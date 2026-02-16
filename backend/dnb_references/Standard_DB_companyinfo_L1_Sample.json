@@ -1,0 +1,298 @@
+{
+	"transactionDetail": {
+		"transactionID": "rrt-008bcd83a756fb8a4-b-wo-20738-19743322-97",
+		"transactionTimestamp": "2020-03-23T09:30:05.258Z",
+		"inLanguage": "en-US"
+	},
+	"inquiryDetail": {
+		"duns": "804735132",
+		"blockIDs": [
+			"companyinfo_L1_v1"
+		]
+	},
+	"organization": {
+		"countryISOAlpha2Code": "US",
+		"duns": "804735132",
+		"primaryName": "Gorman Manufacturing Company, Inc.",
+		"dunsControlStatus": {
+			"operatingStatus": {
+				"description": "Active",
+				"dnbCode": 9074
+			},
+			"isMarketable": false,
+			"isMailUndeliverable": false,
+			"isTelephoneDisconnected": false,
+			"isDelisted": true,
+			"subjectHandlingDetails": [
+				{
+					"description": "Do not call",
+					"dnbCode": 7972
+				}
+			],
+			"firstReportDate": "2017-01-30",
+			"operatingSubStatus": {
+				"description": "Out of business - Favourable",
+				"dnbCode": 9077,
+				"startDate": "2018-07-12T00:00:00.000Z"
+			},
+			"detailedOperatingStatus": {
+				"description": "Operationally Active",
+				"dnbCode": 29929
+			}
+		},
+		"registrationNumbers": [
+			{
+				"registrationNumber": "123456789",
+				"typeDescription": "Federal Taxpayer Identification Number (US)",
+				"typeDnBCode": 6863,
+				"registrationNumberClass": {
+					"description": "National Business Registration Number",
+					"dnbCode": 2888
+				},
+				"isPreferredRegistrationNumber": true,
+				"registrationLocation": "Vlaams Brabant"
+			}
+		],
+		"telephone": [
+			{
+				"telephoneNumber": "6505550000",
+				"isdCode": "1"
+			}
+		],
+		"activities": [
+			{
+				"description": "Lithographic commercial printing",
+				"language": {
+					"description": "English",
+					"dnbCode": 39
+				}
+			}
+		],
+		"isNonClassifiedEstablishment": true,
+		"primaryIndustryCode": {
+			"usSicV4": "2752",
+			"usSicV4Description": "Lithographic commercial printing"
+		},
+		"email": [
+			{
+				"address": "someone@gorman.com"
+			},
+			{
+				"address": "customersupport@gorman.com"
+			}
+		],
+		"certifiedEmail": "admin@xyz.com",
+		"unspscCodes": [
+			{
+				"code": "43230000",
+				"description": "Software",
+				"priority": 1
+			},
+			{
+				"code": "13101900",
+				"description": "Thermoset plastics",
+				"priority": 2
+			}
+		],
+		"tradeStyleNames": [
+			{
+				"name": "Gorman",
+				"priority": 1
+			}
+		],
+		"stockExchanges": [
+			{
+				"tickerName": "NASDAQ:FTH",
+				"exchangeName": {
+					"description": "NASDAQ"
+				},
+				"isPrimary": true
+			},
+			{
+				"tickerName": "Dusseldorf:COZ",
+				"exchangeName": {
+					"description": "Dusseldorf"
+				},
+				"exchangeCountry": {
+					"isoAlpha2Code": "US"
+				},
+				"isPrimary": true
+			}
+		],
+		"standardizedStockExchanges": [
+			{
+				"tickerName": "NYSE:DNB",
+				"listingDate": "2011-09-14",
+				"exchangeName": {
+					"description": "Shanghai Stock Exchange",
+					"dnbCode": 20666
+				},
+				"sectionNames": [
+					{
+						"name": "JASDAQ",
+						"language": {
+							"description": "Japanese",
+							"dnbCode": 3807
+						}
+					}
+				]
+			}
+		],
+		"websiteAddress": [
+			{
+				"url": "www.Gorman.com",
+				"domainName": "Gorman.com"
+			}
+		],
+		"primaryAddress": {
+			"language": {
+				"description": "English",
+				"dnbCode": 39
+			},
+			"addressCountry": {
+				"isoAlpha2Code": "US",
+				"name": "United States"
+			},
+			"continentalRegion": {
+				"name": "North America"
+			},
+			"addressLocality": {
+				"name": "San Francisco"
+			},
+			"minorTownName": "Booker",
+			"addressRegion": {
+				"name": "California",
+				"abbreviatedName": "CA",
+				"isoSubDivisionName": "Yamanashi",
+				"isoSubDivisionCode": "JP-19"
+			},
+			"addressCounty": {
+				"name": "San Francisco"
+			},
+			"postalCode": "94110",
+			"postalCodePosition": {
+				"description": "Post Code presented after Town/City name",
+				"dnbCode": 1009
+			},
+			"streetNumber": "492",
+			"streetName": "Koller St",
+			"streetAddress": {
+				"line1": "492 Koller St",
+				"line2": "Suite 100"
+			},
+			"postOfficeBox": {
+				"postOfficeBoxNumber": "5309",
+				"typeDescription": "Supplied by public Post Office authority",
+				"typeDnBCode": 120
+			},
+			"isRegisteredAddress": false,
+			"standardAddressCodes": [
+				{
+					"addressCode": "ZV12467A",
+					"codeType": {
+						"description": "DK standard address code",
+						"dnbCode": 487
+					}
+				}
+			]
+		},
+		"multilingualPrimaryName": [
+			{
+				"language": {
+					"description": "Japanese",
+					"dnbCode": 39
+				},
+				"name": "ソニー電子（株）",
+				"writingScript": {
+					"description": "Kana",
+					"dnbCode": 19347
+				}
+			}
+		],
+		"multilingualRegisteredNames": [
+			{
+				"language": {
+					"description": "Japanese",
+					"dnbCode": 39
+				},
+				"name": "ソニー電子（株）",
+				"writingScript": {
+					"description": "Kana",
+					"dnbCode": 19347
+				}
+			}
+		],
+		"multilingualTradestyleNames": [
+			{
+				"language": {
+					"description": "English",
+					"dnbCode": 39
+				},
+				"name": "Alternate Company Name",
+				"priority": 1
+			}
+		],
+		"defaultCurrency": "USD",
+		"multilingualPrimaryAddress": [
+			{
+				"language": {
+					"description": "English",
+					"dnbCode": 39
+				},
+				"writingScript": {
+					"description": "Japanese",
+					"dnbCode": 3807
+				},
+				"addressCountry": {
+					"isoAlpha2Code": "US",
+					"name": "United States"
+				},
+				"continentalRegion": {
+					"name": "North America"
+				},
+				"addressLocality": {
+					"name": "San Francisco"
+				},
+				"minorTownName": "Booker",
+				"addressRegion": {
+					"name": "California"
+				},
+				"addressCounty": {
+					"name": "San Francisco"
+				},
+				"postalCode": "94110",
+				"streetNumber": "492",
+				"streetName": "Koller St",
+				"streetAddress": {
+					"line1": "492 Koller St",
+					"line2": "Suite 100"
+				}
+			}
+		],
+		"preferredLanguage": {
+			"description": "English",
+			"dnbCode": 39
+		},
+		"multiLingualSearchNames": [
+			{
+				"language": {
+					"description": "Japanese",
+					"dnbCode": 3807
+				},
+				"name": "ソニー電子（株）",
+				"writingScript": {
+					"description": "Kana",
+					"dnbCode": 19347
+				}
+			}
+		],
+		"securitiesReportID": "E04991"
+	},
+	"blockStatus": [
+		{
+			"blockID": "companyinfo_L1_v1",
+			"status": "ok",
+			"reason": null
+		}
+	]
+}

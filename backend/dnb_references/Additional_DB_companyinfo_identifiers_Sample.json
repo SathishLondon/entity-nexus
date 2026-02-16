@@ -1,0 +1,115 @@
+{
+	"transactionDetail": {
+		"transactionID": "rrt-008bcd83a756fb8a4-b-wo-20739-19744287-55",
+		"transactionTimestamp": "2020-03-23T09:32:37.303Z",
+		"inLanguage": "en-US"
+	},
+	"inquiryDetail": {
+		"duns": "804735132",
+		"blockIDs": [
+			"companyinfo_identifiers_v1"
+		],
+		"tradeUp": "hq",
+		"customerReference": "Some text to describe the request."
+	},
+	"organization": {
+		"countryISOAlpha2Code": "US",
+		"duns": "804735132",
+		"primaryName": "GORMAN MANUFACTURING COMPANY, INC.",
+		"legalEntityIdentifierDetails": {
+			"entityID": "984500D4EEDADDF92B",
+			"legalName": "The legal name of the legal entity.",
+			"legalNameLanguage": {
+				"description": "English",
+				"dnbCode": 39,
+				"languageTag": "en-GB"
+			},
+			"legalAddress": {
+				"language": {
+					"description": "English",
+					"dnbCode": 39,
+					"languageTag": "en-GB"
+				},
+				"addressCountry": {
+					"name": "United States",
+					"isoAlpha2Code": "US"
+				},
+				"addressLocality": {
+					"name": "SAN FRANCISCO"
+				},
+				"addressRegion": {
+					"isoSubDivisionCode": "US-CA",
+					"isoSubDivisionName": "California"
+				},
+				"postalCode": "941109999",
+				"mailRouting": "c/o GORMAN FUNDS LIMITED",
+				"streetNumber": "1",
+				"buildingNumber": "5AD",
+				"streetAddress": {
+					"line1": "492 KOLLER ST",
+					"line2": "37 North Wharf Road",
+					"line3": "CA",
+					"line4": "941109999"
+				}
+			},
+			"headQuarterAddress": {
+				"language": {
+					"description": "English",
+					"dnbCode": 39,
+					"languageTag": "en-GB"
+				},
+				"addressCountry": {
+					"name": "United States",
+					"isoAlpha2Code": "US"
+				},
+				"addressLocality": {
+					"name": "SAN FRANCISCO"
+				},
+				"addressRegion": {
+					"isoSubDivisionCode": "US-CA",
+					"isoSubDivisionName": "California"
+				},
+				"postalCode": "941109999",
+				"mailRouting": "c/o GORMAN FUNDS LIMITED",
+				"streetNumber": "1",
+				"buildingNumber": "5AD",
+				"streetAddress": {
+					"line1": "492 KOLLER ST",
+					"line2": "37 North Wharf Road",
+					"line3": "CA",
+					"line4": "941109999"
+				}
+			},
+			"registrationAuthorityID": "RA0004",
+			"otherRegistrationAuthorityID": "RA00044",
+			"registrationAuthorityEntityID": "FL-0002.040.440-4",
+			"legalJurisdiction": "US-OH",
+			"entityCategory": "GENERAL",
+			"entitySubCategory": "GENERAL Sub",
+			"legalFormCode": "O7XB",
+			"legalFormDescription": "Public Limited",
+			"otherLegalForm": "Public Limited",
+			"entityStatus": "ACTIVE",
+			"entityCreationDate": "2022-05-23",
+			"initialRegistrationDate": "2022-06-20",
+			"lastUpdateDate": "2022-12-01",
+			"registrationStatus": "LAPSED",
+			"nextRenewalDate": "2025-01-29",
+			"managingLOUEntityID": "529900T8BM49AURSDO55",
+			"sourceValidationStatus": "PARTIALLY_CORROBORATED",
+			"validationAuthorityID": "RA00006",
+			"validationAuthorityEntityID": "1827033",
+			"dataProvider": {
+				"description": "Global Legal Entity Identifier Foundation",
+				"dnbCode": 43338
+			}
+		}
+	},
+	"blockStatus": [
+		{
+			"blockID": "companyinfo_identifiers_v1",
+			"status": "ok",
+			"reason": null
+		}
+	]
+}

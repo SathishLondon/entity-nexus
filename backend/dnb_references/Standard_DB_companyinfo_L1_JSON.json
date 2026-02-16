@@ -1,0 +1,1226 @@
+{
+	"swagger": "2.0",
+	"host": "plus.dnb.com",
+	"schemes": [
+		"https"
+	],
+	"info": {
+		"description": "The Data Block API is intended to vend Data Blocks to customers transactionally based on a request for a single DUNS.",
+		"title": "Data Blocks",
+		"version": "1"
+	},
+	"basePath": "/",
+	"paths": {
+		"/v1/data/duns/{dunsNumber}": {
+			"x-DNB-Name": "Data Blocks (companyinfo_L1_v1)",
+			"x-DNB-ID": "dataBlocks",
+			"get": {
+				"description": "The Data Block API is intended to vend Data Blocks to customers transactionally based on a request for a single DUNS.",
+				"summary": "Endpoint",
+				"operationId": "dataBlocks",
+				"x-monitoring": "Available. Please refer <a href=\"/html/guides/Monitor/DataProducts.html\" target=\"_blank\">guide</a> for details.",
+				"x-monitoring-pdf": "Available. Please refer guide for details.",
+				"tags": [
+					"dataBlocks"
+				],
+				"produces": [
+					"application/json;charset=utf-8"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"description": "",
+							"type": "object",
+							"properties": {
+								"transactionDetail": {
+									"type": "object",
+									"description": "The information used to process this request.",
+									"properties": {
+										"transactionID": {
+											"type": "string",
+											"example": "rlh-hi9puyoijk-jop8u-kd-d-1",
+											"description": "A value assigned by the Dun & Bradstreet application to uniquely identify this request."
+										},
+										"transactionTimestamp": {
+											"type": "string",
+											"example": "2017-02-21T17:46:19.839Z",
+											"description": "The date and time, in ISO 8601 UTC Z standard, when this response was created."
+										},
+										"inLanguage": {
+											"type": "string",
+											"example": "en-US",
+											"description": "An IETF BCP 47 code value that defines the language in which this product was rendered."
+										}
+									},
+									"additionalProperties": true,
+									"required": [
+										"inLanguage",
+										"transactionID",
+										"transactionTimestamp"
+									]
+								},
+								"inquiryDetail": {
+									"type": "object",
+									"description": "The criteria used to process this request.",
+									"properties": {
+										"duns": {
+											"type": "string",
+											"example": "804735132",
+											"description": "The D-U-N-S number provided in the request."
+										},
+										"blockIDs": {
+											"type": "array",
+											"description": "The blockIDs provided in the request.",
+											"items": {
+												"example": [
+													"blockID"
+												],
+												"type": "string"
+											}
+										},
+										"tradeUp": {
+											"type": "string",
+											"example": "hq",
+											"description": "The value of the tradeUp parameter provided in the request."
+										},
+										"customerReference": {
+											"type": "string",
+											"example": "Some text to describe the request.",
+											"description": "A reference string provided by the customer for this particular transaction."
+										}
+									},
+									"additionalProperties": true
+								},
+								"blockStatus": {
+									"type": "array",
+									"description": "Records the status of the data blocks requested by the customer.",
+									"items": {
+										"properties": {
+											"blockID": {
+												"type": "string",
+												"example": "blockID",
+												"description": "The unique identifier for the data block."
+											},
+											"status": {
+												"type": "string",
+												"example": "OK",
+												"description": "The current status of the data block fulfilled in this response.<br/><br/>Possible values:<br/>* OK<br/>* Unavailable<br/>* Insufficient data"
+											},
+											"reason": {
+												"type": "string",
+												"example": "Data is not available",
+												"description": "Any specific reason why the data block is not delivered in this response.<br/><br/>Possible values:<br/>* Data is partially available or not available.<br/>* Data is not available for the branch.<br/>* Data is not available on the requested country code."
+											}
+										},
+										"additionalProperties": true,
+										"required": [
+											"blockID",
+											"status"
+										],
+										"type": "object"
+									}
+								},
+								"organization": {
+									"type": "object",
+									"additionalProperties": true,
+									"description": "The details of the entity.",
+									"properties": {
+										"duns": {
+											"type": "string",
+											"example": "804735132",
+											"description": "The D-U-N-S® Number, a proprietary organizational identifier owned and managed by Dun & Bradstreet Inc, provides unique identification of a subject organization, in accordance with the Data Universal Numbering System (D-U-N-S®)."
+										},
+										"countryISOAlpha2Code": {
+											"type": "string",
+											"example": "US",
+											"description": "The two-letter country code, defined by the International Organization for Standardization (ISO) ISO 3166-1 scheme, identifying the country in which the entity is located.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country code substitutions."
+										},
+										"primaryName": {
+											"type": "string",
+											"example": "GORMAN MANUFACTURING COMPANY, INC.",
+											"description": "Single name by which the organization is primarily known or identified."
+										},
+										"dunsControlStatus": {
+											"type": "object",
+											"description": "The details of the organization's functional state and controls that impact its suitability for various usage purposes.",
+											"properties": {
+												"operatingStatus": {
+													"type": "object",
+													"description": "The details of the high level categorization of the organization's functional state or trading status.",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "Active",
+															"description": "Textual description of the organization&#39;s functional state or trading status.<br/>Possible values:<br/>[9074] Active<br/>[403] Out of Business"
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 9074,
+															"description": "A unique code assigned by Dun & Bradstreet to identify the organization&#39;s functional state or trading status.<br/>Possible values: <br/>9074 [Active]<br/>403 [Out of Business]<br/>Refer to Reference code table \"166 [Operating Status]\" for all possible values."
+														}
+													},
+													"additionalProperties": true
+												},
+												"isMarketable": {
+													"type": "boolean",
+													"example": true,
+													"description": "Indicates whether the data on the organization satisfies Dun & Bradstreet&#39;s marketability rules for Sales & Marketing Solutions products. <br/><br/>- If true, the organization satisfies the marketability rules.<br/>- If false, the organization does not satisfy the marketability rules."
+												},
+												"isMailUndeliverable": {
+													"type": "boolean",
+													"example": false,
+													"description": "Indicates whether it is possible to deliver mail to the address of this entity.\r<br/>\r<br/>- If true, it is not possible to deliver mail to at least one of the addresses listed for this DUNS (Primary, Mailing or Registered).<br/>- If false, it is possible to deliver mail to the address."
+												},
+												"isTelephoneDisconnected": {
+													"type": "boolean",
+													"example": false,
+													"description": "Indicates whether the telephone number can be connected to successfully.<br/><br/>- If true, connection to the telephone number is unsuccessful.<br/>- If false, connection to the telephone number is successful."
+												},
+												"isDelisted": {
+													"type": "boolean",
+													"example": true,
+													"description": "Indicates whether the organization has requested that they not be included in any Direct marketing lists (e.g., mail, telephone, email).<br/>- If true, the organization has objected to and must not receive direct marketing material.<br/>- If false, the organization has not objected to receiving direct marketing material."
+												},
+												"subjectHandlingDetails": {
+													"type": "array",
+													"description": "The details of the manner in which the entity is to receive special care being contacted. In many cases, this was specifically requested by the entity.",
+													"items": {
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "Do not call",
+																"description": "The manner in which the entity is to receive special care when being contacted (e.g., do not call or do not send information requests). In many cases, this was specifically requested by the entity."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 7974,
+																"description": "A unique code assigned by Dun & Bradstreet to identify the manner in which the entity is to receive special care from Dun & Bradstreet when it is being contacted.<br/>Refer to Reference code table \"199 [Subject Handling]\" for all possible values."
+															}
+														},
+														"additionalProperties": true,
+														"type": "object"
+													}
+												},
+												"firstReportDate": {
+													"type": "string",
+													"example": "2017-01-30",
+													"description": "The date when the first complete review of all Business Information Report data was updated about the business."
+												},
+												"operatingSubStatus": {
+													"type": "object",
+													"description": "The details of the organization's specific functional state or trading status.",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "Out of business - Favourable",
+															"description": "Textual description of the specific status of the organization's functional state or trading status.<br/><br/>Possible values:<br/>[9074] Active<br/>[9075] Dormant<br/>[9076] Out of Business unfavourable<br/>[9077] Out of Business Favourable"
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 9077,
+															"description": "A unique code assigned by Dun & Bradstreet to identify the specific status of the organization.<br/>Possible values:<br/>9074 [Active]<br/>9075 [Dormant]<br/>9076 [ Out of Business unfavourable]<br/>9077 [Out of Business Favourable]<br/>Refer to Reference code table \"166 [Operating Status]\" for all possible values."
+														},
+														"startDate": {
+															"type": "string",
+															"example": "2018-07-12T00:00:00.000Z",
+															"description": "The date identifying the beginning of the time period in which this Operating Status is or was applicable"
+														}
+													},
+													"additionalProperties": true
+												},
+												"detailedOperatingStatus": {
+													"type": "object",
+													"description": "The details of the organization's specific operational status.",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "Operationally Active",
+															"description": "Textual description of the organization's specific operational  status.<br/>Possible values:<br/>[29929] Operationally Active<br/>[29930] Operationally inactive<br/>[29931] Undetermined"
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 29929,
+															"description": "A unique code assigned by Dun & Bradstreet to identify the specific operational status of the organization.<br/>Possible values:<br/>29929 [Operationally Active]<br/>29930 [Operationally inactive]<br/>29931 [Undetermined]<br/>Refer to Reference code table \"732 [Detailed Operating Status]\" for all possible values."
+														}
+													},
+													"additionalProperties": true
+												}
+											},
+											"additionalProperties": true
+										},
+										"multilingualPrimaryName": {
+											"type": "array",
+											"description": "The details of the name by which the entity is primarily known or identified presented in multiple languages.",
+											"items": {
+												"properties": {
+													"language": {
+														"type": "object",
+														"description": "The details of the language in which this name was recorded.",
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "Japanese",
+																"description": "The language in which this name was recorded."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 39,
+																"description": "A unique code assigned by Dun & Bradstreet to identify the language in which this address was recorded.<br/>Refer to Reference code table \"3 [Language]\" for all possible values."
+															}
+														},
+														"additionalProperties": true
+													},
+													"name": {
+														"type": "string",
+														"example": "ソニー電子（株）",
+														"description": "The name by which the entity is primarily known or identified."
+													},
+													"writingScript": {
+														"type": "object",
+														"description": "Records the type of writing system for the language that was used in recording this textual information. For example, textual information recorded in the language 'Japanese' can be written in any of the following scripts: kanji, katakana, hiragana or romaji.",
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "Kana",
+																"description": "Text denoting the type of writing system for the language that was used in recording this textual information. For example, textual information recorded in the language 'Japanese' can be written in any of the following scripts: kanji, katakana, hiragana or romaji."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 19347,
+																"description": "A unique code assigned by Dun&Bradstreet denoting the type of writing system for the language that was used in recording this textual information. For example, textual information recorded in the language 'Japanese' can be written in any of the following scripts: kanji, katakana, hiragana or romaji.<br/>Refer to Reference code table \"466 [Writing Script]\" for all possible values."
+															}
+														},
+														"additionalProperties": true
+													}
+												},
+												"additionalProperties": true,
+												"type": "object"
+											}
+										},
+										"multilingualRegisteredNames": {
+											"type": "array",
+											"description": "Records the name of the company as recorded in the official registry, if available in multiple languages.",
+											"items": {
+												"properties": {
+													"language": {
+														"type": "object",
+														"description": "The details of the language in which this name was recorded.",
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "Japanese",
+																"description": "The language in which this name was recorded."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 39,
+																"description": "A unique code assigned by Dun & Bradstreet to identify the language in which this address was recorded.<br/>Refer to Reference code table \"3 [Language]\" for all possible values."
+															}
+														},
+														"additionalProperties": true
+													},
+													"name": {
+														"type": "string",
+														"example": "GORMAN MANUFACTURING COMPANY, INC.",
+														"description": "Single name by which the organization is primarily known or identified."
+													},
+													"writingScript": {
+														"type": "object",
+														"description": "Records the type of writing system for the language that was used in recording this textual information. For example, textual information recorded in the language 'Japanese' can be written in any of the following scripts: kanji, katakana, hiragana or romaji.",
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "Kana",
+																"description": "Text denoting the type of writing system for the language that was used in recording this textual information. For example, textual information recorded in the language 'Japanese' can be written in any of the following scripts: kanji, katakana, hiragana or romaji."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 19347,
+																"description": "A unique code assigned by Dun&Bradstreet denoting the type of writing system for the language that was used in recording this textual information. For example, textual information recorded in the language 'Japanese' can be written in any of the following scripts: kanji, katakana, hiragana or romaji.<br/>Refer to Reference code table \"466 [Writing Script]\" for all possible values."
+															}
+														},
+														"additionalProperties": true
+													}
+												},
+												"additionalProperties": true,
+												"type": "object"
+											}
+										},
+										"tradeStyleNames": {
+											"type": "array",
+											"description": "The details of the names the organization trades under for commercial purposes<br/>A 'trading style' or 'trading as name' is a name a business chooses to use which is different from their registered company name. <br/>For example D&B is a trading style of Dun & Bradstreet Ltd. It is what the business chooses to call itself for marketing purposes.",
+											"items": {
+												"properties": {
+													"name": {
+														"type": "string",
+														"example": "Alternate Company Name",
+														"description": "The names the organization trades under for commercial purposes<br/>A 'trading style' or 'trading as name' is a name a business chooses to use which is different from their registered company name.<br/>For example D&B is a trading style of Dun & Bradstreet Ltd. It is what the business chooses to call itself for marketing purposes."
+													},
+													"priority": {
+														"type": "integer",
+														"example": 1,
+														"description": "A numeric value used to identify the relative importance of a Trade Style Name compared to other Trade Style Names.  The lower the numeric value the earlier the data is displayed (i.e. 1 indicates the most important name, 2 the second most important etc...)"
+													}
+												},
+												"additionalProperties": true,
+												"type": "object"
+											}
+										},
+										"multilingualTradestyleNames": {
+											"type": "array",
+											"description": "The details of the names, in multiple languages, that the entity trades under for commercial purposes although its registered legal name used for contracts and other formal situations may be another name.",
+											"items": {
+												"properties": {
+													"language": {
+														"type": "object",
+														"description": "The details of the language in which this name was recorded.",
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "Japanese",
+																"description": "The name of the language in which this name was recorded."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 3807,
+																"description": "A unique code assigned by Dun&Bradstreet to denote the language in which this name was recorded.<br/>Refer to Reference code table \"3 [Language]\" for all possible values."
+															}
+														},
+														"additionalProperties": true
+													},
+													"name": {
+														"type": "string",
+														"example": "三菱商事",
+														"description": "The name that the entity trades under for commercial purposes although its registered legal name used for contracts and other formal situations may be another name."
+													},
+													"priority": {
+														"type": "integer",
+														"example": 1,
+														"description": "The sequence in which the entity mostly uses this Trade Style name."
+													}
+												},
+												"additionalProperties": true,
+												"type": "object"
+											}
+										},
+										"defaultCurrency": {
+											"type": "string",
+											"example": "USD",
+											"description": "The three-letter currency code, defined in the ISO 4217 scheme published by International Organization for Standardization (ISO) identifying the type of money that this entity uses by default."
+										},
+										"websiteAddress": {
+											"type": "array",
+											"description": "The details of the internet URLs used for online information and communication with the Organization.",
+											"items": {
+												"properties": {
+													"url": {
+														"type": "string",
+														"example": "http://www.gorman.com",
+														"description": "The Internet URL (Uniform Resource Locator) that uniquely identifies the proprietary website of the Organization or the website preferred by the Organization that gives more information on the entity."
+													},
+													"domainName": {
+														"type": "string",
+														"example": "gorman.com",
+														"description": "A unique name used to identify the website of the Organization that serves as an address to access that website."
+													}
+												},
+												"additionalProperties": true,
+												"type": "object"
+											}
+										},
+										"email": {
+											"type": "array",
+											"description": "The details of the email address used to contact the entity.",
+											"items": {
+												"properties": {
+													"address": {
+														"type": "string",
+														"example": "someone@company.com",
+														"description": "The email address for the entity."
+													}
+												},
+												"additionalProperties": true,
+												"type": "object"
+											}
+										},
+										"certifiedEmail": {
+											"type": "string",
+											"example": "admin@xyz.com",
+											"description": "A certified E-Mail is an email that guarantees legal certainty of the sender’s identity, of the date and time of sending and receiving the email, and of its content."
+										},
+										"telephone": {
+											"type": "array",
+											"description": "The details of the Telephone contact information used for voice communication with the organization.",
+											"items": {
+												"properties": {
+													"telephoneNumber": {
+														"type": "string",
+														"example": "6505550000",
+														"description": "The primary voice telephone number for the business, when dialing domestically. The National Telephone Number is created by combining the Domestic Area Code and the Local Number.<br/><br/>A Domestic Area Code is a series of numbers that must be prefixed before dialing a telephone number in another local area. National telecommunication authorities use various formats and dialing rules for area codes. Also known as City Code.<br/><br/>A Local Number is a series of numbers that represents a specific telephone line."
+													},
+													"isdCode": {
+														"type": "string",
+														"example": "1",
+														"description": "A series of numbers that must be prefixed before dialing a telephone number in another Country, it is comprised of an International Dialing Prefix followed by the Country Code. These are also referred to as Country Calling Code or Country Dial-In Code."
+													}
+												},
+												"additionalProperties": true,
+												"type": "object"
+											}
+										},
+										"primaryAddress": {
+											"type": "object",
+											"description": "The details of the Primary Address at which the organization is located or conducts operations.",
+											"properties": {
+												"language": {
+													"type": "object",
+													"description": "The details of the language in which this address was recorded.",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "English",
+															"description": "The name of the language in which this address was recorded."
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 39,
+															"description": "A unique code assigned by Dun & Bradstreet to identify the language in which this address was recorded.<br/>Refer to Reference code table \"3 [Language]\" for all possible values."
+														}
+													},
+													"additionalProperties": true
+												},
+												"addressCountry": {
+													"type": "object",
+													"description": "The details of the country or region for this address of the organization.",
+													"properties": {
+														"name": {
+															"type": "string",
+															"example": "United States",
+															"description": "The country or region for this address of the organization."
+														},
+														"isoAlpha2Code": {
+															"type": "string",
+															"example": "US",
+															"description": "The 2 letter alpha country or region code assigned by the International Organization for Standardization (ISO) identifying the country or region for this address of the organization.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country or region code substitutions."
+														}
+													},
+													"additionalProperties": true
+												},
+												"continentalRegion": {
+													"type": "object",
+													"description": "The details of the continent for this address of the organization.",
+													"properties": {
+														"name": {
+															"type": "string",
+															"example": "North America",
+															"description": "The name of the continent for this address of the organization.<br/>Possible values<br/>Africa<br/>Asia Pacific<br/>Europe<br/>Latin America<br/>Middle East<br/>North America"
+														}
+													},
+													"additionalProperties": true
+												},
+												"addressLocality": {
+													"type": "object",
+													"description": "The name of the locality for this address of the organization. Locality defined as a district population cluster. City, town, township, village, borough etc.",
+													"properties": {
+														"name": {
+															"type": "string",
+															"example": "SAN FRANCISCO",
+															"description": "The name of the locality for this address of the organization. Locality defined as a district population cluster. City, town, township, village, borough etc."
+														}
+													},
+													"additionalProperties": true
+												},
+												"minorTownName": {
+													"type": "string",
+													"example": "Booker",
+													"description": "The name of the  village, town or suburb for this address of the organization.<br/>For example Booker in  Booker, High Wycombe."
+												},
+												"addressRegion": {
+													"type": "object",
+													"description": "The name of the geographical area for this address of the organization. For Example New Jersey.",
+													"properties": {
+														"name": {
+															"type": "string",
+															"example": "California",
+															"description": "The name of the geographical area for this address of the organization. For Example New Jersey."
+														},
+														"abbreviatedName": {
+															"type": "string",
+															"example": "CA",
+															"description": "The shortened name of the geographical area for this address of the organization. For example NJ for the US State New Jersey within Country United States."
+														},
+														"isoSubDivisionName": {
+															"type": "string",
+															"example": "Yamanashi",
+															"description": "The official name of a principal subdivision (e.g province or state) of countries coded in ISO 3166-1."
+														},
+														"isoSubDivisionCode": {
+															"type": "string",
+															"example": "JP-19",
+															"description": "The code assigned by ISO that represents the name of a principal subdivision (e.g province or state) of countries coded in ISO 3166-1.  This code is based on the two-letter code element from ISO 3166-1 followed by a separator and up to three alphanumeric characters."
+														}
+													},
+													"additionalProperties": true
+												},
+												"addressCounty": {
+													"type": "object",
+													"description": "The details of the geographical area of a Country or Region for this address of the organization. Countries divide their geography into smaller sub divisions.<br/><br/>County is an example of a commonly used subdivision. Often found in UK.",
+													"properties": {
+														"name": {
+															"type": "string",
+															"example": "SAN MATEO",
+															"description": "The name of the geographical area of a Country or Region for this address of the organization.<br/><br/>Countries subdivide their geography into smaller sub divisions. County is an example of a commonly used subdivision, often found in the UK."
+														}
+													},
+													"additionalProperties": true
+												},
+												"postalCode": {
+													"type": "string",
+													"example": "941109999",
+													"description": "The postal code for this address of the organization.<br/><br/>Also known locally in various English-speaking countries throughout the world as a postcode, post code, Eircode, PIN or ZIP Code) is a series of letters or digits or both, sometimes including spaces or punctuation, included in a postal address for the purpose of sorting mail. The code is used by the country&#39;s postal authority to identify the address where the organization is located or conducts operations ."
+												},
+												"postalCodePosition": {
+													"type": "object",
+													"description": "The details of the position of the Postal Code when presenting the address of the organization.",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "Post code presented before Town/City name",
+															"description": "The position of the Postal Code when presenting this address of the organization. (e.g. before or after the address Town/City)."
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 1009,
+															"description": "A unique code assigned by Dun and Bradstreet to identify the position of the postal code when presenting this address of the organization.<br/>Refer to Reference code table \"210 [Postal Code Position]\" for all possible values."
+														}
+													},
+													"additionalProperties": true
+												},
+												"streetNumber": {
+													"type": "string",
+													"example": "492",
+													"description": "The numerical part of the street address for this address of the organization.<br/>This may be a single number, a number with an appendix, or a range of street numbers.<br/>For example 37 in the address<br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+												},
+												"streetName": {
+													"type": "string",
+													"example": "KOLLER ST",
+													"description": "The name of the street for this address of the organization. For example North Wharf Road in the address<br/>The Point<br/>37 North Wharf<br/>London<br/>W2 1AF"
+												},
+												"streetAddress": {
+													"type": "object",
+													"description": "The details of the street address for this address of the organization.",
+													"properties": {
+														"line1": {
+															"type": "string",
+															"example": "492 KOLLER ST",
+															"description": "The first line of the address where the entity is located.<br/><br/>The first line of this address of the organization. For example The Point in the address<br/><br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+														},
+														"line2": {
+															"type": "string",
+															"example": "Suite 100",
+															"description": "The second line of this address of the organization.<br/>For example 37 North Wharf Road in the address<br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+														}
+													},
+													"additionalProperties": true
+												},
+												"postOfficeBox": {
+													"type": "object",
+													"description": "The details of the location  issued by a private or public Postal Office where the organization requests to have mail delivered for this address of the organization.",
+													"properties": {
+														"postOfficeBoxNumber": {
+															"type": "string",
+															"example": "5309",
+															"description": "A unique identifier issued to the organization by a private or public postal office for this address of the organization.<br/><br/>This includes only the identifying number (or text) and not the textual description of the PO Box type. For example the contents would be just the number 12 from PO Box 12 not PO Box or just the number 57 from PMB 57 not PMB"
+														},
+														"typeDescription": {
+															"type": "string",
+															"example": "Supplied by public Post Office authority",
+															"description": "The type of the PO Box (e.g., Post Office Box, PMB)."
+														},
+														"typeDnBCode": {
+															"type": "integer",
+															"example": 120,
+															"description": "A unique code assigned by Dun & Bradstreet to identify the type of PO Box where the organisation requests to have mail delivered for this Address.<br/>Refer to Reference code table \"208 [Postal Box Type]\" for all possible values."
+														}
+													},
+													"additionalProperties": true
+												},
+												"standardAddressCodes": {
+													"type": "array",
+													"description": "Records identifiers that uniquely identifies an entire address as opposed to an individual component of an address (such as a street). For example, a NIKE Address Identifier, a Japan Postal Barcode.",
+													"items": {
+														"properties": {
+															"addressCode": {
+																"type": "string",
+																"example": "ZV12467A",
+																"description": "An identifier that uniquely identifies an entire address as opposed to an individual component of an address (such as a street). For example, a NIKE Address Identifier, a Japan Postal Barcode."
+															},
+															"codeType": {
+																"type": "object",
+																"description": "Records the type of the standard address code.",
+																"properties": {
+																	"description": {
+																		"type": "string",
+																		"example": "DK standard address code",
+																		"description": "Text that denotes the type of the standard address code."
+																	},
+																	"dnbCode": {
+																		"type": "integer",
+																		"example": 487,
+																		"description": "A unique code assigned by Dun&Bradstreet to identify the type of the standard address code."
+																	}
+																},
+																"additionalProperties": true
+															}
+														},
+														"additionalProperties": true,
+														"type": "object"
+													}
+												},
+												"isRegisteredAddress": {
+													"type": "boolean",
+													"example": true,
+													"description": "Indicates if the address is the same as the organization's Registered Address <br/>if TRUE the primary/main address is the same as the organization's Registered Address.<br/><br/>if FALSE The address is not the same as the organization's Registered Address."
+												}
+											},
+											"additionalProperties": true
+										},
+										"multilingualPrimaryAddress": {
+											"type": "array",
+											"description": "The details of the primary or physical address at which the entity is located presented in multiple languages.",
+											"items": {
+												"properties": {
+													"language": {
+														"type": "object",
+														"description": "The details of the language in which this address was recorded.",
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "Japanese",
+																"description": "The name of the language in which this address was recorded."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 3807,
+																"description": "A unique code assigned by Dun & Bradstreet to identify the language in which this address was recorded.<br/>Refer to Reference code table \"3 [Language]\" for all possible values."
+															}
+														},
+														"additionalProperties": true
+													},
+													"writingScript": {
+														"type": "object",
+														"description": "Records the type of writing system for the language that was used in recording this textual information. For example, textual information recorded in the language 'Japanese' can be written in any of the following scripts: kanji, katakana, hiragana or romaji.",
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "Japanese",
+																"description": "Text denoting the type of writing system for the language that was used in recording this textual information. For example, textual information recorded in the language 'Japanese' can be written in any of the following scripts: kanji, katakana, hiragana or romaji."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 3807,
+																"description": "A unique code assigned by Dun&Bradstreet denoting the type of writing system for the language that was used in recording this textual information. For example, textual information recorded in the language 'Japanese' can be written in any of the following scripts: kanji, katakana, hiragana or romaji.<br/>Refer to Reference code table \"3 [Language]\" for all possible values."
+															}
+														},
+														"additionalProperties": true
+													},
+													"addressCountry": {
+														"type": "object",
+														"description": "The details of the country or region in which this address is located.",
+														"properties": {
+															"name": {
+																"type": "string",
+																"example": "Japan",
+																"description": "The name of the country or region in which this address is located."
+															},
+															"isoAlpha2Code": {
+																"type": "string",
+																"example": "JP",
+																"description": "The two-letter country or region code, defined by the International Organization for Standardization (ISO) ISO 3166-1 scheme identifying the country or region in which this address is located<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country or region code substitutions."
+															}
+														},
+														"additionalProperties": true
+													},
+													"continentalRegion": {
+														"type": "object",
+														"description": "The details of the continental region in which this address is located.",
+														"properties": {
+															"name": {
+																"type": "string",
+																"example": "Asia Pacific",
+																"description": "The name of the continental region for this address. Possible values: - Africa - Asia Pacific - Europe - Latin America - Middle East - North America."
+															}
+														},
+														"additionalProperties": true
+													},
+													"addressLocality": {
+														"type": "object",
+														"description": "The details of the city, town, township, village, borough, etc. in which this address is located.",
+														"properties": {
+															"name": {
+																"type": "string",
+																"example": "千代田区",
+																"description": "The name of the city, town, township, village, borough, etc. in which this address is located."
+															}
+														},
+														"additionalProperties": true
+													},
+													"minorTownName": {
+														"type": "string",
+														"example": "Booker",
+														"description": "The name of the village, town or suburb when it is not a Primary Town or City (e.g., the Booker in Booker, High Wycombe)."
+													},
+													"addressRegion": {
+														"type": "object",
+														"description": "The details of the locally governed area that forms part of a centrally governed nation to identify where this address is located.",
+														"properties": {
+															"name": {
+																"type": "string",
+																"example": "東京都",
+																"description": "The name of the locally governed area that forms part of a centrally governed nation to identify where this address is located."
+															}
+														},
+														"additionalProperties": true
+													},
+													"addressCounty": {
+														"type": "object",
+														"description": "The details of the county in which this address is located.",
+														"properties": {
+															"name": {
+																"type": "string",
+																"example": "雨竜町",
+																"description": "The name of the county in which this address is located."
+															}
+														},
+														"additionalProperties": true
+													},
+													"postalCode": {
+														"type": "string",
+														"example": "941109999",
+														"description": "An identifier used by the local country's postal authority to identify where this address is located."
+													},
+													"streetNumber": {
+														"type": "string",
+														"example": "2",
+														"description": "The number part of the street address where the entity is located. This may be a single number, a number with an appendix, or a range of street numbers. For example, the \"51 - 59C\" in the address 51 - 59C Wall Street."
+													},
+													"streetName": {
+														"type": "string",
+														"example": "丸の内",
+														"description": "The name of the street where the entity is located. For example, \"Wall Street\" in the address 51 - 59C Wall Street."
+													},
+													"streetAddress": {
+														"type": "object",
+														"description": "The details of the street address where the entity is located.",
+														"properties": {
+															"line1": {
+																"type": "string",
+																"example": "丸の内２－３－１",
+																"description": "The first line of the address where the entity is located. For example, \"41 Central Chambers\" in the address 41 Central Chambers Dame Court Dublin 2"
+															},
+															"line2": {
+																"type": "string",
+																"example": "三菱商事ビルディング",
+																"description": "The second line of the address where the entity is located. For example, \"Dame Court\" in the address 41 Central Chambers Dame Court Dublin 2"
+															}
+														},
+														"additionalProperties": true
+													}
+												},
+												"additionalProperties": true,
+												"type": "object"
+											}
+										},
+										"stockExchanges": {
+											"type": "array",
+											"description": "The details of the Stock Exchanges on which the entity's shares are traded.",
+											"items": {
+												"properties": {
+													"tickerName": {
+														"type": "string",
+														"example": "NYSE:DNB",
+														"description": "Text by which the entity is identified on this Stock Exchange for share trading purposes."
+													},
+													"exchangeName": {
+														"type": "object",
+														"description": "The details of the name of the Stock Exchange on which the entity's shares are traded.",
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "NYSE",
+																"description": "The name the Stock Exchange."
+															}
+														},
+														"additionalProperties": true
+													},
+													"exchangeCountry": {
+														"type": "object",
+														"description": "The details of the country of the Stock Exchange.",
+														"properties": {
+															"isoAlpha2Code": {
+																"type": "string",
+																"example": "US",
+																"description": "The two-letter country code, defined by the International Organization for Standardization (ISO) ISO 3166-1 scheme identifying the country of the Stock Exchange.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country code substitutions."
+															}
+														},
+														"additionalProperties": true
+													},
+													"isPrimary": {
+														"type": "boolean",
+														"example": true,
+														"description": "Indicates if this is the most important stock exchange among all the stock exchange where the entity's shares are traded. <br/><br/>- If true, indicates that this is the most important Stock Exchange.<br/>- If false, indicates that this is not the most important Stock Exchange."
+													}
+												},
+												"additionalProperties": true,
+												"type": "object"
+											}
+										},
+										"standardizedStockExchanges": {
+											"type": "array",
+											"description": "Records all the stock exchanges that the subject trades in represented using predefined finite values.",
+											"items": {
+												"properties": {
+													"tickerName": {
+														"type": "string",
+														"example": "NYSE:DNB",
+														"description": "Text by which the entity is identified on this Stock Exchange for share trading purposes."
+													},
+													"listingDate": {
+														"type": "string",
+														"example": "2011-09-14",
+														"description": "The date when this stock was listed first in the stock exchange."
+													},
+													"exchangeName": {
+														"type": "object",
+														"description": "Records the standardized name of the stock exchange.",
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "Shanghai Stock Exchange",
+																"description": "Text that denotes the standardized name of the stock exchange."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 20666,
+																"description": "A unique code assigned by Dun&Bradstreet that denotes the standardized name of the stock exchange.<br/>Refer to Reference code table \"178 [Stock Exchange]\" for all possible values."
+															}
+														},
+														"additionalProperties": true
+													},
+													"sectionNames": {
+														"type": "array",
+														"description": "Records the different sections within a stock exchange in different languages.",
+														"items": {
+															"properties": {
+																"name": {
+																	"type": "string",
+																	"example": "JASDAQ",
+																	"description": "Records the name of the section within the stock exchange, e.g., First section of the Tokyo Stock Exchange, Second section of the Tokyo Stock Exchange, JASDAQ, MOTHERS."
+																},
+																"language": {
+																	"type": "object",
+																	"description": "Records the language in which this information was recorded.",
+																	"properties": {
+																		"description": {
+																			"type": "string",
+																			"example": "Japanese",
+																			"description": "Text that records the language in which this information was recorded.<br/>Refer to Reference code table \"3 [Language]\" for all possible values."
+																		},
+																		"dnbCode": {
+																			"type": "integer",
+																			"example": 3807,
+																			"description": "A unique code assigned by Dun&Bradstreet that records the language in which this information was recorded."
+																		}
+																	},
+																	"additionalProperties": true
+																}
+															},
+															"additionalProperties": true,
+															"type": "object"
+														}
+													}
+												},
+												"additionalProperties": true,
+												"type": "object"
+											}
+										},
+										"registrationNumbers": {
+											"type": "array",
+											"description": "The details of the organization's registration numbers issued by a recognized external authority to uniquely identify subjects. The issuing authority may be a Registration Authority, Government Department or Commercial Enterprise (e.g., Chamber of Commerce numbers, VAT numbers).",
+											"items": {
+												"properties": {
+													"registrationNumber": {
+														"type": "string",
+														"example": "12-3456789",
+														"description": "The number or alphanumeric value assigned by a recognized external authority that either uniquely identifies or helps to identify the organization."
+													},
+													"typeDescription": {
+														"type": "string",
+														"example": "Federal Taxpayer Identification Number (US)",
+														"description": "The official name of the organization identifier assigned by a recognized external authority (e.g.. Australian Company Number, Federal Taxpayer Identification Number, Value Added Tax Number)."
+													},
+													"typeDnBCode": {
+														"type": "integer",
+														"example": 6863,
+														"description": "A unique code assigned by Dun & Bradstreet to identify the type of organization registration number. For example, 2541 stands for company number issued by the UK Companies House.<br/>Refer to Reference code table \"7 [Registration Number Type]\" for all possible values."
+													},
+													"registrationNumberClass": {
+														"type": "object",
+														"description": "Records the broad class into which the Organization Registration Number is categorized. E.g. Tax Registration Number, Chamber of Commerce Number, National Business Number etc.",
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "National Business Registration Number",
+																"description": "Text which denotes the broad class into which the Organization Registration Number is categorized. E.g. Tax Registration Number, Chamber of Commerce Number, National Business Number etc."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 2888,
+																"description": "A unique code assigned by Dun&Bradstreet to denote the broad class into which the Organization Registration Number is categorized. E.g. Tax Registration Number, Chamber of Commerce Number, National Business Number etc.<br/>Refer to Reference code table \"72 [Registration Number Class]\" for all possible values."
+															}
+														},
+														"additionalProperties": true
+													},
+													"isPreferredRegistrationNumber": {
+														"type": "boolean",
+														"example": true,
+														"description": "Indicates whether this is the preferred organization registration number. When turned ON (set to TRUE), this organization registration number is the one Dun & Bradstreet recommends for this organization. When turned OFF (set to FALSE), this is not the preferred organization registration number."
+													},
+													"registrationLocation": {
+														"type": "string",
+														"example": "Vlaams Brabant",
+														"description": "The location, such as the name of a court or Chamber of Commerce, where the Organization Registration Number is registered. Specifically required when the Organization Registration Number is not unique within a country and requires this detail for uniqueness."
+													}
+												},
+												"additionalProperties": true,
+												"type": "object"
+											}
+										},
+										"legalEntityIdentifier": {
+											"type": "string",
+											"example": "",
+											"description": ""
+										},
+										"primaryIndustryCode": {
+											"type": "object",
+											"description": "The details of the business activity in which the organisation is primarily engaged using standardised coding schemes such as European NACE and U.S Standard Industry Classification (SIC).",
+											"properties": {
+												"usSicV4": {
+													"type": "string",
+													"example": "5461",
+													"description": "The 4-digit code in the U.S. SIC (Standard Industrial Classification) 1987 system assigned to an organization categorizing the primary business activities performed at its location. For example, 1611 represents the highway and street construction industry."
+												},
+												"usSicV4Description": {
+													"type": "string",
+													"example": "Credit reporting services",
+													"description": "The description of the business activities represented by the Primary US SIC Code. For example, 'highway and street construction' is the description of industry code 1611."
+												}
+											},
+											"additionalProperties": true
+										},
+										"unspscCodes": {
+											"type": "array",
+											"description": "The details of several products and services represented in the United Nations Standard Products and Services Code (UNSPSC) scheme; this scheme was jointly developed by the United Nations Development Programme (UNDP) and Dun & Bradstreet Corporation in 1998.<br/><br/>The United Nations Standard Products and Services Code (UNSPSC) provides an open, global multi-sector standard for efficient, accurate classification of products and services. It is a 4-level hierarchy coded as an 8-digit number.<br/><br/>The UNSPSC for a given item is composed of four 2-digit identifiers, which together categorize the item into a five-level hierarchy. The five levels of the classification are Segment, Family, Class, and Commodity. Business Function is optional.",
+											"items": {
+												"properties": {
+													"code": {
+														"type": "string",
+														"example": "31111617",
+														"description": "The UNSPSC code that identifies a product or service offered by the entity."
+													},
+													"description": {
+														"type": "string",
+														"example": "Zinc impact extrusions",
+														"description": "The description associated with the UNSPSC code."
+													},
+													"priority": {
+														"type": "integer",
+														"example": 1,
+														"description": "Identifies the order in which this UNSPSC code should be presented relative to other UNSPSC codes."
+													}
+												},
+												"additionalProperties": true,
+												"type": "object"
+											}
+										},
+										"isNonClassifiedEstablishment": {
+											"type": "boolean",
+											"example": true,
+											"description": "When set to \"true\", it denotes that the Dun & Bradstreet is unable to classify the subject into a specific industry.<br/>When set to \"false\", it denotes that the Dun & Bradstreet is able to classify the subject into a specific industry."
+										},
+										"activities": {
+											"type": "array",
+											"description": "The details of the descriptions of operations in different languages.",
+											"items": {
+												"properties": {
+													"description": {
+														"type": "string",
+														"example": "Entity operation description",
+														"description": "Description of operations continued by a business."
+													},
+													"language": {
+														"type": "object",
+														"description": "The details of the language in which this business activity was recorded.",
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "English",
+																"description": "The name of the language in which this business activity was recorded."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 39,
+																"description": "A unique code assigned by Dun & Bradstreet to identify the language in which this business activity was recorded.<br/>Refer to Reference code table \"3 [Language]\" for all possible values."
+															}
+														},
+														"additionalProperties": true
+													}
+												},
+												"additionalProperties": true,
+												"type": "object"
+											}
+										},
+										"preferredLanguage": {
+											"type": "object",
+											"description": "Records the language in which the organization prefers to do business.",
+											"properties": {
+												"description": {
+													"type": "string",
+													"example": "English",
+													"description": "Text defining the language in which the organization prefers to do business."
+												},
+												"dnbCode": {
+													"type": "integer",
+													"example": 39,
+													"description": "A unique code assigned by Dun & Bradstreet, defining the language in which the organization prefers to do business.<br/>Refer to Reference code table \"3 [Language]\" for all possible values."
+												}
+											},
+											"additionalProperties": true
+										},
+										"multiLingualSearchNames": {
+											"type": "array",
+											"description": "Records the names in different languages created by D&B to facilitate name matching.",
+											"items": {
+												"properties": {
+													"name": {
+														"type": "string",
+														"example": "ソニーエレクトロニクス",
+														"description": "A name created by D&B to facilitate name matching."
+													},
+													"language": {
+														"type": "object",
+														"description": "Records the language in which this information was recorded.",
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "Japanese",
+																"description": "Text that records the language in which this information was recorded."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 3807,
+																"description": "A unique code assigned by Dun&Bradstreet that records the language in which this information was recorded.<br/>Refer to Reference code table \"3 [Language]\" for all possible values."
+															}
+														},
+														"additionalProperties": true
+													},
+													"writingScript": {
+														"type": "object",
+														"description": "Records the type of writing system for the language that was used in recording this textual information. For example, textual information recorded in the language 'Japanese' can be written in any of the following scripts: kanji, katakana, hiragana or romaji.",
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "Kana",
+																"description": "Text denoting the type of writing system for the language that was used in recording this textual information. For example, textual information recorded in the language 'Japanese' can be written in any of the following scripts: kanji, katakana, hiragana or romaji."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 19347,
+																"description": "A unique code assigned by Dun&Bradstreet denoting the type of writing system for the language that was used in recording this textual information. For example, textual information recorded in the language 'Japanese' can be written in any of the following scripts: kanji, katakana, hiragana or romaji.<br/>Refer to Reference code table \"466 [Writing Script]\" for all possible values."
+															}
+														},
+														"additionalProperties": true
+													}
+												},
+												"additionalProperties": true,
+												"type": "object"
+											}
+										},
+										"securitiesReportID": {
+											"type": "string",
+											"example": "E04991",
+											"description": "The reference identifier of the document that states the trade name of the company, financial conditions of the corporate group to which the company belongs and other important matters concerning the company's business."
+										}
+									}
+								}
+							},
+							"additionalProperties": true,
+							"required": [
+								"transactionDetail"
+							]
+						}
+					},
+					"301": {
+						"description": "Moved Permanently",
+						"headers": {
+							"location": {
+								"description": "The URL to retrieve the D-U-N-S Number to which the requested D-U-N-S Number was transferred.",
+								"type": "string",
+								"x-example": "https://plus.dnb.com/v1/data/duns/{dunsNumber}?blockIDs=blockID1,blockID2,blockID3,.."
+							}
+						},
+						"schema": {
+							"description": "",
+							"type": "object",
+							"properties": {}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"description": "The access token provided by authentication.",
+						"required": true,
+						"type": "string",
+						"x-example": "Bearer alphanumerictoken"
+					},
+					{
+						"in": "path",
+						"name": "dunsNumber",
+						"description": "A 9-character numeric string identifying the entity by its Dun & Bradstreet D-U-N-S number.",
+						"required": true,
+						"type": "string",
+						"x-example": "804735132"
+					},
+					{
+						"in": "query",
+						"name": "blockIDs",
+						"description": "The block ID provided by Dun & Bradstreet that identifies the data block to be returned.<br/><br/>Multiple values can be included, separated by commas.",
+						"required": true,
+						"type": "string",
+						"x-example": "blockID"
+					},
+					{
+						"in": "query",
+						"name": "tradeUp",
+						"description": "Indicates if the Headquarters D-U-N-S Number should be returned if a Branch is requested.<br/><br/>Valid values:<br/>* hq: If the provided D-U-N-S Number is a Branch, the Headquarter D-U-N-S Number is returned.<br/>* domhq: If the provided D-U-N-S Number is a Branch, the Domestic Headquarter D-U-N-S Number is returned.<br/><br/>If the requested D-U-N-S Number is not a Branch, that D-U-N-S Number will be returned regardless of the value of this parameter.<br/><br/>If the parameter is omitted, the requested D-U-N-S Number is returned even if it is a Branch.",
+						"required": false,
+						"type": "string",
+						"x-example": "hq"
+					},
+					{
+						"in": "query",
+						"name": "customerReference",
+						"description": "Up to 240 characters for a reference string to be linked to the request in order to support subsequent order reconciliation.",
+						"required": false,
+						"type": "string",
+						"x-example": "customer reference text"
+					}
+				]
+			}
+		}
+	}
+}

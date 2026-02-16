@@ -1,0 +1,361 @@
+{
+	"swagger": "2.0",
+	"host": "plus.dnb.com",
+	"schemes": [
+		"https"
+	],
+	"info": {
+		"description": "The Data Block API is intended to vend Data Blocks to customers transactionally based on a request for a single DUNS.",
+		"title": "Data Blocks",
+		"version": "1"
+	},
+	"basePath": "/",
+	"paths": {
+		"/v1/data/duns/{dunsNumber}": {
+			"x-DNB-Name": "Data Blocks (hierarchyconnections_alternative_v1)",
+			"x-DNB-ID": "dataBlocks",
+			"get": {
+				"description": "The Data Block API is intended to vend Data Blocks to customers transactionally based on a request for a single DUNS.",
+				"summary": "Endpoint",
+				"operationId": "dataBlocks",
+				"x-monitoring": "Available. Please refer <a href=\"/html/guides/Monitor/DataProducts.html\" target=\"_blank\">guide</a> for details.",
+				"x-monitoring-pdf": "Available. Please refer guide for details.",
+				"tags": [
+					"dataBlocks"
+				],
+				"produces": [
+					"application/json;charset=utf-8"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"description": "",
+							"type": "object",
+							"properties": {
+								"transactionDetail": {
+									"type": "object",
+									"description": "The information used to process this request.",
+									"properties": {
+										"transactionID": {
+											"type": "string",
+											"example": "rlh-hi9puyoijk-jop8u-kd-d-1",
+											"description": "A value assigned by the Dun & Bradstreet application to uniquely identify this request."
+										},
+										"transactionTimestamp": {
+											"type": "string",
+											"example": "2017-02-21T17:46:19.839Z",
+											"description": "The date and time, in ISO 8601 UTC Z standard, when this response was created."
+										},
+										"inLanguage": {
+											"type": "string",
+											"example": "en-US",
+											"description": "An IETF BCP 47 code value that defines the language in which this product was rendered."
+										}
+									},
+									"additionalProperties": true,
+									"required": [
+										"inLanguage",
+										"transactionID",
+										"transactionTimestamp"
+									]
+								},
+								"inquiryDetail": {
+									"type": "object",
+									"description": "The criteria used to process this request.",
+									"properties": {
+										"duns": {
+											"type": "string",
+											"example": "804735132",
+											"description": "The D-U-N-S number provided in the request."
+										},
+										"blockIDs": {
+											"type": "array",
+											"description": "The blockIDs provided in the request.",
+											"items": {
+												"example": [
+													"blockID"
+												],
+												"type": "string"
+											}
+										},
+										"tradeUp": {
+											"type": "string",
+											"example": "hq",
+											"description": "The value of the tradeUp parameter provided in the request."
+										},
+										"customerReference": {
+											"type": "string",
+											"example": "Some text to describe the request.",
+											"description": "A reference string provided by the customer for this particular transaction."
+										}
+									},
+									"additionalProperties": true
+								},
+								"blockStatus": {
+									"type": "array",
+									"description": "Records the status of the data blocks requested by the customer.",
+									"items": {
+										"properties": {
+											"blockID": {
+												"type": "string",
+												"example": "blockID",
+												"description": "The unique identifier for the data block."
+											},
+											"status": {
+												"type": "string",
+												"example": "OK",
+												"description": "The current status of the data block fulfilled in this response.<br/><br/>Possible values:<br/>* OK<br/>* Unavailable<br/>* Insufficient data"
+											},
+											"reason": {
+												"type": "string",
+												"example": "Data is not available",
+												"description": "Any specific reason why the data block is not delivered in this response.<br/><br/>Possible values:<br/>* Data is partially available or not available.<br/>* Data is not available for the branch.<br/>* Data is not available on the requested country code."
+											}
+										},
+										"additionalProperties": true,
+										"required": [
+											"blockID",
+											"status"
+										],
+										"type": "object"
+									}
+								},
+								"organization": {
+									"type": "object",
+									"additionalProperties": true,
+									"description": "The details of the entity.",
+									"properties": {
+										"duns": {
+											"type": "string",
+											"example": "804735132",
+											"description": "The D-U-N-S® Number, a proprietary organizational identifier owned and managed by Dun & Bradstreet Inc, provides unique identification of a subject organization, in accordance with the Data Universal Numbering System (D-U-N-S®)."
+										},
+										"countryISOAlpha2Code": {
+											"type": "string",
+											"example": "US",
+											"description": "The two-letter country code, defined by the International Organization for Standardization (ISO) ISO 3166-1 scheme, identifying the country in which the entity is located.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country code substitutions."
+										},
+										"primaryName": {
+											"type": "string",
+											"example": "GORMAN MANUFACTURING COMPANY, INC.",
+											"description": "Single name by which the organization is primarily known or identified."
+										},
+										"affiliates": {
+											"type": "array",
+											"description": "The details of other entities relationships to the subject entity typically identified when the affiliated entity has no legal obligation for the debts of the subject entity (e.g., Franchises, agents, dealers, associations, healthcare networks).",
+											"items": {
+												"properties": {
+													"duns": {
+														"type": "string",
+														"example": "804735132",
+														"description": "The D-U-N-S® Number, a proprietary organizational identifier owned and managed by Dun & Bradstreet Inc, provides unique identification of a subject organization, in accordance with the Data Universal Numbering System (D-U-N-S®)."
+													},
+													"primaryName": {
+														"type": "string",
+														"example": "GORMAN MANUFACTURING COMPANY, INC.",
+														"description": "Single name by which the organization is primarily known or identified."
+													},
+													"primaryAddress": {
+														"type": "object",
+														"description": "The details of the Primary Address at which the organization is located or conducts operations.",
+														"properties": {
+															"addressCountry": {
+																"type": "object",
+																"description": "The details of the country or region for this address of the organization.",
+																"properties": {
+																	"name": {
+																		"type": "string",
+																		"example": "United States",
+																		"description": "The country or region for this address of the organization."
+																	},
+																	"isoAlpha2Code": {
+																		"type": "string",
+																		"example": "US",
+																		"description": "The 2 letter alpha country or region code assigned by the International Organization for Standardization (ISO) identifying the country or region for this address of the organization.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country or region code substitutions."
+																	}
+																},
+																"additionalProperties": true
+															},
+															"continentalRegion": {
+																"type": "object",
+																"description": "The details of the continent for this address of the organization.",
+																"properties": {
+																	"name": {
+																		"type": "string",
+																		"example": "North America",
+																		"description": "The name of the continent for this address of the organization.<br/>Possible values<br/>Africa<br/>Asia Pacific<br/>Europe<br/>Latin America<br/>Middle East<br/>North America"
+																	}
+																},
+																"additionalProperties": true
+															},
+															"addressLocality": {
+																"type": "object",
+																"description": "The name of the locality for this address of the organization. Locality defined as a district population cluster. City, town, township, village, borough etc.",
+																"properties": {
+																	"name": {
+																		"type": "string",
+																		"example": "SAN FRANCISCO",
+																		"description": "The name of the locality for this address of the organization. Locality defined as a district population cluster. City, town, township, village, borough etc."
+																	}
+																},
+																"additionalProperties": true
+															},
+															"addressRegion": {
+																"type": "object",
+																"description": "The name of the geographical area for this address of the organization. For Example New Jersey.",
+																"properties": {
+																	"name": {
+																		"type": "string",
+																		"example": "California",
+																		"description": "The name of the geographical area for this address of the organization. For Example New Jersey."
+																	},
+																	"abbreviatedName": {
+																		"type": "string",
+																		"example": "CA",
+																		"description": "The shortened name of the geographical area for this address of the organization. For example NJ for the US State New Jersey within Country United States."
+																	}
+																},
+																"additionalProperties": true
+															},
+															"postalCode": {
+																"type": "string",
+																"example": "941109999",
+																"description": "The postal code for this address of the organization.<br/><br/>Also known locally in various English-speaking countries throughout the world as a postcode, post code, Eircode, PIN or ZIP Code) is a series of letters or digits or both, sometimes including spaces or punctuation, included in a postal address for the purpose of sorting mail. The code is used by the country&#39;s postal authority to identify the address where the organization is located or conducts operations ."
+															},
+															"streetAddress": {
+																"type": "object",
+																"description": "The details of the street address for this address of the organization.",
+																"properties": {
+																	"line1": {
+																		"type": "string",
+																		"example": "492 KOLLER ST",
+																		"description": "The first line of the address where the entity is located.<br/><br/>The first line of this address of the organization. For example The Point in the address<br/><br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																	},
+																	"line2": {
+																		"type": "string",
+																		"example": "Suite 100",
+																		"description": "The second line of this address of the organization.<br/>For example 37 North Wharf Road in the address<br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																	}
+																},
+																"additionalProperties": true
+															}
+														},
+														"additionalProperties": true
+													},
+													"associationType": {
+														"type": "object",
+														"description": "The details of the nature of association of this entity with subject entity.",
+														"properties": {
+															"dnbCode": {
+																"type": "integer",
+																"example": 30488,
+																"description": "A unique code assigned by Dun & Bradstreet to identify the nature of association of this entity with subject entity.<br/>Refer to Reference code table \"511 [Affiliation Type]\" for all possible values."
+															},
+															"description": {
+																"type": "string",
+																"example": "Dealer Alternate Linkage",
+																"description": "The nature of association of this entity with subject entity (e.g., Franchise, Agent)."
+															}
+														},
+														"additionalProperties": true
+													},
+													"franchiseName": {
+														"type": "string",
+														"example": "Franchise",
+														"description": "The franchising branch."
+													},
+													"franchiseID": {
+														"type": "string",
+														"example": "1058890509",
+														"description": "A unique code assigned by Dun & Bradstreet to identify a franchising brand."
+													},
+													"globalUltimate": {
+														"type": "object",
+														"description": "The details of the top most organization in the family tree, tracing each parent up to its own parent. For example, organization A is based in the US and has organization B as its parent also in the US. In turn organization B is owned by organization C, also in the US, which is owned by organization D which is in the UK. Thus, the Global Ultimate of this family tree (and therefore of each member of the family tree) is organization D.",
+														"properties": {
+															"duns": {
+																"type": "string",
+																"example": "804735132",
+																"description": "The unique identification number assigned by Dun and Bradstreet identifying the top most organisation in the family tree."
+															}
+														},
+														"additionalProperties": true
+													}
+												},
+												"additionalProperties": true,
+												"type": "object"
+											}
+										}
+									}
+								}
+							},
+							"additionalProperties": true,
+							"required": [
+								"transactionDetail"
+							]
+						}
+					},
+					"301": {
+						"description": "Moved Permanently",
+						"headers": {
+							"location": {
+								"description": "The URL to retrieve the D-U-N-S Number to which the requested D-U-N-S Number was transferred.",
+								"type": "string",
+								"x-example": "https://plus.dnb.com/v1/data/duns/{dunsNumber}?blockIDs=blockID1,blockID2,blockID3,.."
+							}
+						},
+						"schema": {
+							"description": "",
+							"type": "object",
+							"properties": {}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"description": "The access token provided by authentication.",
+						"required": true,
+						"type": "string",
+						"x-example": "Bearer alphanumerictoken"
+					},
+					{
+						"in": "path",
+						"name": "dunsNumber",
+						"description": "A 9-character numeric string identifying the entity by its Dun & Bradstreet D-U-N-S number.",
+						"required": true,
+						"type": "string",
+						"x-example": "804735132"
+					},
+					{
+						"in": "query",
+						"name": "blockIDs",
+						"description": "The block ID provided by Dun & Bradstreet that identifies the data block to be returned.<br/><br/>Multiple values can be included, separated by commas.",
+						"required": true,
+						"type": "string",
+						"x-example": "blockID"
+					},
+					{
+						"in": "query",
+						"name": "tradeUp",
+						"description": "Indicates if the Headquarters D-U-N-S Number should be returned if a Branch is requested.<br/><br/>Valid values:<br/>* hq: If the provided D-U-N-S Number is a Branch, the Headquarter D-U-N-S Number is returned.<br/>* domhq: If the provided D-U-N-S Number is a Branch, the Domestic Headquarter D-U-N-S Number is returned.<br/><br/>If the requested D-U-N-S Number is not a Branch, that D-U-N-S Number will be returned regardless of the value of this parameter.<br/><br/>If the parameter is omitted, the requested D-U-N-S Number is returned even if it is a Branch.",
+						"required": false,
+						"type": "string",
+						"x-example": "hq"
+					},
+					{
+						"in": "query",
+						"name": "customerReference",
+						"description": "Up to 240 characters for a reference string to be linked to the request in order to support subsequent order reconciliation.",
+						"required": false,
+						"type": "string",
+						"x-example": "customer reference text"
+					}
+				]
+			}
+		}
+	}
+}

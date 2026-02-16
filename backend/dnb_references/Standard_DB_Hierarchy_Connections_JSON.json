@@ -1,0 +1,1464 @@
+{
+	"swagger": "2.0",
+	"host": "plus.dnb.com",
+	"schemes": [
+		"https"
+	],
+	"info": {
+		"description": "The Data Block API is intended to vend Data Blocks to customers transactionally based on a request for a single DUNS.",
+		"title": "Data Blocks",
+		"version": "1"
+	},
+	"basePath": "/",
+	"paths": {
+		"/v1/data/duns/{dunsNumber}": {
+			"x-DNB-Name": "Data Blocks (hierarchyconnections_L1_v1, hierarchyconnections_alternative_v1, hierarchyconnections_eli_v1)",
+			"x-DNB-ID": "dataBlocks",
+			"get": {
+				"description": "The Data Block API is intended to vend Data Blocks to customers transactionally based on a request for a single DUNS.",
+				"summary": "Endpoint",
+				"operationId": "dataBlocks",
+				"x-monitoring": "Available. Please refer <a href=\"/html/guides/Monitor/DataProducts.html\" target=\"_blank\">guide</a> for details.",
+				"x-monitoring-pdf": "Available. Please refer guide for details.",
+				"tags": [
+					"dataBlocks"
+				],
+				"produces": [
+					"application/json;charset=utf-8"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"description": "",
+							"type": "object",
+							"properties": {
+								"transactionDetail": {
+									"type": "object",
+									"description": "The information used to process this request.",
+									"properties": {
+										"transactionID": {
+											"type": "string",
+											"example": "rlh-hi9puyoijk-jop8u-kd-d-1",
+											"description": "A value assigned by the Dun & Bradstreet application to uniquely identify this request."
+										},
+										"transactionTimestamp": {
+											"type": "string",
+											"example": "2017-02-21T17:46:19.839Z",
+											"description": "The date and time, in ISO 8601 UTC Z standard, when this response was created."
+										},
+										"inLanguage": {
+											"type": "string",
+											"example": "en-US",
+											"description": "An IETF BCP 47 code value that defines the language in which this product was rendered."
+										}
+									},
+									"additionalProperties": true,
+									"required": [
+										"inLanguage",
+										"transactionID",
+										"transactionTimestamp"
+									]
+								},
+								"inquiryDetail": {
+									"type": "object",
+									"description": "The criteria used to process this request.",
+									"properties": {
+										"duns": {
+											"type": "string",
+											"example": "804735132",
+											"description": "The D-U-N-S number provided in the request."
+										},
+										"blockIDs": {
+											"type": "array",
+											"description": "The blockIDs provided in the request.",
+											"items": {
+												"example": [
+													"blockID"
+												],
+												"type": "string"
+											}
+										},
+										"tradeUp": {
+											"type": "string",
+											"example": "hq",
+											"description": "The value of the tradeUp parameter provided in the request."
+										},
+										"customerReference": {
+											"type": "string",
+											"example": "Some text to describe the request.",
+											"description": "A reference string provided by the customer for this particular transaction."
+										}
+									},
+									"additionalProperties": true
+								},
+								"blockStatus": {
+									"type": "array",
+									"description": "Records the status of the data blocks requested by the customer.",
+									"items": {
+										"properties": {
+											"blockID": {
+												"type": "string",
+												"example": "blockID",
+												"description": "The unique identifier for the data block."
+											},
+											"status": {
+												"type": "string",
+												"example": "OK",
+												"description": "The current status of the data block fulfilled in this response.<br/><br/>Possible values:<br/>* OK<br/>* Unavailable<br/>* Insufficient data"
+											},
+											"reason": {
+												"type": "string",
+												"example": "Data is not available",
+												"description": "Any specific reason why the data block is not delivered in this response.<br/><br/>Possible values:<br/>* Data is partially available or not available.<br/>* Data is not available for the branch.<br/>* Data is not available on the requested country code."
+											}
+										},
+										"additionalProperties": true,
+										"required": [
+											"blockID",
+											"status"
+										],
+										"type": "object"
+									}
+								},
+								"organization": {
+									"type": "object",
+									"additionalProperties": true,
+									"description": "The details of the entity.",
+									"properties": {
+										"duns": {
+											"type": "string",
+											"example": "804735132",
+											"description": "The D-U-N-S® Number, a proprietary organizational identifier owned and managed by Dun & Bradstreet Inc, provides unique identification of a subject organization, in accordance with the Data Universal Numbering System (D-U-N-S®)."
+										},
+										"countryISOAlpha2Code": {
+											"type": "string",
+											"example": "US",
+											"description": "The two-letter country code, defined by the International Organization for Standardization (ISO) ISO 3166-1 scheme, identifying the country in which the entity is located.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country code substitutions."
+										},
+										"primaryName": {
+											"type": "string",
+											"example": "GORMAN MANUFACTURING COMPANY, INC.",
+											"description": "Single name by which the organization is primarily known or identified."
+										},
+										"corporateLinkage": {
+											"type": "object",
+											"description": "Details of organization to organization relationships based on majority ownership or control (>50%). There are two types of relationships, branch/division to Headquarter and Subsidiary to Parent.",
+											"properties": {
+												"familytreeRolesPlayed": {
+													"type": "array",
+													"description": "The details of the roles the entity plays as a member of an ownership structured family tree.",
+													"items": {
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "Parent/Headquarters",
+																"description": "The role the entity plays as a member of an ownership structured family tree (e.g., a branch, division, a parent, headquarters, subsidiary, global ultimate, domestic ultimate)."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 9141,
+																"description": "A unique code assigned by Dun & Bradstreet to identify describing family tree role.<br/>Refer to Reference code table \"202 [Family Tree Role]\" for all possible values."
+															}
+														},
+														"additionalProperties": true,
+														"type": "object"
+													}
+												},
+												"hierarchyLevel": {
+													"type": "integer",
+													"example": 1,
+													"description": "The number of family-tree levels below the global ultimate the entity is in its corporate hierarchy. The hierarchy level value of the global ultimate will always be 1. Each subsidiary level below the global ultimate is incremented by 1."
+												},
+												"globalUltimateFamilyTreeMembersCount": {
+													"type": "integer",
+													"example": 9000,
+													"description": "The total number of entities in the entity's Family tree starting from Global Ultimate."
+												},
+												"branchesCount": {
+													"type": "integer",
+													"example": 27,
+													"description": "The total number of branch companies that report to the subject in the family tree."
+												},
+												"globalUltimate": {
+													"type": "object",
+													"description": "The details of the top most organization in the family tree, tracing each parent up to its own parent. For example, organization A is based in the US and has organization B as its parent also in the US. In turn organization B is owned by organization C, also in the US, which is owned by organization D which is in the UK. Thus, the Global Ultimate of this family tree (and therefore of each member of the family tree) is organization D.",
+													"properties": {
+														"duns": {
+															"type": "string",
+															"example": "804735132",
+															"description": "The unique identification number assigned by Dun and Bradstreet identifying the top most organisation in the family tree."
+														},
+														"primaryName": {
+															"type": "string",
+															"example": "GORMAN MANUFACTURING COMPANY, INC.",
+															"description": "Single name by which the organization is primarily known or identified."
+														},
+														"primaryAddress": {
+															"type": "object",
+															"description": "The details of the Primary Address at which the organization is located or conducts operations.",
+															"properties": {
+																"addressCountry": {
+																	"type": "object",
+																	"description": "The details of the country or region for this address of the organization.",
+																	"properties": {
+																		"name": {
+																			"type": "string",
+																			"example": "United States",
+																			"description": "The country or region for this address of the organization."
+																		},
+																		"isoAlpha2Code": {
+																			"type": "string",
+																			"example": "US",
+																			"description": "The 2 letter alpha country or region code assigned by the International Organization for Standardization (ISO) identifying the country or region for this address of the organization.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country or region code substitutions."
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"continentalRegion": {
+																	"type": "object",
+																	"description": "The details of the continent for this address of the organization.",
+																	"properties": {
+																		"name": {
+																			"type": "string",
+																			"example": "North America",
+																			"description": "The name of the continent for this address of the organization.<br/>Possible values<br/>Africa<br/>Asia Pacific<br/>Europe<br/>Latin America<br/>Middle East<br/>North America"
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"addressLocality": {
+																	"type": "object",
+																	"description": "The name of the locality for this address of the organization. Locality defined as a district population cluster. City, town, township, village, borough etc.",
+																	"properties": {
+																		"name": {
+																			"type": "string",
+																			"example": "SAN FRANCISCO",
+																			"description": "The name of the locality for this address of the organization. Locality defined as a district population cluster. City, town, township, village, borough etc."
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"addressRegion": {
+																	"type": "object",
+																	"description": "The name of the geographical area for this address of the organization. For Example New Jersey.",
+																	"properties": {
+																		"name": {
+																			"type": "string",
+																			"example": "California",
+																			"description": "The name of the geographical area for this address of the organization. For Example New Jersey."
+																		},
+																		"abbreviatedName": {
+																			"type": "string",
+																			"example": "CA",
+																			"description": "The shortened name of the geographical area for this address of the organization. For example NJ for the US State New Jersey within Country United States."
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"postalCode": {
+																	"type": "string",
+																	"example": "941109999",
+																	"description": "The postal code for this address of the organization.<br/><br/>Also known locally in various English-speaking countries throughout the world as a postcode, post code, Eircode, PIN or ZIP Code) is a series of letters or digits or both, sometimes including spaces or punctuation, included in a postal address for the purpose of sorting mail. The code is used by the country&#39;s postal authority to identify the address where the organization is located or conducts operations ."
+																},
+																"streetAddress": {
+																	"type": "object",
+																	"description": "The details of the street address for this address of the organization.",
+																	"properties": {
+																		"line1": {
+																			"type": "string",
+																			"example": "492 KOLLER ST",
+																			"description": "The first line of the address where the entity is located.<br/><br/>The first line of this address of the organization. For example The Point in the address<br/><br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																		},
+																		"line2": {
+																			"type": "string",
+																			"example": "Suite 100",
+																			"description": "The second line of this address of the organization.<br/>For example 37 North Wharf Road in the address<br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																		}
+																	},
+																	"additionalProperties": true
+																}
+															},
+															"additionalProperties": true
+														}
+													},
+													"additionalProperties": true
+												},
+												"domesticUltimate": {
+													"type": "object",
+													"description": "The details of the highest ranking member of a family tree within the same country/region within a limb of a family.<br/><br/> <br/><br/>For example, Company A is based in the US and has Company B as its parent also in the US. In turn Company B is owned by Company C, also in the US, which is owned by Company D which is in the UK. Thus, the Domestic Ultimate of Company A is actually Company C as this is the last entity in the parent chain that is in the US.",
+													"properties": {
+														"duns": {
+															"type": "string",
+															"example": "804735132",
+															"description": "The D-U-N-S® number of the highest ranking member of a family tree within the same country/region within a limb of a family tree."
+														},
+														"primaryName": {
+															"type": "string",
+															"example": "GORMAN MANUFACTURING COMPANY, INC.",
+															"description": "Single name by which the organization is primarily known or identified."
+														},
+														"primaryAddress": {
+															"type": "object",
+															"description": "The details of the Primary Address at which the organization is located or conducts operations.",
+															"properties": {
+																"addressCountry": {
+																	"type": "object",
+																	"description": "The details of the country or region for this address of the organization.",
+																	"properties": {
+																		"name": {
+																			"type": "string",
+																			"example": "United States",
+																			"description": "The country or region for this address of the organization."
+																		},
+																		"isoAlpha2Code": {
+																			"type": "string",
+																			"example": "US",
+																			"description": "The 2 letter alpha country or region code assigned by the International Organization for Standardization (ISO) identifying the country or region for this address of the organization.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country or region code substitutions."
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"continentalRegion": {
+																	"type": "object",
+																	"description": "The details of the continent for this address of the organization.",
+																	"properties": {
+																		"name": {
+																			"type": "string",
+																			"example": "North America",
+																			"description": "The name of the continent for this address of the organization.<br/>Possible values<br/>Africa<br/>Asia Pacific<br/>Europe<br/>Latin America<br/>Middle East<br/>North America"
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"addressLocality": {
+																	"type": "object",
+																	"description": "The name of the locality for this address of the organization. Locality defined as a district population cluster. City, town, township, village, borough etc.",
+																	"properties": {
+																		"name": {
+																			"type": "string",
+																			"example": "SAN FRANCISCO",
+																			"description": "The name of the locality for this address of the organization. Locality defined as a district population cluster. City, town, township, village, borough etc."
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"addressRegion": {
+																	"type": "object",
+																	"description": "The name of the geographical area for this address of the organization. For Example New Jersey.",
+																	"properties": {
+																		"name": {
+																			"type": "string",
+																			"example": "California",
+																			"description": "The name of the geographical area for this address of the organization. For Example New Jersey."
+																		},
+																		"abbreviatedName": {
+																			"type": "string",
+																			"example": "CA",
+																			"description": "The shortened name of the geographical area for this address of the organization. For example NJ for the US State New Jersey within Country United States."
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"postalCode": {
+																	"type": "string",
+																	"example": "941109999",
+																	"description": "The postal code for this address of the organization.<br/><br/>Also known locally in various English-speaking countries throughout the world as a postcode, post code, Eircode, PIN or ZIP Code) is a series of letters or digits or both, sometimes including spaces or punctuation, included in a postal address for the purpose of sorting mail. The code is used by the country&#39;s postal authority to identify the address where the organization is located or conducts operations ."
+																},
+																"streetAddress": {
+																	"type": "object",
+																	"description": "The details of the street address for this address of the organization.",
+																	"properties": {
+																		"line1": {
+																			"type": "string",
+																			"example": "492 KOLLER ST",
+																			"description": "The first line of the address where the entity is located.<br/><br/>The first line of this address of the organization. For example The Point in the address<br/><br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																		},
+																		"line2": {
+																			"type": "string",
+																			"example": "Suite 100",
+																			"description": "The second line of this address of the organization.<br/>For example 37 North Wharf Road in the address<br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																		}
+																	},
+																	"additionalProperties": true
+																}
+															},
+															"additionalProperties": true
+														}
+													},
+													"additionalProperties": true
+												},
+												"parent": {
+													"type": "object",
+													"description": "The details of the organization that owns more than 50% of the subject organization.",
+													"properties": {
+														"duns": {
+															"type": "string",
+															"example": "804735132",
+															"description": "The D-U-N-S® number of the organization that owns more than 50% of the subject organization."
+														},
+														"primaryName": {
+															"type": "string",
+															"example": "GORMAN MANUFACTURING COMPANY, INC.",
+															"description": "Single name by which the organization is primarily known or identified."
+														},
+														"primaryAddress": {
+															"type": "object",
+															"description": "The details of the Primary Address at which the organization is located or conducts operations.",
+															"properties": {
+																"addressCountry": {
+																	"type": "object",
+																	"description": "The details of the country or region for this address of the organization.",
+																	"properties": {
+																		"name": {
+																			"type": "string",
+																			"example": "United States",
+																			"description": "The country or region for this address of the organization."
+																		},
+																		"isoAlpha2Code": {
+																			"type": "string",
+																			"example": "US",
+																			"description": "The 2 letter alpha country or region code assigned by the International Organization for Standardization (ISO) identifying the country or region for this address of the organization.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country or region code substitutions."
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"continentalRegion": {
+																	"type": "object",
+																	"description": "The details of the continent for this address of the organization.",
+																	"properties": {
+																		"name": {
+																			"type": "string",
+																			"example": "North America",
+																			"description": "The name of the continent for this address of the organization.<br/>Possible values<br/>Africa<br/>Asia Pacific<br/>Europe<br/>Latin America<br/>Middle East<br/>North America"
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"addressLocality": {
+																	"type": "object",
+																	"description": "The name of the locality for this address of the organization. Locality defined as a district population cluster. City, town, township, village, borough etc.",
+																	"properties": {
+																		"name": {
+																			"type": "string",
+																			"example": "SAN FRANCISCO",
+																			"description": "The name of the locality for this address of the organization. Locality defined as a district population cluster. City, town, township, village, borough etc."
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"addressRegion": {
+																	"type": "object",
+																	"description": "The name of the geographical area for this address of the organization. For Example New Jersey.",
+																	"properties": {
+																		"name": {
+																			"type": "string",
+																			"example": "California",
+																			"description": "The name of the geographical area for this address of the organization. For Example New Jersey."
+																		},
+																		"abbreviatedName": {
+																			"type": "string",
+																			"example": "CA",
+																			"description": "The shortened name of the geographical area for this address of the organization. For example NJ for the US State New Jersey within Country United States."
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"postalCode": {
+																	"type": "string",
+																	"example": "941109999",
+																	"description": "The postal code for this address of the organization.<br/><br/>Also known locally in various English-speaking countries throughout the world as a postcode, post code, Eircode, PIN or ZIP Code) is a series of letters or digits or both, sometimes including spaces or punctuation, included in a postal address for the purpose of sorting mail. The code is used by the country&#39;s postal authority to identify the address where the organization is located or conducts operations ."
+																},
+																"streetAddress": {
+																	"type": "object",
+																	"description": "The details of the street address for this address of the organization.",
+																	"properties": {
+																		"line1": {
+																			"type": "string",
+																			"example": "492 KOLLER ST",
+																			"description": "The first line of the address where the entity is located.<br/><br/>The first line of this address of the organization. For example The Point in the address<br/><br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																		},
+																		"line2": {
+																			"type": "string",
+																			"example": "Suite 100",
+																			"description": "The second line of this address of the organization.<br/>For example 37 North Wharf Road in the address<br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																		}
+																	},
+																	"additionalProperties": true
+																}
+															},
+															"additionalProperties": true
+														}
+													},
+													"additionalProperties": true
+												},
+												"headQuarter": {
+													"type": "object",
+													"description": "The details of the organization that serves as the administrative office for its branches.",
+													"properties": {
+														"duns": {
+															"type": "string",
+															"example": "804735132",
+															"description": "The D-U-N-S® number of the Headquarters organization  that serves as the administrative office for its branches."
+														},
+														"primaryName": {
+															"type": "string",
+															"example": "GORMAN MANUFACTURING COMPANY, INC.",
+															"description": "Single name by which the organization is primarily known or identified."
+														},
+														"primaryAddress": {
+															"type": "object",
+															"description": "The details of the Primary Address at which the organization is located or conducts operations.",
+															"properties": {
+																"addressCountry": {
+																	"type": "object",
+																	"description": "The details of the country or region for this address of the organization.",
+																	"properties": {
+																		"name": {
+																			"type": "string",
+																			"example": "United States",
+																			"description": "The country or region for this address of the organization."
+																		},
+																		"isoAlpha2Code": {
+																			"type": "string",
+																			"example": "US",
+																			"description": "The 2 letter alpha country or region code assigned by the International Organization for Standardization (ISO) identifying the country or region for this address of the organization.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country or region code substitutions."
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"continentalRegion": {
+																	"type": "object",
+																	"description": "The details of the continent for this address of the organization.",
+																	"properties": {
+																		"name": {
+																			"type": "string",
+																			"example": "North America",
+																			"description": "The name of the continent for this address of the organization.<br/>Possible values<br/>Africa<br/>Asia Pacific<br/>Europe<br/>Latin America<br/>Middle East<br/>North America"
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"addressLocality": {
+																	"type": "object",
+																	"description": "The name of the locality for this address of the organization. Locality defined as a district population cluster. City, town, township, village, borough etc.",
+																	"properties": {
+																		"name": {
+																			"type": "string",
+																			"example": "SAN FRANCISCO",
+																			"description": "The name of the locality for this address of the organization. Locality defined as a district population cluster. City, town, township, village, borough etc."
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"addressRegion": {
+																	"type": "object",
+																	"description": "The name of the geographical area for this address of the organization. For Example New Jersey.",
+																	"properties": {
+																		"name": {
+																			"type": "string",
+																			"example": "California",
+																			"description": "The name of the geographical area for this address of the organization. For Example New Jersey."
+																		},
+																		"abbreviatedName": {
+																			"type": "string",
+																			"example": "CA",
+																			"description": "The shortened name of the geographical area for this address of the organization. For example NJ for the US State New Jersey within Country United States."
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"postalCode": {
+																	"type": "string",
+																	"example": "941109999",
+																	"description": "The postal code for this address of the organization.<br/><br/>Also known locally in various English-speaking countries throughout the world as a postcode, post code, Eircode, PIN or ZIP Code) is a series of letters or digits or both, sometimes including spaces or punctuation, included in a postal address for the purpose of sorting mail. The code is used by the country&#39;s postal authority to identify the address where the organization is located or conducts operations ."
+																},
+																"streetAddress": {
+																	"type": "object",
+																	"description": "The details of the street address for this address of the organization.",
+																	"properties": {
+																		"line1": {
+																			"type": "string",
+																			"example": "492 KOLLER ST",
+																			"description": "The first line of the address where the entity is located.<br/><br/>The first line of this address of the organization. For example The Point in the address<br/><br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																		},
+																		"line2": {
+																			"type": "string",
+																			"example": "Suite 100",
+																			"description": "The second line of this address of the organization.<br/>For example 37 North Wharf Road in the address<br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																		}
+																	},
+																	"additionalProperties": true
+																}
+															},
+															"additionalProperties": true
+														}
+													},
+													"additionalProperties": true
+												},
+												"branches": {
+													"type": "array",
+													"description": "Records the entities with a valid linkage/association to a business record which is its Headquarters.",
+													"items": {
+														"properties": {
+															"multiLingualNames": {
+																"type": "array",
+																"description": "The details of the name by which the entity is primarily known or identified presented in multiple languages.",
+																"items": {
+																	"properties": {
+																		"name": {
+																			"type": "string",
+																			"example": "ソニー電子（株）",
+																			"description": "The name by which the entity is primarily known or identified."
+																		},
+																		"language": {
+																			"type": "object",
+																			"description": "The details of the language in which this name was recorded.",
+																			"properties": {
+																				"description": {
+																					"type": "string",
+																					"example": "Japanese",
+																					"description": "The language in which this name was recorded."
+																				},
+																				"dnbCode": {
+																					"type": "integer",
+																					"example": 39,
+																					"description": "A unique code assigned by Dun & Bradstreet to identify the language in which this address was recorded.<br/>Refer to Reference code table \"3 [Language]\" for all possible values."
+																				}
+																			},
+																			"additionalProperties": true
+																		}
+																	},
+																	"additionalProperties": true,
+																	"type": "object"
+																}
+															}
+														},
+														"additionalProperties": true,
+														"type": "object"
+													}
+												}
+											},
+											"additionalProperties": true
+										},
+										"industrialPlantsCount": {
+											"type": "integer",
+											"example": 23,
+											"description": "The number of facilities necessary for an industrial or manufacturing operation i.e. the equipment, including machinery, tools, instruments, and fixtures and the buildings containing them."
+										},
+										"affiliates": {
+											"type": "array",
+											"description": "The details of other entities relationships to the subject entity typically identified when the affiliated entity has no legal obligation for the debts of the subject entity (e.g., Franchises, agents, dealers, associations, healthcare networks).",
+											"items": {
+												"properties": {
+													"duns": {
+														"type": "string",
+														"example": "804735132",
+														"description": "The D-U-N-S® Number, a proprietary organizational identifier owned and managed by Dun & Bradstreet Inc, provides unique identification of a subject organization, in accordance with the Data Universal Numbering System (D-U-N-S®)."
+													},
+													"primaryName": {
+														"type": "string",
+														"example": "GORMAN MANUFACTURING COMPANY, INC.",
+														"description": "Single name by which the organization is primarily known or identified."
+													},
+													"primaryAddress": {
+														"type": "object",
+														"description": "The details of the Primary Address at which the organization is located or conducts operations.",
+														"properties": {
+															"addressCountry": {
+																"type": "object",
+																"description": "The details of the country or region for this address of the organization.",
+																"properties": {
+																	"name": {
+																		"type": "string",
+																		"example": "United States",
+																		"description": "The country or region for this address of the organization."
+																	},
+																	"isoAlpha2Code": {
+																		"type": "string",
+																		"example": "US",
+																		"description": "The 2 letter alpha country or region code assigned by the International Organization for Standardization (ISO) identifying the country or region for this address of the organization.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country or region code substitutions."
+																	}
+																},
+																"additionalProperties": true
+															},
+															"continentalRegion": {
+																"type": "object",
+																"description": "The details of the continent for this address of the organization.",
+																"properties": {
+																	"name": {
+																		"type": "string",
+																		"example": "North America",
+																		"description": "The name of the continent for this address of the organization.<br/>Possible values<br/>Africa<br/>Asia Pacific<br/>Europe<br/>Latin America<br/>Middle East<br/>North America"
+																	}
+																},
+																"additionalProperties": true
+															},
+															"addressLocality": {
+																"type": "object",
+																"description": "The name of the locality for this address of the organization. Locality defined as a district population cluster. City, town, township, village, borough etc.",
+																"properties": {
+																	"name": {
+																		"type": "string",
+																		"example": "SAN FRANCISCO",
+																		"description": "The name of the locality for this address of the organization. Locality defined as a district population cluster. City, town, township, village, borough etc."
+																	}
+																},
+																"additionalProperties": true
+															},
+															"addressRegion": {
+																"type": "object",
+																"description": "The name of the geographical area for this address of the organization. For Example New Jersey.",
+																"properties": {
+																	"name": {
+																		"type": "string",
+																		"example": "California",
+																		"description": "The name of the geographical area for this address of the organization. For Example New Jersey."
+																	},
+																	"abbreviatedName": {
+																		"type": "string",
+																		"example": "CA",
+																		"description": "The shortened name of the geographical area for this address of the organization. For example NJ for the US State New Jersey within Country United States."
+																	}
+																},
+																"additionalProperties": true
+															},
+															"postalCode": {
+																"type": "string",
+																"example": "941109999",
+																"description": "The postal code for this address of the organization.<br/><br/>Also known locally in various English-speaking countries throughout the world as a postcode, post code, Eircode, PIN or ZIP Code) is a series of letters or digits or both, sometimes including spaces or punctuation, included in a postal address for the purpose of sorting mail. The code is used by the country&#39;s postal authority to identify the address where the organization is located or conducts operations ."
+															},
+															"streetAddress": {
+																"type": "object",
+																"description": "The details of the street address for this address of the organization.",
+																"properties": {
+																	"line1": {
+																		"type": "string",
+																		"example": "492 KOLLER ST",
+																		"description": "The first line of the address where the entity is located.<br/><br/>The first line of this address of the organization. For example The Point in the address<br/><br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																	},
+																	"line2": {
+																		"type": "string",
+																		"example": "Suite 100",
+																		"description": "The second line of this address of the organization.<br/>For example 37 North Wharf Road in the address<br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																	}
+																},
+																"additionalProperties": true
+															}
+														},
+														"additionalProperties": true
+													},
+													"associationType": {
+														"type": "object",
+														"description": "The details of the nature of association of this entity with subject entity.",
+														"properties": {
+															"dnbCode": {
+																"type": "integer",
+																"example": 30488,
+																"description": "A unique code assigned by Dun & Bradstreet to identify the nature of association of this entity with subject entity.<br/>Refer to Reference code table \"511 [Affiliation Type]\" for all possible values."
+															},
+															"description": {
+																"type": "string",
+																"example": "Dealer Alternate Linkage",
+																"description": "The nature of association of this entity with subject entity (e.g., Franchise, Agent)."
+															}
+														},
+														"additionalProperties": true
+													},
+													"franchiseName": {
+														"type": "string",
+														"example": "Franchise",
+														"description": "The franchising branch."
+													},
+													"franchiseID": {
+														"type": "string",
+														"example": "1058890509",
+														"description": "A unique code assigned by Dun & Bradstreet to identify a franchising brand."
+													},
+													"globalUltimate": {
+														"type": "object",
+														"description": "The details of the top most organization in the family tree, tracing each parent up to its own parent. For example, organization A is based in the US and has organization B as its parent also in the US. In turn organization B is owned by organization C, also in the US, which is owned by organization D which is in the UK. Thus, the Global Ultimate of this family tree (and therefore of each member of the family tree) is organization D.",
+														"properties": {
+															"duns": {
+																"type": "string",
+																"example": "804735132",
+																"description": "The unique identification number assigned by Dun and Bradstreet identifying the top most organisation in the family tree."
+															}
+														},
+														"additionalProperties": true
+													}
+												},
+												"additionalProperties": true,
+												"type": "object"
+											}
+										},
+										"extendedLinkageInsight": {
+											"type": "object",
+											"description": "Records data collected from a Dun & Bradstreet Artificial Intelligence-driven hierarchy solution that utilizes Machine Learning to link businesses as a linkage expert would and capture a wide spectrum of potential relationship including majority ownership, minority ownership, franchise, dealership and much more.",
+											"properties": {
+												"registeredName": {
+													"type": "string",
+													"example": "ABC Corp.",
+													"description": "Records the name of the subject as quoted in the official registry."
+												},
+												"tradeStyleName": {
+													"type": "string",
+													"example": "ABC Co.",
+													"description": "Records the name which an organization trades under for commercial purposes  although its registered  legal name used for contracts and other formal situations may be another name."
+												},
+												"brandName": {
+													"type": "string",
+													"example": "DUN&BRADSTREET",
+													"description": "The brand name of DUNS extracted by Extended Linkage algorithm. For example, if the Business Name is \"The Dun & Bradstreet Corporation\", then Brand Name will be \"DUN&BRADSTREET\"."
+												},
+												"hasBrandNameRecentlyChanged": {
+													"type": "boolean",
+													"example": true,
+													"description": "If true - this indicates that the brand name of the company has changed recently.<br/>If false - this indicates that the brand name of the company has not changed recently."
+												},
+												"countryName": {
+													"type": "string",
+													"example": "United States",
+													"description": "The country name of the company as extarcted by the ELI algorithm."
+												},
+												"isMarketable": {
+													"type": "boolean",
+													"example": true,
+													"description": "Indicates whether the data on the entity satisfies Dun & Bradstreet's marketability rules for Sales & Marketing Solutions products. - If true, the entity data satisfies the marketability rules. - If false, the entity data does not satisfy the marketability rules."
+												},
+												"isMailUndeliverable": {
+													"type": "boolean",
+													"example": false,
+													"description": "When 'true' indicates that it is difficult or impossible to deliver to this address.<br/>When 'false' indicates that mails to this company can be delivered successfully; however as this is the assumed condition there is no requirement to create this tag to represent this fact."
+												},
+												"isOutOfBusiness": {
+													"type": "boolean",
+													"example": false,
+													"description": "Indicates whether an organization is no longer functional or trading. - If true, the organization is neither functional nor trading. - If false, the organization is either functional or trading."
+												},
+												"isDelisted": {
+													"type": "boolean",
+													"example": false,
+													"description": "Indicates whether the entity has requested that they not be included in any Direct marketing lists (e.g., mailing, telephone). - If true, the entity has objected to and MUST NOT receive direct marketing material. - If false, the entity has not objected to receiving direct marketing material"
+												},
+												"linkageSourceCategory": {
+													"type": "integer",
+													"example": 6,
+													"description": "This code indicates the source of linkage:<br/>Code \"9\" is assigned when majority ownership linkage is present.<br/>Code \"8\" is assigned when a local market linkage is present.<br/>Code \"7\" is assigned when an alternative linkage is present.<br/>Codes \"3\" to \"6\" are assigned whenever a modeled relationship is present.            Note: The source codes of 3 - 6 are correlated with ELI Name Evidence, SIC Evidence, Brand Evidence, Phone Evidence, CEO Evidence and etc. The more evidences we've seen in those scores, the higher the source code will be."
+												},
+												"previousMonthLinkageSourceCategory": {
+													"type": "integer",
+													"example": 6,
+													"description": "The linkage source category value from last month."
+												},
+												"primaryIndustryCode": {
+													"type": "object",
+													"description": "Records the details of the primary business activity in which an organization is actively engaged using standardized coding schemes such as European NACE and U.S. Standard Industry Classifications (SIC).",
+													"properties": {
+														"usSicV4": {
+															"type": "string",
+															"example": "2214",
+															"description": "The 4-digit code in the U.S. SIC (Standard Industrial Classification) 1987 system assigned to an organization categorizing the primary business activities performed at its location. For example, 1611 represents the highway and street construction industry."
+														},
+														"hasRecentlyChanged": {
+															"type": "boolean",
+															"example": true,
+															"description": "If true - it indicates that the primary SIC of the company has changed since last month.<br/>If false - it indicates that the primary SIC of the company has not changed since last month."
+														},
+														"previousMonthData": {
+															"type": "object",
+															"description": "Records the primary SIC of the company from last month.",
+															"properties": {
+																"usSicV4": {
+																	"type": "string",
+																	"example": "3310",
+																	"description": "The primary US SIC 4 digit code of the company from last month."
+																}
+															},
+															"additionalProperties": true
+														}
+													},
+													"additionalProperties": true
+												},
+												"associationType": {
+													"type": "object",
+													"description": "Records the type of association and that is intended to provide insights into the nature of the relationship between the entities. it is sourced from alternative linkage when alternative linkage is present. When alternative linkage is not present, type is inferred by the model based on the brand name extracted and the child’s line of business.",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "Agent Alternate Linkage",
+															"description": "Text that indicates the type of association and that is intended to provide insights into the nature of the relationship between the entities. it is sourced from alternative linkage when alternative linkage is present."
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 30487,
+															"description": "A unique code assigned by Dun & Bradstreet that indicates the type of association and that is intended to provide insights into the nature of the relationship between the entities. it is sourced from alternative linkage when alternative linkage is present.<br/>Refer to Reference code table \"511 [Affiliation Type]\" for all possible values."
+														},
+														"previousMonthData": {
+															"type": "object",
+															"description": "Records the association type for the company from previous month.",
+															"properties": {
+																"description": {
+																	"type": "string",
+																	"example": "Agent Alternate Linkage",
+																	"description": "Text that denotes the type of association and that is intended to provide insights into the nature of the relationship between the entities, based on data from last month."
+																},
+																"dnbCode": {
+																	"type": "integer",
+																	"example": 30487,
+																	"description": "A unique code assigned by Dun & Bradstreet, that denotes the type of association and that is intended to provide insights into the nature of the relationship between the entities, based on data from last month.<br/>Refer to Reference code table \"511 [Affiliation Type]\" for all possible values."
+																}
+															},
+															"additionalProperties": true
+														}
+													},
+													"additionalProperties": true
+												},
+												"ownershipPercentage": {
+													"type": "number",
+													"example": 12.5,
+													"description": "The total percentage of the shares (or other instrument of ownership) of the entity directly held/owned by the Shareholder."
+												},
+												"familyTreeCount": {
+													"type": "integer",
+													"example": 145,
+													"description": "The total number of Extended Linkage Family members (i.e. The number of records in whole database with the same Extended Linkage Global Ultimate DUNS Number as the current records.)"
+												},
+												"corporateLinkage": {
+													"type": "object",
+													"description": "Records the relationship between the subject and other entities in the legal family tree with which the subject company is associated. E.g. Its Parent, HQ, Joint Parent or shareholder. Also records names, addresses and registration numbers for the related subject.",
+													"properties": {
+														"hasRecentlyChanged": {
+															"type": "boolean",
+															"example": true,
+															"description": "If true - it indicates that there were changes in the legal linkage of the company<br/>If false - it indicates that there were no changes in the legal linkage of the company"
+														},
+														"familyTreeCount": {
+															"type": "integer",
+															"example": 74,
+															"description": "The total number of the Legal Linkage Family members (i.e. The number of records in whole database with the same Legal Linkage Global Ultimate DUNS Number as the current records.)"
+														},
+														"globalUltimate": {
+															"type": "object",
+															"description": "The details of the top most organization in the family tree, tracing each parent up to its own parent. For example, organization A is based in the US and has organization B as its parent also in the US. In turn organization B is owned by organization C, also in the US, which is owned by organization D which is in the UK. Thus, the Global Ultimate of this family tree (and therefore of each member of the family tree) is organization D",
+															"properties": {
+																"duns": {
+																	"type": "string",
+																	"example": "001785200",
+																	"description": "The unique identification number assigned by Dun and Bradstreet identifying the top most organisation in the family tree."
+																},
+																"name": {
+																	"type": "string",
+																	"example": "ABC Group",
+																	"description": "Single name by which the organization is primarily known or identified."
+																},
+																"primaryAddress": {
+																	"type": "object",
+																	"description": "The details of the Primary Address at which the organization is located or conducts operations.",
+																	"properties": {
+																		"addressCountry": {
+																			"type": "object",
+																			"description": "The details of the country or region where the address of the organization is located or conducts operations.",
+																			"properties": {
+																				"name": {
+																					"type": "string",
+																					"example": "United States",
+																					"description": "The Country or Region where the organization's Primary Address is located or conducts operations ."
+																				}
+																			},
+																			"additionalProperties": true
+																		}
+																	},
+																	"additionalProperties": true
+																}
+															},
+															"additionalProperties": true
+														}
+													},
+													"additionalProperties": true
+												},
+												"globalUltimate": {
+													"type": "object",
+													"description": "Records details of the Global Ultimate that is within the Extended Linkage Family.",
+													"properties": {
+														"duns": {
+															"type": "string",
+															"example": "005438890",
+															"description": "The Duns number of the Global Ultimate that is within the Extended Linkage Family."
+														},
+														"name": {
+															"type": "string",
+															"example": "Lawson Products, Inc.",
+															"description": "The business name of the Global Ultimate that is within the Extended Linkage Family."
+														},
+														"primaryAddress": {
+															"type": "object",
+															"description": "The details of the single primary or physical address of the global ultimate within this Extended family tree.",
+															"properties": {
+																"addressCountry": {
+																	"type": "object",
+																	"description": "The details of the country or region in which this address is located.",
+																	"properties": {
+																		"name": {
+																			"type": "string",
+																			"example": "United States",
+																			"description": "The name of the country or region in which this address is located."
+																		}
+																	},
+																	"additionalProperties": true
+																}
+															},
+															"additionalProperties": true
+														},
+														"hasRecentlyChanged": {
+															"type": "boolean",
+															"example": true,
+															"description": "If true - indicates that there was a change in the ELI Global Ultimate information compared to last month<br/>If false - indicates that there was no change in the ELI Global Ultimate information compared to last month"
+														},
+														"previousMonthData": {
+															"type": "object",
+															"description": "Records the data from previous month.",
+															"properties": {
+																"duns": {
+																	"type": "string",
+																	"example": "007841800",
+																	"description": "The DUNS number of the Global Ultimate that is within the Extended Linkage Family from previous month."
+																}
+															},
+															"additionalProperties": true
+														}
+													},
+													"additionalProperties": true
+												},
+												"domesticUltimate": {
+													"type": "object",
+													"description": "Records details of the Domestic Ultimate that is within the Extended Linkage Family.",
+													"properties": {
+														"duns": {
+															"type": "string",
+															"example": "005438890",
+															"description": "The Duns number of the Domestic Ultimate that is within the Extended Linkage Family."
+														},
+														"name": {
+															"type": "string",
+															"example": "Lawson Products, Inc.",
+															"description": "The business name of the Domestic Ultimate that is within the Extended Linkage Family."
+														},
+														"primaryAddress": {
+															"type": "object",
+															"description": "The details of the single primary or physical address of the domestic ultimate within this Extended family tree.",
+															"properties": {
+																"addressCountry": {
+																	"type": "object",
+																	"description": "The details of the country or region in which this address is located.",
+																	"properties": {
+																		"name": {
+																			"type": "string",
+																			"example": "United States",
+																			"description": "The name of the country or region in which this address is located."
+																		}
+																	},
+																	"additionalProperties": true
+																}
+															},
+															"additionalProperties": true
+														},
+														"hasRecentlyChanged": {
+															"type": "boolean",
+															"example": true,
+															"description": "If true - indicates that there was a change in the ELI Domestic Ultimate information compared to last month<br/>If false - indicates that there was no change in the ELI Domestic Ultimate information compared to last month"
+														},
+														"previousMonthData": {
+															"type": "object",
+															"description": "Records the data from previous month.",
+															"properties": {
+																"duns": {
+																	"type": "string",
+																	"example": "007841800",
+																	"description": "The DUNS number of the Domestic Ultimate that is within the Extended Linkage Family from previous month."
+																}
+															},
+															"additionalProperties": true
+														}
+													},
+													"additionalProperties": true
+												},
+												"parent": {
+													"type": "object",
+													"description": "Records details of the Parent that is within the Extended Linkage Family",
+													"properties": {
+														"duns": {
+															"type": "string",
+															"example": "005438890",
+															"description": "The DUNS number of the Parent that is within the Extended Linkage Family"
+														},
+														"name": {
+															"type": "string",
+															"example": "Lawson Products, Inc.",
+															"description": "The business name of the Parent that is within the Extended Linkage Family"
+														},
+														"primaryAddress": {
+															"type": "object",
+															"description": "The details of the single primary or physical address of the parent company within this Extended family tree.",
+															"properties": {
+																"addressCountry": {
+																	"type": "object",
+																	"description": "The details of the country or region in which this address is located.",
+																	"properties": {
+																		"name": {
+																			"type": "string",
+																			"example": "United States",
+																			"description": "The name of the country or region in which this address is located."
+																		}
+																	},
+																	"additionalProperties": true
+																}
+															},
+															"additionalProperties": true
+														},
+														"hasRecentlyChanged": {
+															"type": "boolean",
+															"example": true,
+															"description": "If true - indicates that there was a change in the ELI parent information compared to last month<br/>If false - indicates that there was no change in the ELI parent information compared to last month"
+														},
+														"previousMonthData": {
+															"type": "object",
+															"description": "Records the data from previous month.",
+															"properties": {
+																"duns": {
+																	"type": "string",
+																	"example": "007841800",
+																	"description": "The DUNS number of the parent that is within the Extended Linkage Family from previous month."
+																}
+															},
+															"additionalProperties": true
+														}
+													},
+													"additionalProperties": true
+												},
+												"nameEvidenceStrength": {
+													"type": "object",
+													"description": "Records the level of the model outcome that supports the family tree information derived using name.",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "Moderate",
+															"description": "Text denoting the level of the model outcome that supports the family tree information derived using name."
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 13695,
+															"description": "A unique code assigned by Dun & Bradstreet indicating the level of the model outcome that supports the family tree information derived using name.<br/>Refer to Reference code table \"354 [Range Position]\" for all possible values."
+														}
+													},
+													"additionalProperties": true
+												},
+												"brandEvidenceStrength": {
+													"type": "object",
+													"description": "Records the level of the model outcome that supports the family tree information derived using brand name.",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "Moderate",
+															"description": "Text denoting the level of the model outcome that supports the family tree information derived using brand name."
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 13695,
+															"description": "A unique code assigned by Dun & Bradstreet indicating the level of the model outcome that supports the family tree information derived using brand name.<br/>Refer to Reference code table \"354 [Range Position]\" for all possible values."
+														}
+													},
+													"additionalProperties": true
+												},
+												"industryEvidenceStrength": {
+													"type": "object",
+													"description": "Records the level of the model outcome that supports the family tree information derived using industry code.",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "Moderate",
+															"description": "Text denoting the level of the model outcome that supports the family tree information derived using industry code."
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 13695,
+															"description": "A unique code assigned by Dun & Bradstreet indicating the level of the model outcome that supports the family tree information derived using industry code.<br/>Refer to Reference code table \"354 [Range Position]\" for all possible values."
+														}
+													},
+													"additionalProperties": true
+												},
+												"locationEvidenceStrength": {
+													"type": "object",
+													"description": "Records the level of the model outcome that supports the family tree information derived using address.",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "Moderate",
+															"description": "Text denoting the level of the model outcome that supports the family tree information derived using address."
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 13695,
+															"description": "A unique code assigned by Dun & Bradstreet indicating the level of the model outcome that supports the family tree information derived using address.<br/>Refer to Reference code table \"354 [Range Position]\" for all possible values."
+														}
+													},
+													"additionalProperties": true
+												},
+												"ceoEvidenceStrength": {
+													"type": "object",
+													"description": "Records the level of the model outcome that supports the family tree information derived using most senior principal data.",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "Moderate",
+															"description": "Text denoting the level of the model outcome that supports the family tree information derived using most senior principal data."
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 13695,
+															"description": "A unique code assigned by Dun & Bradstreet indicating the level of the model outcome that supports the family tree information derived using most senior principal data.<br/>Refer to Reference code table \"354 [Range Position]\" for all possible values."
+														}
+													},
+													"additionalProperties": true
+												},
+												"principalNameEvidenceStrength": {
+													"type": "object",
+													"description": "Records the level of the model outcome that supports the family tree information derived using current principal data.",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "Moderate",
+															"description": "Text denoting the level of the model outcome that supports the family tree information derived using current principal data."
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 13695,
+															"description": "A unique code assigned by Dun & Bradstreet indicating the level of the model outcome that supports the family tree information derived using current principal data.<br/>Refer to Reference code table \"354 [Range Position]\" for all possible values."
+														}
+													},
+													"additionalProperties": true
+												},
+												"telephoneEvidenceStrength": {
+													"type": "object",
+													"description": "Records the level of the model outcome that supports the family tree information derived using telephone information.",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "Moderate",
+															"description": "Text denoting the level of the model outcome that supports the family tree information derived using telephone information."
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 13695,
+															"description": "A unique code assigned by Dun & Bradstreet indicating the level of the model outcome that supports the family tree information derived using telephone information.<br/>Refer to Reference code table \"354 [Range Position]\" for all possible values."
+														}
+													},
+													"additionalProperties": true
+												},
+												"webDomainEvidenceStrength": {
+													"type": "object",
+													"description": "Records the level of the model outcome that supports the family tree information derived using website domain information.",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "Moderate",
+															"description": "Text denoting the level of the model outcome that supports the family tree information derived using website domain information."
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 13695,
+															"description": "A unique code assigned by Dun & Bradstreet indicating the level of the model outcome that supports the family tree information derived using website domain information.<br/>Refer to Reference code table \"354 [Range Position]\" for all possible values."
+														}
+													},
+													"additionalProperties": true
+												},
+												"webPageEvidenceStrength": {
+													"type": "object",
+													"description": "Records the level of the model outcome that supports the family tree information derived using website home page information.",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "Moderate",
+															"description": "Text denoting the level of the model outcome that supports the family tree information derived using website home page information."
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 13695,
+															"description": "A unique code assigned by Dun & Bradstreet indicating the level of the model outcome that supports the family tree information derived using website home page information..<br/>Refer to Reference code table \"354 [Range Position]\" for all possible values."
+														}
+													},
+													"additionalProperties": true
+												},
+												"financialReportEvidenceStrength": {
+													"type": "object",
+													"description": "Records the level of the model outcome that supports the family tree information derived using financial statements.",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "Moderate",
+															"description": "Text denoting the level of the model outcome that supports the family tree information derived using financial statements."
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 13695,
+															"description": "A unique code assigned by Dun & Bradstreet indicating the level of the model outcome that supports the family tree information derived using financial statements..<br/>Refer to Reference code table \"354 [Range Position]\" for all possible values."
+														}
+													},
+													"additionalProperties": true
+												},
+												"wikipediaEvidenceStrength": {
+													"type": "object",
+													"description": "Records the level of the model outcome that supports the family tree information derived using company's Wikipedia web page.",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "Moderate",
+															"description": "Text denoting the level of the model outcome that supports the family tree information derived using company's Wikipedia web page."
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 13695,
+															"description": "A unique code assigned by Dun & Bradstreet indicating the level of the model outcome that supports the family tree information derived using company's Wikipedia web page.<br/>Refer to Reference code table \"354 [Range Position]\" for all possible values."
+														}
+													},
+													"additionalProperties": true
+												},
+												"feedbackEvidenceStrength": {
+													"type": "object",
+													"description": "Records the level of the model outcome that supports the family tree information derived using D&B internal expert or customer feedback.",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "Moderate",
+															"description": "Text denoting the level of the model outcome that supports the family tree information derived using D&B internal expert or customer feedback."
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 13695,
+															"description": "A unique code assigned by Dun & Bradstreet indicating the level of the model outcome that supports the family tree information derived using D&B internal expert or customer feedback.<br/>Refer to Reference code table \"354 [Range Position]\" for all possible values."
+														}
+													},
+													"additionalProperties": true
+												},
+												"alternateLinkage": {
+													"type": "object",
+													"description": "Records information pertaining to a company's shareholding and the various association types between the companies for E.g., franchise relationships, dealer relationships, agent relationships etc.",
+													"properties": {
+														"hasRecentlyChanged": {
+															"type": "boolean",
+															"example": true,
+															"description": "If true - indicates that there is change in the alternate linkage information of the company.<br/>If false - indicates that there is no change in the alternate linkage information of the company."
+														},
+														"operationalGlobalUltimate": {
+															"type": "array",
+															"description": "Records the operational Global Ultimate details.",
+															"items": {
+																"properties": {
+																	"duns": {
+																		"type": "string",
+																		"example": "217387004",
+																		"description": "The DUNS Number of the operational Global Ultimate."
+																	}
+																},
+																"additionalProperties": true,
+																"type": "object"
+															}
+														},
+														"shareOwnership": {
+															"type": "array",
+															"description": "Records information on all the share ownerships held by the person or business.",
+															"items": {
+																"properties": {
+																	"duns": {
+																		"type": "string",
+																		"example": "217387004",
+																		"description": "The DUNS Number of the shareholder."
+																	},
+																	"ownershipPercentage": {
+																		"type": "number",
+																		"example": 32.5,
+																		"description": "A number specifying what percentage of shares in the subject organization are owned by the person or organization."
+																	}
+																},
+																"additionalProperties": true,
+																"type": "object"
+															}
+														}
+													},
+													"additionalProperties": true
+												}
+											},
+											"additionalProperties": true
+										}
+									}
+								}
+							},
+							"additionalProperties": true,
+							"required": [
+								"transactionDetail"
+							]
+						}
+					},
+					"301": {
+						"description": "Moved Permanently",
+						"headers": {
+							"location": {
+								"description": "The URL to retrieve the D-U-N-S Number to which the requested D-U-N-S Number was transferred.",
+								"type": "string",
+								"x-example": "https://plus.dnb.com/v1/data/duns/{dunsNumber}?blockIDs=blockID1,blockID2,blockID3,.."
+							}
+						},
+						"schema": {
+							"description": "",
+							"type": "object",
+							"properties": {}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"description": "The access token provided by authentication.",
+						"required": true,
+						"type": "string",
+						"x-example": "Bearer alphanumerictoken"
+					},
+					{
+						"in": "path",
+						"name": "dunsNumber",
+						"description": "A 9-character numeric string identifying the entity by its Dun & Bradstreet D-U-N-S number.",
+						"required": true,
+						"type": "string",
+						"x-example": "804735132"
+					},
+					{
+						"in": "query",
+						"name": "blockIDs",
+						"description": "The block ID provided by Dun & Bradstreet that identifies the data block to be returned.<br/><br/>Multiple values can be included, separated by commas.",
+						"required": true,
+						"type": "string",
+						"x-example": "blockID"
+					},
+					{
+						"in": "query",
+						"name": "tradeUp",
+						"description": "Indicates if the Headquarters D-U-N-S Number should be returned if a Branch is requested.<br/><br/>Valid values:<br/>* hq: If the provided D-U-N-S Number is a Branch, the Headquarter D-U-N-S Number is returned.<br/>* domhq: If the provided D-U-N-S Number is a Branch, the Domestic Headquarter D-U-N-S Number is returned.<br/><br/>If the requested D-U-N-S Number is not a Branch, that D-U-N-S Number will be returned regardless of the value of this parameter.<br/><br/>If the parameter is omitted, the requested D-U-N-S Number is returned even if it is a Branch.",
+						"required": false,
+						"type": "string",
+						"x-example": "hq"
+					},
+					{
+						"in": "query",
+						"name": "customerReference",
+						"description": "Up to 240 characters for a reference string to be linked to the request in order to support subsequent order reconciliation.",
+						"required": false,
+						"type": "string",
+						"x-example": "customer reference text"
+					}
+				]
+			}
+		}
+	}
+}

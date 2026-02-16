@@ -1,0 +1,61 @@
+{
+	"transactionDetail": {
+		"transactionID": "rrt-003d03e919bd5f898-a-wo-20807-18046005-32",
+		"transactionTimestamp": "2020-03-23T12:17:35.982Z",
+		"inLanguage": "en-US"
+	},
+	"inquiryDetail": {
+		"duns": "804735132",
+		"blockIDs": [
+			"hierarchyconnections_alternative_v1"
+		]
+	},
+	"organization": {
+		"countryISOAlpha2Code": "US",
+		"duns": "804735132",
+		"primaryName": "Gorman Manufacturing Company, Inc.",
+		"affiliates": [
+			{
+				"duns": "804735132",
+				"primaryName": "Gorman Manufacturing",
+				"primaryAddress": {
+					"addressCountry": {
+						"name": "United States",
+						"isoAlpha2Code": "US"
+					},
+					"continentalRegion": {
+						"name": "North America"
+					},
+					"addressLocality": {
+						"name": "San Francisco"
+					},
+					"addressRegion": {
+						"name": "California",
+						"abbreviatedName": "CA"
+					},
+					"postalCode": "94110",
+					"streetAddress": {
+						"line1": "492 Koller St",
+						"line2": "Suite 100"
+					}
+				},
+				"associationType": {
+					"dnbCode": 30486,
+					"description": "Franchise"
+				},
+				"franchiseName": "Franchise",
+				"franchiseID": "1058890509",
+				"globalUltimate": {
+					"duns": "123456789"
+				}
+			}
+		]
+	},
+	"blockStatus": [
+		{
+			"blockID": "hierarchyconnections_alternative_v1",
+			"status": "ok",
+			"reason": null
+		}
+	]
+}

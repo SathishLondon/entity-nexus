@@ -1,0 +1,73 @@
+{
+	"transactionDetail": {
+		"transactionID": "rrt-003d03e919bd5f898-a-wo-20806-18019589-13",
+		"transactionTimestamp": "2020-03-23T10:32:42.319Z",
+		"inLanguage": "en-US"
+	},
+	"inquiryDetail": {
+		"duns": "804735132",
+		"blockIDs": [
+			"principalscontacts_L1_v2"
+		]
+	},
+	"organization": {
+		"countryISOAlpha2Code": "US",
+		"duns": "804735132",
+		"primaryName": "Gorman Manufacturing Company, Inc.",
+		"mostSeniorPrincipal": {
+			"givenName": "Leslie",
+			"middleName": "Ann",
+			"familyName": "Smith",
+			"fullName": "Leslie Smith",
+			"namePrefix": "Dr.",
+			"nameSuffix": "PhD",
+			"associationStartDate": "2013-09-30",
+			"gender": {
+				"description": "Female",
+				"dnbCode": 191
+			},
+			"otherLanguageNames": [
+				{
+					"givenName": "アンソニー",
+					"familyName": "ヴィンシクエラ",
+					"fullName": "Leslie Smith",
+					"language": {
+						"description": "Japanese",
+						"dnbCode": 3807
+					},
+					"writingScript": {
+						"description": "Kana",
+						"dnbCode": 19347
+					}
+				}
+			],
+			"jobTitles": [
+				{
+					"title": "President"
+				}
+			],
+			"managementResponsibilities": [
+				{
+					"description": "President",
+					"mrcCode": "A1A6"
+				}
+			],
+			"idNumbers": [
+				{
+					"idNumber": "11356097",
+					"idType": {
+						"description": "Super Person ID",
+						"dnbCode": 11694
+					}
+				}
+			]
+		}
+	},
+	"blockStatus": [
+		{
+			"blockID": "principalscontacts_L1_v2",
+			"status": "ok",
+			"reason": null
+		}
+	]
+}

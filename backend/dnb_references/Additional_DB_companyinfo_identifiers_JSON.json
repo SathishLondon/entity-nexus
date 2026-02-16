@@ -1,0 +1,610 @@
+{
+	"swagger": "2.0",
+	"host": "plus.dnb.com",
+	"schemes": [
+		"https"
+	],
+	"info": {
+		"description": "The Data Block API is intended to vend Data Blocks to customers transactionally based on a request for a single DUNS.",
+		"title": "Data Blocks",
+		"version": "1"
+	},
+	"basePath": "/",
+	"paths": {
+		"/v1/data/duns/{dunsNumber}": {
+			"x-DNB-Name": "Data Blocks (companyinfo_identifiers_v1)",
+			"x-DNB-ID": "dataBlocks",
+			"get": {
+				"description": "The Data Block API is intended to vend Data Blocks to customers transactionally based on a request for a single DUNS.",
+				"summary": "Endpoint",
+				"operationId": "dataBlocks",
+				"x-monitoring": "Available. Please refer <a href=\"/html/guides/Monitor/DataProducts.html\" target=\"_blank\">guide</a> for details.",
+				"x-monitoring-pdf": "Available. Please refer guide for details.",
+				"tags": [
+					"dataBlocks"
+				],
+				"produces": [
+					"application/json;charset=utf-8"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"description": "",
+							"type": "object",
+							"properties": {
+								"transactionDetail": {
+									"type": "object",
+									"description": "The information used to process this request.",
+									"properties": {
+										"transactionID": {
+											"type": "string",
+											"example": "rlh-hi9puyoijk-jop8u-kd-d-1",
+											"description": "A value assigned by the Dun & Bradstreet application to uniquely identify this request."
+										},
+										"transactionTimestamp": {
+											"type": "string",
+											"example": "2017-02-21T17:46:19.839Z",
+											"description": "The date and time, in ISO 8601 UTC Z standard, when this response was created."
+										},
+										"inLanguage": {
+											"type": "string",
+											"example": "en-US",
+											"description": "An IETF BCP 47 code value that defines the language in which this product was rendered."
+										}
+									},
+									"additionalProperties": true,
+									"required": [
+										"inLanguage",
+										"transactionID",
+										"transactionTimestamp"
+									]
+								},
+								"inquiryDetail": {
+									"type": "object",
+									"description": "The criteria used to process this request.",
+									"properties": {
+										"duns": {
+											"type": "string",
+											"example": "804735132",
+											"description": "The D-U-N-S number provided in the request."
+										},
+										"blockIDs": {
+											"type": "array",
+											"description": "The blockIDs provided in the request.",
+											"items": {
+												"example": [
+													"blockID"
+												],
+												"type": "string"
+											}
+										},
+										"tradeUp": {
+											"type": "string",
+											"example": "hq",
+											"description": "The value of the tradeUp parameter provided in the request."
+										},
+										"customerReference": {
+											"type": "string",
+											"example": "Some text to describe the request.",
+											"description": "A reference string provided by the customer for this particular transaction."
+										}
+									},
+									"additionalProperties": true
+								},
+								"blockStatus": {
+									"type": "array",
+									"description": "Records the status of the data blocks requested by the customer.",
+									"items": {
+										"properties": {
+											"blockID": {
+												"type": "string",
+												"example": "blockID",
+												"description": "The unique identifier for the data block."
+											},
+											"status": {
+												"type": "string",
+												"example": "OK",
+												"description": "The current status of the data block fulfilled in this response.<br/><br/>Possible values:<br/>* OK<br/>* Unavailable<br/>* Insufficient data"
+											},
+											"reason": {
+												"type": "string",
+												"example": "Data is not available",
+												"description": "Any specific reason why the data block is not delivered in this response.<br/><br/>Possible values:<br/>* Data is partially available or not available.<br/>* Data is not available for the branch.<br/>* Data is not available on the requested country code."
+											}
+										},
+										"additionalProperties": true,
+										"required": [
+											"blockID",
+											"status"
+										],
+										"type": "object"
+									}
+								},
+								"organization": {
+									"type": "object",
+									"additionalProperties": true,
+									"description": "The details of the entity.",
+									"properties": {
+										"duns": {
+											"type": "string",
+											"example": "804735132",
+											"description": "The D-U-N-S® Number, a proprietary organizational identifier owned and managed by Dun & Bradstreet Inc, provides unique identification of a subject organization, in accordance with the Data Universal Numbering System (D-U-N-S®)."
+										},
+										"countryISOAlpha2Code": {
+											"type": "string",
+											"example": "US",
+											"description": "The two-letter country code, defined by the International Organization for Standardization (ISO) ISO 3166-1 scheme, identifying the country in which the entity is located.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country code substitutions."
+										},
+										"primaryName": {
+											"type": "string",
+											"example": "GORMAN MANUFACTURING COMPANY, INC.",
+											"description": "Single name by which the organization is primarily known or identified."
+										},
+										"legalEntityIdentifierDetails": {
+											"type": "object",
+											"description": "Records the details of the Legal Entity Identifier assigned to this organization.",
+											"properties": {
+												"entityID": {
+													"type": "string",
+													"example": "984500D4EEDADDF92B49",
+													"description": "The Legal Entity Identifier (LEI) is a 20-character, alpha-numeric code based on the ISO 17442 standard developed by the International Organization for Standardization (ISO)."
+												},
+												"legalName": {
+													"type": "string",
+													"example": "",
+													"description": "The legal name of the legal entity."
+												},
+												"legalNameLanguage": {
+													"type": "object",
+													"description": "Records the language used to present the legal name of the organization.",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "English",
+															"description": "Text that denotes the language used to present the legal name of the organization."
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 39,
+															"description": "A unique code assigned by Dun&Bradstreet that denotes the language used to present the legal name of the organization.<br/>Refer to Reference code table \"3 [Language]\" for all possible values."
+														},
+														"languageTag": {
+															"type": "string",
+															"example": "en-GB",
+															"description": "The language of this element's text content. An IETF Language Code conforming to the latest RFC from IETF BCP 47."
+														}
+													},
+													"additionalProperties": true
+												},
+												"legalAddress": {
+													"type": "object",
+													"description": "The address of the legal entity as recorded in the registration of the legal entity in its legal jurisdiction.",
+													"properties": {
+														"language": {
+															"type": "object",
+															"description": "Records the language used to present the legal address of the organization.",
+															"properties": {
+																"description": {
+																	"type": "string",
+																	"example": "English",
+																	"description": "Text that denotes the language used to present the legal address of the organization."
+																},
+																"dnbCode": {
+																	"type": "integer",
+																	"example": 39,
+																	"description": "A unique code assigned by Dun&Bradstreet that denotes the language used to present the legal address of the organization.<br/>Refer to Reference code table \"3 [Language]\" for all possible values."
+																},
+																"languageTag": {
+																	"type": "string",
+																	"example": "en-GB",
+																	"description": "The language of this element's text content. An IETF Language Code conforming to the latest RFC from IETF BCP 47."
+																}
+															},
+															"additionalProperties": true
+														},
+														"addressCountry": {
+															"type": "object",
+															"description": "Records the details of the country or region in which the business is located.",
+															"properties": {
+																"name": {
+																	"type": "string",
+																	"example": "United Kingdom",
+																	"description": "Text recording the name of the country or region in which the business is located."
+																},
+																"isoAlpha2Code": {
+																	"type": "string",
+																	"example": "GB",
+																	"description": "The two-letter country or region code, defined by the International Organization for Standardization (ISO) ISO 3166-1 scheme identifying the country or region of the business entity.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country or region code substitutions."
+																}
+															},
+															"additionalProperties": true
+														},
+														"addressLocality": {
+															"type": "object",
+															"description": "Records the details of a city, town, township, village, borough, etc. where the business is located.",
+															"properties": {
+																"name": {
+																	"type": "string",
+																	"example": "DONCASTER",
+																	"description": "Identifies the city, town, township, village, borough, etc. where the business is located."
+																}
+															},
+															"additionalProperties": true
+														},
+														"addressRegion": {
+															"type": "object",
+															"description": "Details of the type of geographical area for this address of the organization.<br/>Different markets have their own way of subdividing the country into smaller parts.",
+															"properties": {
+																"isoSubDivisionCode": {
+																	"type": "string",
+																	"example": "US-CA",
+																	"description": "The code assigned by ISO that represents the name of a principal subdivision (e.g province or state) of countries coded in ISO 3166-1.  This code is based on the two-letter code element from ISO 3166-1 followed by a separator and up to three alphanumeric characters."
+																},
+																"isoSubDivisionName": {
+																	"type": "string",
+																	"example": "California",
+																	"description": "The official name of a principal subdivision (e.g province or state) of countries coded in ISO 3166-1."
+																}
+															},
+															"additionalProperties": true
+														},
+														"postalCode": {
+															"type": "string",
+															"example": "950142083",
+															"description": "An identifier used by the local country Postal Authority to identify where the business is located."
+														},
+														"mailRouting": {
+															"type": "string",
+															"example": "c/o JPMORGAN FUNDS LIMITED",
+															"description": "Text address line to hold content from other address lines containing explicit routing information (this element's presence indicates that this address is a routing / \"care of\" address."
+														},
+														"streetNumber": {
+															"type": "string",
+															"example": "1",
+															"description": "Additional structured version of an external house number, or range of numbers, contained in one of the address line elements. This could be a numeral, a letter or code made up of mixed characters (e.g. 221B)."
+														},
+														"buildingNumber": {
+															"type": "string",
+															"example": "5AD",
+															"description": "Additional structured version of an internal location number, or range of numbers, contained in one of the address line elements.This could be a numeral, a letter or code made up of mixed characters (e.g. 13) of a floor, suite or apartment within a building identified."
+														},
+														"streetAddress": {
+															"type": "object",
+															"description": "The details of the street address for this address of the organization.",
+															"properties": {
+																"line1": {
+																	"type": "string",
+																	"example": "1 INFINITE LOOP",
+																	"description": "The first line of the address where the entity is located.<br/><br/>The first line of this address of the organization. For example The Point in the address<br/><br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																},
+																"line2": {
+																	"type": "string",
+																	"example": "37 North Wharf Road",
+																	"description": "The second line of this address of the organization.<br/>For example 37 North Wharf Road in the address<br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																},
+																"line3": {
+																	"type": "string",
+																	"example": "London",
+																	"description": "The third line of the organization's official address. For example  London in the address<br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																},
+																"line4": {
+																	"type": "string",
+																	"example": "W2 1AF",
+																	"description": "The  fourth line of the organization's official address. For example W2 1AF in the address<br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																}
+															},
+															"additionalProperties": true
+														}
+													},
+													"additionalProperties": true
+												},
+												"headQuarterAddress": {
+													"type": "object",
+													"description": "The  address of the headquarters of the legal entity.",
+													"properties": {
+														"language": {
+															"type": "object",
+															"description": "Records the language used to present the legal address of the organization.",
+															"properties": {
+																"description": {
+																	"type": "string",
+																	"example": "English",
+																	"description": "Text that denotes the language used to present the legal address of the organization."
+																},
+																"dnbCode": {
+																	"type": "integer",
+																	"example": 39,
+																	"description": "A unique code assigned by Dun&Bradstreet that denotes the language used to present the legal address of the organization.<br/>Refer to Reference code table \"3 [Language]\" for all possible values."
+																},
+																"languageTag": {
+																	"type": "string",
+																	"example": "en-GB",
+																	"description": "The language of this element's text content. An IETF Language Code conforming to the latest RFC from IETF BCP 47."
+																}
+															},
+															"additionalProperties": true
+														},
+														"addressCountry": {
+															"type": "object",
+															"description": "Records the details of the country or region in which the business is located.",
+															"properties": {
+																"name": {
+																	"type": "string",
+																	"example": "United Kingdom",
+																	"description": "Text recording the name of the country or region in which the business is located."
+																},
+																"isoAlpha2Code": {
+																	"type": "string",
+																	"example": "GB",
+																	"description": "The two-letter country code, defined by the International Organization for Standardization (ISO) ISO 3166-1 scheme identifying the country or region of the business entity.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country or region code substitutions."
+																}
+															},
+															"additionalProperties": true
+														},
+														"addressLocality": {
+															"type": "object",
+															"description": "Records the details of a city, town, township, village, borough, etc. where the business is located.",
+															"properties": {
+																"name": {
+																	"type": "string",
+																	"example": "DONCASTER",
+																	"description": "Identifies the city, town, township, village, borough, etc. where the business is located."
+																}
+															},
+															"additionalProperties": true
+														},
+														"addressRegion": {
+															"type": "object",
+															"description": "Details of the type of geographical area for this address of the organization.<br/>Different markets have their own way of subdividing the country into smaller parts.",
+															"properties": {
+																"isoSubDivisionCode": {
+																	"type": "string",
+																	"example": "US-CA",
+																	"description": "The code assigned by ISO that represents the name of a principal subdivision (e.g province or state) of countries coded in ISO 3166-1.  This code is based on the two-letter code element from ISO 3166-1 followed by a separator and up to three alphanumeric characters."
+																},
+																"isoSubDivisionName": {
+																	"type": "string",
+																	"example": "California",
+																	"description": "The official name of a principal subdivision (e.g province or state) of countries coded in ISO 3166-1."
+																}
+															},
+															"additionalProperties": true
+														},
+														"postalCode": {
+															"type": "string",
+															"example": "950142083",
+															"description": "An identifier used by the local country Postal Authority to identify where the business is located."
+														},
+														"mailRouting": {
+															"type": "string",
+															"example": "c/o JPMORGAN FUNDS LIMITED",
+															"description": "Text address line to hold content from other address lines containing explicit routing information (this element's presence indicates that this address is a routing / \"care of\" address."
+														},
+														"streetNumber": {
+															"type": "string",
+															"example": "1",
+															"description": "Additional structured version of an external house number, or range of numbers, contained in one of the address line elements. This could be a numeral, a letter or code made up of mixed characters (e.g. 221B)."
+														},
+														"buildingNumber": {
+															"type": "string",
+															"example": "5AD",
+															"description": "Additional structured version of an internal location number, or range of numbers, contained in one of the address line elements.This could be a numeral, a letter or code made up of mixed characters (e.g. 13) of a floor, suite or apartment within a building identified."
+														},
+														"streetAddress": {
+															"type": "object",
+															"description": "The details of the street address for this address of the organization.",
+															"properties": {
+																"line1": {
+																	"type": "string",
+																	"example": "1 INFINITE LOOP",
+																	"description": "The first line of the address where the entity is located.<br/><br/>The first line of this address of the organization. For example The Point in the address<br/><br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																},
+																"line2": {
+																	"type": "string",
+																	"example": "37 North Wharf Road",
+																	"description": "The second line of this address of the organization.<br/>For example 37 North Wharf Road in the address<br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																},
+																"line3": {
+																	"type": "string",
+																	"example": "London",
+																	"description": "The third line of the organization's official address. For example  London in the address<br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																},
+																"line4": {
+																	"type": "string",
+																	"example": "W2 1AF",
+																	"description": "The  fourth line of the organization's official address. For example W2 1AF in the address<br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																}
+															},
+															"additionalProperties": true
+														}
+													},
+													"additionalProperties": true
+												},
+												"registrationAuthorityID": {
+													"type": "string",
+													"example": "RA000439",
+													"description": "The reference code of the registration authority, taken from the Registration Authorities Code List maintained by GLEIF."
+												},
+												"otherRegistrationAuthorityID": {
+													"type": "string",
+													"example": "RA000449",
+													"description": "A legacy / historical reference code of a registration authority which is not yet entered in the Registration Authorities Code List (RA list) maintained by GLEIF, or the designation of an interim register until such time as an entry from RA list can be delivered."
+												},
+												"registrationAuthorityEntityID": {
+													"type": "string",
+													"example": "FL-0002.040.440-4",
+													"description": "The identifier of the entity at the indicated registration authority."
+												},
+												"legalJurisdiction": {
+													"type": "string",
+													"example": "US-OH",
+													"description": "The jurisdiction of legal formation of the legal entity; i.e. where the LegalForm of the legal entity originates."
+												},
+												"entityCategory": {
+													"type": "string",
+													"example": "GENERAL",
+													"description": "Indicates (where applicable) the category of legal entity identified by this LEI data record, as a more specific category within the broad definition given in ISO 17442. These categories are based on use cases specified in LEI-ROC policies, found at http://www.leiroc.org/list/leiroc_gls/index.htm."
+												},
+												"entitySubCategory": {
+													"type": "string",
+													"example": "GENERAL Sub",
+													"description": "Indicates and specifies further (where applicable) the sub-category (sub-sector) of Legal Entity identified by this LEI Record and already categorized by the Entity Category field."
+												},
+												"legalFormCode": {
+													"type": "string",
+													"example": "O7XB",
+													"description": "A code that denotes the legal entity's legal form. The list of codes are maintained by ISO / GLEIF through the Entity Legal Form (ELF), available from http://www.gleif.org."
+												},
+												"legalFormDescription": {
+													"type": "string",
+													"example": "Public Limited",
+													"description": "Text that denotes the legal entity's legal form. The list of codes are maintained by ISO / GLEIF through the Entity Legal Form (ELF), available from http://www.gleif.org."
+												},
+												"otherLegalForm": {
+													"type": "string",
+													"example": "Public Limited",
+													"description": "A legacy code or textual description for the legal entity's legal form, used until a current code from the GLEIF-maintained list can be used."
+												},
+												"entityStatus": {
+													"type": "string",
+													"example": "ACTIVE",
+													"description": "The operational and/or legal registration status of the legal entity."
+												},
+												"entityCreationDate": {
+													"type": "string",
+													"example": "2022-05-23",
+													"description": "The date on which the legal entity was first established, as represented by ISO 8601 (as defined in ISO 17442)."
+												},
+												"initialRegistrationDate": {
+													"type": "string",
+													"example": "2022-06-20",
+													"description": "The date of the first LEI assignment, being the date of publication of the identifier and its supporting data record as represented in ISO 8601."
+												},
+												"lastUpdateDate": {
+													"type": "string",
+													"example": "2022-12-01",
+													"description": "Date/time the LEI record was most recently updated."
+												},
+												"registrationStatus": {
+													"type": "string",
+													"example": "LAPSED",
+													"description": "The status of the legal entity's LEI registration with the Managing LOU."
+												},
+												"nextRenewalDate": {
+													"type": "string",
+													"example": "2025-01-29",
+													"description": "The next date by which the LEI registration should be renewed and re-certified by the legal entity."
+												},
+												"managingLOUEntityID": {
+													"type": "string",
+													"example": "529900T8BM49AURSDO55",
+													"description": "The LEI of the LOU that is responsible for administering this LEI registration."
+												},
+												"sourceValidationStatus": {
+													"type": "string",
+													"example": "PARTIALLY_CORROBORATED",
+													"description": "The level of validation of the reference data provided by the<br/>registrant."
+												},
+												"validationAuthorityID": {
+													"type": "string",
+													"example": "RA000063",
+													"description": "The reference code of the registration authority, taken from the Registration Authorities Code List (RA list) maintained by GLEIF."
+												},
+												"validationAuthorityEntityID": {
+													"type": "string",
+													"example": "1827047",
+													"description": "The identifier of the entity at the indicated registration authority."
+												},
+												"dataProvider": {
+													"type": "object",
+													"description": "Records the details of the source which provided this information.",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "Global Legal Entity Identifier Foundation",
+															"description": "Text recording the data providers."
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 43338,
+															"description": "A unique code assigned by Dun&Bradstreet to denote the source which provided this information.<br/>Refer to Reference code table \"29 [Data Provider]\" for all possible values."
+														}
+													},
+													"additionalProperties": true
+												}
+											},
+											"additionalProperties": true
+										}
+									}
+								}
+							},
+							"additionalProperties": true,
+							"required": [
+								"transactionDetail"
+							]
+						}
+					},
+					"301": {
+						"description": "Moved Permanently",
+						"headers": {
+							"location": {
+								"description": "The URL to retrieve the D-U-N-S Number to which the requested D-U-N-S Number was transferred.",
+								"type": "string",
+								"x-example": "https://plus.dnb.com/v1/data/duns/{dunsNumber}?blockIDs=blockID1,blockID2,blockID3,.."
+							}
+						},
+						"schema": {
+							"description": "",
+							"type": "object",
+							"properties": {}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"description": "The access token provided by authentication.",
+						"required": true,
+						"type": "string",
+						"x-example": "Bearer alphanumerictoken"
+					},
+					{
+						"in": "path",
+						"name": "dunsNumber",
+						"description": "A 9-character numeric string identifying the entity by its Dun & Bradstreet D-U-N-S number.",
+						"required": true,
+						"type": "string",
+						"x-example": "804735132"
+					},
+					{
+						"in": "query",
+						"name": "blockIDs",
+						"description": "The block ID provided by Dun & Bradstreet that identifies the data block to be returned.<br/><br/>Multiple values can be included, separated by commas.",
+						"required": true,
+						"type": "string",
+						"x-example": "blockID"
+					},
+					{
+						"in": "query",
+						"name": "tradeUp",
+						"description": "Indicates if the Headquarters D-U-N-S Number should be returned if a Branch is requested.<br/><br/>Valid values:<br/>* hq: If the provided D-U-N-S Number is a Branch, the Headquarter D-U-N-S Number is returned.<br/>* domhq: If the provided D-U-N-S Number is a Branch, the Domestic Headquarter D-U-N-S Number is returned.<br/><br/>If the requested D-U-N-S Number is not a Branch, that D-U-N-S Number will be returned regardless of the value of this parameter.<br/><br/>If the parameter is omitted, the requested D-U-N-S Number is returned even if it is a Branch.",
+						"required": false,
+						"type": "string",
+						"x-example": "hq"
+					},
+					{
+						"in": "query",
+						"name": "customerReference",
+						"description": "Up to 240 characters for a reference string to be linked to the request in order to support subsequent order reconciliation.",
+						"required": false,
+						"type": "string",
+						"x-example": "customer reference text"
+					}
+				]
+			}
+		}
+	}
+}

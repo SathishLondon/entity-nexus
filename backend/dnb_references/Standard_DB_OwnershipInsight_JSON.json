@@ -1,0 +1,504 @@
+{
+	"swagger": "2.0",
+	"host": "plus.dnb.com",
+	"schemes": [
+		"https"
+	],
+	"info": {
+		"description": "The Data Block API is intended to vend Data Blocks to customers transactionally based on a request for a single DUNS.",
+		"title": "Data Blocks",
+		"version": "1"
+	},
+	"basePath": "/",
+	"paths": {
+		"/v1/data/duns/{dunsNumber}": {
+			"x-DNB-Name": "Data Blocks (ownershipinsight_L1_v1)",
+			"x-DNB-ID": "dataBlocks",
+			"get": {
+				"description": "The Data Block API is intended to vend Data Blocks to customers transactionally based on a request for a single DUNS.",
+				"summary": "Endpoint",
+				"operationId": "dataBlocks",
+				"x-monitoring": "Available. Please refer <a href=\"/html/guides/Monitor/DataProducts.html\" target=\"_blank\">guide</a> for details.",
+				"x-monitoring-pdf": "Available. Please refer guide for details.",
+				"tags": [
+					"dataBlocks"
+				],
+				"produces": [
+					"application/json;charset=utf-8"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"description": "",
+							"type": "object",
+							"properties": {
+								"transactionDetail": {
+									"type": "object",
+									"description": "The information used to process this request.",
+									"properties": {
+										"transactionID": {
+											"type": "string",
+											"example": "rlh-hi9puyoijk-jop8u-kd-d-1",
+											"description": "A value assigned by the Dun & Bradstreet application to uniquely identify this request."
+										},
+										"transactionTimestamp": {
+											"type": "string",
+											"example": "2017-02-21T17:46:19.839Z",
+											"description": "The date and time, in ISO 8601 UTC Z standard, when this response was created."
+										},
+										"inLanguage": {
+											"type": "string",
+											"example": "en-US",
+											"description": "An IETF BCP 47 code value that defines the language in which this product was rendered."
+										}
+									},
+									"additionalProperties": true,
+									"required": [
+										"inLanguage",
+										"transactionID",
+										"transactionTimestamp"
+									]
+								},
+								"inquiryDetail": {
+									"type": "object",
+									"description": "The criteria used to process this request.",
+									"properties": {
+										"duns": {
+											"type": "string",
+											"example": "804735132",
+											"description": "The D-U-N-S number provided in the request."
+										},
+										"blockIDs": {
+											"type": "array",
+											"description": "The blockIDs provided in the request.",
+											"items": {
+												"example": [
+													"blockID"
+												],
+												"type": "string"
+											}
+										},
+										"tradeUp": {
+											"type": "string",
+											"example": "hq",
+											"description": "The value of the tradeUp parameter provided in the request."
+										},
+										"customerReference": {
+											"type": "string",
+											"example": "Some text to describe the request.",
+											"description": "A reference string provided by the customer for this particular transaction."
+										}
+									},
+									"additionalProperties": true
+								},
+								"blockStatus": {
+									"type": "array",
+									"description": "Records the status of the data blocks requested by the customer.",
+									"items": {
+										"properties": {
+											"blockID": {
+												"type": "string",
+												"example": "blockID",
+												"description": "The unique identifier for the data block."
+											},
+											"status": {
+												"type": "string",
+												"example": "OK",
+												"description": "The current status of the data block fulfilled in this response.<br/><br/>Possible values:<br/>* OK<br/>* Unavailable<br/>* Insufficient data"
+											},
+											"reason": {
+												"type": "string",
+												"example": "Data is not available",
+												"description": "Any specific reason why the data block is not delivered in this response.<br/><br/>Possible values:<br/>* Data is partially available or not available.<br/>* Data is not available for the branch.<br/>* Data is not available on the requested country code."
+											}
+										},
+										"additionalProperties": true,
+										"required": [
+											"blockID",
+											"status"
+										],
+										"type": "object"
+									}
+								},
+								"organization": {
+									"type": "object",
+									"additionalProperties": true,
+									"description": "The details of the entity.",
+									"properties": {
+										"duns": {
+											"type": "string",
+											"example": "804735132",
+											"description": "The D-U-N-S® Number, a proprietary organizational identifier owned and managed by Dun & Bradstreet Inc, provides unique identification of a subject organization, in accordance with the Data Universal Numbering System (D-U-N-S®)."
+										},
+										"countryISOAlpha2Code": {
+											"type": "string",
+											"example": "US",
+											"description": "The two-letter country code, defined by the International Organization for Standardization (ISO) ISO 3166-1 scheme, identifying the country in which the entity is located.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country code substitutions."
+										},
+										"primaryName": {
+											"type": "string",
+											"example": "GORMAN MANUFACTURING COMPANY, INC.",
+											"description": "Single name by which the organization is primarily known or identified."
+										},
+										"shareOwnership": {
+											"type": "array",
+											"description": "The details of the recording of the individual, organization or entity that owns stock or common stock of the subject organization.",
+											"items": {
+												"properties": {
+													"subjectType": {
+														"type": "object",
+														"description": "Identifies if the entity is an individual, a company, or that fact is unknown.",
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "Individuals",
+																"description": "Identifies if the entity is an individual, a company, or that fact is unknown."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 119,
+																"description": "A unique code assigned by Dun & Bradstreet to identify whether this entity is an Individual or a Company or that this is Unknown.<br/>Refer to Reference code table \"11 [Subject Type]\" for all possible values."
+															}
+														},
+														"additionalProperties": true
+													},
+													"duns": {
+														"type": "string",
+														"example": "804735132",
+														"description": "D-U-N-S Number present on business that owns stock or common stock of the subject entity."
+													},
+													"organizationName": {
+														"type": "string",
+														"example": "Gorman Manufacturing Company, Inc.",
+														"description": "The name of the entity that owns stock or common stock of the subject organization."
+													},
+													"givenName": {
+														"type": "string",
+														"example": "Joseph",
+														"description": "The given name of the entity who owns stock and common stock if the entity is an individual. In western cultures this is usually presented first."
+													},
+													"middleName": {
+														"type": "string",
+														"example": "G",
+														"description": "Additional name associated to the entity who owns stock and common stock if the entity is an individual to distinguish them from other people with the same given name and surname. In several culture, the middle name is a portion of a personal name that is written between the individual's given name and their surname. In some countries such as the US, a single letter can be populated in this field."
+													},
+													"familyName": {
+														"type": "string",
+														"example": "Blogg",
+														"description": "The surname of individual that that owns stock or common stock of the subject entity. In western cultures this is usually presented last."
+													},
+													"fullName": {
+														"type": "string",
+														"example": "Jane M Doe",
+														"description": "The given and surname in addition to the middle name and name suffix listed. If the entity that owns stock or common stock is an organization, the name of the organization will be populated in the full name field."
+													},
+													"otherLanguageNames": {
+														"type": "array",
+														"description": "Records the name of the shareowner in various languages as recorded.",
+														"items": {
+															"properties": {
+																"fullName": {
+																	"type": "string",
+																	"example": "平井 一夫",
+																	"description": "The full name of the shareowner in other local languages."
+																},
+																"language": {
+																	"type": "object",
+																	"description": "Records the language in which this information was recorded.",
+																	"properties": {
+																		"description": {
+																			"type": "string",
+																			"example": "Japanese",
+																			"description": "Text describing the language in which this information was recorded."
+																		},
+																		"dnbCode": {
+																			"type": "integer",
+																			"example": 3807,
+																			"description": "A unique code assigned by Dun&Bradstreet describing the language in which this information was recorded.<br/>Refer to Reference code table \"3 [Language]\" for all possible values."
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"writingScript": {
+																	"type": "object",
+																	"description": "Records the writing script in which this information was recorded.",
+																	"properties": {
+																		"description": {
+																			"type": "string",
+																			"example": "Katakana",
+																			"description": "Text describing the writing script in which this information was recorded."
+																		},
+																		"dnbCode": {
+																			"type": "integer",
+																			"example": 19347,
+																			"description": "A unique code assigned by Dun&Bradstreet describing the writing script in which this information was recorded.<br/>Refer to Reference code table \"466 [Writing Script]\" for all possible values."
+																		}
+																	},
+																	"additionalProperties": true
+																}
+															},
+															"additionalProperties": true,
+															"type": "object"
+														}
+													},
+													"namePrefix": {
+														"type": "string",
+														"example": "Dr.",
+														"description": "The correct form of address for the entity who owns stock and common stock if the entity is an individual (e.g., Dr., Professor, Lord)."
+													},
+													"nameSuffix": {
+														"type": "string",
+														"example": "Jr.",
+														"description": "Letters listed after the last name to provide additional details about the person's family generation if the entity who owns stock and common stock if the entity is an individual(e.g., Senior, Junior, III. ) or their professional/qualification (e.g., MD, PhD etc.) Populated when available."
+													},
+													"dateOfBirth": {
+														"type": "string",
+														"example": "1960-05-24",
+														"description": "The date of birth of the individual.<br/><br/>Format: YYYY-MM-DD or YYYY-MM"
+													},
+													"ownershipPercentage": {
+														"type": "number",
+														"example": 8.56,
+														"description": "The total percent of the subject organization's stock or common stock owned by either an individual, organization with DUNS or direct entity shareholder."
+													},
+													"indirectOwnershipPercentage": {
+														"type": "number",
+														"example": 15.6,
+														"description": "The total percentage of the shares (or other instrument of ownership) of the entity directly held/owned by all the entities in which this entity holds shares."
+													},
+													"votingPercentageHigh": {
+														"type": "number",
+														"example": 65.5,
+														"description": "Records the high end of the range of the percentage of voting rights in the subject directly held/owned."
+													},
+													"lastUpdateDate": {
+														"type": "string",
+														"example": "2017-01-30",
+														"description": "The date when the share ownership information was verified and updated.<br/><br/>Format: YYYY-MM-DD or YYYY-MM"
+													},
+													"stockDetails": {
+														"type": "array",
+														"description": "The type of stock the shareholder owns in the entity and the various parameters that define the control the shareholder may exercise over the entity.",
+														"items": {
+															"properties": {
+																"stockType": {
+																	"type": "object",
+																	"description": "The details about the class of shares that forms part of the shareholders overall holding (e.g., Preference, Cumulative Preference, Redeemable, Ordinary).",
+																	"properties": {
+																		"description": {
+																			"type": "string",
+																			"example": "Preference",
+																			"description": "The class of shares that forms part of the shareholders overall holding (e.g., Preference, Cumulative Preference, Redeemable, Ordinary)."
+																		},
+																		"dnbCode": {
+																			"type": "integer",
+																			"example": 3759,
+																			"description": "A unique code assigned by Dun & Bradstreet to identify the class of shares that forms part of the shareholders overall holding.<br/>Refer to Reference code table \"114 [Capital Stock Type]\" for all possible values."
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"stockSubType": {
+																	"type": "string",
+																	"example": "Ordinary A",
+																	"description": "The sub-category of share classification that has been specifically defined by the entity. <br/><br/>For example, the ordinary shares of an entity may be broken down into Ordinary A, Ordinary B, etc., where the A and B categories have different rights or characteristics. In this example, two Share Ownership Stock Detail aggregates will be created. In both aggregates, the Stock Type Code will be set to 3761 [Ordinary] but the Stock Sub Type Text will be set to &quot;A&quot; in the first occurrence and &quot;B&quot; in the second."
+																},
+																"ownershipPercentage": {
+																	"type": "number",
+																	"example": 5.8,
+																	"description": "The total percentage of the specified share type owned directly by the shareholder."
+																},
+																"shareQuantity": {
+																	"type": "number",
+																	"example": 250,
+																	"description": "The total number of shares within each Capital Stock Type regardless of value. For example, if there are 100 Preference shares with a par value of 5 Euros per share the recorded amount is 100."
+																},
+																"shareAmount": {
+																	"type": "object",
+																	"description": "The details on the value of the total shares of this type possessed by the shareholder.",
+																	"properties": {
+																		"value": {
+																			"type": "number",
+																			"example": 250,
+																			"description": "The total par value of shares of this type held by a shareholder in the entity. Par value is the face value of the shares and not the current stock exchange price (e.g., if there are 100 ordinary shares with a par value of 5 euros per share the recorded amount is 500)."
+																		},
+																		"currency": {
+																			"type": "string",
+																			"example": "USD",
+																			"description": "The three-letter currency code, defined in the ISO 4217 scheme published by the International Organization for Standardization (ISO) identifying the type of money in which this amount is expressed (e.g., USD, CAD, GBP, EUR)."
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"hasVotingRights": {
+																	"type": "boolean",
+																	"example": false,
+																	"description": "Indicates whether the shares of the type specified in Share Ownership Stock Type carry voting rights.<br/><br/><br/>- If true, stock type carries voting rights.<br/>- If false, stock type does not carry voting rights."
+																}
+															},
+															"additionalProperties": true,
+															"type": "object"
+														}
+													},
+													"isTrusteeNominee": {
+														"type": "boolean",
+														"example": false,
+														"description": "Indicates whether the shareholder is a trustee or a nominee (i.e., the shareholder is acting on behalf of someone else to hold the shares.)<br/><br/><br/>- If true, the shareholder is a trustee or a nominee <br/>- If false, the shareholder is acting in their own right and is not a trustee or nominee. This is the assumed condition; there is no requirement to create this tag to represent this fact."
+													},
+													"isPrincipal": {
+														"type": "boolean",
+														"example": false,
+														"description": "DO NOT USE. NO LONGER PROVIDED. <br/>Indicates whether this shareholder is a person or entity that currently has a relationship with the entity where the relationship is a management relationship, employee relationship, or service provider relationship.<br/><br/>- If true, such a relationship exists.<br/>- If false, such a relationship does not exist."
+													},
+													"registrationNumbers": {
+														"type": "array",
+														"description": "Records the details of the numbers assigned by an external body or by D&B which either uniquely identifies or helps to identify the shareholder organization.",
+														"items": {
+															"properties": {
+																"registrationNumber": {
+																	"type": "string",
+																	"example": "122702",
+																	"description": "A number assigned by an external body or by D&B which either uniquely identifies or helps to identify the shareholder organization."
+																},
+																"typeDescription": {
+																	"type": "string",
+																	"example": "Financial Conduct Authority Reference Number (GB)",
+																	"description": "Text identifying the type of Registration Number, e.g., Chamber of Commerce Number, Value Added Tax Number, Federal Taxpayer Identification Number, Companies Registry Office Number."
+																},
+																"typeDnBCode": {
+																	"type": "integer",
+																	"example": 33482,
+																	"description": "A unique code assigned by D&B to identify the type of Registration Number, e.g., Chamber of Commerce Number, Value Added Tax Number, Federal Taxpayer Identification Number, Companies Registry Office Number.<br/>Refer to Reference code table \"7 [Registration Number Type]\" for all possible values."
+																}
+															},
+															"additionalProperties": true,
+															"type": "object"
+														}
+													}
+												},
+												"additionalProperties": true,
+												"type": "object"
+											}
+										},
+										"capitalDetails": {
+											"type": "array",
+											"description": "The details of the current share capital information.",
+											"items": {
+												"properties": {
+													"capitalType": {
+														"type": "object",
+														"description": "The details for the entity's capital type.",
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "Issued",
+																"description": "The type of the capital (e.g., Issued, Paid in, Nominal/Authorized)."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 1017,
+																"description": "A unique code assigned by Dun & Bradstreet to identify the type of the capital.<br/>Refer to Reference code table \"21 [Capital Type]\" for all possible values."
+															}
+														},
+														"additionalProperties": true
+													},
+													"startDate": {
+														"type": "string",
+														"example": "2010-03-14",
+														"description": "The date on which the Capital Amount was first registered.<br/><br/>Format: YYYY-MM-DD or YYYY-MM"
+													},
+													"capitalAmount": {
+														"type": "object",
+														"description": "The details of the capital amount.",
+														"properties": {
+															"value": {
+																"type": "number",
+																"example": 534378,
+																"description": "The amount of the capital."
+															},
+															"currency": {
+																"type": "string",
+																"example": "USD",
+																"description": "The three-letter currency code, defined in the ISO 4217 scheme published by the International Organization for Standardization (ISO) identifying the type of money in which this amount is expressed (e.g., USD, CAD, GBP, EUR)."
+															}
+														},
+														"additionalProperties": true
+													}
+												},
+												"additionalProperties": true,
+												"type": "object"
+											}
+										}
+									}
+								}
+							},
+							"additionalProperties": true,
+							"required": [
+								"transactionDetail"
+							]
+						}
+					},
+					"301": {
+						"description": "Moved Permanently",
+						"headers": {
+							"location": {
+								"description": "The URL to retrieve the D-U-N-S Number to which the requested D-U-N-S Number was transferred.",
+								"type": "string",
+								"x-example": "https://plus.dnb.com/v1/data/duns/{dunsNumber}?blockIDs=blockID1,blockID2,blockID3,.."
+							}
+						},
+						"schema": {
+							"description": "",
+							"type": "object",
+							"properties": {}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"description": "The access token provided by authentication.",
+						"required": true,
+						"type": "string",
+						"x-example": "Bearer alphanumerictoken"
+					},
+					{
+						"in": "path",
+						"name": "dunsNumber",
+						"description": "A 9-character numeric string identifying the entity by its Dun & Bradstreet D-U-N-S number.",
+						"required": true,
+						"type": "string",
+						"x-example": "804735132"
+					},
+					{
+						"in": "query",
+						"name": "blockIDs",
+						"description": "The block ID provided by Dun & Bradstreet that identifies the data block to be returned.<br/><br/>Multiple values can be included, separated by commas.",
+						"required": true,
+						"type": "string",
+						"x-example": "blockID"
+					},
+					{
+						"in": "query",
+						"name": "tradeUp",
+						"description": "Indicates if the Headquarters D-U-N-S Number should be returned if a Branch is requested.<br/><br/>Valid values:<br/>* hq: If the provided D-U-N-S Number is a Branch, the Headquarter D-U-N-S Number is returned.<br/>* domhq: If the provided D-U-N-S Number is a Branch, the Domestic Headquarter D-U-N-S Number is returned.<br/><br/>If the requested D-U-N-S Number is not a Branch, that D-U-N-S Number will be returned regardless of the value of this parameter.<br/><br/>If the parameter is omitted, the requested D-U-N-S Number is returned even if it is a Branch.",
+						"required": false,
+						"type": "string",
+						"x-example": "hq"
+					},
+					{
+						"in": "query",
+						"name": "customerReference",
+						"description": "Up to 240 characters for a reference string to be linked to the request in order to support subsequent order reconciliation.",
+						"required": false,
+						"type": "string",
+						"x-example": "customer reference text"
+					}
+				]
+			}
+		}
+	}
+}

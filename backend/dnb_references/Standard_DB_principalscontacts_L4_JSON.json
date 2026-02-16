@@ -1,0 +1,2056 @@
+{
+	"swagger": "2.0",
+	"host": "plus.dnb.com",
+	"schemes": [
+		"https"
+	],
+	"info": {
+		"description": "The Data Block API is intended to vend Data Blocks to customers transactionally based on a request for a single DUNS.",
+		"title": "Data Blocks",
+		"version": "1"
+	},
+	"basePath": "/",
+	"paths": {
+		"/v1/data/duns/{dunsNumber}": {
+			"x-DNB-Name": "Data Blocks (principalscontacts_L4_v2)",
+			"x-DNB-ID": "dataBlocks",
+			"get": {
+				"description": "The Data Block API is intended to vend Data Blocks to customers transactionally based on a request for a single DUNS.",
+				"summary": "Endpoint",
+				"operationId": "dataBlocks",
+				"x-monitoring": "Available. Please refer <a href=\"/html/guides/Monitor/DataProducts.html\" target=\"_blank\">guide</a> for details.",
+				"x-monitoring-pdf": "Available. Please refer guide for details.",
+				"tags": [
+					"dataBlocks"
+				],
+				"produces": [
+					"application/json;charset=utf-8"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"description": "",
+							"type": "object",
+							"properties": {
+								"transactionDetail": {
+									"type": "object",
+									"description": "The information used to process this request.",
+									"properties": {
+										"transactionID": {
+											"type": "string",
+											"example": "rlh-hi9puyoijk-jop8u-kd-d-1",
+											"description": "A value assigned by the Dun & Bradstreet application to uniquely identify this request."
+										},
+										"transactionTimestamp": {
+											"type": "string",
+											"example": "2017-02-21T17:46:19.839Z",
+											"description": "The date and time, in ISO 8601 UTC Z standard, when this response was created."
+										},
+										"inLanguage": {
+											"type": "string",
+											"example": "en-US",
+											"description": "An IETF BCP 47 code value that defines the language in which this product was rendered."
+										}
+									},
+									"additionalProperties": true,
+									"required": [
+										"inLanguage",
+										"transactionID",
+										"transactionTimestamp"
+									]
+								},
+								"inquiryDetail": {
+									"type": "object",
+									"description": "The criteria used to process this request.",
+									"properties": {
+										"duns": {
+											"type": "string",
+											"example": "804735132",
+											"description": "The D-U-N-S number provided in the request."
+										},
+										"blockIDs": {
+											"type": "array",
+											"description": "The blockIDs provided in the request.",
+											"items": {
+												"example": [
+													"blockID"
+												],
+												"type": "string"
+											}
+										},
+										"tradeUp": {
+											"type": "string",
+											"example": "hq",
+											"description": "The value of the tradeUp parameter provided in the request."
+										},
+										"customerReference": {
+											"type": "string",
+											"example": "Some text to describe the request.",
+											"description": "A reference string provided by the customer for this particular transaction."
+										}
+									},
+									"additionalProperties": true
+								},
+								"blockStatus": {
+									"type": "array",
+									"description": "Records the status of the data blocks requested by the customer.",
+									"items": {
+										"properties": {
+											"blockID": {
+												"type": "string",
+												"example": "blockID",
+												"description": "The unique identifier for the data block."
+											},
+											"status": {
+												"type": "string",
+												"example": "OK",
+												"description": "The current status of the data block fulfilled in this response.<br/><br/>Possible values:<br/>* OK<br/>* Unavailable<br/>* Insufficient data"
+											},
+											"reason": {
+												"type": "string",
+												"example": "Data is not available",
+												"description": "Any specific reason why the data block is not delivered in this response.<br/><br/>Possible values:<br/>* Data is partially available or not available.<br/>* Data is not available for the branch.<br/>* Data is not available on the requested country code."
+											}
+										},
+										"additionalProperties": true,
+										"required": [
+											"blockID",
+											"status"
+										],
+										"type": "object"
+									}
+								},
+								"organization": {
+									"type": "object",
+									"additionalProperties": true,
+									"description": "The details of the entity.",
+									"properties": {
+										"duns": {
+											"type": "string",
+											"example": "804735132",
+											"description": "The D-U-N-S® Number, a proprietary organizational identifier owned and managed by Dun & Bradstreet Inc, provides unique identification of a subject organization, in accordance with the Data Universal Numbering System (D-U-N-S®)."
+										},
+										"countryISOAlpha2Code": {
+											"type": "string",
+											"example": "US",
+											"description": "The two-letter country code, defined by the International Organization for Standardization (ISO) ISO 3166-1 scheme, identifying the country in which the entity is located.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country code substitutions."
+										},
+										"primaryName": {
+											"type": "string",
+											"example": "GORMAN MANUFACTURING COMPANY, INC.",
+											"description": "Single name by which the organization is primarily known or identified."
+										},
+										"principalsSummary": {
+											"type": "object",
+											"description": "The summary information for the principals associated with the entity.",
+											"properties": {
+												"currentPrincipalsCount": {
+													"type": "integer",
+													"example": 10,
+													"description": "The number of current principals that are associated with the entity."
+												},
+												"otherAssociationsCount": {
+													"type": "integer",
+													"example": 4,
+													"description": "The number of relationships where the active principals are associated with other companies currently or in the past."
+												},
+												"inactiveAssociationsCount": {
+													"type": "integer",
+													"example": 7,
+													"description": "The number of relationships where the active principals are associated with other companies that are out of business."
+												},
+												"unfavorableInactiveAssociationsCount": {
+													"type": "integer",
+													"example": 5,
+													"description": "The number of relationships where the principals are associated with other companies that was involved in an unfavorable bankruptcy event."
+												},
+												"favorableInactiveAssociationsCount": {
+													"type": "integer",
+													"example": 2,
+													"description": "The number of relationships where the principals are associated with other companies that was involved in a favorable bankruptcy event."
+												},
+												"detrimentalPrincipalsCount": {
+													"type": "integer",
+													"example": 2,
+													"description": "The number of principals that are associated with negative legal events."
+												},
+												"detrimentalPrincipalsPercentage": {
+													"type": "number",
+													"example": 20,
+													"description": "The percentage of total active principals that are associated with negative legal events."
+												}
+											},
+											"additionalProperties": true
+										},
+										"signingAuthorities": {
+											"type": "array",
+											"description": "The details of the individuals or companies that have the legal right given to them to make descions on behalf of the subject business.",
+											"items": {
+												"properties": {
+													"text": {
+														"type": "string",
+														"example": "David",
+														"description": "The name and other details of the signing authority."
+													},
+													"typeDescription": {
+														"type": "string",
+														"example": "Signing Authority",
+														"description": "Description that provides meaning to the text found in the field."
+													},
+													"typeDnBCode": {
+														"type": "integer",
+														"example": 15356,
+														"description": "A unique code assigned by Dun & Bradstreet that provides meaning to the text found in the field.<br/>Refer to Reference code table \"27 [Information Description]\" for all possible values."
+													},
+													"language": {
+														"type": "object",
+														"description": "The language in which this information is recorded.",
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "Czech",
+																"description": "Text identifying the language in which this information is recorded."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 1627,
+																"description": "A unique code assigned by Dun & Bradstreet identifying the language in which this information is recorded.<br/>Refer to Reference code table \"3 [Language]\" for all possible values."
+															}
+														},
+														"additionalProperties": true
+													},
+													"writingScript": {
+														"type": "object",
+														"description": "The writing script in which this information is recorded.",
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "Latin",
+																"description": "Text identifying the writing script in which this information is recorded."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 19349,
+																"description": "A unique code assigned by Dun & Bradstreet identifying the writing script in which this information is recorded.<br/>Refer to Reference code table \"466 [Writing Script]\" for all possible values."
+															}
+														},
+														"additionalProperties": true
+													},
+													"dataProvider": {
+														"type": "object",
+														"description": "The source from which this information was received.",
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "The Public Register of the Czech Republic",
+																"description": "Text identifying the source from which this information was received."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 42278,
+																"description": "A unique code assigned by Dun & Bradstreet identifying the source from which this information was received.<br/>Refer to Reference code table \"29 [Data Provider]\" for all possible values."
+															}
+														},
+														"additionalProperties": true
+													},
+													"startDate": {
+														"type": "string",
+														"example": "2023-09-12",
+														"description": "A date on or before when this information related to the Signing Authority of an organization has become active."
+													},
+													"endDate": {
+														"type": "string",
+														"example": "2024-12-12",
+														"description": "A date on or before when this information related to the Signing Authority of an organization is no longer valid."
+													},
+													"hasEnded": {
+														"type": "boolean",
+														"example": true,
+														"description": "When set to true; this indicates that this is a former textual information related to the Signing Authority of an organization.<br/><br/>When set to false; this indicates that the textual information related to the Signing Authority of an organization is still active; however, as this is the assumed condition there is no requirement to create this tag to represent this fact."
+													},
+													"priority": {
+														"type": "integer",
+														"example": 1,
+														"description": "A number which may be used to define the order in which the textual information should be presented relative to any other occurrences of Text Entry where the lower the number the earlier the data is presented."
+													}
+												},
+												"additionalProperties": true,
+												"type": "object"
+											}
+										},
+										"currentPrincipals": {
+											"type": "array",
+											"description": "The detail of the person identified as a key stakeholder of the business or organization by the local registry or other official sources. The key stakeholder can be a natural person or an organization. Unless clearly defined as \"former\" or \"most senior\"  the definitions below refer to the current key stakeholder.",
+											"items": {
+												"properties": {
+													"subjectType": {
+														"type": "string",
+														"example": "Individuals",
+														"description": "Text that describes whether the principal is an Individual or Organization."
+													},
+													"birthDate": {
+														"type": "string",
+														"example": "1982-09-21",
+														"description": "The YYYY-MM-DD, YYYY-MM or YYYY representation of the day the key stakeholder of the business or organization was born if the key stakeholder is an individual."
+													},
+													"givenName": {
+														"type": "string",
+														"example": "Leslie",
+														"description": "The given name of the key stakeholder who is an individual. In western cultures this is usually presented first."
+													},
+													"middleName": {
+														"type": "string",
+														"example": "Ann",
+														"description": "Additional name associated to the key stakeholder to distinguish them from other people with the same given name and surname. In several cultures, the middle name is a portion of a personal name that is written between the key stakeholder's given name and their surname. In some countries such as the US, a single letter can be populated in this field."
+													},
+													"familyName": {
+														"type": "string",
+														"example": "Smith",
+														"description": "The family or surname of the key stakeholder who is an individual. In western cultures this is usually presented last."
+													},
+													"fullName": {
+														"type": "string",
+														"example": "Leslie Ann Smith",
+														"description": "The key stakeholder's given and surname in addition to the middle name and name suffix (when available) listed on one field if the key stakeholder is an individual. This will be submitted in the appropriate format for the local country. If the key stakeholder is an organization, the name of the organization will be populated in the full name field."
+													},
+													"namePrefix": {
+														"type": "string",
+														"example": "Dr.",
+														"description": "The correct form of address for the key stakeholder (e.g., Dr., Professor, Lord)."
+													},
+													"nameSuffix": {
+														"type": "string",
+														"example": "PhD",
+														"description": "Letters listed after the key stakeholder's last name to provide additional details about the person's family generation(e.g., Senior, Junior, III. ) or their professional/qualification (e.g., MD, PhD etc.) Populated when available."
+													},
+													"associationStartDate": {
+														"type": "string",
+														"example": "2013-09-30",
+														"description": "The date when this principal first became a principal of the subject. This is not necessarily the date that the principal first took up their current position."
+													},
+													"otherLanguageNames": {
+														"type": "array",
+														"description": "Records the names of the principal in other languages.",
+														"items": {
+															"properties": {
+																"givenName": {
+																	"type": "string",
+																	"example": "アンソニー",
+																	"description": "Records the first name of the principal in other languages."
+																},
+																"familyName": {
+																	"type": "string",
+																	"example": "ヴィンシクエラ",
+																	"description": "Records the last name of the principal in other languages."
+																},
+																"fullName": {
+																	"type": "string",
+																	"example": "许家印",
+																	"description": "The full name of the current principal in language other than English."
+																},
+																"language": {
+																	"type": "object",
+																	"description": "The details of the language in which this name was recorded.",
+																	"properties": {
+																		"description": {
+																			"type": "string",
+																			"example": "English",
+																			"description": "The name of the language in which this name was recorded."
+																		},
+																		"dnbCode": {
+																			"type": "integer",
+																			"example": 39,
+																			"description": "A unique code assigned by Dun & Bradstreet to identify the language in which this name was recorded.<br/>Refer to Reference code table \"3 [Language]\" for all possible values."
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"writingScript": {
+																	"type": "object",
+																	"description": "Records the type of writing system for the language that was used in recording this name. For example, textual information recorded in the language 'Japanese' can be written in any of the following scripts: kanji, katakana, hiragana or romaji.",
+																	"properties": {
+																		"description": {
+																			"type": "string",
+																			"example": "Kana",
+																			"description": "Text denoting the type of writing system for the language that was used in recording this name. For example, textual information recorded in the language 'Japanese' can be written in any of the following scripts: kanji, katakana, hiragana or romaji."
+																		},
+																		"dnbCode": {
+																			"type": "integer",
+																			"example": 19347,
+																			"description": "A unique code assigned by Dun&Bradstreet denoting the type of writing system for the language that was used in recording this name. For example, textual information recorded in the language 'Japanese' can be written in any of the following scripts: kanji, katakana, hiragana or romaji.<br/>Refer to Reference code table \"466 [Writing Script]\" for all possible values."
+																		}
+																	},
+																	"additionalProperties": true
+																}
+															},
+															"additionalProperties": true,
+															"type": "object"
+														}
+													},
+													"nationality": {
+														"type": "object",
+														"description": "The details of the country in which this principal holds a nationality status.",
+														"properties": {
+															"isoAlpha2Code": {
+																"type": "string",
+																"example": "US",
+																"description": "The two-letter country code, defined by the International Organization for Standardization (ISO) ISO 3166-1 scheme, identifying the country of which this Principal is a citizen.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country code substitutions."
+															},
+															"name": {
+																"type": "string",
+																"example": "US",
+																"description": "The name of the country in which the principal holds a nationality status."
+															}
+														},
+														"additionalProperties": true
+													},
+													"gender": {
+														"type": "object",
+														"description": "Text description of the binary classification or unknown classification based on the key stakeholder's personal identity when key stakeholder is an individual.",
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "Female",
+																"description": "Text description of the binary classification or unknown classification based on the key stakeholder's personal identity when key stakeholder is an individual."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 191,
+																"description": "A unique code assigned by Dun & Bradstreet to identify the male/female binary classification or unknown classification when the key stakeholder is an individual.<br/>Possible values:<br/>- 190: Male<br/>- 191: Female<br/>- 3581: not specified<br/>Refer to Reference code table \"18 [Gender]\" for all possible values."
+															}
+														},
+														"additionalProperties": true
+													},
+													"telephones": {
+														"type": "array",
+														"description": "Records the telephone details of the principal.",
+														"items": {
+															"properties": {
+																"telephoneNumber": {
+																	"type": "string",
+																	"example": "+353125662341",
+																	"description": "The telephone number of the principal."
+																}
+															},
+															"additionalProperties": true,
+															"type": "object"
+														}
+													},
+													"hobbies": {
+														"type": "array",
+														"description": "Records the different pursuits the principal or manager engages in for relaxation outside their occupation.",
+														"items": {
+															"properties": {
+																"hobby": {
+																	"type": "string",
+																	"example": "Reading",
+																	"description": "Note: DO NOT USE. Always null.<br/>The name of a pursuit outside the principal or manager's regular occupation."
+																}
+															},
+															"additionalProperties": true,
+															"type": "object"
+														}
+													},
+													"graduationSchoolName": {
+														"type": "string",
+														"example": "NAGASAKI SCHOOL LIFE",
+														"description": "Records the textual name of the establishment at which the education was received."
+													},
+													"primaryAddress": {
+														"type": "object",
+														"description": "The details of the address at which key stakeholder of the business or organization can be contacted. Different address usage type distinction such as primary or residential when available provided by Dun & Bradstreet.",
+														"properties": {
+															"addressCountry": {
+																"type": "object",
+																"description": "The details of the specific country or region of the address where the key stakeholder of the business or organization can be contacted.",
+																"properties": {
+																	"name": {
+																		"type": "string",
+																		"example": "United States",
+																		"description": "The name of the specific country or region of the address where the key stakeholder of the business or organization can be contacted."
+																	},
+																	"isoAlpha2Code": {
+																		"type": "string",
+																		"example": "US",
+																		"description": "The two-letter country or region code of the address where the key stakeholder of the business or organization can be contacted. The two-letter country or region code is defined by the International Organization for Standardization (ISO) ISO 3166-1 scheme identified the country or region the address is located.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country or region code substitutions."
+																	}
+																},
+																"additionalProperties": true
+															},
+															"continentalRegion": {
+																"type": "object",
+																"description": "The details of the continent for this address of the organization.",
+																"properties": {
+																	"name": {
+																		"type": "string",
+																		"example": "North America",
+																		"description": "The name of the continent for this address of the organization.<br/>Possible values<br/>Africa<br/>Asia Pacific<br/>Europe<br/>Latin America<br/>Middle East<br/>North America"
+																	}
+																},
+																"additionalProperties": true
+															},
+															"addressLocality": {
+																"type": "object",
+																"description": "The detail of the locality which is defined as a distinct population cluster. Localities are commonly recognized as cities, town, villages etc. Localities provide granularity to the location of the address where the key stakeholder of the business or organization can be contacted.",
+																"properties": {
+																	"name": {
+																		"type": "string",
+																		"example": "SAN FRANCISCO",
+																		"description": "The name of the locality which is defined as a distinct population cluster. Localities are commonly recognized as cities, town, villages etc. Localities provide granularity to the location of the address where the key stakeholder of the business or organization can be contacted."
+																	}
+																},
+																"additionalProperties": true
+															},
+															"minorTownName": {
+																"type": "string",
+																"example": "Booker",
+																"description": "The name of the village, town or suburb when it is not a Primary Town or City (e.g., the Booker in Booker, High Wycombe) used in the address. Minor town when available provide additional granularity to the location of the address where the key stakeholder of the business or organization can be contacted."
+															},
+															"addressRegion": {
+																"type": "object",
+																"description": "The details of the how different countries subdivide their country into smaller parts.<br/><br/> <br/><br/>Examples:<br/><br/>Departments (France)<br/><br/>States (USA)<br/><br/>Provinces (Netherlands)<br/><br/>Counties (UK)<br/><br/>Bundeslander (Germany)<br/><br/>Provinces and Territories (Canada)<br/><br/><br/>Region provides insight on the subdivided group of the address that can be used to contact the key stakeholder of the business or organization.",
+																"properties": {
+																	"name": {
+																		"type": "string",
+																		"example": "California",
+																		"description": "Different markets have their own way of subdividing the country into smaller parts.<br/><br/>Examples:<br/><br/>Departments (France)<br/><br/>States (USA)<br/><br/>Provinces (Netherlands)<br/><br/>Counties (UK)<br/><br/>Bundeslander (Germany)<br/><br/>Provinces and Territories (Canada)<br/><br/>Name of the subdivided group the address is located and where the key stakeholder can be contacted."
+																	}
+																},
+																"additionalProperties": true
+															},
+															"addressCounty": {
+																"type": "object",
+																"description": "The details of the specific county of the address where the key stakeholder of the business or organization can be contacted. Countries subdivide their geography into smaller sub divisions. County is an example of commonly used subdivision. Often found in UK",
+																"properties": {
+																	"name": {
+																		"type": "string",
+																		"example": "SAN MATEO",
+																		"description": "The name of the specific county of the address where the key stakeholder of the business or organization can be contacted. Countries subdivide their geography into smaller sub divisions. County is an example of commonly used subdivision. Often found in UK."
+																	}
+																},
+																"additionalProperties": true
+															},
+															"postalCode": {
+																"type": "string",
+																"example": "941109999",
+																"description": "A postal code (also known locally in various English-speaking countries throughout the world as a postcode, post code, PIN or ZIP Code) is a series of letters or digits or both, sometimes including spaces or punctuation, included in a postal address for the purpose of sorting mail. \"Principal Address Postal Code\" is an identifier used by the local country's postal authority to identify the address where the key stakeholder of the business or organization can be contacted."
+															},
+															"postalCodePosition": {
+																"type": "object",
+																"description": "The details of the position of the Postal Code when presenting the address where the key stakeholder of the business or organization can be contacted.",
+																"properties": {
+																	"description": {
+																		"type": "string",
+																		"example": "Post code presented before Town/City name",
+																		"description": "The position of the Postal Code when presenting the address (e.g., before the Primary Town/City) where the key stakeholder of the business or organization can be contacted."
+																	},
+																	"dnbCode": {
+																		"type": "integer",
+																		"example": 1009,
+																		"description": "A unique code assigned by Dun & Bradstreet to identify the position of the Postal Code when presenting the address where the key stakeholder of the business or organization can be contacted.<br/>Refer to Reference code table \"210 [Postal Code Position]\" for all possible values."
+																	}
+																},
+																"additionalProperties": true
+															},
+															"streetNumber": {
+																"type": "string",
+																"example": "492",
+																"description": "The number part of the street address where the key stakeholder of the business or organization can be contacted.This may be a single number, a number with an appendix, or a range of street numbers.\r<br/>\r<br/>For example, \"51 - 59C\" in the address 51 - 59C Wall Street."
+															},
+															"streetName": {
+																"type": "string",
+																"example": "KOLLER ST",
+																"description": "The name of the street of the address where the key stakeholder of the business or organization can be contacted.<br/><br/>For example, \"Wall Street\"; in the address 51 - 59C Wall Street."
+															},
+															"streetAddress": {
+																"type": "object",
+																"description": "The details of the street address where the key stakeholder of the business or organization can be contacted.",
+																"properties": {
+																	"line1": {
+																		"type": "string",
+																		"example": "492 KOLLER ST",
+																		"description": "The first line of the address where the key stakeholder of the business or organization can be contacted.\r<br/>\r<br/>For example,\"41 Central Chambers\"; in the address\r<br/>\r<br/>41 Central Chambers\r<br/>Dame Court\r<br/>Dublin 2"
+																	},
+																	"line2": {
+																		"type": "string",
+																		"example": "Suite 100",
+																		"description": "The second line of the address where the key stakeholder of the business or organization can be contacted.<br/><br/>For example, \"Dame Court\"; in the address<br/>41 Central Chambers<br/>Dame Court<br/>Dublin 2"
+																	}
+																},
+																"additionalProperties": true
+															},
+															"postOfficeBox": {
+																"type": "object",
+																"description": "The details of the location issued by postal office where the key stakeholder of the business or organization request to have mail received",
+																"properties": {
+																	"postOfficeBoxNumber": {
+																		"type": "string",
+																		"example": "5309",
+																		"description": "An identifier issued to the organization by a private or public postal office where the key stakeholder of the business or organization request to have mail received"
+																	},
+																	"typeDescription": {
+																		"type": "string",
+																		"example": "Supplied by public Post Office authority",
+																		"description": "A post office box (commonly abbreviated as P.O. box, or also known as a postal box) is a uniquely addressable lockable box located on the premises of a post office station where the key stakeholder of the business or organization request to have mail received."
+																	},
+																	"typeDnBCode": {
+																		"type": "integer",
+																		"example": 120,
+																		"description": "A unique code assigned by Dun & Bradstreet to identify the type of PO Box where the key business stakeholder request to have mail received.<br/>Refer to Reference code table \"208 [Postal Box Type]\" for all possible values."
+																	}
+																},
+																"additionalProperties": true
+															}
+														},
+														"additionalProperties": true
+													},
+													"responsibleAreas": {
+														"type": "array",
+														"description": "The detail of the several different areas for which the key stakeholder has authority in the associated organization which is not evident from their position(s).",
+														"items": {
+															"properties": {
+																"description": {
+																	"type": "string",
+																	"example": "Sole signing authority",
+																	"description": "Text describing the different areas for which the key stakeholder has authority in the associated organization."
+																},
+																"dnbCode": {
+																	"type": "integer",
+																	"example": 6309,
+																	"description": "A unique code assigned by Dun & Bradstreet describing the different areas for which the key stakeholder has authority in the associated organization.<br/>Refer to Reference code table \"100 [Responsible Area] & 220 [Signing Authority]\" for all possible values."
+																},
+																"signingAuthorityClass": {
+																	"type": "object",
+																	"description": "The broad class into which this signing authority is categorized, e.g., Sole Signing Authority, Joint Signing Authority.",
+																	"properties": {
+																		"description": {
+																			"type": "string",
+																			"example": "Sole Signing Authority",
+																			"description": "Text that denotes the broad class into which this signing authority is categorized, e.g., Sole Signing Authority, Joint Signing Authority."
+																		},
+																		"dnbCode": {
+																			"type": "integer",
+																			"example": 45040,
+																			"description": "A unique code assigned by Dun & Bradstreet identifying the broad class into which this signing authority is categorized, e.g., Sole Signing Authority, Joint Signing Authority.<br/>Refer to Reference code table \"872 [Signing Authority Class]\" for all possible values."
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"textEntry": {
+																	"type": "array",
+																	"description": "The different textual information regarding the responsible area or signing authority of the Principal.",
+																	"items": {
+																		"properties": {
+																			"text": {
+																				"type": "string",
+																				"example": "David",
+																				"description": "A further textual information of a responsible area or signing authority of the Principal which cannot be recorded in any of the defined elements."
+																			},
+																			"typeDescription": {
+																				"type": "string",
+																				"example": "Signing Authority",
+																				"description": "Text that denotes the meaning of the textual information recorded."
+																			},
+																			"typeDnBCode": {
+																				"type": "integer",
+																				"example": 15356,
+																				"description": "A unique code assigned by Dun & Bradstreet that denotes the meaning of the textual information recorded.<br/>Refer to Reference code table \"27 [Information Description]\" for all possible values."
+																			},
+																			"language": {
+																				"type": "object",
+																				"description": "The language in which this information is recorded.",
+																				"properties": {
+																					"description": {
+																						"type": "string",
+																						"example": "Czech",
+																						"description": "Text identifying the language in which this information is recorded."
+																					},
+																					"dnbCode": {
+																						"type": "integer",
+																						"example": 1627,
+																						"description": "A unique code assigned by Dun & Bradstreet identifying the language in which this information is recorded.<br/>Refer to Reference code table \"3 [Language]\" for all possible values."
+																					}
+																				},
+																				"additionalProperties": true
+																			},
+																			"priority": {
+																				"type": "integer",
+																				"example": 1,
+																				"description": "A number which may be used to define the order in which the textual information should be presented relative to any other occurrences of Text Entry where the lower the number the earlier the data is presented."
+																			}
+																		},
+																		"additionalProperties": true,
+																		"type": "object"
+																	}
+																}
+															},
+															"additionalProperties": true,
+															"type": "object"
+														}
+													},
+													"jobTitles": {
+														"type": "array",
+														"description": "The detail of the text string that denotes a position held by the key stakeholder in the organization or recording of the title used by the organization to describe this person's job e.g., Leader Global Communication, Manager National Technical Support Center.",
+														"items": {
+															"properties": {
+																"title": {
+																	"type": "string",
+																	"example": "President",
+																	"description": "Text string that denotes a position held by the key stakeholder in the organization or recording of the title used by the organization to describe this person's job e.g., Leader Global Communication, Manager National Technical Support Center."
+																}
+															},
+															"additionalProperties": true,
+															"type": "object"
+														}
+													},
+													"managementResponsibilities": {
+														"type": "array",
+														"description": "The details of the standardized alphanumeric classification code generated by Dun & Bradstreet used to identify the business function and hierarchical level of the key stakeholder based on their professional job title.",
+														"items": {
+															"properties": {
+																"description": {
+																	"type": "string",
+																	"example": "President",
+																	"description": "A text description of the standardized alphanumeric classification code generated by Dun & Bradstreet that identifies the business function and hierarchical level of the key stakeholder based on their professional job title.<br/><br/>For example \" Chief Executive Officer\" in<br/>A1A7 Chief Executive Officer"
+																},
+																"mrcCode": {
+																	"type": "string",
+																	"example": "A1A6",
+																	"description": "A standardized alphanumeric classification code generated by Dun & Bradstreet that identifies the business function of the key stakeholder based on the associated job title data. This information is expressed as a standard Management Responsibility Code (MRC).<br/><br/>For example \" A1A7\" in<br/>A1A7 Chief Executive Officer<br/>Refer to Reference code table \"27751 [MRC]\" for all possible values."
+																}
+															},
+															"additionalProperties": true,
+															"type": "object"
+														}
+													},
+													"idNumbers": {
+														"type": "array",
+														"description": "The details of the identification/registration numbers for the key stakeholder of the business or organization",
+														"items": {
+															"properties": {
+																"idNumber": {
+																	"type": "string",
+																	"example": "11356097",
+																	"description": "A number assigned by an external body or by Dun & Bradstreet which either uniquely identifies or helps to identify the key stakeholder of the business or organization."
+																},
+																"idType": {
+																	"type": "object",
+																	"description": "The details that identifies the type of key stakeholder Identification Number, e.g., Social Security Number.",
+																	"properties": {
+																		"description": {
+																			"type": "string",
+																			"example": "Super Person ID",
+																			"description": "Text that identifies the type of \"Principal Identification Number\", e.g., Social Security Number."
+																		},
+																		"dnbCode": {
+																			"type": "integer",
+																			"example": 11694,
+																			"description": "A unique code assigned by Dun & Bradstreet that identifies the type of \"Principal Identification Number\", e.g., Social Security Number.<br/>Refer to Reference code table \"7 [Registration Number Type]\" for all possible values."
+																		}
+																	},
+																	"additionalProperties": true
+																}
+															},
+															"additionalProperties": true,
+															"type": "object"
+														}
+													},
+													"isSigningAuthority": {
+														"type": "boolean",
+														"example": true,
+														"description": "Indicates whether the principal has been given the legal right to make decisions on behalf of the subject business.<br/><br/>- If true, principal has legal right to make decisions.<br/>- If false, principal does not have legal right to make decisions."
+													},
+													"isDisqualifiedDirector": {
+														"type": "boolean",
+														"example": true,
+														"description": "When set to \"true\"; it indicates that the principal is disqualified.<br/>When set to \"false\";  it indicates that the principal is not disqualified."
+													},
+													"disqualifications": {
+														"type": "array",
+														"description": "Records principal disqualification details.",
+														"items": {
+															"properties": {
+																"disqualificationType": {
+																	"type": "object",
+																	"description": "Records the procedure how the principal was disqualified, e.g. Court Order.",
+																	"properties": {
+																		"description": {
+																			"type": "string",
+																			"example": "Court Order",
+																			"description": "Text that denotes the procedure how the principal was disqualified, e.g. Court Order."
+																		},
+																		"dnbCode": {
+																			"type": "integer",
+																			"example": 29866,
+																			"description": "A unique code assigned by Dun & Bradstreet that denotes the procedure how the principal was disqualified, e.g. Court Order."
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"startDate": {
+																	"type": "string",
+																	"example": "2021-07-12",
+																	"description": "The date when the disqualification becomes effective."
+																},
+																"endDate": {
+																	"type": "string",
+																	"example": "2022-07-11",
+																	"description": "The date at which the Disqualification is no longer in effect."
+																},
+																"dataProvider": {
+																	"type": "object",
+																	"description": "Records the details of the source which provided this information.",
+																	"properties": {
+																		"description": {
+																			"type": "string",
+																			"example": "Companies House",
+																			"description": "Text that identifies the source which provided this information."
+																		},
+																		"dnbCode": {
+																			"type": "integer",
+																			"example": 19175,
+																			"description": "A unique code assigned by Dun & Bradstreet that identifies the source which provided this information.<br/>Refer to Reference code table \"29 [Data Provider]\" for all possible values."
+																		}
+																	},
+																	"additionalProperties": true
+																},
+																"actText": {
+																	"type": "string",
+																	"example": "",
+																	"description": "Text that provides additional details regarding the disqualification of this principal."
+																},
+																"actType": {
+																	"type": "object",
+																	"description": "Records textual information about the directors has been disqualified by the Indian Ministry of corporate affairs, according to  Companies Act 2013 section 164(2).",
+																	"properties": {
+																		"description": {
+																			"type": "string",
+																			"example": "Board Of Directors Comments Text",
+																			"description": "Textual information about the directors has been disqualified by the Indian Ministry of corporate affairs, according to  Companies Act 2013 section 164(2)."
+																		},
+																		"dnbCode": {
+																			"type": "integer",
+																			"example": 27109,
+																			"description": "A unique code assigned by Dun & Bradstreet about the directors has been disqualified by the Indian Ministry of corporate affairs, according to  Companies Act 2013 section 164(2).<br/>Refer to Reference code table \"27 [Information Description]\" for all possible values."
+																		}
+																	},
+																	"additionalProperties": true
+																}
+															},
+															"additionalProperties": true,
+															"type": "object"
+														}
+													},
+													"associations": {
+														"type": "array",
+														"description": "Records details of other businesses with which the principal has an association. E.g. Other Directorships",
+														"items": {
+															"properties": {
+																"duns": {
+																	"type": "string",
+																	"example": "701456389",
+																	"description": "The DUNS number of the associated business."
+																},
+																"primaryName": {
+																	"type": "string",
+																	"example": "ABC Corp",
+																	"description": "The primary name of the associated business."
+																},
+																"startDate": {
+																	"type": "string",
+																	"example": "2012-09-12",
+																	"description": "The date when the Principal's relationship with the associated business started. E.g. The date when the principal was appointed as a director."
+																}
+															},
+															"additionalProperties": true,
+															"type": "object"
+														}
+													}
+												},
+												"additionalProperties": true,
+												"type": "object"
+											}
+										},
+										"formerPrincipals": {
+											"type": "array",
+											"description": "The details of the person identified as a previously employed key stakeholder of a business or organization by the local registry or other official sources. A former key stakeholder can be a natural person or an organization.",
+											"items": {
+												"properties": {
+													"subjectType": {
+														"type": "object",
+														"description": "Identifies if the entity is an individual, a company, or that fact is unknown.",
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "Individuals",
+																"description": "Identifies if the entity is an individual, a company, or that fact is unknown."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 119,
+																"description": "A unique code assigned by Dun & Bradstreet to identify whether this entity is an Individual or a Company or that this is Unknown.<br/>Refer to Reference code table \"11 [Subject Type]\" for all possible values."
+															}
+														},
+														"additionalProperties": true
+													},
+													"birthDate": {
+														"type": "string",
+														"example": "1960-21-15",
+														"description": "The YYYY-MM-DD, YYYY-MM or YYYY representation of the day the previously employed key stakeholder of the business was born if the former key stakeholder is an individual."
+													},
+													"givenName": {
+														"type": "string",
+														"example": "Leslie",
+														"description": "The given name of the previously employed key stakeholder who is an individual. In western cultures this is usually presented first."
+													},
+													"middleName": {
+														"type": "string",
+														"example": "Ann",
+														"description": "Additional name associated to the previously employed key stakeholder to distinguish them from other people with the same given name and surname. In several culture, the middle name is a portion of a personal name that is written between the former key stakeholder's given name and their surname. In some countries such as the US, a single letter can be populated in this field."
+													},
+													"familyName": {
+														"type": "string",
+														"example": "Smith",
+														"description": "The family or surname of the previously employed key stakeholder who is an individual. In western cultures this is usually presented last."
+													},
+													"fullName": {
+														"type": "string",
+														"example": "Leslie Ann Smith",
+														"description": "The previously employed key stakeholder's given and surname in addition to the middle name and name suffix (when available) listed on one field if the former key stakeholder is an individual. This will be submitted in the appropriate format for the local country. If the former key stakeholder is an organization, the name of the organization will be populated in the full name field."
+													},
+													"namePrefix": {
+														"type": "string",
+														"example": "Dr.",
+														"description": "The correct form of address for the previously employed key stakeholder (e.g., Dr., Professor, Lord)."
+													},
+													"nameSuffix": {
+														"type": "string",
+														"example": "PhD",
+														"description": "Letters listed after the previously employed key stakeholder's last name to provide additional details about the person's family generation(e.g., Senior, Junior, III. ) or their professional/qualification (e.g., MD, PhD etc.) Populated when available."
+													},
+													"associationStartDate": {
+														"type": "string",
+														"example": "2007-12-31",
+														"description": "The date when this principal first became a principal of the subject. This is not necessarily the date that the principal first took up their current position."
+													},
+													"associationEndDate": {
+														"type": "string",
+														"example": "2021-10-02",
+														"description": "The date when this principal ceased to be a principal of the subject."
+													},
+													"nationality": {
+														"type": "object",
+														"description": "The details of the country in which this principal holds a nationality status.",
+														"properties": {
+															"isoAlpha2Code": {
+																"type": "string",
+																"example": "US",
+																"description": "The two-letter country code, defined by the International Organization for Standardization (ISO) ISO 3166-1 scheme, identifying the country of which this Principal is a citizen.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country code substitutions."
+															}
+														},
+														"additionalProperties": true
+													},
+													"primaryAddress": {
+														"type": "object",
+														"description": "The details of the address at which previously employed key stakeholder of the business or organization could be contacted when employed. Different address usage type distinction such as primary or residential when available provided by Dun & Bradstreet.",
+														"properties": {
+															"addressCountry": {
+																"type": "object",
+																"description": "The detail of the specific country or region of the address where the previously employed key stakeholder of the business or organization could be contacted when employed.",
+																"properties": {
+																	"name": {
+																		"type": "string",
+																		"example": "United States",
+																		"description": "The name of the specific country or region of the address where the previously employed key stakeholder of the business or organization can be contacted."
+																	},
+																	"isoAlpha2Code": {
+																		"type": "string",
+																		"example": "US",
+																		"description": "The two-letter country or region code of the address where the previously employed key stakeholder of the business or organization could be contacted when employed. The two-letter country or region code is defined by the International Organization for Standardization (ISO) ISO 3166-1 scheme identified the country or region the address is located.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country or region code substitutions."
+																	}
+																},
+																"additionalProperties": true
+															},
+															"continentalRegion": {
+																"type": "object",
+																"description": "The details of the continent for this address of the organization.",
+																"properties": {
+																	"name": {
+																		"type": "string",
+																		"example": "North America",
+																		"description": "The name of the continent for this address of the organization.<br/>Possible values<br/>Africa<br/>Asia Pacific<br/>Europe<br/>Latin America<br/>Middle East<br/>North America"
+																	}
+																},
+																"additionalProperties": true
+															},
+															"addressLocality": {
+																"type": "object",
+																"description": "The detail of the locality which is defined as a distinct population cluster. Localities are commonly recognized as cities, town, villages etc. Localities provide granularity to the location of the address the previously employed key stakeholder of the business or organization could be contacted when employed.",
+																"properties": {
+																	"name": {
+																		"type": "string",
+																		"example": "SAN FRANCISCO",
+																		"description": "The name of the locality which is defined as a distinct population cluster. Localities are commonly recognized as cities, town, villages etc. Localities provide granularity to the location of the address the former key stakeholder of the business or organization could be contacted when employed."
+																	}
+																},
+																"additionalProperties": true
+															},
+															"minorTownName": {
+																"type": "string",
+																"example": "Booker",
+																"description": "The name of the village, town or suburb when it is not a Primary Town or City (e.g., the Booker in Booker, High Wycombe) used in the address. Minor town when available provide additional granularity to the location of the address where the previously employed key stakeholder of the business or organization could be contacted when employed."
+															},
+															"addressRegion": {
+																"type": "object",
+																"description": "The details of the how different countries subdivide their country into smaller parts.<br/><br/><br/><br/>Examples:<br/><br/>Departments (France)<br/><br/>States (USA)<br/><br/>Provinces (Netherlands)<br/><br/>Counties (UK)<br/><br/>Bundeslander (Germany)<br/><br/>Provinces and Territories (Canada)<br/><br/><br/><br/>Region provides insight on the subdivided group of the address that can be used to contact the previously employed key stakeholder of the business or organization.",
+																"properties": {
+																	"name": {
+																		"type": "string",
+																		"example": "California",
+																		"description": "Different markets have their own way of subdividing the country into smaller parts.<br/><br/><br/><br/>Examples:<br/><br/>Departments (France)<br/><br/>States (USA)<br/><br/>Provinces (Netherlands)<br/><br/>Counties (UK)<br/><br/>Bundeslander (Germany)<br/><br/>Provinces and Territories (Canada)<br/><br/><br/><br/>Name of the subdivided group the address is located and where the previously employed key stakeholder could be contacted when employed."
+																	}
+																},
+																"additionalProperties": true
+															},
+															"addressCounty": {
+																"type": "object",
+																"description": "The details of the specific county of the address where the previously employed key stakeholder of the business or organization could be contacted when employed. Countries subdivide their geography into smaller sub divisions. County is an example of commonly used subdivision. Often found in UK.",
+																"properties": {
+																	"name": {
+																		"type": "string",
+																		"example": "SAN MATEO",
+																		"description": "The name of the specific county of the address where the previously employed key stakeholder of the business or organization could be contacted when employed. Countries subdivide their geography into smaller sub divisions. County is an example of commonly used subdivision. Often found in UK."
+																	}
+																},
+																"additionalProperties": true
+															},
+															"postalCode": {
+																"type": "string",
+																"example": "941109999",
+																"description": "A postal code (also known locally in various English-speaking countries throughout the world as a postcode, post code, PIN or ZIP Code) is a series of letters or digits or both, sometimes including spaces or punctuation, included in a postal address for the purpose of sorting mail. \"Former Principal Address Postal Code\" is an identifier used by the local country's postal authority to identify the address where the previously employed key stakeholder of the business or organization could be contacted when employed."
+															},
+															"postalCodePosition": {
+																"type": "object",
+																"description": "The details of the position of the Postal Code when presenting the address where the previously employed key stakeholder of the business or organization could be contacted when employed.",
+																"properties": {
+																	"description": {
+																		"type": "string",
+																		"example": "Post code presented before Town/City name",
+																		"description": "The position of the Postal Code when presenting the address (e.g., before the Primary Town/City) where the previously employed key stakeholder of the business or organization could be contacted when employed."
+																	},
+																	"dnbCode": {
+																		"type": "integer",
+																		"example": 1009,
+																		"description": "A unique code assigned by Dun & Bradstreet to identify the position of the Postal Code when presenting the address where the previously employed key stakeholder of the business or organization could be contacted when employed.<br/>Refer to Reference code table \"210 [Postal Code Position]\" for all possible values."
+																	}
+																},
+																"additionalProperties": true
+															},
+															"streetNumber": {
+																"type": "string",
+																"example": "492",
+																"description": "The number part of the street address where the previously employed key stakeholder of the business could be contacted when employed. This may be a single number, a number with an appendix, or a range of street numbers.<br/><br/>For example, \"51 - 59C\" in the address 51 - 59C Wall Street."
+															},
+															"streetName": {
+																"type": "string",
+																"example": "KOLLER ST",
+																"description": "The name of the street of the address where the previously employed key stakeholder of the business or organization could be contacted when employed.<br/><br/>For example, \"Wall Street\"; in the address 51 - 59C Wall Street."
+															},
+															"streetAddress": {
+																"type": "object",
+																"description": "The details of the street address where the previously employed key stakeholder of the business or organization can be contacted.",
+																"properties": {
+																	"line1": {
+																		"type": "string",
+																		"example": "492 KOLLER ST",
+																		"description": "The first line of the address where the previously employed key stakeholder of the business or organization could be contacted when employed.<br/><br/>For example,\"41 Central Chambers\"; in the address<br/><br/>41 Central Chambers<br/>Dame Court<br/>Dublin 2"
+																	},
+																	"line2": {
+																		"type": "string",
+																		"example": "Suite 100",
+																		"description": "The second line of the address where the previously employed key stakeholder of the business or organization could be contacted when employed.\r<br/>\r<br/>For example, \"Dame Court\"; in the address\r<br/>\r<br/>41 Central Chambers\r<br/>Dame Court\r<br/>Dublin 2"
+																	}
+																},
+																"additionalProperties": true
+															},
+															"postOfficeBox": {
+																"type": "object",
+																"description": "The details of the location issued by postal office where the previously employed key stakeholder of the business or organization requested to have mail received.",
+																"properties": {
+																	"postOfficeBoxNumber": {
+																		"type": "string",
+																		"example": "5390",
+																		"description": "An identifier issued to the entity by a private or public postal office where the previously employed key stakeholder of the business or organization requested to have mail received."
+																	},
+																	"typeDescription": {
+																		"type": "string",
+																		"example": "Supplied by public Post Office authority",
+																		"description": "A post office box (commonly abbreviated as P.O. box, or also known as a postal box) is a uniquely addressable lockable box located on the premises of a post office station where the previously employed key stakeholder of the business or organization requested to have mail received."
+																	},
+																	"typeDnBCode": {
+																		"type": "integer",
+																		"example": 120,
+																		"description": "A unique code assigned by Dun & Bradstreet to identify the type of PO Box where the previously employed key business stakeholder requested to have mail received.<br/>Refer to Reference code table \"208 [Postal Box Type]\" for all possible values."
+																	}
+																},
+																"additionalProperties": true
+															}
+														},
+														"additionalProperties": true
+													},
+													"responsibleAreas": {
+														"type": "array",
+														"description": "The detail of the several different areas for which the previously employed key stakeholder had authority in the associated organization which is not evident from their position(s).",
+														"items": {
+															"properties": {
+																"description": {
+																	"type": "string",
+																	"example": "Administration",
+																	"description": "Text describing the different areas for which the previously employed key stakeholder had authority in the associated organization."
+																},
+																"dnbCode": {
+																	"type": "integer",
+																	"example": 3680,
+																	"description": "A unique code assigned by Dun & Bradstreet describing the different areas for which the former key stakeholder had authority in the associated organization.<br/>Refer to Reference code table \"100 [Responsible Area]\" for all possible values."
+																}
+															},
+															"additionalProperties": true,
+															"type": "object"
+														}
+													},
+													"jobTitles": {
+														"type": "array",
+														"description": "The detail of the text string that denotes a position held by the previously employed key stakeholder in the organization or recording of the title used by the organization to describe this person's job e.g., Leader Global Communication, Manager National Technical Support Center.",
+														"items": {
+															"properties": {
+																"title": {
+																	"type": "string",
+																	"example": "President",
+																	"description": "Text string that denotes a position held by the previously employed key stakeholder in the organization or recording of the title used by the organization to describe this person's job e.g., Leader Global Communication, Manager National Technical Support Center."
+																}
+															},
+															"additionalProperties": true,
+															"type": "object"
+														}
+													},
+													"managementResponsibilities": {
+														"type": "array",
+														"description": "The details of the standardized alphanumeric classification code generated by Dun & Bradstreet used to identify the business function and hierarchical level of the previously employed key stakeholder based on their professional job title.",
+														"items": {
+															"properties": {
+																"description": {
+																	"type": "string",
+																	"example": "President",
+																	"description": "A text description of the standardized alphanumeric classification code generated by Dun & Bradstreet that identifies the business function and hierarchical level of the previously employed key stakeholder based on their professional job title.<br/><br/>For example \" Chief Executive Officer\" in A1A7 Chief Executive Officer"
+																},
+																"mrcCode": {
+																	"type": "string",
+																	"example": "A1A6",
+																	"description": "A standardized alphanumeric classification code generated by Dun & Bradstreet that identifies the business function of the previously employed key stakeholder based on the associated job title data. This information is expressed as a standard Management Responsibility Code (MRC).<br/><br/>For example \" A1A7\" in A1A7 Chief Executive Officer.<br/>Refer to Reference code table \"27751 [MRC]\" for all possible values."
+																}
+															},
+															"additionalProperties": true,
+															"type": "object"
+														}
+													},
+													"idNumbers": {
+														"type": "array",
+														"description": "The detail of identification/registration numbers for the previously employed key stakeholder of the organization",
+														"items": {
+															"properties": {
+																"idNumber": {
+																	"type": "string",
+																	"example": "11356097",
+																	"description": "A number assigned by an external body or by Dun & Bradstreet which either uniquely identifies or helps to identify the previously employed key stakeholder of the organization."
+																},
+																"idType": {
+																	"type": "object",
+																	"description": "The detail that identifies the type of \"Principal Identification Number\", e.g., Social Security Number for the previously employed key stakeholder of the organization",
+																	"properties": {
+																		"description": {
+																			"type": "string",
+																			"example": "Super Person ID",
+																			"description": "Text that identifies the type of Principal Identification Number, e.g., Social Security Number for the previously employed key stakeholder of the organization"
+																		},
+																		"dnbCode": {
+																			"type": "integer",
+																			"example": 11694,
+																			"description": "A unique code assigned by Dun & Bradstreet that identifies the type of \"Principal Identification Number\", e.g., Social Security Number for the previously employed key stakeholder of the organization<br/>Refer to Reference code table \"7 [Registration Number Type]\" for all possible values."
+																		}
+																	},
+																	"additionalProperties": true
+																}
+															},
+															"additionalProperties": true,
+															"type": "object"
+														}
+													}
+												},
+												"additionalProperties": true,
+												"type": "object"
+											}
+										},
+										"mostSeniorPrincipal": {
+											"type": "object",
+											"description": "The person identified as a highest ranking key stakeholder of a business or organization by the local registry or other official sources. A key stakeholder can be a natural person or an organization.",
+											"properties": {
+												"subjectType": {
+													"type": "string",
+													"example": "Individuals",
+													"description": "Text that describes whether the principal is an Individual or Organization."
+												},
+												"birthDate": {
+													"type": "string",
+													"example": "1960-12-15",
+													"description": "The YYYY-MM-DD, YYYY-MM  or YYYY representation of the day the highest ranking key stakeholder of the business or organization was born if the key stakeholder is an individual."
+												},
+												"givenName": {
+													"type": "string",
+													"example": "Leslie",
+													"description": "The given name of the highest ranking key stakeholder who is an individual. In western cultures this is usually presented first."
+												},
+												"middleName": {
+													"type": "string",
+													"example": "Ann",
+													"description": "Additional name associated to the highest ranking key stakeholder to distinguish them from other people with the same given name and surname. In several cultures, the middle name is a portion of a personal name that is written between the highest ranking key stakeholder's given name and their surname. In some countries such as the US, a single letter can be populated in this field."
+												},
+												"familyName": {
+													"type": "string",
+													"example": "Smith",
+													"description": "The family or surname of the highest ranking key stakeholder who is an individual. In western cultures this is usually presented last."
+												},
+												"fullName": {
+													"type": "string",
+													"example": "Leslie Ann Smith",
+													"description": "The highest ranking key stakeholder's given and surname in addition to the middle name and name suffix (when available) listed on one field if the key stakeholder is an individual. This will be submitted in the appropriate format for the local country. If the highest ranking key stakeholder is an organization, the name of the organization will be populated in the full name field."
+												},
+												"namePrefix": {
+													"type": "string",
+													"example": "Dr.",
+													"description": "The correct form of address for the highest ranking key stakeholder (e.g., Dr., Professor, Lord)."
+												},
+												"nameSuffix": {
+													"type": "string",
+													"example": "PhD",
+													"description": "Letters listed after the highest ranking key stakeholder's last name to provide additional details about the person's family generation(e.g., Senior, Junior, III. ) or their professional/qualification (e.g., MD, PhD etc.) Populated when available."
+												},
+												"associationStartDate": {
+													"type": "string",
+													"example": "2013-09-30",
+													"description": "The date when this principal first became a principal of the subject. This is not necessarily the date that the principal first took up their current position."
+												},
+												"otherLanguageNames": {
+													"type": "array",
+													"description": "Records the names of the principal in other languages.",
+													"items": {
+														"properties": {
+															"givenName": {
+																"type": "string",
+																"example": "アンソニー",
+																"description": "Records the first name of the principal in other languages."
+															},
+															"familyName": {
+																"type": "string",
+																"example": "ヴィンシクエラ",
+																"description": "Records the last name of the principal in other languages."
+															},
+															"fullName": {
+																"type": "string",
+																"example": "浩光 齋藤",
+																"description": "The full name of the most senior principal in other local languages."
+															},
+															"language": {
+																"type": "object",
+																"description": "Records the language in which this information was recorded.",
+																"properties": {
+																	"description": {
+																		"type": "string",
+																		"example": "Japanese",
+																		"description": "Text that records the language in which this information was recorded.<br/>Refer to Reference code table \"3 [Language]\" for all possible values."
+																	},
+																	"dnbCode": {
+																		"type": "integer",
+																		"example": 3807,
+																		"description": "A unique code assigned by Dun&Bradstreet that records the language in which this information was recorded.<br/>Refer to Reference code table \"3 [Language]\" for all possible values."
+																	}
+																},
+																"additionalProperties": true
+															},
+															"writingScript": {
+																"type": "object",
+																"description": "Records the type of writing system for the language that was used in recording this textual information. For example, textual information recorded in the language 'Japanese' can be written in any of the following scripts: kanji, katakana, hiragana or romaji.",
+																"properties": {
+																	"description": {
+																		"type": "string",
+																		"example": "Kana",
+																		"description": "Text denoting the type of writing system for the language that was used in recording this textual information. For example, textual information recorded in the language 'Japanese' can be written in any of the following scripts: kanji, katakana, hiragana or romaji."
+																	},
+																	"dnbCode": {
+																		"type": "integer",
+																		"example": 19347,
+																		"description": "A unique code assigned by Dun&Bradstreet denoting the type of writing system for the language that was used in recording this textual information. For example, textual information recorded in the language 'Japanese' can be written in any of the following scripts: kanji, katakana, hiragana or romaji.<br/>Refer to Reference code table \"466 [Writing Script]\" for all possible values."
+																	}
+																},
+																"additionalProperties": true
+															}
+														},
+														"additionalProperties": true,
+														"type": "object"
+													}
+												},
+												"nationality": {
+													"type": "object",
+													"description": "The details of the country in which this principal holds a nationality status.",
+													"properties": {
+														"isoAlpha2Code": {
+															"type": "string",
+															"example": "US",
+															"description": "The 2 letter alpha country or region code assigned by the International Organization for Standardization (ISO) identifying the country or region for this address of the organization.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country or region code substitutions."
+														},
+														"name": {
+															"type": "string",
+															"example": "US",
+															"description": "The name of the country in which the principal holds a nationality status."
+														}
+													},
+													"additionalProperties": true
+												},
+												"gender": {
+													"type": "object",
+													"description": "The detail of the binary classification or unknown classification based on the highest ranking key stakeholder's personal identity when key stakeholder is an individual.",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "Female",
+															"description": "Text description of the binary classification or unknown classification based on the highest ranking key stakeholder's personal identity when key stakeholder is an individual."
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 191,
+															"description": "A unique code assigned by Dun & Bradstreet to identify to define the male/female binary classification or unknown classification when the highest ranking key stakeholder is an individual.<br/>Possible values:<br/>- 190: Male<br/>- 191: Female<br/>- 3581: not specified<br/>Refer to Reference code table \"18 [Gender]\" for all possible values."
+														}
+													},
+													"additionalProperties": true
+												},
+												"zodiacSign": {
+													"type": "array",
+													"description": "Records the Zodiac Sign details of the Principal.",
+													"items": {
+														"properties": {
+															"sign": {
+																"type": "string",
+																"example": "虎",
+																"description": "Records the textual description of the Zodiac Sign of the principal."
+															},
+															"language": {
+																"type": "object",
+																"description": "Records the language in which the Zodiac Sign Text is being presented.",
+																"properties": {
+																	"description": {
+																		"type": "string",
+																		"example": "Japanese",
+																		"description": "Text which describes the language in which the Zodiac Sign Text is being presented."
+																	},
+																	"dnbCode": {
+																		"type": "integer",
+																		"example": 3807,
+																		"description": "A code which describes the language in which the Zodiac Sign Text is being presented."
+																	}
+																},
+																"additionalProperties": true
+															}
+														},
+														"additionalProperties": true,
+														"type": "object"
+													}
+												},
+												"premiseLocationType": {
+													"type": "object",
+													"description": "Records several different types of premises which the principal utilizes at the address.",
+													"properties": {
+														"locationType": {
+															"type": "string",
+															"example": "Factory",
+															"description": "Text which describes the facility used by this principal at the address, e.g., Factory, Offices, Showroom, Warehouse."
+														},
+														"language": {
+															"type": "object",
+															"description": "Records the language in which the premise location is being presented.",
+															"properties": {
+																"description": {
+																	"type": "string",
+																	"example": "Japanese",
+																	"description": "Text which describes the language in which the premise location is being presented."
+																},
+																"dnbCode": {
+																	"type": "integer",
+																	"example": 3807,
+																	"description": "A code which describes the language in which the premise location is being presented."
+																}
+															},
+															"additionalProperties": true
+														}
+													},
+													"additionalProperties": true
+												},
+												"telephones": {
+													"type": "array",
+													"description": "Records the telephone details of the principal.",
+													"items": {
+														"properties": {
+															"telephoneNumber": {
+																"type": "string",
+																"example": "+353125662341",
+																"description": "The telephone number of the principal."
+															}
+														},
+														"additionalProperties": true,
+														"type": "object"
+													}
+												},
+												"hobbies": {
+													"type": "array",
+													"description": "Records the different pursuits the principal or manager engages in for relaxation outside their occupation.",
+													"items": {
+														"properties": {
+															"hobby": {
+																"type": "string",
+																"example": "Reading",
+																"description": "DO NOT USE: Always null. Replaced by codified elements. <br/>The name of a pursuit outside the principal or manager's regular occupation."
+															},
+															"description": {
+																"type": "string",
+																"example": "Mountaineering",
+																"description": "Text that denotes the pursuit outside the principal or manager's regular occupation."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 19830,
+																"description": "A unique code assigned by Dun&Bradstreet that denotes the pursuit outside the principal or manager's regular occupation.<br/>Refer to Reference code table \"476 [Hobby]\" for all possible values."
+															}
+														},
+														"additionalProperties": true,
+														"type": "object"
+													}
+												},
+												"graduationSchoolName": {
+													"type": "string",
+													"example": "NAGASAKI SCHOOL LIFE",
+													"description": "Records the textual name of the establishment at which the education was received."
+												},
+												"educationalQualifications": {
+													"type": "array",
+													"description": "Records the names of educational institutions attended by the principal. Where this resulted in some award or certification being attained then this may also be recorded.",
+													"items": {
+														"properties": {
+															"qualification": {
+																"type": "string",
+																"example": "Master in Physics",
+																"description": "Text that describes the educational award received by the principal or manager; e.g., certificate, Degree, Diploma"
+															},
+															"status": {
+																"type": "object",
+																"description": "Records the current situation of the person's standing with the educational institution; e.g., attending, graduated, dropped out, transferred, sabbatical.",
+																"properties": {
+																	"description": {
+																		"type": "string",
+																		"example": "Graduate",
+																		"description": "Text that describes the current situation of the person's standing with the educational institution; e.g., attending, graduated, dropped out, transferred, sabbatical."
+																	},
+																	"dnbCode": {
+																		"type": "integer",
+																		"example": 27217,
+																		"description": "A unique code assigned by Dun & Bradstreet which describes the current situation of the person's standing with the educational institution; e.g., attending, graduated, dropped out, transferred, sabbatical.<br/>Refer to Reference code table \"500 [Education Status]\" for all possible values."
+																	}
+																},
+																"additionalProperties": true
+															}
+														},
+														"additionalProperties": true,
+														"type": "object"
+													}
+												},
+												"primaryAddress": {
+													"type": "object",
+													"description": "The details of the address at which highest ranking key stakeholder of the business or organization can be contacted. Different address usage type distinction such as primary or residential when available provided by Dun & Bradstreet.",
+													"properties": {
+														"addressCountry": {
+															"type": "object",
+															"description": "The detail of the specific country or region of the address where the highest ranking key stakeholder of the business or organization be contacted.",
+															"properties": {
+																"name": {
+																	"type": "string",
+																	"example": "United States",
+																	"description": "The name of the specific country or region of the address where the highest ranking key stakeholder of the business or organization can be contacted."
+																},
+																"isoAlpha2Code": {
+																	"type": "string",
+																	"example": "US",
+																	"description": "The two-letter country or region code of the address where the highest ranking key stakeholder of the business or organization can be contacted. The two-letter country or region code is defined by the International Organization for Standardization (ISO) ISO 3166-1 scheme identified the country or region the address is located.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country or region code substitutions."
+																}
+															},
+															"additionalProperties": true
+														},
+														"continentalRegion": {
+															"type": "object",
+															"description": "The details of the continent for this address of the organization.",
+															"properties": {
+																"name": {
+																	"type": "string",
+																	"example": "North America",
+																	"description": "The name of the continent for this address of the organization.<br/>Possible values<br/>Africa<br/>Asia Pacific<br/>Europe<br/>Latin America<br/>Middle East<br/>North America"
+																}
+															},
+															"additionalProperties": true
+														},
+														"addressLocality": {
+															"type": "object",
+															"description": "The detail of the locality which is defined as a distinct population cluster. Localities are commonly recognized as cities, town, villages etc. Localities provide granularity to the location of the address the highest ranking key stakeholder of the business or organization can be contacted.",
+															"properties": {
+																"name": {
+																	"type": "string",
+																	"example": "SAN FRANCISCO",
+																	"description": "The name of the locality which is defined as a distinct population cluster. Localities are commonly recognized as cities, town, villages etc. Localities provide granularity to the location of the address the highest ranking key stakeholder of the business or organization can be contacted."
+																}
+															},
+															"additionalProperties": true
+														},
+														"minorTownName": {
+															"type": "string",
+															"example": "Booker",
+															"description": "The name of the village, town or suburb when it is not a Primary Town or City (e.g., the Booker in Booker, High Wycombe) used in the address. Minor town when available provide additional granularity to the location of the address where the highest ranking key stakeholder of the business or organization can be contacted."
+														},
+														"addressRegion": {
+															"type": "object",
+															"description": "The details of the how different countries subdivide their country into smaller parts.<br/><br/><br/><br/>Examples:<br/><br/>Departments (France)<br/><br/>States (USA)<br/><br/>Provinces (Netherlands)<br/><br/>Counties (UK)<br/><br/>Bundeslander (Germany)<br/><br/>Provinces and Territories (Canada)<br/><br/><br/><br/>Region provides insight on the subdivided group of the address that can be used to contact the highest ranking key stakeholder of the business or organization.",
+															"properties": {
+																"name": {
+																	"type": "string",
+																	"example": "California",
+																	"description": "Different markets have their own way of subdividing the country into smaller parts.<br/><br/>Examples:<br/><br/>Departments (France)<br/>States (USA)<br/>Provinces (Netherlands)<br/>Counties (UK)<br/>Bundeslander (Germany)<br/>Provinces and Territories (Canada)<br/><br/>Name of the subdivided group the address is located and where the highest ranking key stakeholder can be contacted."
+																}
+															},
+															"additionalProperties": true
+														},
+														"addressCounty": {
+															"type": "object",
+															"description": "The details of the specific county of the address where the highest ranking key stakeholder of the business or organization can be contacted. Countries subdivide their geography into smaller sub divisions. County is an example of commonly used subdivision. Often found in UK.",
+															"properties": {
+																"name": {
+																	"type": "string",
+																	"example": "SAN MATEO",
+																	"description": "The name of the specific county of the address where the highest ranking key stakeholder of the business or organization can be contacted. Countries subdivide their geography into smaller sub divisions. County is an example of commonly used subdivision. Often found in UK."
+																}
+															},
+															"additionalProperties": true
+														},
+														"postalCode": {
+															"type": "string",
+															"example": "941109999",
+															"description": "A postal code (also known locally in various English-speaking countries throughout the world as a postcode, post code, PIN or ZIP Code) is a series of letters or digits or both, sometimes including spaces or punctuation, included in a postal address for the purpose of sorting mail. \"Most Senior Principal Address Postal Code\" is an identifier used by the local country's postal authority to identify the address where the highest ranking key stakeholder of the business or organization can be contacted."
+														},
+														"postalCodePosition": {
+															"type": "object",
+															"description": "The details of the position of the Postal Code when presenting the address where the highest ranking key stakeholder of the business or organization can be contacted.",
+															"properties": {
+																"description": {
+																	"type": "string",
+																	"example": "Post code presented before Town/City name",
+																	"description": "The position of the Postal Code when presenting the address (e.g., before the Primary Town/City) where the highest ranking key stakeholder of the business or organization can be contacted."
+																},
+																"dnbCode": {
+																	"type": "integer",
+																	"example": 1009,
+																	"description": "A unique code assigned by Dun & Bradstreet to identify the position of the Postal Code when presenting the address where the highest ranking key stakeholder of the business or organization can be contacted.<br/>Refer to Reference code table \"210 [Postal Code Position]\" for all possible values."
+																}
+															},
+															"additionalProperties": true
+														},
+														"streetNumber": {
+															"type": "string",
+															"example": "492",
+															"description": "The number part of the street address where the highest ranking key stakeholder of the business or the organization can be contacted. This may be a single number, a number with an appendix, or a range of street numbers.\r<br/>\r<br/>For example, \"51 - 59C\" in the address 51 - 59C Wall Street."
+														},
+														"streetName": {
+															"type": "string",
+															"example": "KOLLER ST",
+															"description": "The name of the street of the address where the highest ranking key stakeholder of the business or organization can be contacted.<br/><br/>For example, \"Wall Street\"; in the address 51 - 59C Wall Street."
+														},
+														"streetAddress": {
+															"type": "object",
+															"description": "The details of the street address where the highest ranking key stakeholder of the business or organization can be contacted.",
+															"properties": {
+																"line1": {
+																	"type": "string",
+																	"example": "492 KOLLER ST",
+																	"description": "The first line of the address where the highest ranking key stakeholder of the business or organization can be contacted.<br/><br/>For example,\"41 Central Chambers\"; in the address<br/><br/>41 Central Chambers<br/>Dame Court<br/>Dublin 2"
+																},
+																"line2": {
+																	"type": "string",
+																	"example": "Suite 100",
+																	"description": "The second line of the address where the highest ranking key stakeholder of the business or organization can be contacted.\r<br/>\r<br/>For example, \"Dame Court\"; in the address\r<br/>\r<br/>41 Central Chambers\r<br/>Dame Court\r<br/>Dublin 2"
+																}
+															},
+															"additionalProperties": true
+														},
+														"postOfficeBox": {
+															"type": "object",
+															"description": "The details of the location issued by postal office where the highest ranking key stakeholder of the business or organization requests to have mail received.",
+															"properties": {
+																"postOfficeBoxNumber": {
+																	"type": "string",
+																	"example": "5309",
+																	"description": "An identifier issued to the entity by a private or public postal office where the highest ranking key stakeholder of the business or organization request to have mail received."
+																},
+																"typeDescription": {
+																	"type": "string",
+																	"example": "Supplied by public Post Office authority",
+																	"description": "A post office box (commonly abbreviated as P.O. box, or also known as a postal box) is a uniquely addressable lockable box located on the premises of a post office station where the highest ranking key stakeholder of the business or organization request to have mail received."
+																},
+																"typeDnBCode": {
+																	"type": "integer",
+																	"example": 120,
+																	"description": "A unique code assigned by Dun & Bradstreet to identify the type of PO Box where the highest ranking key stakeholder of the business or organization request to have mail received.<br/>Refer to Reference code table \"208 [Postal Box Type]\" for all possible values."
+																}
+															},
+															"additionalProperties": true
+														},
+														"standardAddressCodes": {
+															"type": "array",
+															"description": "Records identifiers that uniquely identifies an entire address as opposed to an individual component of an address (such as a street). For example, a NIKE Address Identifier, a Japan Postal Barcode.",
+															"items": {
+																"properties": {
+																	"addressCode": {
+																		"type": "string",
+																		"example": "ZV12467A",
+																		"description": "An identifier that uniquely identifies an entire address as opposed to an individual component of an address (such as a street). For example, a NIKE Address Identifier, a Japan Postal Barcode."
+																	},
+																	"codeType": {
+																		"type": "object",
+																		"description": "Records the type of the standard address code.",
+																		"properties": {
+																			"description": {
+																				"type": "string",
+																				"example": "DK standard address code",
+																				"description": "Text that denotes the type of the standard address code."
+																			},
+																			"dnbCode": {
+																				"type": "integer",
+																				"example": 487,
+																				"description": "A unique code assigned by Dun&Bradstreet to identify the type of the standard address code."
+																			}
+																		},
+																		"additionalProperties": true
+																	}
+																},
+																"additionalProperties": true,
+																"type": "object"
+															}
+														}
+													},
+													"additionalProperties": true
+												},
+												"birthAddress": {
+													"type": "object",
+													"description": "Records the location where the principal was born.",
+													"properties": {
+														"addressLocality": {
+															"type": "object",
+															"description": "Records the town where the principal was born.",
+															"properties": {
+																"name": {
+																	"type": "string",
+																	"example": "London",
+																	"description": "The name of the town where the principal was born"
+																}
+															},
+															"additionalProperties": true
+														}
+													},
+													"additionalProperties": true
+												},
+												"responsibleAreas": {
+													"type": "object",
+													"description": "This gives details of the several different areas for which the highest ranking key stakeholder has authority in the associated organization which is not evident from their position(s).",
+													"properties": {
+														"description": {
+															"type": "string",
+															"example": "Sole signing authority",
+															"description": "Text describing the different areas for which the highest ranking key stakeholder has authority in the associated organization."
+														},
+														"dnbCode": {
+															"type": "integer",
+															"example": 6309,
+															"description": "A unique code assigned by Dun & Bradstreet describing the different areas for which the highest ranking key stakeholder has authority in the associated organization.<br/>Refer to Reference code table \"100 [Responsible Area]\" for all possible values."
+														}
+													},
+													"additionalProperties": true
+												},
+												"responsibleAreasEntry": {
+													"type": "array",
+													"description": "The details of the several different areas for which the highest ranking key stakeholder has authority in the associated organization which is not evident from their position(s).<br/>Note: This section includes all available responsible areas",
+													"items": {
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "Customer Service",
+																"description": "Text describing the different areas for which the highest ranking key stakeholder has authority in the associated organization."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 3162,
+																"description": "A unique code assigned by Dun & Bradstreet describing the different areas for which the highest ranking key stakeholder has authority in the associated organization.<br/>Refer to Reference code table \"100 [Responsible Areas]\" for all possible values."
+															},
+															"signingAuthorityClass": {
+																"type": "object",
+																"description": "The broad class into which this signing authority is categorized, e.g., Sole Signing Authority, Joint Signing Authority.",
+																"properties": {
+																	"description": {
+																		"type": "string",
+																		"example": "Sole Signing Authority",
+																		"description": "Text that denotes the broad class into which this signing authority is categorized, e.g., Sole Signing Authority, Joint Signing Authority."
+																	},
+																	"dnbCode": {
+																		"type": "integer",
+																		"example": 45040,
+																		"description": "A unique code assigned by Dun & Bradstreet identifying the broad class into which this signing authority is categorized, e.g., Sole Signing Authority, Joint Signing Authority.<br/>Refer to Reference code table \"872 [Signing Authority Class]\" for all possible values."
+																	}
+																},
+																"additionalProperties": true
+															},
+															"textEntry": {
+																"type": "array",
+																"description": "The different textual information regarding the responsible area or signing authority of the Principal.",
+																"items": {
+																	"properties": {
+																		"text": {
+																			"type": "string",
+																			"example": "David",
+																			"description": "A further textual information of a responsible area or signing authority of the Principal which cannot be recorded in any of the defined elements."
+																		},
+																		"typeDescription": {
+																			"type": "string",
+																			"example": "Signing Authority",
+																			"description": "Text that denotes the meaning of the textual information recorded."
+																		},
+																		"typeDnBCode": {
+																			"type": "integer",
+																			"example": 15356,
+																			"description": "A unique code assigned by Dun & Bradstreet that denotes the meaning of the textual information recorded.<br/>Refer to Reference code table \"27 [Information Description]\" for all possible values."
+																		},
+																		"language": {
+																			"type": "object",
+																			"description": "The language in which this information is recorded.",
+																			"properties": {
+																				"description": {
+																					"type": "string",
+																					"example": "Czech",
+																					"description": "Text identifying the language in which this information is recorded."
+																				},
+																				"dnbCode": {
+																					"type": "integer",
+																					"example": 1627,
+																					"description": "A unique code assigned by Dun & Bradstreet identifying the language in which this information is recorded.<br/>Refer to Reference code table \"3 [Language]\" for all possible values."
+																				}
+																			},
+																			"additionalProperties": true
+																		},
+																		"priority": {
+																			"type": "integer",
+																			"example": 1,
+																			"description": "A number which may be used to define the order in which the textual information should be presented relative to any other occurrences of Text Entry where the lower the number the earlier the data is presented."
+																		}
+																	},
+																	"additionalProperties": true,
+																	"type": "object"
+																}
+															}
+														},
+														"additionalProperties": true,
+														"type": "object"
+													}
+												},
+												"positions": {
+													"type": "array",
+													"description": "The details on the job position the principal or manager holds or has held in the entity.",
+													"items": {
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "Chairman Executive Committee",
+																"description": "The job position the principal or manager holds or has held in the entity (e.g., Financial Director, Managing Director, Sales Director, Operations Manager)."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"example": 95,
+																"description": "A unique code assigned by Dun & Bradstreet to identify the job position the principal or manager holds or has held in the entity.<br/>Refer to Reference code table \"5 [Position] & 198 [Employee Position]\" for all possible values."
+															},
+															"startDate": {
+																"type": "string",
+																"example": "2022-08-31",
+																"description": "The date when the principal started in this position."
+															}
+														},
+														"additionalProperties": true,
+														"type": "object"
+													}
+												},
+												"jobTitles": {
+													"type": "array",
+													"description": "Text string that denotes a position held by the highest ranking key stakeholder in the organization or recording of the title used by the organization to describe this person's job e.g., Leader Global Communication, Manager National Technical Support Center.",
+													"items": {
+														"properties": {
+															"title": {
+																"type": "string",
+																"example": "President",
+																"description": "Text string that denotes a position held by the highest ranking key stakeholder in the organization or recording of the title used by the organization to describe this person's job e.g., Leader Global Communication, Manager National Technical Support Center."
+															}
+														},
+														"additionalProperties": true,
+														"type": "object"
+													}
+												},
+												"managementResponsibilities": {
+													"type": "array",
+													"description": "The details of the standardized alphanumeric classification code generated by Dun & Bradstreet used to identify the business function and hierarchical level of the highest ranking key stakeholder based on their professional job title.",
+													"items": {
+														"properties": {
+															"description": {
+																"type": "string",
+																"example": "President",
+																"description": "A text description of the standardized alphanumeric classification code generated by Dun & Bradstreet that identifies the business function and hierarchical level of the highest ranking key stakeholder of the business or organization based on their professional job title.<br/><br/>For example \" Chief Executive Officer\" in<br/>A1A7 Chief Executive Officer"
+															},
+															"mrcCode": {
+																"type": "string",
+																"example": "A1A6",
+																"description": "A standardized alphanumeric classification code generated by Dun & Bradstreet that identifies the business function of the highest ranking key stakeholder based on the associated job title data. This information is expressed as a standard Management Responsibility Code (MRC).<br/><br/>For example \" A1A7\" in<br/>A1A7 Chief Executive Officer<br/>Refer to Reference code table \"27751 [MRC]\" for all possible values."
+															}
+														},
+														"additionalProperties": true,
+														"type": "object"
+													}
+												},
+												"idNumbers": {
+													"type": "array",
+													"description": "Identification/registration numbers for the highest ranking key stakeholder of the organization",
+													"items": {
+														"properties": {
+															"idNumber": {
+																"type": "string",
+																"example": "11356097",
+																"description": "A number assigned by an external body or by Dun & Bradstreet which either uniquely identifies or helps to identify the highest ranking key stakeholder of the organization."
+															},
+															"idType": {
+																"type": "object",
+																"description": "Identifies the type of \"Principal Identification Number\", e.g., Social Security Number for the highest ranking key stakeholder of the organization.",
+																"properties": {
+																	"description": {
+																		"type": "string",
+																		"example": "Super Person ID",
+																		"description": "Text that identifies the type of \"Principal Identification Number\", e.g., Social Security Number for the highest ranking key stakeholder of the organization"
+																	},
+																	"dnbCode": {
+																		"type": "integer",
+																		"example": 11694,
+																		"description": "A unique code assigned by Dun & Bradstreet that identifies the type of \"Principal Identification Number\", e.g., Social Security Number for the highest ranking key stakeholder of the organization<br/>Refer to Reference code table \"7 [Registration Number Type]\" for all possible values."
+																	}
+																},
+																"additionalProperties": true
+															}
+														},
+														"additionalProperties": true,
+														"type": "object"
+													}
+												},
+												"isSigningAuthority": {
+													"type": "boolean",
+													"example": true,
+													"description": "Indicates whether the principal has been given the legal right to make decisions on behalf of the subject business.<br/><br/>- If true, principal has legal right to make decisions.<br/>- If false, principal does not have legal right to make decisions."
+												},
+												"hasBankruptcyHistory": {
+													"type": "boolean",
+													"example": true,
+													"description": "Indicates if the principal was involved in a bankruptcy filing by a previously associated company."
+												},
+												"isDisqualifiedDirector": {
+													"type": "boolean",
+													"example": true,
+													"description": "When set to \"true\"; it indicates that the principal is disqualified.<br/>When set to \"false\";  it indicates that the principal is not disqualified."
+												},
+												"disqualifications": {
+													"type": "array",
+													"description": "Records principal disqualification details.",
+													"items": {
+														"properties": {
+															"disqualificationType": {
+																"type": "object",
+																"description": "Records the procedure how the principal was disqualified, e.g. Court Order.",
+																"properties": {
+																	"description": {
+																		"type": "string",
+																		"example": "Court Order",
+																		"description": "Text that denotes the procedure how the principal was disqualified, e.g. Court Order."
+																	},
+																	"dnbCode": {
+																		"type": "integer",
+																		"example": 29866,
+																		"description": "A unique code assigned by Dun & Bradstreet that denotes the procedure how the principal was disqualified, e.g. Court Order."
+																	}
+																},
+																"additionalProperties": true
+															},
+															"startDate": {
+																"type": "string",
+																"example": "2021-07-12",
+																"description": "The date when the disqualification becomes effective."
+															},
+															"endDate": {
+																"type": "string",
+																"example": "2022-07-11",
+																"description": "The date at which the Disqualification is no longer in effect."
+															},
+															"dataProvider": {
+																"type": "object",
+																"description": "Records the details of the source which provided this information.",
+																"properties": {
+																	"description": {
+																		"type": "string",
+																		"example": "Companies House",
+																		"description": "Text that identifies the source which provided this information."
+																	},
+																	"dnbCode": {
+																		"type": "integer",
+																		"example": 19175,
+																		"description": "A unique code assigned by Dun & Bradstreet that identifies the source which provided this information.<br/>Refer to Reference code table \"29 [Data Provider]\" for all possible values."
+																	}
+																},
+																"additionalProperties": true
+															},
+															"actText": {
+																"type": "string",
+																"example": "",
+																"description": "Text that provides additional details regarding the disqualification of this principal."
+															},
+															"actType": {
+																"type": "object",
+																"description": "Records textual information about the directors has been disqualified by the Indian Ministry of corporate affairs, according to  Companies Act 2013 section 164(2).",
+																"properties": {
+																	"description": {
+																		"type": "string",
+																		"example": "Board Of Directors Comments Text",
+																		"description": "Textual information about the directors has been disqualified by the Indian Ministry of corporate affairs, according to  Companies Act 2013 section 164(2)."
+																	},
+																	"dnbCode": {
+																		"type": "integer",
+																		"example": 27109,
+																		"description": "A unique code assigned by Dun & Bradstreet about the directors has been disqualified by the Indian Ministry of corporate affairs, according to  Companies Act 2013 section 164(2).<br/>Refer to Reference code table \"27 [Information Description]\" for all possible values."
+																	}
+																},
+																"additionalProperties": true
+															}
+														},
+														"additionalProperties": true,
+														"type": "object"
+													}
+												},
+												"associations": {
+													"type": "array",
+													"description": "Records details of other businesses with which the principal has an association. E.g. Other Directorships",
+													"items": {
+														"properties": {
+															"duns": {
+																"type": "string",
+																"example": "701456389",
+																"description": "The DUNS number of the associated business."
+															},
+															"primaryName": {
+																"type": "string",
+																"example": "ABC Corp",
+																"description": "The primary name of the associated business."
+															},
+															"startDate": {
+																"type": "string",
+																"example": "2012-09-12",
+																"description": "The date when the Principal's relationship with the associated business started. E.g. The date when the principal was appointed as a director."
+															}
+														},
+														"additionalProperties": true,
+														"type": "object"
+													}
+												}
+											},
+											"additionalProperties": true
+										}
+									}
+								}
+							},
+							"additionalProperties": true,
+							"required": [
+								"transactionDetail"
+							]
+						}
+					},
+					"301": {
+						"description": "Moved Permanently",
+						"headers": {
+							"location": {
+								"description": "The URL to retrieve the D-U-N-S Number to which the requested D-U-N-S Number was transferred.",
+								"type": "string",
+								"x-example": "https://plus.dnb.com/v1/data/duns/{dunsNumber}?blockIDs=blockID1,blockID2,blockID3,.."
+							}
+						},
+						"schema": {
+							"description": "",
+							"type": "object",
+							"properties": {}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"description": "The access token provided by authentication.",
+						"required": true,
+						"type": "string",
+						"x-example": "Bearer alphanumerictoken"
+					},
+					{
+						"in": "path",
+						"name": "dunsNumber",
+						"description": "A 9-character numeric string identifying the entity by its Dun & Bradstreet D-U-N-S number.",
+						"required": true,
+						"type": "string",
+						"x-example": "804735132"
+					},
+					{
+						"in": "query",
+						"name": "blockIDs",
+						"description": "The block ID provided by Dun & Bradstreet that identifies the data block to be returned.<br/><br/>Multiple values can be included, separated by commas.",
+						"required": true,
+						"type": "string",
+						"x-example": "blockID"
+					},
+					{
+						"in": "query",
+						"name": "tradeUp",
+						"description": "Indicates if the Headquarters D-U-N-S Number should be returned if a Branch is requested.<br/><br/>Valid values:<br/>* hq: If the provided D-U-N-S Number is a Branch, the Headquarter D-U-N-S Number is returned.<br/>* domhq: If the provided D-U-N-S Number is a Branch, the Domestic Headquarter D-U-N-S Number is returned.<br/><br/>If the requested D-U-N-S Number is not a Branch, that D-U-N-S Number will be returned regardless of the value of this parameter.<br/><br/>If the parameter is omitted, the requested D-U-N-S Number is returned even if it is a Branch.",
+						"required": false,
+						"type": "string",
+						"x-example": "hq"
+					},
+					{
+						"in": "query",
+						"name": "customerReference",
+						"description": "Up to 240 characters for a reference string to be linked to the request in order to support subsequent order reconciliation.",
+						"required": false,
+						"type": "string",
+						"x-example": "customer reference text"
+					}
+				]
+			}
+		}
+	}
+}

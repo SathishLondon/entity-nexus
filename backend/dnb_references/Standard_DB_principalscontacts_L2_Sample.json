@@ -1,0 +1,134 @@
+{
+	"transactionDetail": {
+		"transactionID": "rrt-008bcd83a756fb8a4-b-wo-20738-19763753-67",
+		"transactionTimestamp": "2020-03-23T10:36:14.432Z",
+		"inLanguage": "en-US"
+	},
+	"inquiryDetail": {
+		"duns": "804735132",
+		"blockIDs": [
+			"principalscontacts_L2_v2"
+		],
+		"tradeUp": "hq",
+		"customerReference": "Some text to describe the request."
+	},
+	"organization": {
+		"countryISOAlpha2Code": "US",
+		"duns": "804735132",
+		"primaryName": "Gorman Manufacturing Company, Inc.",
+		"principalsSummary": {
+			"currentPrincipalsCount": 10,
+			"otherAssociationsCount": 4,
+			"inactiveAssociationsCount": 7,
+			"unfavorableInactiveAssociationsCount": 5,
+			"favorableInactiveAssociationsCount": 2,
+			"detrimentalPrincipalsCount": 2,
+			"detrimentalPrincipalsPercentage": 20
+		},
+		"mostSeniorPrincipal": {
+			"givenName": "Leslie",
+			"middleName": "Ann",
+			"familyName": "Smith",
+			"fullName": "Leslie Smith",
+			"namePrefix": "Dr.",
+			"nameSuffix": "PhD",
+			"associationStartDate": "2013-09-30",
+			"otherLanguageNames": [
+				{
+					"givenName": "アンソニー",
+					"familyName": "ヴィンシクエラ",
+					"fullName": "浩光 齋藤",
+					"language": {
+						"description": "Japanese",
+						"dnbCode": 3807
+					},
+					"writingScript": {
+						"description": "Kana",
+						"dnbCode": 19347
+					}
+				}
+			],
+			"gender": {
+				"description": "Female",
+				"dnbCode": 191
+			},
+			"jobTitles": [
+				{
+					"title": "President"
+				}
+			],
+			"managementResponsibilities": [
+				{
+					"description": "President",
+					"mrcCode": "A1A6"
+				}
+			],
+			"idNumbers": [
+				{
+					"idNumber": "11356097",
+					"idType": {
+						"description": "Super Person ID",
+						"dnbCode": 11694
+					}
+				}
+			]
+		},
+		"currentPrincipals": [
+			{
+				"givenName": "Leslie",
+				"middleName": "Ann",
+				"familyName": "Smith",
+				"fullName": "Leslie Ann Smith",
+				"namePrefix": "Dr.",
+				"nameSuffix": "PhD",
+				"associationStartDate": "2013-09-30",
+				"otherLanguageNames": [
+					{
+						"givenName": "アンソニー",
+						"familyName": "ヴィンシクエラ",
+						"fullName": "浩光 齋藤",
+						"language": {
+							"description": "Japanese",
+							"dnbCode": 3807
+						},
+						"writingScript": {
+							"description": "Kana",
+							"dnbCode": 19347
+						}
+					}
+				],
+				"gender": {
+					"description": "Female",
+					"dnbCode": 191
+				},
+				"jobTitles": [
+					{
+						"title": "President"
+					}
+				],
+				"managementResponsibilities": [
+					{
+						"description": "President",
+						"mrcCode": "A1A6"
+					}
+				],
+				"idNumbers": [
+					{
+						"idNumber": "11356097",
+						"idType": {
+							"description": "Super Person ID",
+							"dnbCode": 11694
+						}
+					}
+				]
+			}
+		]
+	},
+	"blockStatus": [
+		{
+			"blockID": "principalscontacts_L2_v2",
+			"status": "ok",
+			"reason": null
+		}
+	]
+}

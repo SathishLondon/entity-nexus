@@ -1,0 +1,3556 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 4513
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0 g
+28.3464566929133888 566.933543307086552 Td
+(Data Blocks) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+0. g
+BT
+/F1 10 Tf
+11.5 TL
+0.078 g
+33.3464566929133923 553.433543307086552 Td
+(\(companyinfo_identifiers_v1\)) Tj
+ET
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0. g
+28.3464566929133888 517.0870866141732449 Td
+(GET https://plus.dnb.com/v1/data/duns/{dunsNumber}) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+0. g
+BT
+/F1 10 Tf
+11.5 TL
+0.078 g
+33.3464566929133923 489.4138582677165346 Td
+(The Data Block API is intended to vend Data Blocks to customers transactionally based on a request for a single DUNS.) Tj
+T* () Tj
+T* (Monitoring : Available. Please refer guide for details.) Tj
+ET
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0. g
+28.3464566929133888 430.0674015748031707 Td
+(Request Parameters) Tj
+ET
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0. g
+28.3464566929133888 401.7209448818897499 Td
+(Query Parameters) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.93 g
+0.78 G
+0. w
+0.93 g
+40. 373.3744881889762723 170.0787401574803255 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+0. 0.318 0.447 rg
+45. 359.8744881889763292 Td
+(Name) Tj
+ET
+0.93 g
+0.78 G
+0. w
+0.93 g
+210.0787401574803539 373.3744881889762723 591.811259842519803 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+0. 0.318 0.447 rg
+215.0787401574803255 359.8744881889763292 Td
+(Details) Tj
+ET
+0. G
+0.5670000000000001 w
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 351.8744881889762723 170.0787401574803255 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 338.3744881889763292 Td
+(blockIDs) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+210.0787401574803539 351.8744881889762723 591.811259842519803 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+215.0787401574803255 338.3744881889763292 Td
+([string] Required e.g.: blockID) Tj
+T* (The block ID provided by Dun & Bradstreet that identifies the data block to be returned.) Tj
+T* () Tj
+T* (Multiple values can be included, separated by commas.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 295.8744881889763292 170.0787401574803255 -124.9999999999999858 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 282.3744881889763292 Td
+(tradeUp) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+210.0787401574803539 295.8744881889763292 591.811259842519803 -124.9999999999999858 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+215.0787401574803255 282.3744881889763292 Td
+([string] e.g.: hq) Tj
+T* (Indicates if the Headquarters D-U-N-S Number should be returned if a Branch is requested.) Tj
+T* () Tj
+T* (Valid values:) Tj
+T* (* hq: If the provided D-U-N-S Number is a Branch, the Headquarter D-U-N-S Number is returned.) Tj
+T* (* domhq: If the provided D-U-N-S Number is a Branch, the Domestic Headquarter D-U-N-S Number is returned.) Tj
+T* () Tj
+T* (If the requested D-U-N-S Number is not a Branch, that D-U-N-S Number will be returned regardless of the value of this parameter.) Tj
+T* () Tj
+T* (If the parameter is omitted, the requested D-U-N-S Number is returned even if it is a Branch.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 170.8744881889763576 170.0787401574803255 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 157.3744881889764429 Td
+(customerReference) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+210.0787401574803539 170.8744881889763576 591.811259842519803 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+215.0787401574803255 157.3744881889764429 Td
+([string] e.g.: customer reference text) Tj
+T* (Up to 240 characters for a reference string to be linked to the request in order to support subsequent order reconciliation.) Tj
+ET
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0. g
+28.3464566929133888 109.5280314960630221 Td
+(Header Parameters) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.93 g
+0.78 G
+0. w
+0.93 g
+40. 81.1815748031496156 170.0787401574803255 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+0. 0.318 0.447 rg
+45. 67.6815748031497151 Td
+(Name) Tj
+ET
+0.93 g
+0.78 G
+0. w
+0.93 g
+210.0787401574803539 81.1815748031496156 591.811259842519803 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+0. 0.318 0.447 rg
+215.0787401574803255 67.6815748031497151 Td
+(Details) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 6340
+>>
+stream
+0. w
+0.78 G
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 555.2799999999999727 170.0787401574803255 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 541.7799999999999727 Td
+(Authorization) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+210.0787401574803539 555.2799999999999727 591.811259842519803 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+215.0787401574803255 541.7799999999999727 Td
+([string] Required e.g.: Bearer alphanumerictoken) Tj
+T* (The access token provided by authentication.) Tj
+ET
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0. g
+28.3464566929133888 493.9335433070866088 Td
+(Path Parameters) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.93 g
+0.78 G
+0. w
+0.93 g
+40. 465.5870866141731881 170.0787401574803255 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+0. 0.318 0.447 rg
+45. 452.0870866141732449 Td
+(Name) Tj
+ET
+0.93 g
+0.78 G
+0. w
+0.93 g
+210.0787401574803539 465.5870866141731881 591.811259842519803 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+0. 0.318 0.447 rg
+215.0787401574803255 452.0870866141732449 Td
+(Details) Tj
+ET
+0. G
+0.5670000000000001 w
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 444.0870866141732449 170.0787401574803255 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 430.5870866141732449 Td
+(dunsNumber) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+210.0787401574803539 444.0870866141732449 591.811259842519803 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+215.0787401574803255 430.5870866141732449 Td
+([string] Required e.g.: 804735132) Tj
+T* (A 9-character numeric string identifying the entity by its Dun & Bradstreet D-U-N-S number.) Tj
+ET
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0. g
+28.3464566929133888 382.7406299212598242 Td
+(Response\(s\)) Tj
+ET
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0. g
+28.3464566929133888 354.3941732283464034 Td
+(Response for HTTP Status Code : 200) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.93 g
+0.78 G
+0. w
+0.93 g
+40. 326.0477165354329827 283.4645669291338663 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+0. 0.318 0.447 rg
+45. 312.5477165354330396 Td
+(Name) Tj
+ET
+0.93 g
+0.78 G
+0. w
+0.93 g
+323.4645669291339232 326.0477165354329827 478.4254330708664043 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+0. 0.318 0.447 rg
+328.4645669291338663 312.5477165354330396 Td
+(Details) Tj
+ET
+0. G
+0.5670000000000001 w
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 304.5477165354329827 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 291.0477165354330396 Td
+(transactionDetail) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 304.5477165354329827 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 291.0477165354330396 Td
+([object] Required) Tj
+T* (The information used to process this request.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 271.5477165354329827 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 258.0477165354330396 Td
+(transactionDetail.transactionID) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 271.5477165354329827 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 258.0477165354330396 Td
+([string] Required e.g.: rlh-hi9puyoijk-jop8u-kd-d-1) Tj
+T* (A value assigned by the Dun & Bradstreet application to uniquely identify this request.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 238.5477165354329827 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 225.0477165354330396 Td
+(transactionDetail.transactionTimestamp) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 238.5477165354329827 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 225.0477165354330396 Td
+([string] Required e.g.: 2017-02-21T17:46:19.839Z) Tj
+T* (The date and time, in ISO 8601 UTC Z standard, when this response was created.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 205.5477165354329827 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 192.0477165354330396 Td
+(transactionDetail.inLanguage) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 205.5477165354329827 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 192.0477165354330396 Td
+([string] Required e.g.: en-US) Tj
+T* (An IETF BCP 47 code value that defines the language in which this product was rendered.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 172.5477165354330396 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 159.0477165354330964 Td
+(inquiryDetail) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 172.5477165354330396 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 159.0477165354330964 Td
+([object]) Tj
+T* (The criteria used to process this request.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 139.547716535433068 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 126.0477165354331532 Td
+(inquiryDetail.duns) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 139.547716535433068 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 126.0477165354331532 Td
+([string] e.g.: 804735132) Tj
+T* (The D-U-N-S number provided in the request.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 106.5477165354331106 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 93.0477165354331532 Td
+(inquiryDetail.blockIDs) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 106.5477165354331106 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 93.0477165354331532 Td
+([array \(string\)] e.g.: blockID) Tj
+T* (The blockIDs provided in the request.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 73.5477165354331532 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 60.0477165354332101 Td
+(inquiryDetail.tradeUp) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 73.5477165354331532 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 60.0477165354332101 Td
+([string] e.g.: hq) Tj
+T* (The value of the tradeUp parameter provided in the request.) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+7 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 8 0 R
+>>
+endobj
+8 0 obj
+<<
+/Length 5497
+>>
+stream
+0. w
+0.78 G
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 555.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 541.7799999999999727 Td
+(inquiryDetail.customerReference) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 555.2799999999999727 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+([string] e.g.: Some text to describe the request.) Tj
+T* (A reference string provided by the customer for this particular transaction.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 522.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 508.7799999999999727 Td
+(blockStatus) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 522.2799999999999727 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 508.7799999999999727 Td
+([array \(object\)]) Tj
+T* (Records the status of the data blocks requested by the customer.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 489.2799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 475.7799999999999727 Td
+(blockStatus.blockID) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 489.2799999999999159 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 475.7799999999999727 Td
+([string] Required e.g.: blockID) Tj
+T* (The unique identifier for the data block.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 456.2799999999999727 283.4645669291338663 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 442.7799999999999727 Td
+(blockStatus.status) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 456.2799999999999727 478.4254330708664043 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 442.7799999999999727 Td
+([string] Required e.g.: OK) Tj
+T* (The current status of the data block fulfilled in this response.) Tj
+T* () Tj
+T* (Possible values:) Tj
+T* (* OK) Tj
+T* (* Unavailable) Tj
+T* (* Insufficient data) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 365.7799999999999727 283.4645669291338663 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 352.2799999999999727 Td
+(blockStatus.reason) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 365.7799999999999727 478.4254330708664043 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 352.2799999999999727 Td
+([string] e.g.: Data is not available) Tj
+T* (Any specific reason why the data block is not delivered in this response.) Tj
+T* () Tj
+T* (Possible values:) Tj
+T* (* Data is partially available or not available.) Tj
+T* (* Data is not available for the branch.) Tj
+T* (* Data is not available on the requested country code.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 275.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 261.7799999999999727 Td
+(organization) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 275.2799999999999727 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 261.7799999999999727 Td
+([object]) Tj
+T* (The details of the entity.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 242.2799999999999443 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 228.7800000000000296 Td
+(organization.duns) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 242.2799999999999443 478.4254330708664043 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 228.7800000000000296 Td
+([string] e.g.: 804735132) Tj
+T* (The D-U-N-S® Number, a proprietary organizational identifier owned and managed by Dun & Bradstreet) Tj
+T* (Inc, provides unique identification of a subject organization, in accordance with the Data Universal) Tj
+T* (Numbering System \(D-U-N-S®\).) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 186.2799999999999443 283.4645669291338663 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 172.7799999999999727 Td
+(organization.countryISOAlpha2Code) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 186.2799999999999443 478.4254330708664043 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 172.7799999999999727 Td
+([string] e.g.: US) Tj
+T* (The two-letter country code, defined by the International Organization for Standardization \(ISO\) ISO) Tj
+T* (3166-1 scheme, identifying the country in which the entity is located.) Tj
+T* () Tj
+T* (Note: Please refer to Country Code Substitutions Table) Tj
+T* ([/html/resources/CountryCodes.html#country-substitute] for the country code substitutions.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 107.2799999999999443 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 93.7800000000000296 Td
+(organization.primaryName) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 107.2799999999999443 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 93.7800000000000296 Td
+([string] e.g.: GORMAN MANUFACTURING COMPANY, INC.) Tj
+T* (Single name by which the organization is primarily known or identified.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 74.2799999999999869 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 60.7800000000000864 Td
+(organization.legalEntityIdentifierDetails) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 74.2799999999999869 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 60.7800000000000864 Td
+([object]) Tj
+T* (Records the details of the Legal Entity Identifier assigned to this organization.) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+9 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 10 0 R
+>>
+endobj
+10 0 obj
+<<
+/Length 7400
+>>
+stream
+0. w
+0.78 G
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 555.2799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 541.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.entityID) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 555.2799999999999727 478.4254330708664043 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+([string] e.g.: 984500D4EEDADDF92B49) Tj
+T* (The Legal Entity Identifier \(LEI\) is a 20-character, alpha-numeric code based on the ISO 17442 standard) Tj
+T* (developed by the International Organization for Standardization \(ISO\).) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 510.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 497.2799999999999727 Td
+(organization.legalEntityIdentifierDetails.legalName) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 510.7799999999999727 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 497.2799999999999727 Td
+([string] e.g.: ) Tj
+T* (The legal name of the legal entity.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 477.7799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 464.2799999999999727 Td
+(organization.legalEntityIdentifierDetails.legalNameLanguage) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 477.7799999999999159 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 464.2799999999999727 Td
+([object]) Tj
+T* (Records the language used to present the legal name of the organization.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 444.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 431.2799999999999727 Td
+(organization.legalEntityIdentifierDetails.legalNameLanguage.d) Tj
+T* (escription) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 444.7799999999999727 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 431.2799999999999727 Td
+([string] e.g.: English) Tj
+T* (Text that denotes the language used to present the legal name of the organization.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 411.7799999999999159 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 398.2799999999999727 Td
+(organization.legalEntityIdentifierDetails.legalNameLanguage.d) Tj
+T* (nbCode) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 411.7799999999999159 478.4254330708664043 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 398.2799999999999727 Td
+([integer] e.g.: 39) Tj
+T* (A unique code assigned by Dun&Bradstreet that denotes the language used to present the legal name of) Tj
+T* (the organization.) Tj
+T* (Refer to Reference code table "3 [Language]" for all possible values.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 355.7799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 342.2800000000000296 Td
+(organization.legalEntityIdentifierDetails.legalNameLanguage.l) Tj
+T* (anguageTag) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 355.7799999999999727 478.4254330708664043 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 342.2800000000000296 Td
+([string] e.g.: en-GB) Tj
+T* (The language of this element's text content. An IETF Language Code conforming to the latest RFC from) Tj
+T* (IETF BCP 47.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 311.2800000000000296 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 297.7800000000000296 Td
+(organization.legalEntityIdentifierDetails.legalAddress) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 311.2800000000000296 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 297.7800000000000296 Td
+([object]) Tj
+T* (The address of the legal entity as recorded in the registration of the legal entity in its legal jurisdiction.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 278.2800000000000296 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 264.7800000000000296 Td
+(organization.legalEntityIdentifierDetails.legalAddress.languag) Tj
+T* (e) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 278.2800000000000296 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 264.7800000000000296 Td
+([object]) Tj
+T* (Records the language used to present the legal address of the organization.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 245.2800000000000011 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 231.7800000000000296 Td
+(organization.legalEntityIdentifierDetails.legalAddress.languag) Tj
+T* (e.description) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 245.2800000000000011 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 231.7800000000000296 Td
+([string] e.g.: English) Tj
+T* (Text that denotes the language used to present the legal address of the organization.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 212.2800000000000011 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 198.7800000000000864 Td
+(organization.legalEntityIdentifierDetails.legalAddress.languag) Tj
+T* (e.dnbCode) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 212.2800000000000011 478.4254330708664043 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 198.7800000000000864 Td
+([integer] e.g.: 39) Tj
+T* (A unique code assigned by Dun&Bradstreet that denotes the language used to present the legal address) Tj
+T* (of the organization.) Tj
+T* (Refer to Reference code table "3 [Language]" for all possible values.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 156.2800000000000011 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 142.7800000000000296 Td
+(organization.legalEntityIdentifierDetails.legalAddress.languag) Tj
+T* (e.languageTag) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 156.2800000000000011 478.4254330708664043 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 142.7800000000000296 Td
+([string] e.g.: en-GB) Tj
+T* (The language of this element's text content. An IETF Language Code conforming to the latest RFC from) Tj
+T* (IETF BCP 47.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 111.7799999999999585 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 98.2800000000000296 Td
+(organization.legalEntityIdentifierDetails.legalAddress.address) Tj
+T* (Country) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 111.7799999999999585 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 98.2800000000000296 Td
+([object]) Tj
+T* (Records the details of the country or region in which the business is located.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 78.7800000000000011 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 65.2800000000000864 Td
+(organization.legalEntityIdentifierDetails.legalAddress.address) Tj
+T* (Country.name) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 78.7800000000000011 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 65.2800000000000864 Td
+([string] e.g.: United Kingdom) Tj
+T* (Text recording the name of the country or region in which the business is located.) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+11 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 12 0 R
+>>
+endobj
+12 0 obj
+<<
+/Length 7562
+>>
+stream
+0. w
+0.78 G
+1. g
+0.78 G
+0. w
+1. g
+40. 555.2799999999999727 283.4645669291338663 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 541.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.legalAddress.address) Tj
+T* (Country.isoAlpha2Code) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 555.2799999999999727 478.4254330708664043 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+([string] e.g.: GB) Tj
+T* (The two-letter country or region code, defined by the International Organization for Standardization \(ISO\)) Tj
+T* (ISO 3166-1 scheme identifying the country or region of the business entity.) Tj
+T* () Tj
+T* (Note: Please refer to Country Code Substitutions Table) Tj
+T* ([/html/resources/CountryCodes.html#country-substitute] for the country or region code substitutions.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 476.2799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 462.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.legalAddress.address) Tj
+T* (Locality) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 476.2799999999999159 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 462.7799999999999727 Td
+([object]) Tj
+T* (Records the details of a city, town, township, village, borough, etc. where the business is located.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 443.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 429.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.legalAddress.address) Tj
+T* (Locality.name) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 443.2799999999999727 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 429.7799999999999727 Td
+([string] e.g.: DONCASTER) Tj
+T* (Identifies the city, town, township, village, borough, etc. where the business is located.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 410.2800000000000296 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 396.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.legalAddress.address) Tj
+T* (Region) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 410.2800000000000296 478.4254330708664043 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 396.7799999999999727 Td
+([object]) Tj
+T* (Details of the type of geographical area for this address of the organization.) Tj
+T* (Different markets have their own way of subdividing the country into smaller parts.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 365.7799999999999727 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 352.2799999999999727 Td
+(organization.legalEntityIdentifierDetails.legalAddress.address) Tj
+T* (Region.isoSubDivisionCode) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 365.7799999999999727 478.4254330708664043 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 352.2799999999999727 Td
+([string] e.g.: US-CA) Tj
+T* (The code assigned by ISO that represents the name of a principal subdivision \(e.g province or state\) of) Tj
+T* (countries coded in ISO 3166-1. This code is based on the two-letter code element from ISO 3166-1) Tj
+T* (followed by a separator and up to three alphanumeric characters.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 309.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 296.2799999999999727 Td
+(organization.legalEntityIdentifierDetails.legalAddress.address) Tj
+T* (Region.isoSubDivisionName) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 309.7799999999999727 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 296.2799999999999727 Td
+([string] e.g.: California) Tj
+T* (The official name of a principal subdivision \(e.g province or state\) of countries coded in ISO 3166-1.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 276.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 263.2799999999999727 Td
+(organization.legalEntityIdentifierDetails.legalAddress.postalCo) Tj
+T* (de) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 276.7799999999999727 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 263.2799999999999727 Td
+([string] e.g.: 950142083) Tj
+T* (An identifier used by the local country Postal Authority to identify where the business is located.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 243.7799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 230.2800000000000296 Td
+(organization.legalEntityIdentifierDetails.legalAddress.mailRout) Tj
+T* (ing) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 243.7799999999999727 478.4254330708664043 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 230.2800000000000296 Td
+([string] e.g.: c/o JPMORGAN FUNDS LIMITED) Tj
+T* (Text address line to hold content from other address lines containing explicit routing information \(this) Tj
+T* (element's presence indicates that this address is a routing / "care of" address.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 199.2799999999999443 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 185.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.legalAddress.streetNu) Tj
+T* (mber) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 199.2799999999999443 478.4254330708664043 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 185.7799999999999727 Td
+([string] e.g.: 1) Tj
+T* (Additional structured version of an external house number, or range of numbers, contained in one of the) Tj
+T* (address line elements. This could be a numeral, a letter or code made up of mixed characters \(e.g. 221B\).) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 154.7799999999998875 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 141.2799999999999727 Td
+(organization.legalEntityIdentifierDetails.legalAddress.building) Tj
+T* (Number) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 154.7799999999998875 478.4254330708664043 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 141.2799999999999727 Td
+([string] e.g.: 5AD) Tj
+T* (Additional structured version of an internal location number, or range of numbers, contained in one of the) Tj
+T* (address line elements.This could be a numeral, a letter or code made up of mixed characters \(e.g. 13\) of a) Tj
+T* (floor, suite or apartment within a building identified.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 98.7799999999998875 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 85.2799999999999727 Td
+(organization.legalEntityIdentifierDetails.legalAddress.streetAd) Tj
+T* (dress) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 98.7799999999998875 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 85.2799999999999727 Td
+([object]) Tj
+T* (The details of the street address for this address of the organization.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 65.7799999999999159 283.4645669291338663 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 52.2799999999999727 Td
+(organization.legalEntityIdentifierDetails.legalAddress.streetAd) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 65.7799999999999159 478.4254330708664043 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 52.2799999999999727 Td
+([string] e.g.: 1 INFINITE LOOP) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+13 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 14 0 R
+>>
+endobj
+14 0 obj
+<<
+/Length 4728
+>>
+stream
+0. w
+0.78 G
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 555.2799999999999727 283.4645669291338663 -102. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 541.7799999999999727 Td
+(dress.line1) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 555.2799999999999727 478.4254330708664043 -102. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+(The first line of the address where the entity is located.) Tj
+T* () Tj
+T* (The first line of this address of the organization. For example The Point in the address) Tj
+T* () Tj
+T* (The Point) Tj
+T* (37 North Wharf Road) Tj
+T* (London) Tj
+T* (W2 1AF) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 453.2799999999999727 283.4645669291338663 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 439.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.legalAddress.streetAd) Tj
+T* (dress.line2) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 453.2799999999999727 478.4254330708664043 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 439.7799999999999727 Td
+([string] e.g.: 37 North Wharf Road) Tj
+T* (The second line of this address of the organization.) Tj
+T* (For example 37 North Wharf Road in the address) Tj
+T* (The Point) Tj
+T* (37 North Wharf Road) Tj
+T* (London) Tj
+T* (W2 1AF) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 362.7799999999999727 283.4645669291338663 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 349.2799999999999727 Td
+(organization.legalEntityIdentifierDetails.legalAddress.streetAd) Tj
+T* (dress.line3) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 362.7799999999999727 478.4254330708664043 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 349.2799999999999727 Td
+([string] e.g.: London) Tj
+T* (The third line of the organization's official address. For example London in the address) Tj
+T* (The Point) Tj
+T* (37 North Wharf Road) Tj
+T* (London) Tj
+T* (W2 1AF) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 283.7799999999999727 283.4645669291338663 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 270.2799999999999727 Td
+(organization.legalEntityIdentifierDetails.legalAddress.streetAd) Tj
+T* (dress.line4) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 283.7799999999999727 478.4254330708664043 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 270.2799999999999727 Td
+([string] e.g.: W2 1AF) Tj
+T* (The fourth line of the organization's official address. For example W2 1AF in the address) Tj
+T* (The Point) Tj
+T* (37 North Wharf Road) Tj
+T* (London) Tj
+T* (W2 1AF) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 204.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 191.2800000000000296 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 204.7799999999999727 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 191.2800000000000296 Td
+([object]) Tj
+T* (The address of the headquarters of the legal entity.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 171.7800000000000296 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 158.2800000000000864 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress.l) Tj
+T* (anguage) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 171.7800000000000296 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 158.2800000000000864 Td
+([object]) Tj
+T* (Records the language used to present the legal address of the organization.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 138.780000000000058 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 125.2800000000001432 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress.l) Tj
+T* (anguage.description) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 138.780000000000058 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 125.2800000000001432 Td
+([string] e.g.: English) Tj
+T* (Text that denotes the language used to present the legal address of the organization.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 105.7800000000001006 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 92.2800000000001432 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress.l) Tj
+T* (anguage.dnbCode) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 105.7800000000001006 478.4254330708664043 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 92.2800000000001432 Td
+([integer] e.g.: 39) Tj
+T* (A unique code assigned by Dun&Bradstreet that denotes the language used to present the legal address) Tj
+T* (of the organization.) Tj
+T* (Refer to Reference code table "3 [Language]" for all possible values.) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+15 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 16 0 R
+>>
+endobj
+16 0 obj
+<<
+/Length 7616
+>>
+stream
+0. w
+0.78 G
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 555.2799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 541.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress.l) Tj
+T* (anguage.languageTag) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 555.2799999999999727 478.4254330708664043 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+([string] e.g.: en-GB) Tj
+T* (The language of this element's text content. An IETF Language Code conforming to the latest RFC from) Tj
+T* (IETF BCP 47.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 510.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 497.2799999999999727 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress.a) Tj
+T* (ddressCountry) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 510.7799999999999727 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 497.2799999999999727 Td
+([object]) Tj
+T* (Records the details of the country or region in which the business is located.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 477.7799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 464.2799999999999727 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress.a) Tj
+T* (ddressCountry.name) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 477.7799999999999159 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 464.2799999999999727 Td
+([string] e.g.: United Kingdom) Tj
+T* (Text recording the name of the country or region in which the business is located.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 444.7799999999999727 283.4645669291338663 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 431.2799999999999727 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress.a) Tj
+T* (ddressCountry.isoAlpha2Code) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 444.7799999999999727 478.4254330708664043 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 431.2799999999999727 Td
+([string] e.g.: GB) Tj
+T* (The two-letter country code, defined by the International Organization for Standardization \(ISO\) ISO) Tj
+T* (3166-1 scheme identifying the country or region of the business entity.) Tj
+T* () Tj
+T* (Note: Please refer to Country Code Substitutions Table) Tj
+T* ([/html/resources/CountryCodes.html#country-substitute] for the country or region code substitutions.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 365.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 352.2799999999999727 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress.a) Tj
+T* (ddressLocality) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 365.7799999999999727 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 352.2799999999999727 Td
+([object]) Tj
+T* (Records the details of a city, town, township, village, borough, etc. where the business is located.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 332.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 319.2800000000000296 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress.a) Tj
+T* (ddressLocality.name) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 332.7799999999999727 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 319.2800000000000296 Td
+([string] e.g.: DONCASTER) Tj
+T* (Identifies the city, town, township, village, borough, etc. where the business is located.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 299.7799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 286.2800000000000296 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress.a) Tj
+T* (ddressRegion) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 299.7799999999999727 478.4254330708664043 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 286.2800000000000296 Td
+([object]) Tj
+T* (Details of the type of geographical area for this address of the organization.) Tj
+T* (Different markets have their own way of subdividing the country into smaller parts.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 255.2800000000000011 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 241.7800000000000296 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress.a) Tj
+T* (ddressRegion.isoSubDivisionCode) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 255.2800000000000011 478.4254330708664043 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 241.7800000000000296 Td
+([string] e.g.: US-CA) Tj
+T* (The code assigned by ISO that represents the name of a principal subdivision \(e.g province or state\) of) Tj
+T* (countries coded in ISO 3166-1. This code is based on the two-letter code element from ISO 3166-1) Tj
+T* (followed by a separator and up to three alphanumeric characters.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 199.2800000000000011 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 185.7800000000000864 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress.a) Tj
+T* (ddressRegion.isoSubDivisionName) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 199.2800000000000011 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 185.7800000000000864 Td
+([string] e.g.: California) Tj
+T* (The official name of a principal subdivision \(e.g province or state\) of countries coded in ISO 3166-1.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 166.280000000000058 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 152.7800000000001432 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress.p) Tj
+T* (ostalCode) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 166.280000000000058 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 152.7800000000001432 Td
+([string] e.g.: 950142083) Tj
+T* (An identifier used by the local country Postal Authority to identify where the business is located.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 133.2800000000000864 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 119.7800000000001432 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress.) Tj
+T* (mailRouting) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 133.2800000000000864 478.4254330708664043 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 119.7800000000001432 Td
+([string] e.g.: c/o JPMORGAN FUNDS LIMITED) Tj
+T* (Text address line to hold content from other address lines containing explicit routing information \(this) Tj
+T* (element's presence indicates that this address is a routing / "care of" address.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 88.780000000000058 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 75.2800000000000864 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress.s) Tj
+T* (treetNumber) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 88.780000000000058 478.4254330708664043 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 75.2800000000000864 Td
+([string] e.g.: 1) Tj
+T* (Additional structured version of an external house number, or range of numbers, contained in one of the) Tj
+T* (address line elements. This could be a numeral, a letter or code made up of mixed characters \(e.g. 221B\).) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+17 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 18 0 R
+>>
+endobj
+18 0 obj
+<<
+/Length 4512
+>>
+stream
+0. w
+0.78 G
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 555.2799999999999727 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 541.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress.b) Tj
+T* (uildingNumber) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 555.2799999999999727 478.4254330708664043 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+([string] e.g.: 5AD) Tj
+T* (Additional structured version of an internal location number, or range of numbers, contained in one of the) Tj
+T* (address line elements.This could be a numeral, a letter or code made up of mixed characters \(e.g. 13\) of a) Tj
+T* (floor, suite or apartment within a building identified.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 499.2799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 485.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress.s) Tj
+T* (treetAddress) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 499.2799999999999159 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 485.7799999999999727 Td
+([object]) Tj
+T* (The details of the street address for this address of the organization.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 466.2799999999999727 283.4645669291338663 -113.4999999999999858 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 452.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress.s) Tj
+T* (treetAddress.line1) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 466.2799999999999727 478.4254330708664043 -113.4999999999999858 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 452.7799999999999727 Td
+([string] e.g.: 1 INFINITE LOOP) Tj
+T* (The first line of the address where the entity is located.) Tj
+T* () Tj
+T* (The first line of this address of the organization. For example The Point in the address) Tj
+T* () Tj
+T* (The Point) Tj
+T* (37 North Wharf Road) Tj
+T* (London) Tj
+T* (W2 1AF) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 352.7799999999999727 283.4645669291338663 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 339.2799999999999727 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress.s) Tj
+T* (treetAddress.line2) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 352.7799999999999727 478.4254330708664043 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 339.2799999999999727 Td
+([string] e.g.: 37 North Wharf Road) Tj
+T* (The second line of this address of the organization.) Tj
+T* (For example 37 North Wharf Road in the address) Tj
+T* (The Point) Tj
+T* (37 North Wharf Road) Tj
+T* (London) Tj
+T* (W2 1AF) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 262.2800000000000296 283.4645669291338663 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 248.7800000000000296 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress.s) Tj
+T* (treetAddress.line3) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 262.2800000000000296 478.4254330708664043 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 248.7800000000000296 Td
+([string] e.g.: London) Tj
+T* (The third line of the organization's official address. For example London in the address) Tj
+T* (The Point) Tj
+T* (37 North Wharf Road) Tj
+T* (London) Tj
+T* (W2 1AF) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 183.2800000000000011 283.4645669291338663 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 169.7800000000000864 Td
+(organization.legalEntityIdentifierDetails.headQuarterAddress.s) Tj
+T* (treetAddress.line4) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 183.2800000000000011 478.4254330708664043 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 169.7800000000000864 Td
+([string] e.g.: W2 1AF) Tj
+T* (The fourth line of the organization's official address. For example W2 1AF in the address) Tj
+T* (The Point) Tj
+T* (37 North Wharf Road) Tj
+T* (London) Tj
+T* (W2 1AF) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 104.2800000000000153 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 90.7800000000000864 Td
+(organization.legalEntityIdentifierDetails.registrationAuthorityID) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 104.2800000000000153 478.4254330708664043 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 90.7800000000000864 Td
+([string] e.g.: RA000439) Tj
+T* (The reference code of the registration authority, taken from the Registration Authorities Code List) Tj
+T* (maintained by GLEIF.) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+19 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 20 0 R
+>>
+endobj
+20 0 obj
+<<
+/Length 7321
+>>
+stream
+0. w
+0.78 G
+1. g
+0.78 G
+0. w
+1. g
+40. 555.2799999999999727 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 541.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.otherRegistrationAuth) Tj
+T* (orityID) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 555.2799999999999727 478.4254330708664043 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+([string] e.g.: RA000449) Tj
+T* (A legacy / historical reference code of a registration authority which is not yet entered in the Registration) Tj
+T* (Authorities Code List \(RA list\) maintained by GLEIF, or the designation of an interim register until such time) Tj
+T* (as an entry from RA list can be delivered.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 499.2799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 485.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.registrationAuthorityEn) Tj
+T* (tityID) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 499.2799999999999159 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 485.7799999999999727 Td
+([string] e.g.: FL-0002.040.440-4) Tj
+T* (The identifier of the entity at the indicated registration authority.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 466.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 452.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.legalJurisdiction) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 466.2799999999999727 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 452.7799999999999727 Td
+([string] e.g.: US-OH) Tj
+T* (The jurisdiction of legal formation of the legal entity; i.e. where the LegalForm of the legal entity originates.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 433.2799999999999727 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 419.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.entityCategory) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 433.2799999999999727 478.4254330708664043 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 419.7799999999999727 Td
+([string] e.g.: GENERAL) Tj
+T* (Indicates \(where applicable\) the category of legal entity identified by this LEI data record, as a more) Tj
+T* (specific category within the broad definition given in ISO 17442. These categories are based on use cases) Tj
+T* (specified in LEI-ROC policies, found at http://www.leiroc.org/list/leiroc_gls/index.htm.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 377.2799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 363.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.entitySubCategory) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 377.2799999999999727 478.4254330708664043 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 363.7799999999999727 Td
+([string] e.g.: GENERAL Sub) Tj
+T* (Indicates and specifies further \(where applicable\) the sub-category \(sub-sector\) of Legal Entity identified) Tj
+T* (by this LEI Record and already categorized by the Entity Category field.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 332.7799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 319.2800000000000296 Td
+(organization.legalEntityIdentifierDetails.legalFormCode) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 332.7799999999999727 478.4254330708664043 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 319.2800000000000296 Td
+([string] e.g.: O7XB) Tj
+T* (A code that denotes the legal entity's legal form. The list of codes are maintained by ISO / GLEIF through) Tj
+T* (the Entity Legal Form \(ELF\), available from http://www.gleif.org.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 288.2799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 274.7800000000000296 Td
+(organization.legalEntityIdentifierDetails.legalFormDescription) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 288.2799999999999727 478.4254330708664043 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 274.7800000000000296 Td
+([string] e.g.: Public Limited) Tj
+T* (Text that denotes the legal entity's legal form. The list of codes are maintained by ISO / GLEIF through the) Tj
+T* (Entity Legal Form \(ELF\), available from http://www.gleif.org.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 243.7800000000000011 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 230.2800000000000296 Td
+(organization.legalEntityIdentifierDetails.otherLegalForm) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 243.7800000000000011 478.4254330708664043 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 230.2800000000000296 Td
+([string] e.g.: Public Limited) Tj
+T* (A legacy code or textual description for the legal entity's legal form, used until a current code from the) Tj
+T* (GLEIF-maintained list can be used.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 199.2800000000000011 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 185.7800000000000864 Td
+(organization.legalEntityIdentifierDetails.entityStatus) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 199.2800000000000011 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 185.7800000000000864 Td
+([string] e.g.: ACTIVE) Tj
+T* (The operational and/or legal registration status of the legal entity.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 166.280000000000058 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 152.7800000000001432 Td
+(organization.legalEntityIdentifierDetails.entityCreationDate) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 166.280000000000058 478.4254330708664043 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 152.7800000000001432 Td
+([string] e.g.: 2022-05-23) Tj
+T* (The date on which the legal entity was first established, as represented by ISO 8601 \(as defined in ISO) Tj
+T* (17442\).) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 121.7800000000000153 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 108.2800000000000864 Td
+(organization.legalEntityIdentifierDetails.initialRegistrationDate) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 121.7800000000000153 478.4254330708664043 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 108.2800000000000864 Td
+([string] e.g.: 2022-06-20) Tj
+T* (The date of the first LEI assignment, being the date of publication of the identifier and its supporting data) Tj
+T* (record as represented in ISO 8601.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 77.2799999999999869 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 63.7800000000000864 Td
+(organization.legalEntityIdentifierDetails.lastUpdateDate) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 77.2799999999999869 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 63.7800000000000864 Td
+([string] e.g.: 2022-12-01) Tj
+T* (Date/time the LEI record was most recently updated.) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+21 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 22 0 R
+>>
+endobj
+22 0 obj
+<<
+/Length 6418
+>>
+stream
+0. w
+0.78 G
+1. g
+0.78 G
+0. w
+1. g
+40. 555.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 541.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.registrationStatus) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 555.2799999999999727 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+([string] e.g.: LAPSED) Tj
+T* (The status of the legal entity's LEI registration with the Managing LOU.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 522.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 508.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.nextRenewalDate) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 522.2799999999999727 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 508.7799999999999727 Td
+([string] e.g.: 2025-01-29) Tj
+T* (The next date by which the LEI registration should be renewed and re-certified by the legal entity.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 489.2799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 475.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.managingLOUEntityID) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 489.2799999999999159 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 475.7799999999999727 Td
+([string] e.g.: 529900T8BM49AURSDO55) Tj
+T* (The LEI of the LOU that is responsible for administering this LEI registration.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 456.2799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 442.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.sourceValidationStatu) Tj
+T* (s) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 456.2799999999999727 478.4254330708664043 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 442.7799999999999727 Td
+([string] e.g.: PARTIALLY_CORROBORATED) Tj
+T* (The level of validation of the reference data provided by the) Tj
+T* (registrant.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 411.7799999999999159 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 398.2799999999999727 Td
+(organization.legalEntityIdentifierDetails.validationAuthorityID) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 411.7799999999999159 478.4254330708664043 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 398.2799999999999727 Td
+([string] e.g.: RA000063) Tj
+T* (The reference code of the registration authority, taken from the Registration Authorities Code List \(RA list\)) Tj
+T* (maintained by GLEIF.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 367.2799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 353.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.validationAuthorityEnti) Tj
+T* (tyID) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 367.2799999999999159 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 353.7799999999999727 Td
+([string] e.g.: 1827047) Tj
+T* (The identifier of the entity at the indicated registration authority.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 334.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 320.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.dataProvider) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 334.2799999999999727 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 320.7799999999999727 Td
+([object]) Tj
+T* (Records the details of the source which provided this information.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 301.2799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 287.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.dataProvider.descripti) Tj
+T* (on) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 301.2799999999999159 478.4254330708664043 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 287.7799999999999727 Td
+([string] e.g.: Global Legal Entity Identifier Foundation) Tj
+T* (Text recording the data providers.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 268.2799999999999159 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 254.7799999999999727 Td
+(organization.legalEntityIdentifierDetails.dataProvider.dnbCode) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 268.2799999999999159 478.4254330708664043 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 254.7799999999999727 Td
+([integer] e.g.: 43338) Tj
+T* (A unique code assigned by Dun&Bradstreet to denote the source which provided this information.) Tj
+T* (Refer to Reference code table "29 [Data Provider]" for all possible values.) Tj
+ET
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0. g
+28.3464566929133888 195.433543307086552 Td
+(Response for HTTP Status Code : 301) Tj
+ET
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0. g
+28.3464566929133888 167.0870866141731881 Td
+(Response Headers) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.93 g
+0.78 G
+0. w
+0.93 g
+40. 138.7406299212597389 170.0787401574803255 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+0. 0.318 0.447 rg
+45. 125.2406299212598242 Td
+(Name) Tj
+ET
+0.93 g
+0.78 G
+0. w
+0.93 g
+210.0787401574803539 138.7406299212597389 591.811259842519803 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+0. 0.318 0.447 rg
+215.0787401574803255 125.2406299212598242 Td
+(Details) Tj
+ET
+0. G
+0.5670000000000001 w
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 117.2406299212597816 170.0787401574803255 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 103.7406299212598242 Td
+(location) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+210.0787401574803539 117.2406299212597816 591.811259842519803 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+215.0787401574803255 103.7406299212598242 Td
+([string] e.g.: https://plus.dnb.com/v1/data/duns/{dunsNumber}?blockIDs=blockID1,blockID2,blockID3,..) Tj
+T* (The URL to retrieve the D-U-N-S Number to which the requested D-U-N-S Number was transferred.) Tj
+ET
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R ]
+/Count 10
+>>
+endobj
+23 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+24 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+25 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+26 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+27 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+28 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+29 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+30 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+31 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+32 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+33 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+34 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+35 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+36 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 23 0 R
+/F2 24 0 R
+/F3 25 0 R
+/F4 26 0 R
+/F5 27 0 R
+/F6 28 0 R
+/F7 29 0 R
+/F8 30 0 R
+/F9 31 0 R
+/F10 32 0 R
+/F11 33 0 R
+/F12 34 0 R
+/F13 35 0 R
+/F14 36 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+37 0 obj
+<<
+/Producer (jsPDF 3.0.1)
+/CreationDate (D:20260115000452-00'00')
+>>
+endobj
+38 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 39
+0000000000 65535 f 
+0000063832 00000 n 
+0000065715 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000004717 00000 n 
+0000004854 00000 n 
+0000011246 00000 n 
+0000011383 00000 n 
+0000016932 00000 n 
+0000017070 00000 n 
+0000024523 00000 n 
+0000024662 00000 n 
+0000032277 00000 n 
+0000032416 00000 n 
+0000037197 00000 n 
+0000037336 00000 n 
+0000045005 00000 n 
+0000045144 00000 n 
+0000049709 00000 n 
+0000049848 00000 n 
+0000057222 00000 n 
+0000057361 00000 n 
+0000063950 00000 n 
+0000064076 00000 n 
+0000064207 00000 n 
+0000064341 00000 n 
+0000064479 00000 n 
+0000064603 00000 n 
+0000064732 00000 n 
+0000064864 00000 n 
+0000065000 00000 n 
+0000065128 00000 n 
+0000065255 00000 n 
+0000065384 00000 n 
+0000065517 00000 n 
+0000065619 00000 n 
+0000065968 00000 n 
+0000066054 00000 n 
+trailer
+<<
+/Size 39
+/Root 38 0 R
+/Info 37 0 R
+/ID [ <ED6ABB9CDFF18C4B858C8AC71B03253B> <ED6ABB9CDFF18C4B858C8AC71B03253B> ]
+>>
+startxref
+66158
+%%EOF

@@ -1,0 +1,1308 @@
+{
+	"transactionDetail": {
+		"transactionID": "rrt-008bcd83a756fb8a4-b-wo-20739-19744287-55",
+		"transactionTimestamp": "2020-03-23T09:32:37.303Z",
+		"inLanguage": "en-US"
+	},
+	"inquiryDetail": {
+		"duns": "804735132",
+		"blockIDs": [
+			"companyinfo_L4_v1",
+			"companyinfo_identifiers_v1"
+		],
+		"tradeUp": "hq",
+		"customerReference": "Some text to describe the request."
+	},
+	"organization": {
+		"countryISOAlpha2Code": "US",
+		"duns": "804735132",
+		"primaryName": "GORMAN MANUFACTURING COMPANY, INC.",
+		"dunsControlStatus": {
+			"operatingStatus": {
+				"description": "Active",
+				"dnbCode": 9074,
+				"startDate": "2016-03-14"
+			},
+			"operatingSubStatus": {
+				"description": "Active",
+				"dnbCode": 9074,
+				"startDate": "2018-07-12T00:00:00.000Z"
+			},
+			"detailedOperatingStatus": {
+				"description": "Active",
+				"dnbCode": 9074
+			},
+			"isMarketable": false,
+			"isLocalMarketable": true,
+			"isSelfRequestedDUNS": false,
+			"selfRequestDate": "2013-06-08",
+			"isMailUndeliverable": false,
+			"isTelephoneDisconnected": false,
+			"isDelisted": true,
+			"subjectHandlingDetails": [
+				{
+					"description": "Do not fax",
+					"dnbCode": 7972
+				},
+				{
+					"description": "Do not call",
+					"dnbCode": 7974
+				},
+				{
+					"description": "Do not mail",
+					"dnbCode": 7975
+				},
+				{
+					"description": "Do not e-mail",
+					"dnbCode": 9051
+				},
+				{
+					"description": "Suppress from all marketing lists",
+					"dnbCode": 9146
+				}
+			],
+			"firstReportDate": "2017-01-30",
+			"recordClass": {
+				"description": "Full DMI record",
+				"dnbCode": 10928
+			}
+		},
+		"localOperatingStatus": [
+			{
+				"status": "Active",
+				"language": {
+					"description": "English",
+					"dnbCode": 39
+				}
+			}
+		],
+		"registeredName": "GORMAN MANUFACTURING COMPANY, INC.",
+		"multilingualPrimaryName": [
+			{
+				"language": {
+					"description": "Japanese",
+					"dnbCode": 39
+				},
+				"name": "ソニー電子（株）",
+				"writingScript": {
+					"description": "Kana",
+					"dnbCode": 19347
+				}
+			}
+		],
+		"multilingualRegisteredNames": [
+			{
+				"language": {
+					"description": "Japanese",
+					"dnbCode": 39
+				},
+				"name": "GORMAN MANUFACTURING COMPANY, INC.",
+				"writingScript": {
+					"description": "Kana",
+					"dnbCode": 19347
+				}
+			}
+		],
+		"summary": [
+			{
+				"text": "<p>activated and text added 71918.</p>",
+				"textType": {
+					"description": "Initial Public Offering Summary",
+					"dnbCode": 32465
+				}
+			}
+		],
+		"tradeStyleNames": [
+			{
+				"name": "Gorman",
+				"priority": 1
+			}
+		],
+		"multilingualTradestyleNames": [
+			{
+				"language": {
+					"description": "English",
+					"dnbCode": 39
+				},
+				"name": "Alternate Company Name",
+				"priority": 1
+			}
+		],
+		"iso20022StructuredPrimaryAddress": {
+			"addressCountry": {
+				"isoAlpha2Code": "US"
+			},
+			"addressRegion": {
+				"name": "California",
+				"isoSubDivisionName": "Yamanashi",
+				"isoSubDivisionCode": "JP-19"
+			},
+			"addressCounty": {
+				"name": "SAN MATEO"
+			},
+			"addressLocality": {
+				"name": "SAN FRANCISCO"
+			},
+			"minorTownName": "Booker",
+			"postalCode": "941109999",
+			"streetNumber": "492",
+			"streetName": "KOLLER ST",
+			"streetAddress": {
+				"line1": "1 INFINITE LOOP",
+				"line2": "Ocean drive"
+			},
+			"buildingName": "The Tower",
+			"buildingInternalUnit": "3rd Floor",
+			"buildingInternalUnitType": {
+				"description": "Floor",
+				"dnbCode": 3285
+			},
+			"buildingInternalReference": "Room 23",
+			"buildingInternalReferenceType": {
+				"description": "Floor",
+				"dnbCode": 3306
+			}
+		},
+		"formerPrimaryNames": [
+			{
+				"name": "Gorman",
+				"startDate": "1997-10-01",
+				"endDate": "1998-01-01"
+			}
+		],
+		"formerRegisteredNames": [
+			{
+				"name": "Gorman",
+				"startDate": "1997-10-01",
+				"endDate": "1998-01-01"
+			}
+		],
+		"defaultCurrency": "USD",
+		"websiteAddress": [
+			{
+				"url": "www.Gorman.com",
+				"domainName": "Gorman.com"
+			}
+		],
+		"email": [
+			{
+				"address": "someone@gorman.com"
+			},
+			{
+				"address": "customersupport@gorman.com"
+			}
+		],
+		"certifiedEmail": "admin@xyz.com",
+		"telephone": [
+			{
+				"telephoneNumber": "6505550000",
+				"isdCode": "1"
+			}
+		],
+		"primaryAddress": {
+			"language": {
+				"description": "English",
+				"dnbCode": 39
+			},
+			"addressCountry": {
+				"name": "United States",
+				"isoAlpha2Code": "US"
+			},
+			"continentalRegion": {
+				"name": "North America"
+			},
+			"addressLocality": {
+				"name": "San Francisco"
+			},
+			"minorTownName": "Booker",
+			"addressRegion": {
+				"name": "California",
+				"abbreviatedName": "CA",
+				"isoSubDivisionName": "Yamanashi",
+				"isoSubDivisionCode": "JP-19",
+				"administrativeDivisionCode": "GR84"
+			},
+			"addressCounty": {
+				"name": "San Francisco",
+				"administrativeDivisionCode": "GK706"
+			},
+			"postalCode": "94110",
+			"postalCodePosition": {
+				"description": "Post Code presented after Town/City name",
+				"dnbCode": 1009
+			},
+			"postalRoute": "route 3B",
+			"streetAddress": {
+				"line1": "492 Koller St",
+				"line2": "Suite 100"
+			},
+			"streetNumber": "492",
+			"streetName": "Koller St",
+			"postOfficeBox": {
+				"postOfficeBoxNumber": "PO362",
+				"typeDescription": "P O Box",
+				"typeDnBCode": 120
+			},
+			"latitude": 37.777709,
+			"longitude": -122.404624,
+			"geographicalPrecision": {
+				"description": "Street Segment Centroid",
+				"dnbCode": 30256
+			},
+			"statisticalArea": {
+				"cbsaName": "San Francisco-Oakland-Hayward CA",
+				"cbsaCode": "41860",
+				"economicAreaOfInfluenceCode": "146",
+				"populationRank": {
+					"rankNumber": "9",
+					"rankDnBCode": 10961,
+					"rankDescription": "500,000 +"
+				}
+			},
+			"locationOwnership": {
+				"description": "Owns",
+				"dnbCode": 1128
+			},
+			"premisesArea": {
+				"measurement": 2400,
+				"unitDescription": "square metre",
+				"unitDnBCode": 9041,
+				"reliabilityDescription": "Actual",
+				"reliabilityDnBCode": 9092
+			},
+			"isManufacturingLocation": true,
+			"isRegisteredAddress": false,
+			"isResidentialAddress": true,
+			"congressionalDistricts": [
+				{
+					"district": "18"
+				}
+			],
+			"standardAddressCodes": [
+				{
+					"addressCode": "ZV12467A",
+					"codeType": {
+						"description": "DK standard address code",
+						"dnbCode": 487
+					}
+				}
+			]
+		},
+		"multilingualPrimaryAddress": [
+			{
+				"language": {
+					"description": "English",
+					"dnbCode": 39
+				},
+				"writingScript": {
+					"description": "Japanese",
+					"dnbCode": 3807
+				},
+				"addressCountry": {
+					"isoAlpha2Code": "US",
+					"name": "United States"
+				},
+				"continentalRegion": {
+					"name": "North America"
+				},
+				"addressLocality": {
+					"name": "San Francisco"
+				},
+				"minorTownName": "Booker",
+				"addressRegion": {
+					"name": "California"
+				},
+				"addressCounty": {
+					"name": "San Francisco"
+				},
+				"postalCode": "94110",
+				"streetNumber": "492",
+				"streetName": "Koller St",
+				"streetAddress": {
+					"line1": "492 Koller St",
+					"line2": "Suite 100"
+				}
+			}
+		],
+		"multilingualRegisteredAddress": [
+			{
+				"language": {
+					"description": "English",
+					"dnbCode": 39
+				},
+				"writingScript": {
+					"description": "Japanese",
+					"dnbCode": 3807
+				},
+				"addressCountry": {
+					"isoAlpha2Code": "US",
+					"name": "United States"
+				},
+				"continentalRegion": {
+					"name": "North America"
+				},
+				"addressLocality": {
+					"name": "San Francisco"
+				},
+				"addressRegion": {
+					"name": "California"
+				},
+				"postalCode": "94110",
+				"streetAddress": {
+					"line1": "492 Koller St",
+					"line2": "Suite 100"
+				}
+			}
+		],
+		"registeredAddress": {
+			"language": {
+				"description": "English",
+				"dnbCode": 39
+			},
+			"addressCountry": {
+				"name": "United States",
+				"isoAlpha2Code": "US"
+			},
+			"addressLocality": {
+				"name": "Cupertino"
+			},
+			"minorTownName": "Booker",
+			"addressRegion": {
+				"name": "California",
+				"abbreviatedName": "CA"
+			},
+			"addressCounty": {
+				"name": "Santa Clara County"
+			},
+			"postalCode": "950142083",
+			"postalCodePosition": {
+				"description": "Post Code presented after Town/City name",
+				"dnbCode": 1009
+			},
+			"streetName": "KOLLER ST",
+			"streetNumber": "492",
+			"streetAddress": {
+				"line1": "492 KOLLER ST",
+				"line2": "Suite 100",
+				"line3": "Address line 3",
+				"line4": "Address line 4"
+			},
+			"postOfficeBox": {
+				"postOfficeBoxNumber": "PO362",
+				"typeDescription": "P O Box",
+				"typeDnBCode": 120
+			}
+		},
+		"mailingAddress": {
+			"language": {
+				"description": "English",
+				"dnbCode": 39
+			},
+			"addressCountry": {
+				"name": "United States",
+				"isoAlpha2Code": "US"
+			},
+			"continentalRegion": {
+				"name": "North America"
+			},
+			"addressLocality": {
+				"name": "Cupertino"
+			},
+			"minorTownName": "Booker",
+			"addressRegion": {
+				"name": "California",
+				"abbreviatedName": "CA"
+			},
+			"addressCounty": {
+				"name": "Santa Clara County"
+			},
+			"postalCode": "950142083",
+			"postalCodePosition": {
+				"description": "Post Code presented after Town/City name",
+				"dnbCode": 1009
+			},
+			"postalRoute": "route 3B",
+			"streetName": "KOLLER ST",
+			"streetNumber": "492 ",
+			"streetAddress": {
+				"line1": "492 KOLLER ST",
+				"line2": "Suite 100"
+			},
+			"postOfficeBox": {
+				"postOfficeBoxNumber": "PO362",
+				"typeDescription": "P O Box",
+				"typeDnBCode": 120
+			}
+		},
+		"formerPrimaryAddresses": [
+			{
+				"language": {},
+				"addressCountry": {
+					"name": "United States",
+					"isoAlpha2Code": "US"
+				},
+				"addressLocality": {
+					"name": "Cupertino"
+				},
+				"minorTownName": "Booker",
+				"addressRegion": {
+					"name": "California",
+					"abbreviatedName": "CA"
+				},
+				"addressCounty": {
+					"name": "Santa Clara County"
+				},
+				"postalCode": "950142083",
+				"streetNumber": "492",
+				"streetName": "Koller St",
+				"streetAddress": {
+					"line1": "492 Koller St",
+					"line2": "Suite 100"
+				},
+				"startDate": "2015-07-12",
+				"endDate": "2015-04-17"
+			}
+		],
+		"formerRegisteredAddresses": [
+			{
+				"language": {},
+				"addressCountry": {
+					"name": "Republic Of Ireland",
+					"isoAlpha2Code": "IE"
+				},
+				"addressLocality": {
+					"name": "San Francisco"
+				},
+				"minorTownName": "Booker",
+				"addressRegion": {
+					"name": "California",
+					"abbreviatedName": "CA"
+				},
+				"addressCounty": {
+					"name": "San Francisco"
+				},
+				"postalCode": "950142083",
+				"streetNumber": "492",
+				"streetName": "Koller St",
+				"streetAddress": {
+					"line1": "492 Koller St",
+					"line2": "Suite 100",
+					"line3": "Address line 3",
+					"line4": "Address line 4"
+				},
+				"startDate": "2015-07-12",
+				"endDate": "2015-04-17"
+			}
+		],
+		"isFortune1000Listed": true,
+		"isForbesLargestPrivateCompaniesListed": true,
+		"stockExchanges": [
+			{
+				"tickerName": "NYSE: OIIY",
+				"exchangeName": {
+					"description": "N.Y.S.E"
+				},
+				"exchangeCountry": {
+					"isoAlpha2Code": "US"
+				},
+				"isPrimary": true
+			},
+			{
+				"tickerName": "NSE: TYRE",
+				"exchangeName": {
+					"description": "NSE"
+				},
+				"exchangeCountry": {
+					"isoAlpha2Code": "US"
+				},
+				"isPrimary": false
+			}
+		],
+		"standardizedStockExchanges": [
+			{
+				"tickerName": "NYSE:DNB",
+				"listingDate": "2011-09-14",
+				"exchangeName": {
+					"description": "Shanghai Stock Exchange",
+					"dnbCode": 20666
+				},
+				"sectionNames": [
+					{
+						"name": "JASDAQ",
+						"language": {
+							"description": "Japanese",
+							"dnbCode": 3807
+						}
+					}
+				]
+			}
+		],
+		"thirdPartyAssessment": [
+			{
+				"description": "Fortune 500",
+				"dnbCode": 23290,
+				"assessmentDate": "2015-08-23",
+				"value": "5"
+			}
+		],
+		"registrationNumbers": [
+			{
+				"registrationNumber": "123456789",
+				"typeDescription": "Federal Taxpayer Identification Number (US)",
+				"typeDnBCode": 6863,
+				"registrationNumberClass": {
+					"description": "National Business Registration Number",
+					"dnbCode": 2888
+				},
+				"isPreferredRegistrationNumber": true,
+				"registrationLocation": "Vlaams Brabant"
+			}
+		],
+		"industryCodes": [
+			{
+				"code": "323111",
+				"description": "Commercial Printing (except Screen and Books)",
+				"typeDescription": "North American Industry Classification System 2017",
+				"typeDnBCode": 30832,
+				"priority": 1
+			},
+			{
+				"code": "27520000",
+				"description": "Commercial printing, lithographic",
+				"typeDescription": "D&B Standard Industry Code",
+				"typeDnBCode": 3599,
+				"priority": 1
+			},
+			{
+				"code": "1812",
+				"description": "Other printing",
+				"typeDescription": "NACE Revision 2",
+				"typeDnBCode": 29104,
+				"priority": 1
+			},
+			{
+				"code": "2752",
+				"description": "Lithographic commercial printing",
+				"typeDescription": "US Standard Industry Code 1987 - 4 digit",
+				"typeDnBCode": 399,
+				"priority": 1
+			},
+			{
+				"code": "1068",
+				"description": "Commercial Printing",
+				"typeDescription": "D&B Hoovers Industry Code",
+				"typeDnBCode": 25838,
+				"priority": 1
+			},
+			{
+				"code": "D",
+				"description": "Manufacturing",
+				"typeDescription": "D&B Standard Major Industry Code",
+				"typeDnBCode": 24657,
+				"priority": 1
+			}
+		],
+		"legalEntityIdentifier": "984500D4EEDADDF92B49",
+		"primaryIndustryCode": {
+			"usSicV4": "2752",
+			"usSicV4Description": "Lithographic commercial printing"
+		},
+		"unspscCodes": [
+			{
+				"code": "43230000",
+				"description": "Software",
+				"priority": 1
+			},
+			{
+				"code": "13101900",
+				"description": "Thermoset plastics",
+				"priority": 2
+			}
+		],
+		"isNonClassifiedEstablishment": true,
+		"activities": [
+			{
+				"description": "Lithographic commercial printing",
+				"language": {
+					"description": "English",
+					"dnbCode": 39
+				}
+			}
+		],
+		"incorporatedDate": "1977",
+		"startDate": "1985",
+		"businessEntityType": {
+			"description": "Corporation",
+			"dnbCode": 451
+		},
+		"legalForm": {
+			"description": "Corporation",
+			"dnbCode": 31217,
+			"startDate": "1985",
+			"registrationLocation": {
+				"addressRegion": "CA"
+			}
+		},
+		"controlOwnershipDate": "1985",
+		"controlOwnershipType": {
+			"description": "Publicly owned",
+			"dnbCode": 9057
+		},
+		"charterType": {
+			"description": "Profit",
+			"dnbCode": 9123
+		},
+		"operations": [
+			{
+				"description": "some description"
+			}
+		],
+		"isAgent": true,
+		"isImporter": true,
+		"isExporter": true,
+		"subjectComments": [
+			{
+				"commentDate": "2023-09-11",
+				"commentaries": [
+					{
+						"description": "Annual audit exempted",
+						"dnbCode": 31670,
+						"priority": 1
+					}
+				]
+			}
+		],
+		"registeredDetails": {
+			"legalForm": {
+				"description": "Corporation (US)",
+				"dnbCode": 7101,
+				"registrationStatus": {
+					"description": "Registered",
+					"dnbCode": 21361
+				},
+				"localLegalForms": [
+					{
+						"code": "FR1000",
+						"description": "Natural persons",
+						"scheme": "INSEE 4-digit Legal Form Code",
+						"language": {
+							"description": "English",
+							"dnbCode": 39
+						},
+						"priority": 1
+					}
+				]
+			}
+		},
+		"numberOfEmployees": [
+			{
+				"value": 120,
+				"minimumValue": 700,
+				"maximumValue": 1500,
+				"employeeFiguresDate": "2017-12-31",
+				"informationScopeDescription": "Headquarters Only (Employs Here)",
+				"informationScopeDnBCode": 9068,
+				"reliabilityDescription": "Actual",
+				"reliabilityDnBCode": 9092,
+				"employeeCategories": [
+					{
+						"employmentBasisDescription": "Principals",
+						"employmentBasisDnBCode": 3511
+					}
+				],
+				"trend": [
+					{
+						"timePeriod": {
+							"description": "1-3 years",
+							"dnbCode": 13711
+						},
+						"growthRate": -7,
+						"value": 23.01,
+						"reliabilityDescription": "Audited",
+						"reliabilityDnBCode": 9092
+					},
+					{
+						"timePeriod": {
+							"description": "1-5 years",
+							"dnbCode": 13721
+						},
+						"growthRate": -7,
+						"value": 23.01,
+						"reliabilityDescription": "Audited",
+						"reliabilityDnBCode": 9092
+					}
+				]
+			},
+			{
+				"value": 153,
+				"minimumValue": 700,
+				"maximumValue": 1500,
+				"employeeFiguresDate": "2017-12-31",
+				"informationScopeDescription": "Consolidated",
+				"informationScopeDnBCode": 9067,
+				"reliabilityDescription": "Actual",
+				"reliabilityDnBCode": 9092,
+				"employeeCategories": [
+					{
+						"employmentBasisDescription": "Principals",
+						"employmentBasisDnBCode": 9064
+					}
+				],
+				"trend": [
+					{
+						"timePeriod": {
+							"description": "1-3 years",
+							"dnbCode": 13711
+						},
+						"growthRate": -7,
+						"value": 23.01,
+						"reliabilityDescription": "Audited",
+						"reliabilityDnBCode": 9092
+					},
+					{
+						"timePeriod": {
+							"description": "1-5 years",
+							"dnbCode": 13721
+						},
+						"growthRate": -7,
+						"value": 23.01,
+						"reliabilityDescription": "Audited",
+						"reliabilityDnBCode": 9092
+					}
+				]
+			}
+		],
+		"financials": [
+			{
+				"financialStatementToDate": "2015-12-31",
+				"financialStatementDuration": "P3M",
+				"informationScopeDescription": "Consolidated",
+				"informationScopeDnBCode": 9067,
+				"reliabilityDescription": "Actual",
+				"reliabilityDnBCode": 9092,
+				"unitCode": "SingleUnits",
+				"yearlyRevenue": [
+					{
+						"minimumValue": 22500,
+						"maximumValue": 250000,
+						"value": 22589957,
+						"currency": "USD"
+					}
+				]
+			}
+		],
+		"individualStatementYearlyRevenue": {
+			"value": 12500.5,
+			"currency": "USD"
+		},
+		"fiscalYearEnd": "20.22-12-31",
+		"banks": [
+			{
+				"name": "Bank Corp",
+				"address": {
+					"addressLocality": {
+						"name": "Cupertino"
+					},
+					"addressRegion": {
+						"name": "California"
+					},
+					"postalCode": "950142083",
+					"streetAddress": {
+						"line1": "492 KOLLER ST",
+						"line2": "Suite 100"
+					}
+				},
+				"registrationNumbers": [
+					{
+						"registrationNumber": "123456789"
+					}
+				],
+				"currentNotableEvent": {
+					"eventType": {
+						"description": "Account Closed",
+						"dnbCode": 13741
+					},
+					"startDate": "2021-08-13",
+					"lastUpdateDate": "2022-10-12"
+				},
+				"branchName": "Milwaukee county",
+				"telephone": [
+					{
+						"telephoneNumber": "6505550000"
+					}
+				]
+			},
+			{
+				"name": "HSBC",
+				"address": {
+					"addressLocality": {
+						"name": "Cupertino"
+					},
+					"addressRegion": {
+						"name": "California"
+					},
+					"postalCode": "950142083",
+					"streetAddress": {
+						"line1": "492 KOLLER ST",
+						"line2": "Suite 100"
+					}
+				},
+				"registrationNumbers": [
+					{
+						"registrationNumber": "123456789"
+					}
+				],
+				"currentNotableEvent": {
+					"eventType": {
+						"description": "Account Closed",
+						"dnbCode": 13741
+					},
+					"startDate": "2021-08-13",
+					"lastUpdateDate": "2022-10-12"
+				},
+				"branchName": "Milwaukee county",
+				"telephone": [
+					{
+						"telephoneNumber": "6505550000"
+					}
+				]
+			}
+		],
+		"isSmallBusiness": true,
+		"isStandalone": false,
+		"globalUltimate": {
+			"numberOfEmployees": [
+				{
+					"value": 352600,
+					"minimumValue": 700,
+					"maximumValue": 1500,
+					"employeeFiguresDate": "2017-12-31",
+					"informationScopeDescription": "Consolidated",
+					"informationScopeDnBCode": 9067,
+					"reliabilityDescription": "Actual",
+					"reliabilityDnBCode": 9092
+				}
+			],
+			"financials": [
+				{
+					"yearlyRevenue": [
+						{
+							"value": 73620000000,
+							"currency": "USD"
+						}
+					],
+					"informationScopeDescription": "Consolidated",
+					"informationScopeDnBCode": 9067,
+					"reliabilityDescription": "Actual",
+					"reliabilityDnBCode": 9092
+				}
+			]
+		},
+		"domesticUltimate": {
+			"numberOfEmployees": [
+				{
+					"value": 352600,
+					"minimumValue": 700,
+					"maximumValue": 1500,
+					"employeeFiguresDate": "2017-12-31",
+					"informationScopeDescription": "Consolidated",
+					"informationScopeDnBCode": 9067,
+					"reliabilityDescription": "Actual",
+					"reliabilityDnBCode": 9092
+				}
+			],
+			"financials": [
+				{
+					"yearlyRevenue": [
+						{
+							"value": 73620000000,
+							"currency": "USD"
+						}
+					],
+					"informationScopeDescription": "Consolidated",
+					"informationScopeDnBCode": 9067,
+					"reliabilityDescription": "Actual",
+					"reliabilityDnBCode": 9092
+				}
+			]
+		},
+		"competitors": [
+			{
+				"duns": "804735132",
+				"primaryName": "CompA",
+				"issuedShareCapitalAmount": 1000000,
+				"individualEmployeeCount": 1500,
+				"salesRevenue": 512345
+			},
+			{
+				"duns": "804735132",
+				"primaryName": "CompB",
+				"issuedShareCapitalAmount": 1000000,
+				"individualEmployeeCount": 1500,
+				"salesRevenue": 512345
+			}
+		],
+		"otherCompetitors": [
+			{
+				"duns": "804735132"
+			}
+		],
+		"regulations": [
+			{
+				"regulatorDetails": {
+					"name": "ABC",
+					"regulatorID": "1AXY76",
+					"address": {
+						"addressRegion": "Nevada"
+					},
+					"registrationNumber": "123456789",
+					"registryURL": "http://regualtorname.com"
+				},
+				"matchCandidates": [
+					{
+						"name": "Gorman Manufacturing",
+						"address": {
+							"addressCountry": {
+								"name": "United States"
+							},
+							"addressLocality": {
+								"name": "Cupertino"
+							},
+							"addressRegion": {
+								"name": "California"
+							},
+							"postalCode": "95014",
+							"streetAddress": {
+								"line1": "492 KOLLER ST"
+							}
+						},
+						"matchQualityInformation": {
+							"confidenceCode": 7,
+							"matchGrade": "AAAAAAAAAAA"
+						}
+					},
+					{
+						"name": "Gorman",
+						"address": {
+							"addressCountry": {
+								"name": "United States"
+							},
+							"addressLocality": {
+								"name": "Cupertino"
+							},
+							"addressRegion": {
+								"name": "California"
+							},
+							"postalCode": "95014",
+							"streetAddress": {
+								"line1": "492 KOLLER ST"
+							}
+						},
+						"matchQualityInformation": {
+							"confidenceCode": 7,
+							"matchGrade": "AAAAAAAAAAA"
+						}
+					}
+				]
+			}
+		],
+		"franchiseOperationType": {
+			"description": "Franchisor owned",
+			"dnbCode": 10887
+		},
+		"assignmentModel": {
+			"isStandalone": false,
+			"familytreeRolesPlayed": [
+				{
+					"description": "Parent",
+					"dnbCode": 12773
+				}
+			],
+			"employeeReliability": {
+				"description": "Assigned",
+				"dnbCode": 33392
+			},
+			"salesReliability": {
+				"description": "Assigned",
+				"dnbCode": 33392
+			},
+			"hasChangeInGlobalUltimate": false,
+			"physicalLocation": {
+				"employeeCount": 81,
+				"salesAmount": 1
+			},
+			"linkedCompanies": {
+				"employeeCount": 153,
+				"salesAmount": 85401792
+			},
+			"countryGroup": {
+				"employeeCount": 81,
+				"salesAmount": 1
+			},
+			"globalUltimate": {
+				"duns": "804735132",
+				"employeeCount": 153,
+				"salesAmount": 85401792,
+				"familyTreeMembersCount": 7,
+				"industrySectorsCount": 6,
+				"primarySector": {
+					"industryCode": "562",
+					"industryDescription": "Women's clothing stores",
+					"typeDnBCode": 23406,
+					"typeDescription": "US Standard Industry Code 1987 - 3 digit",
+					"sectorPercentage": 43
+				},
+				"secondarySector": {
+					"industryCode": "275",
+					"industryDescription": "Commercial printing",
+					"typeDnBCode": 23406,
+					"typeDescription": "US Standard Industry Code 1987 - 3 digit",
+					"sectorPercentage": 22
+				},
+				"unclassifiedSector": {
+					"sectorPercentage": 24
+				}
+			},
+			"domesticUltimate": {
+				"duns": "804735132",
+				"employeeCount": 81,
+				"salesAmount": 1,
+				"familyTreeMembersCount": 1,
+				"industrySectorsCount": 1,
+				"primarySector": {
+					"industryCode": "275",
+					"industryDescription": "Commercial printing",
+					"typeDnBCode": 23406,
+					"typeDescription": "US Standard Industry Code 1987 - 3 digit",
+					"sectorPercentage": 10
+				},
+				"secondarySector": {
+					"industryCode": " ",
+					"industryDescription": "Automation and Robotics",
+					"typeDnBCode": 23406,
+					"typeDescription": "US Standard Industry Code 1987 - 3 digit",
+					"sectorPercentage": 78
+				},
+				"unclassifiedSector": {
+					"sectorPercentage": 32
+				}
+			}
+		},
+		"organizationSizeCategory": {
+			"description": "Medium",
+			"dnbCode": 20548
+		},
+		"employerDesignation": {
+			"scoreDate": "2018-09-12",
+			"indexScore": 0.3,
+			"designation": {
+				"description": "Employer",
+				"dnbCode": 36133
+			},
+			"reliability": {
+				"description": "Actual",
+				"dnbCode": 9092
+			}
+		},
+		"individualNetWorthToTotalAssets": 3.2,
+		"netWorthToTotalAssets": 12.5,
+		"preferredLanguage": {
+			"description": "English",
+			"dnbCode": 39
+		},
+		"suppliers": [
+			{
+				"duns": "001237651",
+				"names": [
+					{
+						"name": "ソニーエレクトロニクス"
+					}
+				]
+			}
+		],
+		"customers": [
+			{
+				"duns": "001237651",
+				"names": [
+					{
+						"name": "ソニーエレクトロニクス",
+						"language": {
+							"description": "Japanese",
+							"dnbCode": 3807
+						}
+					}
+				]
+			}
+		],
+		"lineOfBusinessSummary": [
+			{
+				"text": "イベント管理",
+				"language": {
+					"description": "Japanese",
+					"dnbCode": 39
+				}
+			}
+		],
+		"multiLingualSearchNames": [
+			{
+				"language": {
+					"description": "Japanese",
+					"dnbCode": 3807
+				},
+				"name": "ソニー電子（株）",
+				"writingScript": {
+					"description": "Kana",
+					"dnbCode": 19347
+				}
+			}
+		],
+		"securitiesReportID": "E04991",
+		"imperialCalendarStartYear": "万延元年",
+		"tsrCommodityCodes": [
+			{
+				"commodityName": "019702地盤改良工事",
+				"language": {
+					"description": "Japanese",
+					"dnbCode": 3807
+				},
+				"priority": 1,
+				"writingScript": {
+					"description": "Kana",
+					"dnbCode": 19347
+				}
+			}
+		],
+		"businessTrustIndex": {
+			"scoreDate": "2021-01-31",
+			"trustIndex": 0.4,
+			"trustClass": {
+				"description": "Low",
+				"dnbCode": 13692
+			},
+			"nationalPercentile": 75,
+			"dataProvider": {
+				"description": "Her Majesty's Revenue and Customs",
+				"dnbCode": 32474
+			},
+			"scoreReasons": [
+				{
+					"description": "The subject's URL is found to have a similar match in D&B's repository of high risk businesses.",
+					"dnbCode": 36176
+				}
+			],
+			"excludedOrganization": {
+				"duns": "804735132",
+				"name": "GORMAN MANUFACTURING COMPANY, INC.",
+				"address": {
+					"streetAddressLines": [
+						{
+							"line1": "492 KOLLER ST"
+						}
+					]
+				}
+			}
+		},
+		"investigationDate": "2022-08-31",
+		"tsrReportDate": "2021-10-12",
+		"legalEntityIdentifierDetails": {
+			"entityID": "984500D4EEDADDF92B",
+			"legalName": "The legal name of the legal entity.",
+			"legalNameLanguage": {
+				"description": "English",
+				"dnbCode": 39,
+				"languageTag": "en-GB"
+			},
+			"legalAddress": {
+				"language": {
+					"description": "English",
+					"dnbCode": 39,
+					"languageTag": "en-GB"
+				},
+				"addressCountry": {
+					"name": "United States",
+					"isoAlpha2Code": "US"
+				},
+				"addressLocality": {
+					"name": "SAN FRANCISCO"
+				},
+				"addressRegion": {
+					"isoSubDivisionCode": "US-CA",
+					"isoSubDivisionName": "California"
+				},
+				"postalCode": "941109999",
+				"mailRouting": "c/o GORMAN FUNDS LIMITED",
+				"streetNumber": "1",
+				"buildingNumber": "5AD",
+				"streetAddress": {
+					"line1": "492 KOLLER ST",
+					"line2": "37 North Wharf Road",
+					"line3": "CA",
+					"line4": "941109999"
+				}
+			},
+			"headQuarterAddress": {
+				"language": {
+					"description": "English",
+					"dnbCode": 39,
+					"languageTag": "en-GB"
+				},
+				"addressCountry": {
+					"name": "United States",
+					"isoAlpha2Code": "US"
+				},
+				"addressLocality": {
+					"name": "SAN FRANCISCO"
+				},
+				"addressRegion": {
+					"isoSubDivisionCode": "US-CA",
+					"isoSubDivisionName": "California"
+				},
+				"postalCode": "941109999",
+				"mailRouting": "c/o GORMAN FUNDS LIMITED",
+				"streetNumber": "1",
+				"buildingNumber": "5AD",
+				"streetAddress": {
+					"line1": "492 KOLLER ST",
+					"line2": "37 North Wharf Road",
+					"line3": "CA",
+					"line4": "941109999"
+				}
+			},
+			"registrationAuthorityID": "RA0004",
+			"otherRegistrationAuthorityID": "RA00044",
+			"registrationAuthorityEntityID": "FL-0002.040.440-4",
+			"legalJurisdiction": "US-OH",
+			"entityCategory": "GENERAL",
+			"entitySubCategory": "GENERAL Sub",
+			"legalFormCode": "O7XB",
+			"legalFormDescription": "Public Limited",
+			"otherLegalForm": "Public Limited",
+			"entityStatus": "ACTIVE",
+			"entityCreationDate": "2022-05-23",
+			"initialRegistrationDate": "2022-06-20",
+			"lastUpdateDate": "2022-12-01",
+			"registrationStatus": "LAPSED",
+			"nextRenewalDate": "2025-01-29",
+			"managingLOUEntityID": "529900T8BM49AURSDO55",
+			"sourceValidationStatus": "PARTIALLY_CORROBORATED",
+			"validationAuthorityID": "RA00006",
+			"validationAuthorityEntityID": "1827033",
+			"dataProvider": {
+				"description": "Global Legal Entity Identifier Foundation",
+				"dnbCode": 43338
+			}
+		}
+	},
+	"blockStatus": [
+		{
+			"blockID": "companyinfo_L4_v1",
+			"status": "ok",
+			"reason": null
+		},
+		{
+			"blockID": "companyinfo_identifiers_v1",
+			"status": "ok",
+			"reason": null
+		}
+	]
+}

@@ -1,0 +1,1863 @@
+{
+	"openapi": "3.0.0",
+	"info": {
+		"title": "Beneficial Ownership List (cmpbol)",
+		"description": "Beneficial Ownership List provides a list structure of both entities and individuals, and their relationship to the specified D-U-N-S Number with a particular focus on identifying Ultimate Beneficial Owners (UBOs) and Corporate Beneficial Owners (CBOs). This output is optimized for presentation in list format.\nNote: This API is available as part of \"Ownership Insights\" (Level 2) Non Standard Data Blocks.",
+		"version": "v1"
+	},
+	"servers": [
+		{
+			"url": "https://plus.dnb.com",
+			"description": "Production endpoint"
+		}
+	],
+	"paths": {
+		"/v1/beneficialowner": {
+			"description": "Beneficial Ownership List provides a list structure of both entities and individuals, and their relationship to the specified D-U-N-S Number with a particular focus on identifying Ultimate Beneficial Owners (UBOs) and Corporate Beneficial Owners (CBOs). This output is optimized for presentation in list format.\nNote: This API is available as part of \"Ownership Insights\" (Level 2) Non Standard Data Blocks.",
+			"x-DNB-ID": "cmpbol",
+			"x-DNB-Name": "Beneficial Ownership List (cmpbol) ",
+			"get": {
+				"description": "Beneficial Ownership List provides a list structure of both entities and individuals, and their relationship to the specified D-U-N-S Number with a particular focus on identifying Ultimate Beneficial Owners (UBOs) and Corporate Beneficial Owners (CBOs). This output is optimized for presentation in list format.\nNote: This API is available as part of \"Ownership Insights\" (Level 2) Non Standard Data Blocks.",
+				"summary": "Beneficial Ownership List (cmpbol)",
+				"operationId": "cmpbol",
+				"x-monitoring": "Available. Please refer <a href=\"/html/guides/Monitor/DataProducts.html\" target=\"_blank\">guide</a> for details.",
+				"x-monitoring-pdf": "Available. Please refer guide for details.",
+				"x-productId": "cmpbol",
+				"parameters": [
+					{
+						"name": "duns",
+						"in": "query",
+						"required": true,
+						"description": "A 9-character numeric string identifying the entity by its Dun & Bradstreet D-U-N-S number.",
+						"example": "804735132",
+						"schema": {
+							"type": "string",
+							"maxLength": 9
+						}
+					},
+					{
+						"name": "productId",
+						"in": "query",
+						"required": true,
+						"description": "The product ID provided by Dun & Bradstreet that identifies the product to be returned.",
+						"example": "cmpcos",
+						"schema": {
+							"type": "string"
+						},
+						"x-example": "cmpbol"
+					},
+					{
+						"name": "versionId",
+						"in": "query",
+						"required": true,
+						"description": "The version of the product to be returned.",
+						"example": "v1",
+						"schema": {
+							"type": "string"
+						},
+						"x-example": "vv1"
+					},
+					{
+						"name": "tradeUp",
+						"in": "query",
+						"required": false,
+						"description": "Indicates if the Headquarters D-U-N-S Number should be returned if a Branch is requested.<br/><br/>Valid values:<br/>* hq: If the provided D-U-N-S Number is a Branch, the Headquarter D-U-N-S Number is returned.<br/>* domhq: If the provided D-U-N-S Number is a Branch, the Domestic Headquarter D-U-N-S Number is returned.<br/><br/>If the requested D-U-N-S Number is not a Branch, that D-U-N-S Number will be returned regardless of the value of this parameter.<br/><br/>If the parameter is omitted, the requested D-U-N-S Number is returned even if it is a Branch.",
+						"example": "hq",
+						"schema": {
+							"type": "string",
+							"enum": [
+								"hq",
+								"domhq"
+							]
+						}
+					},
+					{
+						"name": "customerReference",
+						"in": "query",
+						"required": false,
+						"description": "Text supplied by the requester describing the request for their own use, from their own perspective. It is pass through data that is returned to the requester along with the D&B resolution; it has no bearing on the processing done by D&B and might not be meaningful to anyone other than the requester.<br/><br/>Maxlength : 640 characters.",
+						"example": "customer reference text",
+						"schema": {
+							"type": "string",
+							"maxLength": 240
+						}
+					},
+					{
+						"name": "ownershipType",
+						"in": "query",
+						"required": false,
+						"description": "Identifies the level of ownership.<br/><br/>Valid values:<br/>* BENF_OWRP: includes Beneficial Ownerships only.<br/><br/>The following values are applicable for CMPBOL only:<br/>* CTLD_OWRP: includes Controlled Ownerships (Direct and Indirect) only.<br/>* DIRC_OWRP: includes Direct Ownerships only.<br/>* IDIR_OWRP: includes Indirect Ownerships only.<br/><br/>Note: (Applicable to CMPBOS & CMPCOS only) The filter does not remove any undisclosed owners or owners not matching the criteria from the response but denoted using isFilteredOut=true.",
+						"example": "BENF_OWRP",
+						"schema": {
+							"type": "string",
+							"enum": [
+								"BENF_OWRP",
+								"CTLD_OWRP",
+								"DIRC_OWRP",
+								"IDIR_OWRP"
+							]
+						}
+					},
+					{
+						"name": "ownershipPercentage",
+						"in": "query",
+						"required": false,
+						"description": "Limits the search to entities that include information on shareholders whose shareholding percentage is equal to or greater than this value.<br/><br/>Valid values:<br/>* 0.00 to 100.00 (maximum two decimals)<br/><br/>Note: (Applicable to CMPBOS & CMPCOS only) The filter does not remove any undisclosed owners or owners not matching the criteria from the response but denoted using isFilteredOut=true.",
+						"example": 20.5,
+						"schema": {
+							"type": "number"
+						}
+					},
+					{
+						"name": "excludeUndisclosedHoldings",
+						"in": "query",
+						"required": false,
+						"description": "Limits the search to entities that exclude information on shareholders whose percentage is zero or undisclosed.<br/><br/>* If true, results exclude information on shareholders whose  percentage is zero or undisclosed.<br/>* If false or null, results inlcude information on shareholders whose  percentage is zero or undisclosed.<br/><br/>Note : Both excludeUndisclosedHoldings & appliedControlType must not be included together.",
+						"example": true,
+						"schema": {
+							"type": "boolean"
+						}
+					},
+					{
+						"name": "degreeOfSeparation",
+						"in": "query",
+						"required": false,
+						"description": "Defines the limit on the depth of the ownership structure to be retrieved.<br/><br/>Valid values: Integers from 1.<br/><br/>Note: (Applicable to CMPBOS & CMPCOS only) The filter does not remove any undisclosed owners or owners not matching the criteria from the response but denoted using isFilteredOut=true.<br/>Not applicable for Large structure paginated results.",
+						"example": 1,
+						"schema": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "appliedControlType",
+						"in": "query",
+						"required": false,
+						"description": "The type of calculation applied to imply the unknown or undisclosed ownership percentage of the inquired subject.<br/><br/>When set to NULL, D&B implied ownership percentages will be calculated based on the worst case distribution.<br/><br/>Possible values:<br/><br/>34781 [Worst Case Distribution] - Everyone who is a direct undisclosed owner gets all of the available undisclosed amount (i.e. assumes all entities own all the wealth) e.g. 4 undisclosed owners get 100% each. This is the default output<br/><br/>34782 [Equal Distribution] - Everyone who is a direct undisclosed owner gets an equal share of the available undisclosed amount (i.e. assumes all entities own an equal amount of the wealth) e.g. 4 undisclosed owners get 25% each. <br/>Note: Not applicable for Large structure paginated results.<br/><br/>Note : Both excludeUndisclosedHoldings & appliedControlType must not be included together",
+						"example": 34781,
+						"schema": {
+							"type": "integer",
+							"enum": [
+								34781,
+								34782
+							]
+						}
+					},
+					{
+						"name": "pageNumber",
+						"in": "query",
+						"required": false,
+						"description": "Search results can be paginated; this attribute specifies which page is to be returned.<br/>Valid values: Integers from 1.",
+						"example": 10,
+						"schema": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "returnPaginatedResults",
+						"in": "query",
+						"required": false,
+						"description": "When set to \"true\" indicates to return paginated response for large structures.<br/>When set to \"false\" indicates not to return paginated response for large structures. (default)<br/><br/>Note: <br/>1. pageNumber parameter is not applicable when returnPaginatedResults is provided as false or not specified in the request.<br/>2. appliedControlType Equal Distribution & degreeOfSeparation parameters are not applicable for Large structure paginated results. The full paginated, appliedControlType Worst Case Distribution response is retrieved.",
+						"example": true,
+						"schema": {
+							"type": "boolean"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"additionalProperties": true,
+									"properties": {
+										"transactionDetail": {
+											"type": "object",
+											"nullable": true,
+											"properties": {
+												"transactionID": {
+													"type": "string",
+													"nullable": true,
+													"example": "rlh-hi9puyoijk-jop8u-kd-d-1",
+													"description": "A value assigned by the Dun & Bradstreet application to uniquely identify this request."
+												},
+												"transactionTimestamp": {
+													"type": "string",
+													"nullable": true,
+													"example": "2017-02-21T17:46:19.839Z",
+													"description": "The date and time, in ISO 8601 UTC Z standard, when this response was created."
+												},
+												"inLanguage": {
+													"type": "string",
+													"nullable": true,
+													"example": "en-US",
+													"description": "An IETF BCP 47 code value that defines the language in which this product was rendered."
+												},
+												"productID": {
+													"type": "string",
+													"nullable": true,
+													"example": "PRODID",
+													"description": "The ID of the product used to create the response."
+												},
+												"productVersion": {
+													"type": "string",
+													"nullable": true,
+													"example": "1",
+													"description": "The version of the product used to create the response."
+												}
+											},
+											"additionalProperties": true,
+											"description": "The information used to process this request."
+										},
+										"inquiryDetail": {
+											"type": "object",
+											"nullable": true,
+											"properties": {
+												"duns": {
+													"type": "string",
+													"nullable": true,
+													"example": "804735132",
+													"description": "The D-U-N-S number provided in the request."
+												},
+												"productID": {
+													"type": "string",
+													"nullable": true,
+													"example": "PRODID",
+													"description": "The ID of the product used to produce the response."
+												},
+												"productVersion": {
+													"type": "string",
+													"nullable": true,
+													"example": "v1",
+													"description": "The product version number provided in the request."
+												},
+												"tradeUp": {
+													"type": "string",
+													"nullable": true,
+													"example": "hq",
+													"description": "The value of the tradeUp parameter provided in the request."
+												},
+												"ownershipType": {
+													"type": "string",
+													"nullable": true,
+													"example": "BENF_OWRP",
+													"description": "The ownership type code provided in the request."
+												},
+												"ownershipPercentage": {
+													"type": "number",
+													"nullable": true,
+													"example": 50,
+													"description": "The ownership percentage included in the request."
+												},
+												"excludeUndisclosedHoldings": {
+													"type": "string",
+													"nullable": true,
+													"example": "true",
+													"description": "The undisclosed holdings value provided in the request."
+												},
+												"degreeOfSeparation": {
+													"type": "integer",
+													"nullable": true,
+													"example": 1,
+													"description": "The degree of separation provided in the request."
+												},
+												"customerReference": {
+													"type": "string",
+													"nullable": true,
+													"example": "Some text to describe the request.",
+													"description": "A reference string provided by the customer for this particular transaction."
+												},
+												"appliedControlType": {
+													"type": "integer",
+													"nullable": true,
+													"example": 34781,
+													"description": "The type of calculation applied to imply the unknown or undisclosed ownership percentage of the inquired subject.<br/><br/>When set to NULL, D&B implied ownership percentages will be calculated based on the worst case distribution."
+												},
+												"pageNumber": {
+													"type": "string",
+													"nullable": true,
+													"example": "1",
+													"description": "Denotes the preference of the customer to return search results starting from a specific page.  A maximum of 1000 results can be returned. By default this is set to 1. "
+												},
+												"returnPaginatedResults": {
+													"type": "string",
+													"nullable": true,
+													"example": "true",
+													"description": "The returnPaginatedResults provided in the request."
+												}
+											},
+											"additionalProperties": true,
+											"description": "The details of the input data provided."
+										},
+										"organization": {
+											"type": "object",
+											"nullable": true,
+											"properties": {
+												"duns": {
+													"type": "string",
+													"nullable": true,
+													"example": "804735132",
+													"description": "The D-U-N-S® Number, a proprietary organizational identifier owned and managed by Dun & Bradstreet Inc, provides unique identification of a subject organization, in accordance with the Data Universal Numbering System (D-U-N-S®)."
+												},
+												"dunsControlStatus": {
+													"type": "object",
+													"nullable": true,
+													"properties": {
+														"isOutOfBusiness": {
+															"type": "boolean",
+															"nullable": true,
+															"example": true,
+															"description": "Indicates whether an organization is no longer functional or trading.<br/><br/>- If true, the organization is neither functional nor trading.<br/>- If false, the organization is either functional or trading."
+														}
+													},
+													"additionalProperties": true,
+													"description": "The details of the organization's functional state and controls that impact its suitability for various usage purposes."
+												},
+												"primaryName": {
+													"type": "string",
+													"nullable": true,
+													"example": "GORMAN MANUFACTURING COMPANY, INC.",
+													"description": "Single name by which the organization is primarily known or identified."
+												},
+												"address": {
+													"type": "object",
+													"nullable": true,
+													"properties": {
+														"addressCountry": {
+															"type": "object",
+															"nullable": true,
+															"properties": {
+																"name": {
+																	"type": "string",
+																	"nullable": true,
+																	"example": "United States",
+																	"description": "The country or region for this address of the organization."
+																},
+																"isoAlpha2Code": {
+																	"type": "string",
+																	"nullable": true,
+																	"maxLength": 2,
+																	"example": "US",
+																	"description": "The 2 letter alpha country code assigned by the International Organization for Standardization (ISO) identifying the Country/Region for this address of the organization.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country code substitutions."
+																}
+															},
+															"additionalProperties": true,
+															"description": "The details of the country or region for this address of the organization."
+														},
+														"addressLocality": {
+															"type": "object",
+															"nullable": true,
+															"properties": {
+																"name": {
+																	"type": "string",
+																	"nullable": true,
+																	"example": "SAN FRANCISCO",
+																	"description": "The name of the locality for this address of the organization. Locality defined as a district population cluster. City, town, township, village, borough etc."
+																}
+															},
+															"additionalProperties": true,
+															"description": "The details of the locality for this address of the organization. Locality defined as a district population cluster. City, town, township, village, borough etc."
+														},
+														"addressRegion": {
+															"type": "object",
+															"nullable": true,
+															"properties": {
+																"name": {
+																	"type": "string",
+																	"nullable": true,
+																	"example": "California",
+																	"description": "The name of the geographical area for this address of the organization. For Example New Jersey."
+																}
+															},
+															"additionalProperties": true,
+															"description": "Details of the type of geographical area for this address of the organization.<br/>Different markets have their own way of subdividing the country into smaller parts. <br/>Examples:<br/>Departments (France)<br/>States (USA)<br/>Provinces (Netherlands)<br/>Counties (UK)<br/>Bundeslander (Germany)<br/>Provinces and Territories (Canada)"
+														},
+														"addressCounty": {
+															"type": "object",
+															"nullable": true,
+															"properties": {
+																"name": {
+																	"type": "string",
+																	"nullable": true,
+																	"example": "SAN MATEO",
+																	"description": "The name of the geographical area of a Country or Region for this address of the organization.<br/><br/>Countries subdivide their geography into smaller sub divisions. County is an example of a commonly used subdivision, often found in the UK."
+																}
+															},
+															"additionalProperties": true,
+															"description": "The details of the geographical area of a Country or Region for this address of the organization. Countries divide their geography into smaller sub divisions.<br/><br/>County is an example of a commonly used subdivision. Often found in UK."
+														},
+														"postalCode": {
+															"type": "string",
+															"nullable": true,
+															"example": "941109999",
+															"description": "The postal code for this address of the organization.<br/><br/>Also known locally in various English-speaking countries throughout the world as a postcode, post code, Eircode, PIN or ZIP Code) is a series of letters or digits or both, sometimes including spaces or punctuation, included in a postal address for the purpose of sorting mail. The code is used by the country&#39;s postal authority to identify the address where the organization is located or conducts operations ."
+														},
+														"streetAddress": {
+															"type": "object",
+															"nullable": true,
+															"properties": {
+																"line1": {
+																	"type": "string",
+																	"nullable": true,
+																	"example": "492 KOLLER ST",
+																	"description": "The first line of the address where the entity is located.<br/><br/>The first line of this address of the organization. For example The Point in the address<br/><br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																},
+																"line2": {
+																	"type": "string",
+																	"nullable": true,
+																	"example": "Suite 100",
+																	"description": "The second line of this address of the organization.<br/>For example 37 North Wharf Road in the address<br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																},
+																"line3": {
+																	"type": "string",
+																	"nullable": true,
+																	"example": "Address line 3",
+																	"description": "The third line of the organization's official address. For example  London in the address<br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																}
+															},
+															"additionalProperties": true,
+															"description": "The details of the street address for this address of the organization."
+														}
+													},
+													"additionalProperties": true,
+													"description": "The details of the entity's address."
+												},
+												"primaryIndustryCode": {
+													"type": "object",
+													"nullable": true,
+													"properties": {
+														"usSicV4": {
+															"type": "string",
+															"nullable": true,
+															"example": "5461",
+															"description": "The 4-digit code in the U.S. SIC (Standard Industrial Classification) 1987 system assigned to an organization categorizing the primary business activities performed at its location. For example, 1611 represents the highway and street construction industry.<br/>Refer to Reference code table \"399 [US Standard Industry Code 1987 - 4 digit]\" for all possible values."
+														},
+														"usSicV4Description": {
+															"type": "string",
+															"nullable": true,
+															"example": "Credit reporting services",
+															"description": "The description of the business activities represented by the Primary US SIC Code. For example, 'highway and street construction' is the description of industry code 1611."
+														}
+													},
+													"additionalProperties": true,
+													"description": "The details of the business activity in which the organisation is primarily engaged using standardised coding schemes such as European NACE and U.S Standard Industry Classification (SIC)."
+												},
+												"businessEntityType": {
+													"type": "object",
+													"nullable": true,
+													"properties": {
+														"description": {
+															"type": "string",
+															"nullable": true,
+															"example": "Corporation",
+															"description": "The text description of the unique code assigned by Dun & Bradstreet for the Legal Form Class."
+														},
+														"dnbCode": {
+															"type": "integer",
+															"nullable": true,
+															"example": 451,
+															"description": "A unique code assigned by D&B to identify the Legal Form Class. <br/>E.g. 451 is the Code for Corporation.<br/>Refer to Reference code table \"4 [Legal Form] & 197 [Business Entity Type]\" for all possible values."
+														}
+													},
+													"additionalProperties": true,
+													"description": "A broad category of an organization structure into which all Legal Forms are grouped. These categories are created by Dun & Bradstreet for client use based on Legal Form association with one and only one Legal Form Class. Legal Form Class is limited to Corporation, Partnership, Proprietorship, National Government, Local Government, Joint Venture, Non Profit Organization, Co-operative / Mutual Organization and Foreign Company as well as a category for Legal Forms that do not fit into an existing Legal Form Class."
+												},
+												"controlOwnershipType": {
+													"type": "object",
+													"nullable": true,
+													"properties": {
+														"description": {
+															"type": "string",
+															"nullable": true,
+															"example": "Privately owned",
+															"description": "The name for the type of controlling ownership (e.g., publicly owned, privately owned, state owned). <br/><br/>Note: For some countries, controlling ownership can be derived from the legal form."
+														},
+														"dnbCode": {
+															"type": "integer",
+															"nullable": true,
+															"example": 9058,
+															"description": "A unique code assigned by Dun & Bradstreet to identify the type of controlling ownership.<br/>Refer to Reference code table \"175 [Control Type]\" for all possible values."
+														},
+														"confidenceLevel": {
+															"type": "object",
+															"nullable": true,
+															"properties": {
+																"description": {
+																	"type": "string",
+																	"nullable": true,
+																	"example": "Low",
+																	"description": "The level of the confidence for the reported control type within the spectrum."
+																},
+																"dnbCode": {
+																	"type": "integer",
+																	"nullable": true,
+																	"example": 13693,
+																	"description": "A unique code assigned by Dun & Bradstreet to identify the level of the confidence for the reported control type.<br/>Refer to Reference code table \"354 [Range]\" for all possible values."
+																}
+															},
+															"additionalProperties": true,
+															"description": "The details of the level of the confidence for the reported control type within the spectrum."
+														}
+													},
+													"additionalProperties": true,
+													"description": "The details of the type of controlling ownership."
+												},
+												"ownershipUnavailableReasons": {
+													"type": "array",
+													"nullable": true,
+													"description": "The details on why ownership information is unavailable for this entity.",
+													"items": {
+														"type": "object",
+														"nullable": true,
+														"properties": {
+															"description": {
+																"type": "string",
+																"nullable": true,
+																"example": "Subject declined to provide this data",
+																"description": "The reason why ownership information for this entity is unavailable."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"nullable": true,
+																"example": 931,
+																"description": "A unique code assigned by Dun & Bradstreet to identify the reason why ownership information for this entity is unavailable.<br/>Refer to Reference code table \"74 [Unavailable Reason]\" for all possible values."
+															}
+														},
+														"additionalProperties": true
+													}
+												},
+												"pscUnavailableReasons": {
+													"type": "array",
+													"nullable": true,
+													"description": "The details of why Persons of Significant control information is unavailable for this entity.",
+													"items": {
+														"type": "object",
+														"nullable": true,
+														"properties": {
+															"description": {
+																"type": "string",
+																"nullable": true,
+																"example": "PSC exists but not identified",
+																"description": "The reason Persons of Significant control information is unavailable for this entity."
+															},
+															"dnbCode": {
+																"type": "integer",
+																"nullable": true,
+																"example": 30842,
+																"description": "A unique code assigned by Dun & Bradstreet to identify the reason Persons of Significant control information is unavailable for this entity.<br/>Refer to Reference code table \"74 [Unavailable Reason]\" for all possible values."
+															},
+															"startDate": {
+																"type": "string",
+																"nullable": true,
+																"example": "2016-02-01",
+																"description": "The date from when the Persons of Significant control information for this entity is unavailable."
+															}
+														},
+														"additionalProperties": true
+													}
+												},
+												"beneficialOwnershipSummary": {
+													"type": "object",
+													"nullable": true,
+													"properties": {
+														"beneficialOwnersCount": {
+															"type": "integer",
+															"nullable": true,
+															"example": 250,
+															"description": "The number of owners of the entity that can include direct, indirect and beneficial owners."
+														},
+														"relationshipsCount": {
+															"type": "integer",
+															"nullable": true,
+															"example": 120,
+															"description": "The number of relationships between members in an ownership structure for the entity."
+														},
+														"maximumDegreeOfSeparation": {
+															"type": "integer",
+															"nullable": true,
+															"example": 3,
+															"description": "The farthest distance between the entity and another owner within the ownership structure."
+														},
+														"totalAllocatedOwnershipPercentage": {
+															"type": "number",
+															"nullable": true,
+															"example": 32.5,
+															"description": "The overall percentage of shares of the entity that are known to be allocated to shareowners."
+														},
+														"organizationsCount": {
+															"type": "integer",
+															"nullable": true,
+															"example": 80,
+															"description": "The number of owners of the entity that are identified as business entities."
+														},
+														"individualsCount": {
+															"type": "integer",
+															"nullable": true,
+															"example": 70,
+															"description": "The number of owners of the entity that are identified as individuals."
+														},
+														"unclassifedOwnersCount": {
+															"type": "integer",
+															"nullable": true,
+															"example": 50,
+															"description": "The number of owners of the entity that are not categorized as individual or entity."
+														},
+														"corporateBeneficiariesCount": {
+															"type": "integer",
+															"nullable": true,
+															"example": 25,
+															"description": "The number of ultimate beneficiaries of the entity that are identified as legally setup corporate businesses."
+														},
+														"stateOwnedOrganizationsCount": {
+															"type": "integer",
+															"nullable": true,
+															"example": 5,
+															"description": "The number of owners of the entity that are classified as State Owned Organization. This does not include the entity."
+														},
+														"governmentOrganizationsCount": {
+															"type": "integer",
+															"nullable": true,
+															"example": 5,
+															"description": "The number of owners of the entity that are classified as Government Organization. This does not include the entity."
+														},
+														"publiclyTradingOrganizationsCount": {
+															"type": "integer",
+															"nullable": true,
+															"example": 65,
+															"description": "The number of owners of the entity that are classified as Publicly Trading Organization. This does not include the entity."
+														},
+														"privatelyHeldOrganizationsCount": {
+															"type": "integer",
+															"nullable": true,
+															"example": 12,
+															"description": "The number of owners of the entity that are classified as Privately Held Organization. This does not include the entity."
+														},
+														"countryWiseSummary": {
+															"type": "array",
+															"nullable": true,
+															"description": "The details of the indicative or derived information about the owners of the entity in each country.",
+															"items": {
+																"type": "object",
+																"nullable": true,
+																"properties": {
+																	"countryISOAlpha2Code": {
+																		"type": "string",
+																		"nullable": true,
+																		"example": "US",
+																		"description": "The country code provided in the request.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country code substitutions."
+																	},
+																	"beneficialOwnersCount": {
+																		"type": "integer",
+																		"nullable": true,
+																		"example": 250,
+																		"description": "The number of owners of the entity that can include direct, indirect and beneficial owners."
+																	}
+																},
+																"additionalProperties": true
+															}
+														},
+														"pscCount": {
+															"type": "integer",
+															"nullable": true,
+															"example": 125,
+															"description": "The number of owners of the entity that are classified as Persons of Significant Control Organization. This does not include the entity."
+														},
+														"pscUniqueTypeCount": {
+															"type": "integer",
+															"nullable": true,
+															"example": 50,
+															"description": "The number of distinct types of Persons of Significant Control present for the entity."
+														},
+														"typeWisePSCSummary": {
+															"type": "array",
+															"nullable": true,
+															"description": "The details on the count of nodes per type of Persons of Significant Control for the entity.",
+															"items": {
+																"type": "object",
+																"nullable": true,
+																"properties": {
+																	"pscType": {
+																		"type": "object",
+																		"nullable": true,
+																		"properties": {
+																			"description": {
+																				"type": "string",
+																				"nullable": true,
+																				"example": "Individual",
+																				"description": "The type of Persons of Significant Control."
+																			},
+																			"dnbCode": {
+																				"type": "integer",
+																				"nullable": true,
+																				"example": 119,
+																				"description": "A unique code assigned by Dun & Bradstreet to identify the type of Persons of Significant Control.<br/>Refer to Reference code table \"11 [Subject Type]\" for all possible values."
+																			},
+																			"pscCount": {
+																				"type": "integer",
+																				"nullable": true,
+																				"example": 55,
+																				"description": "The number of beneficiaries present for this specific type of Person Of Significant Control type."
+																			}
+																		},
+																		"additionalProperties": true,
+																		"description": "The details on the type of Persons of Significant Control."
+																	}
+																},
+																"additionalProperties": true
+															}
+														},
+														"nationalityWisePSCSummary": {
+															"type": "array",
+															"nullable": true,
+															"description": "The details of the summary information on Persons of Significant Control by nationality.",
+															"items": {
+																"type": "object",
+																"nullable": true,
+																"properties": {
+																	"nationality": {
+																		"type": "string",
+																		"nullable": true,
+																		"example": "British",
+																		"description": "The nationality of the Person of Significant control."
+																	},
+																	"pscCount": {
+																		"type": "integer",
+																		"nullable": true,
+																		"example": 35,
+																		"description": "The number of PSCs present for this specific nationality."
+																	}
+																},
+																"additionalProperties": true
+															}
+														},
+														"nationalityUnknownPSCCount": {
+															"type": "string",
+															"nullable": true,
+															"example": "20",
+															"description": "DO NOT USE. This element is in the process of being deprecated. Please use organization.beneficialOwnershipSummary.unknownNationalityPSCCount<br/>The number of PSCs present that do not have a nationality recorded."
+														},
+														"unknownNationalityPSCCount": {
+															"type": "integer",
+															"nullable": true,
+															"example": 20,
+															"description": "The number of PSCs present that do not have a nationality recorded."
+														},
+														"countryWisePSCSummary": {
+															"type": "array",
+															"nullable": true,
+															"description": "The details of the summary information on Persons of Significant Control by country.",
+															"items": {
+																"type": "object",
+																"nullable": true,
+																"properties": {
+																	"countryISOAlpha2Code": {
+																		"type": "string",
+																		"nullable": true,
+																		"example": "US",
+																		"description": "The country code provided in the request.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country code substitutions."
+																	},
+																	"pscCount": {
+																		"type": "integer",
+																		"nullable": true,
+																		"example": 35,
+																		"description": "The number of PSCs with the given country of residence."
+																	}
+																},
+																"additionalProperties": true
+															}
+														},
+														"countryUnknownPSCCount": {
+															"type": "integer",
+															"nullable": true,
+															"description": "The number of PSCs that do not have a country of residence recorded."
+														},
+														"totalImpliedOwnershipPercentage": {
+															"type": "number",
+															"nullable": true,
+															"example": 40,
+															"description": "The sum of D&B inferred beneficial ownership percentages across all beneficiaries of the subject company."
+														},
+														"unIdentifiedShareOwnersCount": {
+															"type": "integer",
+															"nullable": true,
+															"example": 2,
+															"description": "The number of anonymous shareholders that were added to the ownership structure to enable calculation of implied beneficial ownership."
+														},
+														"impliedPercentageBeneficialOwnersCount": {
+															"type": "integer",
+															"nullable": true,
+															"example": 2,
+															"description": "The number of nodes that have D&B inferred ownership percentages within the ownership structure."
+														}
+													},
+													"additionalProperties": true,
+													"description": "The indicative or derived information about the ownership structure of the entity."
+												},
+												"beneficialOwnership": {
+													"type": "object",
+													"nullable": true,
+													"properties": {
+														"beneficialOwners": {
+															"type": "array",
+															"nullable": true,
+															"description": "The details of the beneficiaries of the entity.",
+															"items": {
+																"type": "object",
+																"nullable": true,
+																"properties": {
+																	"isBeneficiary": {
+																		"type": "boolean",
+																		"nullable": true,
+																		"example": true,
+																		"description": "Indicates whether this owner is identified as a beneficiary.<br/><br/>- If true, this owner is identified as a beneficiary.<br/>-If false, this owner is not identified as a beneficiary."
+																	},
+																	"memberID": {
+																		"type": "integer",
+																		"nullable": true,
+																		"example": 55544321,
+																		"description": "A unique identifier assigned by Dun & Bradstreet at this point of time for a node, entity associated in this structure. This system generated ID is bound to change at a later point of time.<br/><br/>Notes:<br/>1. This element is mandatory to create the ownership structure.<br/>2. With the introduction of the applied logic functionality on 25 November 2020 any balance of the unknown holdings will be attributed to an \"Unknown\" owner. This owner will be identified in the response with the same member ID as the subject DUNS but prefixed with a \"-\", e.g. \"memberID\": -207144500,<br/>This member will have the following fields populated only:<br/>\"isBeneficiary\": true,<br/>\"memberID\": -207144500,<br/>\"name\": \"Unknown\",<br/>\"degreeOfSeparation\": 1,<br/>\"isUndisclosed\": true,<br/>\"appliedControlType\": [<br/>{<br/>\"dnbCode\": 34785,<br/>\"description\": \"Forced Distribution\"<br/>}<br/>],<br/>\"impliedDirectOwnershipPercentage\": N.N, (where N.N is the undisclosed balance)<br/>\"impliedBeneficialOwnershipPercentage\": N.N, (where N.N is the undisclosed balance)"
+																	},
+																	"name": {
+																		"type": "string",
+																		"nullable": true,
+																		"example": "GORMAN MANUFACTURING COMPANY, INC.",
+																		"description": "The name by which the individual / organization is primarily known / identified."
+																	},
+																	"duns": {
+																		"type": "string",
+																		"nullable": true,
+																		"example": "804735132",
+																		"description": "The D-U-N-S® Number, a proprietary organizational identifier owned and managed by Dun & Bradstreet Inc, provides unique identification of a subject organization, in accordance with the Data Universal Numbering System (D-U-N-S®)."
+																	},
+																	"personId": {
+																		"type": "string",
+																		"nullable": true,
+																		"example": "123456",
+																		"description": "The personal identification number or shareholder number assigned by an external body that helps to identify a shareholder."
+																	},
+																	"beneficiaryType": {
+																		"type": "object",
+																		"nullable": true,
+																		"properties": {
+																			"description": {
+																				"type": "string",
+																				"nullable": true,
+																				"example": "Individual",
+																				"description": "Identifies whether the owner is an Individual, Company or if it is Unknown."
+																			},
+																			"dnbCode": {
+																				"type": "integer",
+																				"nullable": true,
+																				"example": 119,
+																				"description": "A unique code assigned by Dun & Bradstreet to identify whether the owner is an Individual, Company or if it is Unknown.<br/>Refer to Reference code table \"11 [Subject Type]\" for all possible values."
+																			}
+																		},
+																		"additionalProperties": true,
+																		"description": "The high level classification of whether the owner is an Individual, Company or if it is Unknown."
+																	},
+																	"detailedBeneficiaryType": {
+																		"type": "object",
+																		"nullable": true,
+																		"properties": {
+																			"description": {
+																				"type": "string",
+																				"nullable": true,
+																				"example": "Representative Officer",
+																				"description": "This denotes the type of beneficiary. For e.g., Individual, Business etc."
+																			},
+																			"dnbCode": {
+																				"type": "integer",
+																				"nullable": true,
+																				"example": 1601,
+																				"description": "The description for the detailed beneficiary Type.<br/>Refer to Reference code table \"11 [Subject Type]\" for all possible values."
+																			}
+																		},
+																		"additionalProperties": true,
+																		"description": "Records lower level classification of the owner based on the type of beneficiary."
+																	},
+																	"businessEntityType": {
+																		"type": "object",
+																		"nullable": true,
+																		"properties": {
+																			"description": {
+																				"type": "string",
+																				"nullable": true,
+																				"example": "Corporation",
+																				"description": "The text description of the unique code assigned by Dun & Bradstreet for the Legal Form Class."
+																			},
+																			"dnbCode": {
+																				"type": "integer",
+																				"nullable": true,
+																				"example": 451,
+																				"description": "A unique code assigned by Dun & Bradstreet to identify the legal form or structure of the entity as registered with government authorities.<br/>Refer to Reference code table \"4 [Legal Form] & 197 [Business Entity Type]\" for all possible values."
+																			}
+																		},
+																		"additionalProperties": true,
+																		"description": "A broad category of an organization structure into which all Legal Forms are grouped. These categories are created by Dun & Bradstreet for client use based on Legal Form association with one and only one Legal Form Class. Legal Form Class is limited to Corporation, Partnership, Proprietorship, National Government, Local Government, Joint Venture, Non Profit Organization, Co-operative / Mutual Organization and Foreign Company as well as a category for Legal Forms that do not fit into an existing Legal Form Class."
+																	},
+																	"address": {
+																		"type": "object",
+																		"nullable": true,
+																		"properties": {
+																			"addressCountry": {
+																				"type": "object",
+																				"nullable": true,
+																				"properties": {
+																					"name": {
+																						"type": "string",
+																						"nullable": true,
+																						"example": "United States",
+																						"description": "The country or region for this address of the organization.<br/>Refer to Reference code table \"ISOCountry [ISO Country Codes]\" for all possible values."
+																					},
+																					"isoAlpha2Code": {
+																						"type": "string",
+																						"nullable": true,
+																						"example": "US",
+																						"description": "The 2 letter alpha country code assigned by the International Organization for Standardization (ISO) identifying the Country/Region for this address of the organization.<br/><br/>Note: Please refer to  <a href= \"/html/resources/CountryCodes.html#country-substitute\">Country Code Substitutions Table</a> for the country code substitutions."
+																					}
+																				},
+																				"additionalProperties": true,
+																				"description": "The details of the country or region for this address of the organization."
+																			},
+																			"addressLocality": {
+																				"type": "object",
+																				"nullable": true,
+																				"properties": {
+																					"name": {
+																						"type": "string",
+																						"nullable": true,
+																						"example": "SAN FRANCISCO",
+																						"description": "The name of the locality for this address of the organization. Locality defined as a district population cluster. City, town, township, village, borough etc."
+																					}
+																				},
+																				"additionalProperties": true,
+																				"description": "The details of the locality for this address of the organization. Locality defined as a district population cluster. City, town, township, village, borough etc."
+																			},
+																			"addressRegion": {
+																				"type": "object",
+																				"nullable": true,
+																				"properties": {
+																					"name": {
+																						"type": "string",
+																						"nullable": true,
+																						"example": "California",
+																						"description": "The name of the geographical area for this address of the organization. For Example New Jersey."
+																					}
+																				},
+																				"additionalProperties": true,
+																				"description": "Details of the type of geographical area for this address of the organization.<br/>Different markets have their own way of subdividing the country into smaller parts. <br/>Examples:<br/>Departments (France)<br/>States (USA)<br/>Provinces (Netherlands)<br/>Counties (UK)<br/>Bundeslander (Germany)<br/>Provinces and Territories (Canada)"
+																			},
+																			"postalCode": {
+																				"type": "string",
+																				"nullable": true,
+																				"example": "941109999",
+																				"description": "The postal code for this address of the organization.<br/><br/>Also known locally in various English-speaking countries throughout the world as a postcode, post code, Eircode, PIN or ZIP Code) is a series of letters or digits or both, sometimes including spaces or punctuation, included in a postal address for the purpose of sorting mail. The code is used by the country&#39;s postal authority to identify the address where the organization is located or conducts operations ."
+																			},
+																			"streetAddress": {
+																				"type": "object",
+																				"nullable": true,
+																				"properties": {
+																					"line1": {
+																						"type": "string",
+																						"nullable": true,
+																						"example": "492 KOLLER ST",
+																						"description": "The first line of the address where the entity is located.<br/><br/>The first line of this address of the organization. For example The Point in the address<br/><br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																					},
+																					"line2": {
+																						"type": "string",
+																						"nullable": true,
+																						"example": "Suite 100",
+																						"description": "The second line of this address of the organization.<br/>For example 37 North Wharf Road in the address<br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																					},
+																					"line3": {
+																						"type": "string",
+																						"nullable": true,
+																						"example": "Address line 3",
+																						"description": "The third line of the organization's official address. For example  London in the address<br/>The Point<br/>37 North Wharf Road<br/>London<br/>W2 1AF"
+																					}
+																				},
+																				"additionalProperties": true,
+																				"description": "The details of the street address for this address of the organization."
+																			}
+																		},
+																		"additionalProperties": true,
+																		"description": "The details of the Primary Address at which the organization is located or conducts operations."
+																	},
+																	"nationality": {
+																		"type": "string",
+																		"nullable": true,
+																		"example": "British",
+																		"description": "The nationality of the owner if the owner is an individual."
+																	},
+																	"birthDate": {
+																		"type": "string",
+																		"nullable": true,
+																		"example": "1955-02-17",
+																		"description": "The date of birth of the owner if the owner is an individual."
+																	},
+																	"residenceCountryName": {
+																		"type": "string",
+																		"nullable": true,
+																		"example": "United States",
+																		"description": "The name of the country in which the individual usually resides."
+																	},
+																	"legalAuthority": {
+																		"type": "string",
+																		"nullable": true,
+																		"example": "Limited Liability Partnership Act 2000",
+																		"description": "The name of the government body or the law, which supervises or regulates the individual or the company, and also exercises significant influence over the beneficiary."
+																	},
+																	"legalForm": {
+																		"type": "string",
+																		"nullable": true,
+																		"example": "Limited Company",
+																		"description": "The legal form or structure of the company, who exercises significant influence over the beneficiary, as registered with government authorities."
+																	},
+																	"natureOfControlType": {
+																		"type": "array",
+																		"nullable": true,
+																		"description": "Records the significant influence that exists between two beneficiaries.",
+																		"items": {
+																			"type": "object",
+																			"nullable": true,
+																			"properties": {
+																				"description": {
+																					"type": "string",
+																					"nullable": true,
+																					"example": "Significant control of a firm which owns 25% to 50% shares of the company",
+																					"description": "Text identifying the type of control the individual or the company holds on the subject, e.g., ownership of 25% to 50% of shares, voting rights of 25% to 50%."
+																				},
+																				"dnbCode": {
+																					"type": "integer",
+																					"nullable": true,
+																					"example": 30854,
+																					"description": "A unique code assigned by Dun & Bradstreet identifying the type of control the individual or the company holds on the subject, e.g., ownership of 25% to 50% of shares, voting rights of 25% to 50%.<br/>Refer to Reference code table \"743 [Nature of Control]\" for all possible values."
+																				},
+																				"controlClass": {
+																					"type": "object",
+																					"nullable": true,
+																					"properties": {
+																						"description": {
+																							"type": "string",
+																							"nullable": true,
+																							"example": "Ownership or voting rights of 0% to 25%",
+																							"description": "Text that describes a broad class into which the type of control the individual or the company holds on the subject is categorized, e.g., ownership or voting rights between 25% to 50%."
+																						},
+																						"dnbCode": {
+																							"type": "integer",
+																							"nullable": true,
+																							"example": 36136,
+																							"description": "A unique code assigned by D&B that identifies the broad class into which the type of control the individual or the company holds on the subject is categorized, e.g., ownership or voting rights between 25% to 50%.<br/>Refer to Reference code table \"758 [Nature of Control Class]\" for all possible values."
+																						}
+																					},
+																					"additionalProperties": true,
+																					"description": "Records the class of significant influence that exists between two beneficiaries."
+																				},
+																				"controlPercentage": {
+																					"type": "number",
+																					"nullable": true,
+																					"example": 12.5,
+																					"description": "This denotes the nature of control's percentage."
+																				},
+																				"controlReasons": {
+																					"type": "array",
+																					"nullable": true,
+																					"description": "Records the reason for the nature of control.",
+																					"items": {
+																						"type": "object",
+																						"nullable": true,
+																						"properties": {
+																							"description": {
+																								"type": "string",
+																								"nullable": true,
+																								"example": "Settlor of the trust",
+																								"description": "Text that describes the reason for the control type which qualifies the nature of control."
+																							},
+																							"dnbCode": {
+																								"type": "integer",
+																								"nullable": true,
+																								"example": 36009,
+																								"description": "A unique code assigned by D&B that identifies the reason for the control type which qualifies the nature of control.<br/>Refer to Reference code table \"822 [Nature of Control Reason]\" for all possible values."
+																							}
+																						},
+																						"additionalProperties": true
+																					}
+																				},
+																				"isDirectControl": {
+																					"type": "boolean",
+																					"nullable": true,
+																					"example": true,
+																					"description": "When turned ON (set to true) it denotes the control is due to holding a controlling stake directly in this organisation. <br/>When turned OFF (set to false) it denotes the control is due to holding a controlling stake via other parent organisations."
+																				}
+																			},
+																			"additionalProperties": true
+																		}
+																	},
+																	"natureofControlClass": {
+																		"type": "array",
+																		"nullable": true,
+																		"description": "DO NOT USE. This element is in the process of being deprecated. Please use organization.beneficialOwnership.beneficialOwners.natureOfControlClass<br/>Records the class of significant influence that exists between two beneficiaries.",
+																		"items": {
+																			"type": "object",
+																			"nullable": true,
+																			"properties": {
+																				"description": {
+																					"type": "string",
+																					"nullable": true,
+																					"example": "Ownership or voting rights of 50% to 75%",
+																					"description": "DO NOT USE. This element is in the process of being deprecated. Please use organization.beneficialOwnership.beneficialOwners.natureOfControlClass.description<br/>Text identifying a broad class into which the type of control the individual or the company holds on the subject is categorized, e.g., ownership or voting rights between 25% to 50%."
+																				},
+																				"dnbCode": {
+																					"type": "integer",
+																					"nullable": true,
+																					"example": 33475,
+																					"description": "DO NOT USE. This element is in the process of being deprecated. Please use organization.beneficialOwnership.beneficialOwners.natureOfControlClass.dnbCode<br/>A unique code assigned by Dun & Bradstreet identifying a broad class into which the type of control the individual or the company holds on the subject is categorized, e.g., ownership or voting rights between 25% to 50%.<br/>Refer to Reference code table \"758 [Nature of Control Class]\" for all possible values."
+																				}
+																			},
+																			"additionalProperties": true
+																		}
+																	},
+																	"natureOfControlClass": {
+																		"type": "array",
+																		"nullable": true,
+																		"description": "Records the class of significant influence that exists between two beneficiaries.",
+																		"items": {
+																			"type": "object",
+																			"nullable": true,
+																			"properties": {
+																				"description": {
+																					"type": "string",
+																					"nullable": true,
+																					"example": "Ownership or voting rights of 50% to 75%",
+																					"description": "Text identifying a broad class into which the type of control the individual or the company holds on the subject is categorized, e.g., ownership or voting rights between 25% to 50%."
+																				},
+																				"dnbCode": {
+																					"type": "integer",
+																					"nullable": true,
+																					"example": 33475,
+																					"description": "A unique code assigned by Dun & Bradstreet identifying a broad class into which the type of control the individual or the company holds on the subject is categorized, e.g., ownership or voting rights between 25% to 50%.<br/>Refer to Reference code table \"758 [Nature of Control Class]\" for all possible values."
+																				}
+																			},
+																			"additionalProperties": true
+																		}
+																	},
+																	"natureOfControlStartDate": {
+																		"type": "string",
+																		"nullable": true,
+																		"example": "2013-01-01",
+																		"description": "The date when the individual or the company has acquired significant influence over the entity."
+																	},
+																	"isPSC": {
+																		"type": "boolean",
+																		"nullable": true,
+																		"example": true,
+																		"description": "Indicates whether this beneficiary is a person with significant control.<br/><br/>- If true, this beneficiary is a person with significant control.<br/>-If false, this beneficiary is not a person with significant control."
+																	},
+																	"directOwnershipPercentage": {
+																		"type": "number",
+																		"nullable": true,
+																		"example": 0.56,
+																		"description": "The owner's direct shareholding percentage."
+																	},
+																	"indirectOwnershipPercentage": {
+																		"type": "number",
+																		"nullable": true,
+																		"example": 0.45,
+																		"description": "The owner's indirect shareholding percentage."
+																	},
+																	"beneficialOwnershipPercentage": {
+																		"type": "number",
+																		"nullable": true,
+																		"example": 1.01,
+																		"description": "The owner's actual shareholding percentage."
+																	},
+																	"ownershipUnavailableReasons": {
+																		"type": "array",
+																		"nullable": true,
+																		"description": "The details on why ownership information is unavailable for this entity.",
+																		"items": {
+																			"type": "object",
+																			"nullable": true,
+																			"properties": {
+																				"description": {
+																					"type": "string",
+																					"nullable": true,
+																					"example": "Subject declined to provide this data",
+																					"description": "The reason why ownership information for this entity is unavailable."
+																				},
+																				"dnbCode": {
+																					"type": "integer",
+																					"nullable": true,
+																					"example": 931,
+																					"description": "A unique code assigned by Dun & Bradstreet to identify the reason why ownership information for this entity is unavailable.<br/>Refer to Reference code table \"74 [Unavailable Reason]\" for all possible values."
+																				}
+																			},
+																			"additionalProperties": true
+																		}
+																	},
+																	"isOutofBusiness": {
+																		"type": "boolean",
+																		"nullable": true,
+																		"example": true,
+																		"description": "DO NOT USE. This element is in the process of being deprecated. Please use organization.beneficialOwnership.beneficialOwners.isOutOfBusiness<br/>Indicates whether the owner entity is currently Out of Business.<br/><br/>- If true, the owner entity is out of business.<br/>- If false, the owner entity is not out of business."
+																	},
+																	"isOutOfBusiness": {
+																		"type": "boolean",
+																		"nullable": true,
+																		"example": true,
+																		"description": "Indicates whether the owner entity is currently Out of Business.<br/><br/>- If true, the owner entity is out of business.<br/>- If false, the owner entity is not out of business."
+																	},
+																	"controlOwnershipType": {
+																		"type": "object",
+																		"nullable": true,
+																		"properties": {
+																			"description": {
+																				"type": "string",
+																				"nullable": true,
+																				"example": "Privately owned",
+																				"description": "The name for the type of controlling ownership (e.g., publicly owned, privately owned, state owned). <br/><br/>Note: For some countries, controlling ownership can be derived from the legal form."
+																			},
+																			"dnbCode": {
+																				"type": "integer",
+																				"nullable": true,
+																				"example": 9058,
+																				"description": "A unique code assigned by Dun & Bradstreet to identify the type of controlling ownership.<br/>Refer to Reference code table \"175 [Control Type]\" for all possible values."
+																			},
+																			"confidenceLevel": {
+																				"type": "object",
+																				"nullable": true,
+																				"properties": {
+																					"description": {
+																						"type": "string",
+																						"nullable": true,
+																						"example": "Low",
+																						"description": "The level of the confidence for the reported control type within the spectrum."
+																					},
+																					"dnbCode": {
+																						"type": "integer",
+																						"nullable": true,
+																						"example": 13693,
+																						"description": "A unique code assigned by Dun & Bradstreet to identify the level of the confidence for the reported control type.<br/>Refer to Reference code table \"354 [Range]\" for all possible values."
+																					}
+																				},
+																				"additionalProperties": true,
+																				"description": "The details of the level of the confidence for the reported control type within the spectrum."
+																			}
+																		},
+																		"additionalProperties": true,
+																		"description": "The details of the type of controlling ownership."
+																	},
+																	"degreeOfSeparation": {
+																		"type": "integer",
+																		"nullable": true,
+																		"example": 3,
+																		"description": "The distance between this beneficiary and the entity within the ownership structure."
+																	},
+																	"isUndisclosed": {
+																		"type": "boolean",
+																		"nullable": true,
+																		"example": true,
+																		"description": "Indicates whether the ownership percentage is not reported for the beneficiary, or it has not been calculated.<br/><br/>- If true, the ownership percentage is not reported or calculated for the beneficiary.<br/>- If null, the ownership percentage for this beneficiary has been reported or calculated."
+																	},
+																	"appliedControlType": {
+																		"type": "array",
+																		"nullable": true,
+																		"description": "Records information of the type of calculation applied on the member.<br/><br/>Note: While the request parameters are restricted to codes 34781 [Worst Case Distribution] or 34782 [Equal Distribution], the response can include all 5 code values.",
+																		"items": {
+																			"type": "object",
+																			"nullable": true,
+																			"properties": {
+																				"dnbCode": {
+																					"type": "integer",
+																					"nullable": true,
+																					"example": 34781,
+																					"description": "A unique code assigned by Dun & Bradstreet that describes the type of calculation applied to imply the unknown or undisclosed ownership percentage of the inquired subject.<br/>Refer to Reference code table \"793 [Applied Control Type]\" for all possible values."
+																				},
+																				"description": {
+																					"type": "string",
+																					"nullable": true,
+																					"example": "Worst Case Distribution",
+																					"description": "Text that specifies the type of calculation applied to imply the unknown or undisclosed ownership percentage of the inquired subject, e.g., Worst Case Distribution, Equal Distribution."
+																				}
+																			},
+																			"additionalProperties": true
+																		}
+																	},
+																	"impliedDirectOwnershipPercentage": {
+																		"type": "number",
+																		"nullable": true,
+																		"example": 60,
+																		"description": "Dun & Bradstreet inferred direct shareholding percentage due to unavailable % information from registry source"
+																	},
+																	"impliedIndirectOwnershipPercentage": {
+																		"type": "number",
+																		"nullable": true,
+																		"example": 60,
+																		"description": "Dun & Bradstreet inferred indirect shareholding percentage due to unavailable % information from registry source"
+																	},
+																	"impliedBeneficialOwnershipPercentage": {
+																		"type": "number",
+																		"nullable": true,
+																		"example": 60,
+																		"description": "Dun & Bradstreet inferred beneficiary shareholding percentage due to unavailable % information from registry source"
+																	},
+																	"isTrusteeNominee": {
+																		"type": "boolean",
+																		"nullable": true,
+																		"example": true,
+																		"description": "When turned ON (set to 1) indicates that a shareholder is a trustee or a nominee, I.e. the shareholder is acting on behalf of someone else to hold the shares.<br/><br/>When turned OFF (set to 0) this indicates that the shareholder is acting in their own right and is not a trustee or nominee; however as this is the assumed condition there is no requirement to create this tag to represent this fact."
+																	}
+																},
+																"additionalProperties": true
+															}
+														}
+													},
+													"additionalProperties": true,
+													"description": "The details of the owners of the entity that can include direct, indirect and beneficial owners. The details under this section can be used to generate the ownership structure."
+												},
+												"corporateLinkage": {
+													"type": "object",
+													"nullable": true,
+													"properties": {
+														"globalUltimate": {
+															"type": "object",
+															"nullable": true,
+															"properties": {
+																"duns": {
+																	"type": "string",
+																	"nullable": true,
+																	"example": "804735132",
+																	"description": "The unique identification number assigned by Dun and Bradstreet identifying the top most organisation in the family tree."
+																},
+																"primaryName": {
+																	"type": "string",
+																	"nullable": true,
+																	"example": "GORMAN MANUFACTURING COMPANY, INC.",
+																	"description": "Single name by which the organization is primarily known or identified."
+																}
+															},
+															"additionalProperties": true,
+															"description": "The details of the top most organization in the family tree, tracing each parent up to its own parent. For example, organization A is based in the US and has organization B as its parent also in the US. In turn organization B is owned by organization C, also in the US, which is owned by organization D which is in the UK. Thus, the Global Ultimate of this family tree (and therefore of each member of the family tree) is organization D."
+														},
+														"domesticUltimate": {
+															"type": "object",
+															"nullable": true,
+															"properties": {
+																"duns": {
+																	"type": "string",
+																	"nullable": true,
+																	"example": "804735132",
+																	"description": "The D-U-N-S® number of the highest ranking member of a family tree within the same country/region within a limb of a family tree."
+																},
+																"primaryName": {
+																	"type": "string",
+																	"nullable": true,
+																	"example": "GORMAN MANUFACTURING COMPANY, INC.",
+																	"description": "Single name by which the organization is primarily known or identified."
+																}
+															},
+															"additionalProperties": true,
+															"description": "The details of the highest ranking member of a family tree within the same country/region within a limb of a family.<br/><br/> <br/><br/>For example, Company A is based in the US and has Company B as its parent also in the US. In turn Company B is owned by Company C, also in the US, which is owned by Company D which is in the UK. Thus, the Domestic Ultimate of Company A is actually Company C as this is the last entity in the parent chain that is in the US."
+														},
+														"parent": {
+															"type": "object",
+															"nullable": true,
+															"properties": {
+																"duns": {
+																	"type": "string",
+																	"nullable": true,
+																	"example": "804735132",
+																	"description": "The D-U-N-S® number of the organization that owns more than 50% of the subject organization."
+																},
+																"primaryName": {
+																	"type": "string",
+																	"nullable": true,
+																	"example": "GORMAN MANUFACTURING COMPANY, INC.",
+																	"description": "Single name by which the organization is primarily known or identified."
+																}
+															},
+															"additionalProperties": true,
+															"description": "The details of the organization that owns more than 50% of the subject organization."
+														}
+													},
+													"additionalProperties": true,
+													"description": "Details of organization to organization relationships based on majority ownership or control (>50%). There are two types of relationships, branch/division to Headquarter and Subsidiary to Parent."
+												},
+												"isLargeStructure": {
+													"type": "boolean",
+													"nullable": true,
+													"example": true,
+													"description": "When set to \"true\", it denotes that this request has more associated entities that cannot be delivered in a single API response and needs to be paginated to deliver all linked entities. The totalRecordCount provides the number of all entities for this request criteria.<br/>A default page size of 1000 applied in this case.<br/>When set to \"false\", it denotes that all the entities associated with this request can be delivered in a single API response."
+												},
+												"totalRecordCount": {
+													"type": "integer",
+													"nullable": true,
+													"example": 10000,
+													"description": "The overall number of entities that match the request criteria."
+												},
+												"returnedRecordCount": {
+													"type": "integer",
+													"nullable": true,
+													"example": 100,
+													"description": "The number of entities returned in the response."
+												}
+											},
+											"additionalProperties": true,
+											"description": "The details of the entity."
+										},
+										"totalPageCount": {
+											"type": "integer",
+											"nullable": true,
+											"example": 5,
+											"description": "The total number of pages that match the request criteria."
+										},
+										"links": {
+											"type": "object",
+											"nullable": true,
+											"properties": {
+												"self": {
+													"type": "string",
+													"nullable": true,
+													"example": "https://dnblinktopage.com",
+													"description": "Link to the current page of the results."
+												},
+												"prev": {
+													"type": "string",
+													"nullable": true,
+													"example": "https://dnblinktopage.com",
+													"description": "Link to the previous page of the results."
+												},
+												"next": {
+													"type": "string",
+													"nullable": true,
+													"example": "https://dnblinktopage.com",
+													"description": "Link to the next page of the results."
+												},
+												"first": {
+													"type": "string",
+													"nullable": true,
+													"example": "https://dnblinktopage.com",
+													"description": "Link to the first page of the results."
+												},
+												"last": {
+													"type": "string",
+													"nullable": true,
+													"example": "https://dnblinktopage.com",
+													"description": "Link to the last page of the results"
+												}
+											},
+											"additionalProperties": true,
+											"description": "The links to traverse between pages with search results."
+										}
+									}
+								}
+							}
+						}
+					},
+					"301": {
+						"description": "Moved Permanently",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"additionalProperties": true,
+									"properties": {
+										"transactionDetail": {
+											"type": "object",
+											"nullable": true,
+											"properties": {
+												"transactionID": {
+													"type": "string",
+													"nullable": true,
+													"example": "rlh-hi9puyoijk-jop8u-kd-d-1",
+													"description": "A value assigned by the Dun & Bradstreet application to uniquely identify this request."
+												},
+												"transactionTimestamp": {
+													"type": "string",
+													"nullable": true,
+													"example": "2017-02-21T17:46:19.839Z",
+													"description": "The date and time, in ISO 8601 UTC Z standard, when this response was created."
+												},
+												"inLanguage": {
+													"type": "string",
+													"nullable": true,
+													"example": "en-US",
+													"description": "An IETF BCP 47 code value that defines the language in which this product was rendered."
+												},
+												"productID": {
+													"type": "string",
+													"nullable": true,
+													"example": "PRODID",
+													"description": "The ID of the product used to create the response."
+												},
+												"productVersion": {
+													"type": "string",
+													"nullable": true,
+													"example": "1",
+													"description": "The version of the product used to create the response."
+												}
+											},
+											"additionalProperties": true,
+											"description": "The information used to process this request."
+										},
+										"error": {
+											"type": "object",
+											"nullable": true,
+											"properties": {
+												"errorCode": {
+													"type": "string",
+													"nullable": true,
+													"example": "10002",
+													"description": "A number assigned by Dun & Bradstreet that uniquely identifies the reason for failure of this request. See the Error and Information Code list for more information."
+												},
+												"errorMessage": {
+													"type": "string",
+													"nullable": true,
+													"example": "Invalid parameters.",
+													"description": "Describes reason for failure of this request."
+												},
+												"errorDetails": {
+													"type": "array",
+													"nullable": true,
+													"description": "The details of the error.",
+													"items": {
+														"type": "object",
+														"nullable": true,
+														"properties": {
+															"parameter": {
+																"type": "string",
+																"nullable": true,
+																"example": "duns",
+																"description": "The name of the parameter that contains an invalid value or is missing."
+															},
+															"description": {
+																"type": "string",
+																"nullable": true,
+																"example": "Invalid parameters.",
+																"description": "Describes reason for failure of this request."
+															}
+														},
+														"additionalProperties": true
+													}
+												}
+											},
+											"additionalProperties": true,
+											"description": "The details of any error that occurred. This section is created only when the customer request was not fulfilled due to system failures, incorrect, or incomplete request parameters, etc."
+										},
+										"inquiryDetail": {
+											"type": "object",
+											"nullable": true,
+											"properties": {
+												"duns": {
+													"type": "string",
+													"nullable": true,
+													"example": "804735132",
+													"description": "The D-U-N-S number provided in the request."
+												},
+												"productID": {
+													"type": "string",
+													"nullable": true,
+													"example": "PRODID",
+													"description": "The ID of the product used to produce the response."
+												},
+												"productVersion": {
+													"type": "string",
+													"nullable": true,
+													"example": "v1",
+													"description": "The product version number provided in the request."
+												},
+												"tradeUp": {
+													"type": "string",
+													"nullable": true,
+													"example": "hq",
+													"description": "The value of the tradeUp parameter provided in the request."
+												},
+												"ownershipType": {
+													"type": "string",
+													"nullable": true,
+													"example": "BENF_OWRP",
+													"description": "The ownership type code provided in the request."
+												},
+												"ownershipPercentage": {
+													"type": "number",
+													"nullable": true,
+													"example": 50,
+													"description": "The ownership percentage included in the request."
+												},
+												"excludeUndisclosedHoldings": {
+													"type": "string",
+													"nullable": true,
+													"example": "true",
+													"description": "The undisclosed holdings value provided in the request."
+												},
+												"degreeOfSeparation": {
+													"type": "integer",
+													"nullable": true,
+													"example": 1,
+													"description": "The degree of separation provided in the request."
+												},
+												"customerReference": {
+													"type": "string",
+													"nullable": true,
+													"example": "Some text to describe the request.",
+													"description": "A reference string provided by the customer for this particular transaction."
+												},
+												"appliedControlType": {
+													"type": "integer",
+													"nullable": true,
+													"example": 34781,
+													"description": "The type of calculation applied to imply the unknown or undisclosed ownership percentage of the inquired subject.<br/><br/>When set to NULL, D&B implied ownership percentages will be calculated based on the worst case distribution."
+												},
+												"pageNumber": {
+													"type": "string",
+													"nullable": true,
+													"example": "1",
+													"description": "Denotes the preference of the customer to return search results starting from a specific page.  A maximum of 1000 results can be returned. By default this is set to 1. "
+												},
+												"returnPaginatedResults": {
+													"type": "string",
+													"nullable": true,
+													"example": "true",
+													"description": "The returnPaginatedResults provided in the request."
+												}
+											},
+											"additionalProperties": true,
+											"description": "The details of the input data provided."
+										},
+										"duns": {
+											"type": "string",
+											"nullable": true,
+											"example": "804735132",
+											"description": "The D-U-N-S® Number, a proprietary organizational identifier owned and managed by Dun & Bradstreet Inc, provides unique identification of a subject organization, in accordance with the Data Universal Numbering System (D-U-N-S®)."
+										},
+										"dunsControlStatus": {
+											"type": "object",
+											"nullable": true,
+											"properties": {
+												"dunsTransfers": {
+													"type": "array",
+													"nullable": true,
+													"description": "The transfer details of the given D-U-N-S number.",
+													"items": {
+														"type": "object",
+														"nullable": true,
+														"properties": {
+															"retainedDUNS": {
+																"type": "string",
+																"nullable": true,
+																"example": "123456789",
+																"description": "D-U-N-S number of the given input that is retained."
+															}
+														},
+														"additionalProperties": true,
+														"required": [
+															"retainedDUNS"
+														]
+													}
+												}
+											},
+											"additionalProperties": true,
+											"description": "The details of the organization's functional state and controls that impact its suitability for various usage purposes.",
+											"required": [
+												"dunsTransfers"
+											]
+										}
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"additionalProperties": true,
+									"properties": {
+										"transactionDetail": {
+											"type": "object",
+											"nullable": true,
+											"properties": {
+												"transactionID": {
+													"type": "string",
+													"nullable": true,
+													"example": "rlh-hi9puyoijk-jop8u-kd-d-1",
+													"description": "A value assigned by the Dun & Bradstreet application to uniquely identify this request."
+												},
+												"transactionTimestamp": {
+													"type": "string",
+													"nullable": true,
+													"example": "2017-02-21T17:46:19.839Z",
+													"description": "The date and time, in ISO 8601 UTC Z standard, when this response was created."
+												},
+												"inLanguage": {
+													"type": "string",
+													"nullable": true,
+													"example": "en-US",
+													"description": "An IETF BCP 47 code value that defines the language in which this product was rendered."
+												},
+												"productID": {
+													"type": "string",
+													"nullable": true,
+													"example": "PRODID",
+													"description": "The ID of the product used to create the response."
+												},
+												"productVersion": {
+													"type": "string",
+													"nullable": true,
+													"example": "1",
+													"description": "The version of the product used to create the response."
+												}
+											},
+											"additionalProperties": true,
+											"description": "The information used to process this request."
+										},
+										"error": {
+											"type": "object",
+											"nullable": true,
+											"properties": {
+												"errorCode": {
+													"type": "string",
+													"nullable": true,
+													"example": "10002",
+													"description": "A number assigned by Dun & Bradstreet that uniquely identifies the reason for failure of this request. See the Error and Information Code list for more information."
+												},
+												"errorMessage": {
+													"type": "string",
+													"nullable": true,
+													"example": "Invalid parameters.",
+													"description": "Describes reason for failure of this request."
+												},
+												"errorDetails": {
+													"type": "array",
+													"nullable": true,
+													"description": "The details of the error.",
+													"items": {
+														"type": "object",
+														"nullable": true,
+														"properties": {
+															"parameter": {
+																"type": "string",
+																"nullable": true,
+																"example": "duns",
+																"description": "The name of the parameter that contains an invalid value or is missing."
+															},
+															"description": {
+																"type": "string",
+																"nullable": true,
+																"example": "Invalid parameters.",
+																"description": "Describes reason for failure of this request."
+															}
+														},
+														"additionalProperties": true
+													}
+												}
+											},
+											"additionalProperties": true,
+											"description": "The details of any error that occurred. This section is created only when the customer request was not fulfilled due to system failures, incorrect, or incomplete request parameters, etc."
+										},
+										"inquiryDetail": {
+											"type": "object",
+											"nullable": true,
+											"properties": {
+												"duns": {
+													"type": "string",
+													"nullable": true,
+													"example": "804735132",
+													"description": "The D-U-N-S number provided in the request."
+												},
+												"productID": {
+													"type": "string",
+													"nullable": true,
+													"example": "PRODID",
+													"description": "The ID of the product used to produce the response."
+												},
+												"productVersion": {
+													"type": "string",
+													"nullable": true,
+													"example": "v1",
+													"description": "The product version number provided in the request."
+												},
+												"tradeUp": {
+													"type": "string",
+													"nullable": true,
+													"example": "hq",
+													"description": "The value of the tradeUp parameter provided in the request."
+												},
+												"ownershipType": {
+													"type": "string",
+													"nullable": true,
+													"example": "BENF_OWRP",
+													"description": "The ownership type code provided in the request."
+												},
+												"ownershipPercentage": {
+													"type": "number",
+													"nullable": true,
+													"example": 50,
+													"description": "The ownership percentage included in the request."
+												},
+												"excludeUndisclosedHoldings": {
+													"type": "string",
+													"nullable": true,
+													"example": "true",
+													"description": "The undisclosed holdings value provided in the request."
+												},
+												"degreeOfSeparation": {
+													"type": "integer",
+													"nullable": true,
+													"example": 1,
+													"description": "The degree of separation provided in the request."
+												},
+												"customerReference": {
+													"type": "string",
+													"nullable": true,
+													"example": "Some text to describe the request.",
+													"description": "A reference string provided by the customer for this particular transaction."
+												},
+												"appliedControlType": {
+													"type": "integer",
+													"nullable": true,
+													"example": 34781,
+													"description": "The type of calculation applied to imply the unknown or undisclosed ownership percentage of the inquired subject.<br/><br/>When set to NULL, D&B implied ownership percentages will be calculated based on the worst case distribution."
+												},
+												"pageNumber": {
+													"type": "string",
+													"nullable": true,
+													"example": "1",
+													"description": "Denotes the preference of the customer to return search results starting from a specific page.  A maximum of 1000 results can be returned. By default this is set to 1. "
+												},
+												"returnPaginatedResults": {
+													"type": "string",
+													"nullable": true,
+													"example": "true",
+													"description": "The returnPaginatedResults provided in the request."
+												}
+											},
+											"additionalProperties": true,
+											"description": "The details of the input data provided."
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"components": {
+		"securitySchemes": {
+			"bearerAuth": {
+				"type": "http",
+				"scheme": "bearer"
+			}
+		}
+	},
+	"security": [
+		{
+			"bearerAuth": []
+		}
+	]
+}

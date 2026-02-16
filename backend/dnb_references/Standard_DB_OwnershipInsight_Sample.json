@@ -1,0 +1,122 @@
+{
+	"transactionDetail": {
+		"transactionID": "rrt-008bcd83a756fb8a4-b-wo-20739-19759122-55",
+		"transactionTimestamp": "2020-03-23T10:19:27.253Z",
+		"inLanguage": "en-US"
+	},
+	"inquiryDetail": {
+		"duns": "804735132",
+		"blockIDs": [
+			"ownershipinsight_L1_v1"
+		]
+	},
+	"organization": {
+		"countryISOAlpha2Code": "US",
+		"duns": "804735132",
+		"primaryName": "Gorman Manufacturing Company, Inc.",
+		"capitalDetails": [
+			{
+				"capitalType": {
+					"description": "Issued",
+					"dnbCode": 1017
+				},
+				"startDate": "2011-03-28",
+				"capitalAmount": {
+					"value": 550000,
+					"currency": "USD"
+				}
+			},
+			{
+				"capitalType": {
+					"description": "Authorised",
+					"dnbCode": 203
+				},
+				"startDate": "2011-03-28",
+				"capitalAmount": {
+					"value": 750000,
+					"currency": "USD"
+				}
+			}
+		],
+		"shareOwnership": [
+			{
+				"subjectType": {
+					"description": "Individual",
+					"dnbCode": 119
+				},
+				"duns": "804735132",
+				"organizationName": "Gorman",
+				"fullName": "Leslie Smith",
+				"namePrefix": "Mr.",
+				"givenName": "Leslie",
+				"middleName": "J",
+				"familyName": "Smith",
+				"nameSuffix": "Jr.",
+				"dateOfBirth": "13-09-1975",
+				"lastUpdateDate": "2016-12-16",
+				"ownershipPercentage": 30,
+				"indirectOwnershipPercentage": 15,
+				"votingPercentageHigh": 65.5,
+				"stockDetails": [
+					{
+						"stockType": {
+							"description": "Ordinary",
+							"dnbCode": 3761
+						},
+						"stockSubType": "A",
+						"ownershipPercentage": 30,
+						"shareQuantity": 600,
+						"shareAmount": {
+							"value": 500,
+							"currency": "USD"
+						},
+						"hasVotingRights": true
+					},
+					{
+						"stockType": {
+							"description": "Ordinary",
+							"dnbCode": 3761
+						},
+						"stockSubType": "A",
+						"ownershipPercentage": 33.33,
+						"shareQuantity": 1,
+						"shareAmount": {
+							"value": 250,
+							"currency": "USD"
+						},
+						"hasVotingRights": true
+					}
+				],
+				"isTrusteeNominee": true,
+				"isPrincipal": false,
+				"registrationNumbers": [
+					{
+						"registrationNumber": "122702",
+						"typeDescription": "Financial Conduct Authority Reference Number (GB)",
+						"typeDnBCode": 33482
+					}
+				],
+				"otherLanguageNames": [
+					{
+						"fullName": "平井 一夫",
+						"language": {
+							"description": "Japanese",
+							"dnbCode": 3807
+						},
+						"writingScript": {
+							"description": "Katakana",
+							"dnbCode": 19347
+						}
+					}
+				]
+			}
+		]
+	},
+	"blockStatus": [
+		{
+			"blockID": "ownershipinsight_L1_v1",
+			"status": "ok",
+			"reason": null
+		}
+	]
+}

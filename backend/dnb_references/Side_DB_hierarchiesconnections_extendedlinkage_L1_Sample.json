@@ -1,0 +1,169 @@
+{
+	"transactionDetail": {
+		"transactionID": "rrt-003d03e919bd5f898-a-wo-20807-18046005-32",
+		"transactionTimestamp": "2020-03-23T12:17:35.982Z",
+		"inLanguage": "en-US"
+	},
+	"inquiryDetail": {
+		"duns": "804735132",
+		"blockIDs": [
+			"hierarchyconnections_eli_v1"
+		]
+	},
+	"organization": {
+		"countryISOAlpha2Code": "US",
+		"duns": "804735132",
+		"primaryName": "Gorman Manufacturing Company, Inc.",
+		"extendedLinkageInsight": {
+			"registeredName": "ABC Corp.",
+			"tradeStyleName": "ABC Co.",
+			"brandName": "DUN&BRADSTREET",
+			"hasBrandNameRecentlyChanged": true,
+			"countryName": "United States",
+			"isMarketable": true,
+			"isMailUndeliverable": false,
+			"isOutOfBusiness": false,
+			"isDelisted": false,
+			"linkageSourceCategory": 6,
+			"previousMonthLinkageSourceCategory": 6,
+			"primaryIndustryCode": {
+				"usSicV4": "2214",
+				"hasRecentlyChanged": true,
+				"previousMonthData": {
+					"usSicV4": "3310"
+				}
+			},
+			"associationType": {
+				"description": "Agent Alternate Linkage",
+				"dnbCode": 30487,
+				"previousMonthData": {
+					"description": "Agent Alternate Linkage",
+					"dnbCode": 30487
+				}
+			},
+			"ownershipPercentage": 12.5,
+			"familyTreeCount": 145,
+			"corporateLinkage": {
+				"hasRecentlyChanged": true,
+				"familyTreeCount": 74,
+				"globalUltimate": {
+					"duns": "001785200",
+					"name": "ABC Group",
+					"primaryAddress": {
+						"addressCountry": {
+							"name": "United States"
+						}
+					}
+				}
+			},
+			"globalUltimate": {
+				"duns": "005438890",
+				"name": "Lawson Products, Inc",
+				"primaryAddress": {
+					"addressCountry": {
+						"name ": "United States"
+					}
+				},
+				"hasRecentlyChanged": true,
+				"previousMonthData": {
+					"duns": "007841800"
+				}
+			},
+			"domesticUltimate": {
+				"duns": "005438890",
+				"name": "Lawson Products, Inc",
+				"primaryAddress": {
+					"addressCountry": {
+						"name": "United States"
+					}
+				},
+				"hasRecentlyChanged": true,
+				"previousMonthData": {
+					"duns": "007841800"
+				}
+			},
+			"parent": {
+				"duns": "005438890",
+				"name": "Lawson Products, Inc",
+				"primaryAddress": {
+					"addressCountry": {
+						"name": "United States"
+					}
+				},
+				"hasRecentlyChanged": true,
+				"previousMonthData": {
+					"duns": "007841800"
+				}
+			},
+			"nameEvidenceStrength": {
+				"description": "Moderate",
+				"dnbCode": 13695
+			},
+			"brandEvidenceStrength": {
+				"description": "Moderate",
+				"dnbCode": 13695
+			},
+			"industryEvidenceStrength": {
+				"description": "Moderate",
+				"dnbCode": 13695
+			},
+			"locationEvidenceStrength": {
+				"description": "Moderate",
+				"dnbCode": 13695
+			},
+			"ceoEvidenceStrength": {
+				"description": "Moderate",
+				"dnbCode": 13695
+			},
+			"principalNameEvidenceStrength": {
+				"description": "Moderate",
+				"dnbCode": 13695
+			},
+			"telephoneEvidenceStrength": {
+				"description": "Moderate",
+				"dnbCode": 13695
+			},
+			"webDomainEvidenceStrength": {
+				"description": "Moderate",
+				"dnbCode": 13695
+			},
+			"webPageEvidenceStrength": {
+				"description": "Moderate",
+				"dnbCode": 13695
+			},
+			"financialReportEvidenceStrength": {
+				"description": "Moderate",
+				"dnbCode": 13695
+			},
+			"wikipediaEvidenceStrength": {
+				"description": "Moderate",
+				"dnbCode": 13695
+			},
+			"feedbackEvidenceStrength": {
+				"description": "Moderate",
+				"dnbCode": 13695
+			},
+			"alternateLinkage": {
+				"hasRecentlyChanged": true,
+				"operationalGlobalUltimate": [
+					{
+						"duns": "217387004"
+					}
+				],
+				"shareOwnership": [
+					{
+						"duns": "217387004",
+						"ownershipPercentage": 32.5
+					}
+				]
+			}
+		}
+	},
+	"blockStatus": [
+		{
+			"blockID": "hierarchyconnections_eli_v1",
+			"status": "ok",
+			"reason": null
+		}
+	]
+}

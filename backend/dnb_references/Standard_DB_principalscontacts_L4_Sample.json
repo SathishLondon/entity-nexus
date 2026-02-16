@@ -1,0 +1,495 @@
+{
+	"transactionDetail": {
+		"transactionID": "rrt-0aab8d4bf8d3936a1-b-se-20994-5788238-1",
+		"transactionTimestamp": "2020-04-05T12:04:46.721Z",
+		"inLanguage": "en-US"
+	},
+	"inquiryDetail": {
+		"duns": "804735132",
+		"blockIDs": [
+			"principalscontacts_L4_v2"
+		],
+		"tradeUp": "hq",
+		"customerReference": "Some text to describe the request."
+	},
+	"organization": {
+		"countryISOAlpha2Code": "US",
+		"duns": "804735132",
+		"primaryName": "Gorman Manufacturing Company, Inc.",
+		"principalsSummary": {
+			"currentPrincipalsCount": 125,
+			"otherAssociationsCount": 32,
+			"inactiveAssociationsCount": 4,
+			"unfavorableInactiveAssociationsCount": 6,
+			"favorableInactiveAssociationsCount": 23,
+			"detrimentalPrincipalsCount": 16,
+			"detrimentalPrincipalsPercentage": 7.2
+		},
+		"signingAuthorities": [
+			{
+				"text": "David",
+				"typeDescription": "Signing Authority",
+				"typeDnBCode": 15356,
+				"language": {
+					"description": "Czech",
+					"dnbCode": 1627
+				},
+				"writingScript": {
+					"description": "Latin",
+					"dnbCode": 19349
+				},
+				"dataProvider": {
+					"description": "The Public Register of the Czech Republic",
+					"dnbCode": 42278
+				},
+				"startDate": "2023-09-12",
+				"endDate": "2024-12-12",
+				"hasEnded": true,
+				"priority": 1
+			}
+		],
+		"currentPrincipals": [
+			{
+				"subjectType": "Individuals",
+				"birthDate": "1960-12-15",
+				"givenName": "Leslie",
+				"middleName": "J",
+				"familyName": "Smith",
+				"fullName": "Leslie Smith",
+				"namePrefix": "Dr.",
+				"nameSuffix": "PhD",
+				"associationStartDate": "2013-09-30",
+				"nationality": {
+					"name": "United States",
+					"isoAlpha2Code": "US"
+				},
+				"gender": {
+					"description": "Male",
+					"dnbCode": 9101
+				},
+				"otherLanguageNames": [
+					{
+						"givenName": "アンソニー",
+						"familyName": "ヴィンシクエラ",
+						"fullName": "Leslie Smith",
+						"language": {
+							"description": "Japanese",
+							"dnbCode": 3807
+						},
+						"writingScript": {
+							"description": "Kana",
+							"dnbCode": 19347
+						}
+					}
+				],
+				"telephones": [
+					{
+						"telephoneNumber": "+353125662341"
+					}
+				],
+				"hobbies": [
+					{
+						"hobby": "Reading"
+					}
+				],
+				"graduationSchoolName": "NAGASAKI SCHOOL LIFE",
+				"primaryAddress": {
+					"addressCountry": {
+						"isoAlpha2Code": "US",
+						"name": "United States"
+					},
+					"continentalRegion": {
+						"name": "North America"
+					},
+					"addressLocality": {
+						"name": "San Francisco"
+					},
+					"minorTownName": "Booker",
+					"addressRegion": {
+						"name": "California"
+					},
+					"addressCounty": {
+						"name": "SAN MATEO"
+					},
+					"postalCode": "94110",
+					"postalCodePosition": {
+						"description": "Post Code presented after Town/City name",
+						"dnbCode": 1009
+					},
+					"streetName": "Koller St",
+					"streetNumber": "492",
+					"streetAddress": {
+						"line1": "492 Koller St",
+						"line2": "Suite 100"
+					},
+					"postOfficeBox": {
+						"postOfficeBoxNumber": "5309",
+						"typeDescription": "Supplied by public Post Office authority",
+						"typeDnBCode": 120
+					}
+				},
+				"responsibleAreas": [
+					{
+						"description": "Sole signing authority",
+						"dnbCode": 6309,
+						"signingAuthorityClass": {
+							"description": "Sole signing authority",
+							"dnbCode": 45040
+						},
+						"textEntry": [
+							{
+								"text": "David",
+								"typeDescription": "Signing Authority",
+								"typeDnBCode": 15356,
+								"language": {
+									"description": "Czech",
+									"dnbCode": 1627
+								},
+								"priority": 1
+							}
+						]
+					}
+				],
+				"jobTitles": [
+					{
+						"title": "President"
+					}
+				],
+				"managementResponsibilities": [
+					{
+						"description": "President",
+						"mrcCode": "A1A6"
+					}
+				],
+				"idNumbers": [
+					{
+						"idNumber": "15257000",
+						"idType": {
+							"description": "Super Person ID",
+							"dnbCode": 11694
+						}
+					}
+				],
+				"isSigningAuthority": true,
+				"isDisqualifiedDirector": true,
+				"disqualifications": [
+					{
+						"disqualificationType": {
+							"description": "Court Order",
+							"dnbCode": 29866
+						},
+						"startDate": "2021-07-12",
+						"endDate": "2022-07-11",
+						"dataProvider": {
+							"description": "Companies House",
+							"dnbCode": 19175
+						},
+						"actText": "",
+						"actType": {
+							"description": "Board Of Directors Comments Text",
+							"dnbCode": 27109
+						}
+					}
+				],
+				"associations": [
+					{
+						"duns": "950987655",
+						"primaryName": "ABC Corp.",
+						"startDate": "2017-09-21"
+					}
+				]
+			}
+		],
+		"mostSeniorPrincipal": {
+			"subjectType": "Individuals",
+			"birthDate": "1960-12-15",
+			"givenName": "Leslie",
+			"middleName": "Ann",
+			"familyName": "Smith",
+			"fullName": "Leslie Smith",
+			"namePrefix": "Dr.",
+			"otherLanguageNames": [
+				{
+					"givenName": "アンソニー",
+					"familyName": "ヴィンシクエラ",
+					"fullName": "Leslie Smith",
+					"language": {
+						"description": "Japanese",
+						"dnbCode": 3807
+					},
+					"writingScript": {
+						"description": "Kana",
+						"dnbCode": 19347
+					}
+				}
+			],
+			"gender": {
+				"description": "Male",
+				"dnbCode": 9101
+			},
+			"zodiacSign": [
+				{
+					"sign": "虎",
+					"language": {
+						"description": "Japanese",
+						"dnbCode": 3807
+					}
+				}
+			],
+			"premiseLocationType": {
+				"locationType": "Factory",
+				"language": {
+					"description": "Japanese",
+					"dnbCode": 3807
+				}
+			},
+			"telephones": [
+				{
+					"telephoneNumber": "+353125662341"
+				}
+			],
+			"hobbies": [
+				{
+					"hobby": "Reading",
+					"description": "Mountaineering",
+					"dnbCode": 19830
+				}
+			],
+			"graduationSchoolName": "NAGASAKI SCHOOL LIFE",
+			"educationalQualifications": [
+				{
+					"qualification": "Master in Physics",
+					"status": {
+						"description": "Graduate",
+						"dnbCode": 27217
+					}
+				}
+			],
+			"nameSuffix": "PhD",
+			"associationStartDate": "2013-09-30",
+			"nationality": {
+				"isoAlpha2Code": "US",
+				"name": "US"
+			},
+			"primaryAddress": {
+				"addressCountry": {
+					"isoAlpha2Code": "US",
+					"name": "United States"
+				},
+				"continentalRegion": {
+					"name": "North America"
+				},
+				"addressLocality": {
+					"name": "San Francisco"
+				},
+				"minorTownName": "Booker",
+				"addressRegion": {
+					"name": "California"
+				},
+				"addressCounty": {
+					"name": "SAN MATEO"
+				},
+				"postalCode": "94110",
+				"postalCodePosition": {
+					"description": "Post Code presented after Town/City name",
+					"dnbCode": 1009
+				},
+				"streetName": "Koller St",
+				"streetNumber": "492",
+				"streetAddress": {
+					"line1": "492 Koller St",
+					"line2": "Suite 100"
+				},
+				"postOfficeBox": {
+					"postOfficeBoxNumber": "5309",
+					"typeDescription": "Supplied by public Post Office authority",
+					"typeDnBCode": 120
+				},
+				"standardAddressCodes": [
+					{
+						"addressCode": "ZV12467A",
+						"codeType": {
+							"description": "DK standard address code",
+							"dnbCode": 487
+						}
+					}
+				]
+			},
+			"birthAddress": {
+				"addressLocality": {
+					"name": "San Francisco"
+				}
+			},
+			"responsibleAreas": {
+				"description": "CEO",
+				"dnbCode": 7531
+			},
+			"responsibleAreasEntry": [
+				{
+					"description": "Customer Service",
+					"dnbCode": 3162,
+					"signingAuthorityClass": {
+						"description": "Sole signing authority",
+						"dnbCode": 6309
+					},
+					"textEntry": [
+						{
+							"text": "David",
+							"typeDescription": "Signing Authority",
+							"typeDnBCode": 15356,
+							"language": {
+								"description": "Czech",
+								"dnbCode": 1627
+							},
+							"priority": 1
+						}
+					]
+				}
+			],
+			"positions": [
+				{
+					"description": "Chairman Executive Committee",
+					"dnbCode": 95,
+					"startDate": "2022-08-31"
+				}
+			],
+			"jobTitles": [
+				{
+					"title": "President"
+				}
+			],
+			"managementResponsibilities": [
+				{
+					"description": "President",
+					"mrcCode": "A1A6"
+				}
+			],
+			"idNumbers": [
+				{
+					"idNumber": "11356097",
+					"idType": {
+						"description": "Super Person ID",
+						"dnbCode": 11694
+					}
+				}
+			],
+			"isSigningAuthority": true,
+			"hasBankruptcyHistory": true,
+			"isDisqualifiedDirector": true,
+			"disqualifications": [
+				{
+					"disqualificationType": {
+						"description": "Court Order",
+						"dnbCode": 29866
+					},
+					"startDate": "2021-07-12",
+					"endDate": "2022-07-11",
+					"dataProvider": {
+						"description": "Companies House",
+						"dnbCode": 1917
+					},
+					"actText": "",
+					"actType": {
+						"description": "Board Of Directors Comments Text",
+						"dnbCode": 27109
+					}
+				}
+			],
+			"associations": [
+				{
+					"duns": "950987655",
+					"primaryName": "ABC Corp.",
+					"startDate": "2017-09-21"
+				}
+			]
+		},
+		"formerPrincipals": [
+			{
+				"subjectType": {
+					"description": "Individual",
+					"dnbCode": 119
+				},
+				"birthDate": "1985-03-27",
+				"givenName": "Leslie",
+				"middleName": "Ann",
+				"familyName": "Smith",
+				"fullName": "Leslie Smith",
+				"namePrefix": "Dr.",
+				"nameSuffix": "PhD",
+				"associationStartDate": "2013-09-30",
+				"associationEndDate": "2021-10-02",
+				"nationality": {
+					"isoAlpha2Code": "US"
+				},
+				"primaryAddress": {
+					"addressCountry": {
+						"isoAlpha2Code": "US",
+						"name": "United States"
+					},
+					"continentalRegion": {
+						"name": "North America"
+					},
+					"addressLocality": {
+						"name": "San Francisco"
+					},
+					"minorTownName": "Booker",
+					"addressRegion": {
+						"name": "California"
+					},
+					"addressCounty": {
+						"name": "SAN MATEO"
+					},
+					"postalCode": "94110",
+					"postalCodePosition": {
+						"description": "Post Code presented after Town/City name",
+						"dnbCode": 1009
+					},
+					"streetName": "Koller St",
+					"streetNumber": "492",
+					"streetAddress": {
+						"line1": "492 Koller St",
+						"line2": "Suite 100"
+					},
+					"postOfficeBox": {
+						"postOfficeBoxNumber": "5309",
+						"typeDescription": "Supplied by public Post Office authority",
+						"typeDnBCode": 120
+					}
+				},
+				"responsibleAreas": [
+					{
+						"description": "President",
+						"dnbCode": 6754
+					}
+				],
+				"jobTitles": [
+					{
+						"title": "President"
+					}
+				],
+				"managementResponsibilities": [
+					{
+						"description": "President",
+						"mrcCode": "A1A6"
+					}
+				],
+				"idNumbers": [
+					{
+						"idNumber": "11356097",
+						"idType": {
+							"description": "Super Person ID",
+							"dnbCode": 11694
+						}
+					}
+				]
+			}
+		]
+	},
+	"blockStatus": [
+		{
+			"blockID": "principalscontacts_L4_v2",
+			"status": "ok",
+			"reason": null
+		}
+	]
+}

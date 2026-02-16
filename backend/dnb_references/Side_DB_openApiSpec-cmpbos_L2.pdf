@@ -1,0 +1,9168 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 4885
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0 g
+28.3464566929133888 566.933543307086552 Td
+(Beneficial Ownership Structure \(cmpbos\)) Tj
+ET
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0 g
+28.3464566929133888 538.5870866141732449 Td
+(GET https://plus.dnb.com/v1/beneficialowner) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+0. g
+BT
+/F1 10 Tf
+11.5 TL
+0.078 g
+33.3464566929133923 510.9138582677164777 Td
+(Beneficial Ownership Structure provides a full structure which allows customers to understand all entities and individuals, along with all of their relationships to the specified) Tj
+T* (D-U-N-S Number. This output is optimized for visualization purposes.) Tj
+T* (Note: This API is available as part of "Ownership Insights" \(Level 2\) Non Standard Data Blocks.) Tj
+T* () Tj
+T* (Monitoring : Not Available.) Tj
+T* () Tj
+T* (Product ID : cmpbos) Tj
+ET
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0. g
+28.3464566929133888 405.5674015748031138 Td
+(Request Parameters) Tj
+ET
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0. g
+28.3464566929133888 377.2209448818897499 Td
+(Query Parameters) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.93 g
+0.78 G
+0. w
+0.93 g
+40. 348.8744881889763292 170.0787401574803255 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+0. 0.318 0.447 rg
+45. 335.3744881889763292 Td
+(Name) Tj
+ET
+0.93 g
+0.78 G
+0. w
+0.93 g
+210.0787401574803539 348.8744881889763292 591.8112598425195756 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+0. 0.318 0.447 rg
+215.0787401574803255 335.3744881889763292 Td
+(Details) Tj
+ET
+0. G
+0.5670000000000001 w
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 327.3744881889763292 170.0787401574803255 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 313.8744881889763292 Td
+(duns) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+210.0787401574803539 327.3744881889763292 591.8112598425195756 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+215.0787401574803255 313.8744881889763292 Td
+([string] Required e.g.: 804735132) Tj
+T* (A 9-character numeric string identifying the entity by its Dun & Bradstreet D-U-N-S number.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 294.3744881889763292 170.0787401574803255 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 280.8744881889763292 Td
+(productId) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+210.0787401574803539 294.3744881889763292 591.8112598425195756 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+215.0787401574803255 280.8744881889763292 Td
+([string] Required e.g.: cmpbos) Tj
+T* (The product ID provided by Dun & Bradstreet that identifies the product to be returned.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 261.3744881889763292 170.0787401574803255 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 247.8744881889763292 Td
+(versionId) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+210.0787401574803539 261.3744881889763292 591.8112598425195756 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+215.0787401574803255 247.8744881889763292 Td
+([string] Required e.g.: v1) Tj
+T* (The version of the product to be returned.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 228.3744881889763008 170.0787401574803255 -124.9999999999999858 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 214.874488188976386 Td
+(tradeUp) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+210.0787401574803539 228.3744881889763008 591.8112598425195756 -124.9999999999999858 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+215.0787401574803255 214.874488188976386 Td
+([string] e.g.: hq) Tj
+T* (Indicates if the Headquarters D-U-N-S Number should be returned if a Branch is requested.) Tj
+T* () Tj
+T* (Valid values:) Tj
+T* (* hq: If the provided D-U-N-S Number is a Branch, the Headquarter D-U-N-S Number is returned.) Tj
+T* (* domhq: If the provided D-U-N-S Number is a Branch, the Domestic Headquarter D-U-N-S Number is returned.) Tj
+T* () Tj
+T* (If the requested D-U-N-S Number is not a Branch, that D-U-N-S Number will be returned regardless of the value of this parameter.) Tj
+T* () Tj
+T* (If the parameter is omitted, the requested D-U-N-S Number is returned even if it is a Branch.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 103.3744881889763576 170.0787401574803255 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 89.8744881889764429 Td
+(customerReference) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+210.0787401574803539 103.3744881889763576 591.8112598425195756 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+215.0787401574803255 89.8744881889764429 Td
+([string] e.g.: customer reference text) Tj
+T* (Text supplied by the requester describing the request for their own use, from their own perspective. It is pass through data that is) Tj
+T* (returned to the requester along with the D&B resolution; it has no bearing on the processing done by D&B and might not be) Tj
+T* (meaningful to anyone other than the requester.) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 3821
+>>
+stream
+0. w
+0.78 G
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 555.2799999999999727 170.0787401574803255 -32.9999999999999929 re
+f
+0.96 g
+0.78 G
+0. w
+0.96 g
+210.0787401574803539 555.2799999999999727 591.8112598425195756 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+215.0787401574803255 541.7799999999999727 Td
+() Tj
+T* (Maxlength : 640 characters.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 522.2799999999999727 170.0787401574803255 -159.4999999999999716 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 508.7799999999999727 Td
+(ownershipType) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+210.0787401574803539 522.2799999999999727 591.8112598425195756 -159.4999999999999716 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+215.0787401574803255 508.7799999999999727 Td
+([string] e.g.: BENF_OWRP) Tj
+T* (Identifies the level of ownership.) Tj
+T* () Tj
+T* (Valid values:) Tj
+T* (* BENF_OWRP: includes Beneficial Ownerships only.) Tj
+T* () Tj
+T* (The following values are applicable for CMPBOL only:) Tj
+T* (* CTLD_OWRP: includes Controlled Ownerships \(Direct and Indirect\) only.) Tj
+T* (* DIRC_OWRP: includes Direct Ownerships only.) Tj
+T* (* IDIR_OWRP: includes Indirect Ownerships only.) Tj
+T* () Tj
+T* (Note: \(Applicable to CMPBOS & CMPCOS only\) The filter does not remove any undisclosed owners or owners not matching the) Tj
+T* (criteria from the response but denoted using isFilteredOut=true.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 362.7799999999999727 170.0787401574803255 -113.4999999999999858 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 349.2799999999999727 Td
+(ownershipPercentage) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+210.0787401574803539 362.7799999999999727 591.8112598425195756 -113.4999999999999858 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+215.0787401574803255 349.2799999999999727 Td
+([number] e.g.: 20.5) Tj
+T* (Limits the search to entities that include information on shareholders whose shareholding percentage is equal to or greater than this) Tj
+T* (value.) Tj
+T* () Tj
+T* (Valid values:) Tj
+T* (* 0.00 to 100.00 \(maximum two decimals\)) Tj
+T* () Tj
+T* (Note: \(Applicable to CMPBOS & CMPCOS only\) The filter does not remove any undisclosed owners or owners not matching the) Tj
+T* (criteria from the response but denoted using isFilteredOut=true.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 249.2800000000000011 170.0787401574803255 -102. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 235.7800000000000296 Td
+(degreeOfSeparation) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+210.0787401574803539 249.2800000000000011 591.8112598425195756 -102. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+215.0787401574803255 235.7800000000000296 Td
+([integer] e.g.: 1) Tj
+T* (Defines the limit on the depth of the ownership structure to be retrieved.) Tj
+T* () Tj
+T* (Valid values: Integers from 1.) Tj
+T* () Tj
+T* (Note: \(Applicable to CMPBOS & CMPCOS only\) The filter does not remove any undisclosed owners or owners not matching the) Tj
+T* (criteria from the response but denoted using isFilteredOut=true.) Tj
+T* (Not applicable for Large structure paginated results.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 147.2800000000000296 170.0787401574803255 -102. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 133.7800000000000864 Td
+(appliedControlType) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+210.0787401574803539 147.2800000000000296 591.8112598425195756 -102. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+215.0787401574803255 133.7800000000000864 Td
+([integer] e.g.: 34781) Tj
+T* (The type of calculation applied to imply the unknown or undisclosed ownership percentage of the inquired subject.) Tj
+T* () Tj
+T* (When set to NULL, D&B implied ownership percentages will be calculated based on the worst case distribution.) Tj
+T* () Tj
+T* (Possible values:) Tj
+T* () Tj
+T* (34781 [Worst Case Distribution] - Everyone who is a direct undisclosed owner gets all of the available undisclosed amount \(i.e.) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+7 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 8 0 R
+>>
+endobj
+8 0 obj
+<<
+/Length 5159
+>>
+stream
+0. w
+0.78 G
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 555.2799999999999727 170.0787401574803255 -90.5 re
+f
+0.96 g
+0.78 G
+0. w
+0.96 g
+210.0787401574803539 555.2799999999999727 591.8112598425195756 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+215.0787401574803255 541.7799999999999727 Td
+(assumes all entities own all the wealth\) e.g. 4 undisclosed owners get 100% each. This is the default output) Tj
+T* () Tj
+T* (34782 [Equal Distribution] - Everyone who is a direct undisclosed owner gets an equal share of the available undisclosed amount) Tj
+T* (\(i.e. assumes all entities own an equal amount of the wealth\) e.g. 4 undisclosed owners get 25% each.) Tj
+T* (Note: Not applicable for Large structure paginated results.) Tj
+T* () Tj
+T* (Note : Both excludeUndisclosedHoldings & appliedControlType must not be included together) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 464.7799999999999159 170.0787401574803255 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 451.2799999999999727 Td
+(pageNumber) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+210.0787401574803539 464.7799999999999159 591.8112598425195756 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+215.0787401574803255 451.2799999999999727 Td
+([integer] e.g.: 10) Tj
+T* (Search results can be paginated; this attribute specifies which page is to be returned.) Tj
+T* (Valid values: Integers from 1.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 420.2799999999999727 170.0787401574803255 -102. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 406.7799999999999727 Td
+(returnPaginatedResults) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+210.0787401574803539 420.2799999999999727 591.8112598425195756 -102. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+215.0787401574803255 406.7799999999999727 Td
+([boolean] e.g.: true) Tj
+T* (When set to "true" indicates to return paginated response for large structures.) Tj
+T* (When set to "false" indicates not to return paginated response for large structures. \(default\)) Tj
+T* () Tj
+T* (Note:) Tj
+T* (1. pageNumber parameter is not applicable when returnPaginatedResults is provided as false or not specified in the request.) Tj
+T* (2. appliedControlType Equal Distribution & degreeOfSeparation parameters are not applicable for Large structure paginated results.) Tj
+T* (The full paginated, appliedControlType Worst Case Distribution response is retrieved.) Tj
+ET
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0. g
+28.3464566929133888 289.9335433070866088 Td
+(Header Parameters) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.93 g
+0.78 G
+0. w
+0.93 g
+40. 261.5870866141731881 170.0787401574803255 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+0. 0.318 0.447 rg
+45. 248.0870866141731881 Td
+(Name) Tj
+ET
+0.93 g
+0.78 G
+0. w
+0.93 g
+210.0787401574803539 261.5870866141731881 591.811259842519803 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+0. 0.318 0.447 rg
+215.0787401574803255 248.0870866141731881 Td
+(Details) Tj
+ET
+0. G
+0.5670000000000001 w
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 240.0870866141731597 170.0787401574803255 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 226.5870866141731881 Td
+(Authorization) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+210.0787401574803539 240.0870866141731597 591.811259842519803 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+215.0787401574803255 226.5870866141731881 Td
+([string] Required e.g.: Bearer alphanumerictoken) Tj
+T* (The access token provided by authentication.) Tj
+ET
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0. g
+28.3464566929133888 178.7406299212597673 Td
+(Response\(s\)) Tj
+ET
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0. g
+28.3464566929133888 150.3941732283464034 Td
+(Response for HTTP Status Code : 200) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.93 g
+0.78 G
+0. w
+0.93 g
+40. 122.0477165354329827 283.4645669291338663 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+0. 0.318 0.447 rg
+45. 108.5477165354330396 Td
+(Name) Tj
+ET
+0.93 g
+0.78 G
+0. w
+0.93 g
+323.4645669291339232 122.0477165354329827 478.4254330708660632 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+0. 0.318 0.447 rg
+328.4645669291338663 108.5477165354330396 Td
+(Details) Tj
+ET
+0. G
+0.5670000000000001 w
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 100.5477165354330111 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 87.0477165354330964 Td
+(transactionDetail) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 100.5477165354330111 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 87.0477165354330964 Td
+([object]) Tj
+T* (The information used to process this request.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 67.5477165354330538 283.4645669291338663 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 54.0477165354330964 Td
+(transactionDetail.transactionID) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 67.5477165354330538 478.4254330708660632 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 54.0477165354330964 Td
+([string] e.g.: rlh-hi9puyoijk-jop8u-kd-d-1) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+9 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 10 0 R
+>>
+endobj
+10 0 obj
+<<
+/Length 7487
+>>
+stream
+0. w
+0.78 G
+1. g
+0.78 G
+0. w
+1. g
+40. 555.2799999999999727 283.4645669291338663 -21.4999999999999964 re
+f
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 555.2799999999999727 478.4254330708660632 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+(A value assigned by the Dun & Bradstreet application to uniquely identify this request.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 533.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 520.2799999999999727 Td
+(transactionDetail.transactionTimestamp) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 533.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 520.2799999999999727 Td
+([string] e.g.: 2017-02-21T17:46:19.839Z) Tj
+T* (The date and time, in ISO 8601 UTC Z standard, when this response was created.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 500.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 487.2799999999999727 Td
+(transactionDetail.inLanguage) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 500.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 487.2799999999999727 Td
+([string] e.g.: en-US) Tj
+T* (An IETF BCP 47 code value that defines the language in which this product was rendered.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 467.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 454.2799999999999727 Td
+(transactionDetail.productID) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 467.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 454.2799999999999727 Td
+([string] e.g.: PRODID) Tj
+T* (The ID of the product used to create the response.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 434.7799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 421.2799999999999727 Td
+(transactionDetail.productVersion) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 434.7799999999999159 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 421.2799999999999727 Td
+([string] e.g.: 1) Tj
+T* (The version of the product used to create the response.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 401.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 388.2799999999999727 Td
+(inquiryDetail) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 401.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 388.2799999999999727 Td
+([object]) Tj
+T* (The details of the input data provided.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 368.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 355.2799999999999727 Td
+(inquiryDetail.duns) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 368.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 355.2799999999999727 Td
+([string] e.g.: 804735132) Tj
+T* (The D-U-N-S number provided in the request.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 335.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 322.2799999999999727 Td
+(inquiryDetail.productID) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 335.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 322.2799999999999727 Td
+([string] e.g.: PRODID) Tj
+T* (The ID of the product used to produce the response.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 302.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 289.2799999999999727 Td
+(inquiryDetail.productVersion) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 302.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 289.2799999999999727 Td
+([string] e.g.: v1) Tj
+T* (The product version number provided in the request.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 269.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 256.2799999999999727 Td
+(inquiryDetail.tradeUp) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 269.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 256.2799999999999727 Td
+([string] e.g.: hq) Tj
+T* (The value of the tradeUp parameter provided in the request.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 236.7799999999999443 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 223.2799999999999727 Td
+(inquiryDetail.ownershipType) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 236.7799999999999443 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 223.2799999999999727 Td
+([string] e.g.: BENF_OWRP) Tj
+T* (The ownership type code provided in the request.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 203.7799999999999443 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 190.2800000000000296 Td
+(inquiryDetail.ownershipPercentage) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 203.7799999999999443 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 190.2800000000000296 Td
+([number] e.g.: 50) Tj
+T* (The ownership percentage included in the request.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 170.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 157.2800000000000296 Td
+(inquiryDetail.excludeUndisclosedHoldings) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 170.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 157.2800000000000296 Td
+([string] e.g.: true) Tj
+T* (The undisclosed holdings value provided in the request.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 137.7800000000000296 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 124.2800000000000864 Td
+(inquiryDetail.degreeOfSeparation) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 137.7800000000000296 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 124.2800000000000864 Td
+([integer] e.g.: 1) Tj
+T* (The degree of separation provided in the request.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 104.7800000000000722 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 91.2800000000001432 Td
+(inquiryDetail.customerReference) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 104.7800000000000722 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 91.2800000000001432 Td
+([string] e.g.: Some text to describe the request.) Tj
+T* (A reference string provided by the customer for this particular transaction.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 71.7800000000001006 283.4645669291338663 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 58.2800000000002001 Td
+(inquiryDetail.appliedControlType) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 71.7800000000001006 478.4254330708660632 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 58.2800000000002001 Td
+([integer] e.g.: 34781) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+11 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 12 0 R
+>>
+endobj
+12 0 obj
+<<
+/Length 6284
+>>
+stream
+0. w
+0.78 G
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 555.2799999999999727 283.4645669291338663 -67.5 re
+f
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 555.2799999999999727 478.4254330708660632 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+(The type of calculation applied to imply the unknown or undisclosed ownership percentage of the inquired) Tj
+T* (subject.) Tj
+T* () Tj
+T* (When set to NULL, D&B implied ownership percentages will be calculated based on the worst case) Tj
+T* (distribution.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 487.7799999999999159 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 474.2799999999999727 Td
+(inquiryDetail.pageNumber) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 487.7799999999999159 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 474.2799999999999727 Td
+([string] e.g.: 1) Tj
+T* (Denotes the preference of the customer to return search results starting from a specific page. A maximum) Tj
+T* (of 1000 results can be returned. By default this is set to 1.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 443.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 429.7799999999999727 Td
+(inquiryDetail.returnPaginatedResults) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 443.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 429.7799999999999727 Td
+([string] e.g.: true) Tj
+T* (The returnPaginatedResults provided in the request.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 410.2800000000000296 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 396.7799999999999727 Td
+(organization) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 410.2800000000000296 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 396.7799999999999727 Td
+([object]) Tj
+T* (The details of the entity.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 377.2799999999999727 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 363.7799999999999727 Td
+(organization.duns) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 377.2799999999999727 478.4254330708660632 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 363.7799999999999727 Td
+([string] e.g.: 804735132) Tj
+T* (The D-U-N-S® Number, a proprietary organizational identifier owned and managed by Dun & Bradstreet) Tj
+T* (Inc, provides unique identification of a subject organization, in accordance with the Data Universal) Tj
+T* (Numbering System \(D-U-N-S®\).) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 321.2799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 307.7799999999999727 Td
+(organization.dunsControlStatus) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 321.2799999999999727 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 307.7799999999999727 Td
+([object]) Tj
+T* (The details of the organization's functional state and controls that impact its suitability for various usage) Tj
+T* (purposes.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 276.7799999999999727 283.4645669291338663 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 263.2799999999999727 Td
+(organization.dunsControlStatus.isOutOfBusiness) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 276.7799999999999727 478.4254330708660632 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 263.2799999999999727 Td
+([boolean] e.g.: true) Tj
+T* (Indicates whether an organization is no longer functional or trading.) Tj
+T* () Tj
+T* (- If true, the organization is neither functional nor trading.) Tj
+T* (- If false, the organization is either functional or trading.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 209.2800000000000011 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 195.7800000000000864 Td
+(organization.primaryName) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 209.2800000000000011 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 195.7800000000000864 Td
+([string] e.g.: GORMAN MANUFACTURING COMPANY, INC.) Tj
+T* (Single name by which the organization is primarily known or identified.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 176.2800000000000296 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 162.7800000000000864 Td
+(organization.address) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 176.2800000000000296 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 162.7800000000000864 Td
+([object]) Tj
+T* (The details of the entity's address.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 143.2800000000000864 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 129.7800000000001432 Td
+(organization.address.addressCountry) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 143.2800000000000864 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 129.7800000000001432 Td
+([object]) Tj
+T* (The details of the country or region for this address of the organization.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 110.2800000000001148 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 96.7800000000002001 Td
+(organization.address.addressCountry.name) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 110.2800000000001148 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 96.7800000000002001 Td
+([string] e.g.: United States) Tj
+T* (The country or region for this address of the organization.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 77.2800000000001575 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 63.7800000000002001 Td
+(organization.address.addressCountry.isoAlpha2Code) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 77.2800000000001575 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 63.7800000000002001 Td
+([string] e.g.: US) Tj
+T* (The 2 letter alpha country code assigned by the International Organization for Standardization \(ISO\)) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+13 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 14 0 R
+>>
+endobj
+14 0 obj
+<<
+/Length 5035
+>>
+stream
+0. w
+0.78 G
+1. g
+0.78 G
+0. w
+1. g
+40. 555.2799999999999727 283.4645669291338663 -56. re
+f
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 555.2799999999999727 478.4254330708660632 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+(identifying the Country/Region for this address of the organization.) Tj
+T* () Tj
+T* (Note: Please refer to Country Code Substitutions Table) Tj
+T* ([/html/resources/CountryCodes.html#country-substitute] for the country code substitutions.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 499.2799999999999159 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 485.7799999999999727 Td
+(organization.address.addressLocality) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 499.2799999999999159 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 485.7799999999999727 Td
+([object]) Tj
+T* (The details of the locality for this address of the organization. Locality defined as a district population) Tj
+T* (cluster. City, town, township, village, borough etc.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 454.7799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 441.2799999999999727 Td
+(organization.address.addressLocality.name) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 454.7799999999999727 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 441.2799999999999727 Td
+([string] e.g.: SAN FRANCISCO) Tj
+T* (The name of the locality for this address of the organization. Locality defined as a district population) Tj
+T* (cluster. City, town, township, village, borough etc.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 410.2800000000000296 283.4645669291338663 -124.9999999999999858 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 396.7799999999999727 Td
+(organization.address.addressRegion) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 410.2800000000000296 478.4254330708660632 -124.9999999999999858 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 396.7799999999999727 Td
+([object]) Tj
+T* (Details of the type of geographical area for this address of the organization.) Tj
+T* (Different markets have their own way of subdividing the country into smaller parts.) Tj
+T* (Examples:) Tj
+T* (Departments \(France\)) Tj
+T* (States \(USA\)) Tj
+T* (Provinces \(Netherlands\)) Tj
+T* (Counties \(UK\)) Tj
+T* (Bundeslander \(Germany\)) Tj
+T* (Provinces and Territories \(Canada\)) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 285.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 271.7800000000000296 Td
+(organization.address.addressRegion.name) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 285.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 271.7800000000000296 Td
+([string] e.g.: California) Tj
+T* (The name of the geographical area for this address of the organization. For Example New Jersey.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 252.2799999999999727 283.4645669291338663 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 238.7800000000000296 Td
+(organization.address.addressCounty) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 252.2799999999999727 478.4254330708660632 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 238.7800000000000296 Td
+([object]) Tj
+T* (The details of the geographical area of a Country or Region for this address of the organization. Countries) Tj
+T* (divide their geography into smaller sub divisions.) Tj
+T* () Tj
+T* (County is an example of a commonly used subdivision. Often found in UK.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 184.7800000000000011 283.4645669291338663 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 171.2800000000000864 Td
+(organization.address.addressCounty.name) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 184.7800000000000011 478.4254330708660632 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 171.2800000000000864 Td
+([string] e.g.: SAN MATEO) Tj
+T* (The name of the geographical area of a Country or Region for this address of the organization.) Tj
+T* () Tj
+T* (Countries subdivide their geography into smaller sub divisions. County is an example of a commonly used) Tj
+T* (subdivision, often found in the UK.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 117.2800000000000011 283.4645669291338663 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 103.7800000000000864 Td
+(organization.address.postalCode) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 117.2800000000000011 478.4254330708660632 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 103.7800000000000864 Td
+([string] e.g.: 941109999) Tj
+T* (The postal code for this address of the organization.) Tj
+T* () Tj
+T* (Also known locally in various English-speaking countries throughout the world as a postcode, post code,) Tj
+T* (Eircode, PIN or ZIP Code\) is a series of letters or digits or both, sometimes including spaces or) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+15 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 16 0 R
+>>
+endobj
+16 0 obj
+<<
+/Length 4920
+>>
+stream
+0. w
+0.78 G
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 555.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 555.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+(punctuation, included in a postal address for the purpose of sorting mail. The code is used by the country's) Tj
+T* (postal authority to identify the address where the organization is located or conducts operations .) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 522.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 508.7799999999999727 Td
+(organization.address.streetAddress) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 522.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 508.7799999999999727 Td
+([object]) Tj
+T* (The details of the street address for this address of the organization.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 489.2799999999999159 283.4645669291338663 -113.4999999999999858 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 475.7799999999999727 Td
+(organization.address.streetAddress.line1) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 489.2799999999999159 478.4254330708660632 -113.4999999999999858 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 475.7799999999999727 Td
+([string] e.g.: 492 KOLLER ST) Tj
+T* (The first line of the address where the entity is located.) Tj
+T* () Tj
+T* (The first line of this address of the organization. For example The Point in the address) Tj
+T* () Tj
+T* (The Point) Tj
+T* (37 North Wharf Road) Tj
+T* (London) Tj
+T* (W2 1AF) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 375.7799999999999727 283.4645669291338663 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 362.2799999999999727 Td
+(organization.address.streetAddress.line2) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 375.7799999999999727 478.4254330708660632 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 362.2799999999999727 Td
+([string] e.g.: Suite 100) Tj
+T* (The second line of this address of the organization.) Tj
+T* (For example 37 North Wharf Road in the address) Tj
+T* (The Point) Tj
+T* (37 North Wharf Road) Tj
+T* (London) Tj
+T* (W2 1AF) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 285.2799999999999727 283.4645669291338663 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 271.7800000000000296 Td
+(organization.address.streetAddress.line3) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 285.2799999999999727 478.4254330708660632 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 271.7800000000000296 Td
+([string] e.g.: Address line 3) Tj
+T* (The third line of the organization's official address. For example London in the address) Tj
+T* (The Point) Tj
+T* (37 North Wharf Road) Tj
+T* (London) Tj
+T* (W2 1AF) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 206.2799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 192.7800000000000296 Td
+(organization.primaryIndustryCode) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 206.2799999999999727 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 192.7800000000000296 Td
+([object]) Tj
+T* (The details of the business activity in which the organisation is primarily engaged using standardised) Tj
+T* (coding schemes such as European NACE and U.S Standard Industry Classification \(SIC\).) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 161.7799999999999443 283.4645669291338663 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 148.2800000000000296 Td
+(organization.primaryIndustryCode.usSicV4) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 161.7799999999999443 478.4254330708660632 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 148.2800000000000296 Td
+([string] e.g.: 5461) Tj
+T* (The 4-digit code in the U.S. SIC \(Standard Industrial Classification\) 1987 system assigned to an) Tj
+T* (organization categorizing the primary business activities performed at its location. For example, 1611) Tj
+T* (represents the highway and street construction industry.) Tj
+T* (Refer to Reference code table "399 [US Standard Industry Code 1987 - 4 digit]" for all possible values.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 94.2799999999999443 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 80.7799999999999727 Td
+(organization.primaryIndustryCode.usSicV4Description) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 94.2799999999999443 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 80.7799999999999727 Td
+([string] e.g.: Credit reporting services) Tj
+T* (The description of the business activities represented by the Primary US SIC Code. For example, 'highway) Tj
+T* (and street construction' is the description of industry code 1611.) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+17 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 18 0 R
+>>
+endobj
+18 0 obj
+<<
+/Length 6515
+>>
+stream
+0. w
+0.78 G
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 555.2799999999999727 283.4645669291338663 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 541.7799999999999727 Td
+(organization.businessEntityType) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 555.2799999999999727 478.4254330708660632 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+([object]) Tj
+T* (A broad category of an organization structure into which all Legal Forms are grouped. These categories) Tj
+T* (are created by Dun & Bradstreet for client use based on Legal Form association with one and only one) Tj
+T* (Legal Form Class. Legal Form Class is limited to Corporation, Partnership, Proprietorship, National) Tj
+T* (Government, Local Government, Joint Venture, Non Profit Organization, Co-operative / Mutual) Tj
+T* (Organization and Foreign Company as well as a category for Legal Forms that do not fit into an existing) Tj
+T* (Legal Form Class.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 464.7799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 451.2799999999999727 Td
+(organization.businessEntityType.description) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 464.7799999999999159 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 451.2799999999999727 Td
+([string] e.g.: Corporation) Tj
+T* (The text description of the unique code assigned by Dun & Bradstreet for the Legal Form Class.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 431.7799999999999159 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 418.2799999999999727 Td
+(organization.businessEntityType.dnbCode) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 431.7799999999999159 478.4254330708660632 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 418.2799999999999727 Td
+([integer] e.g.: 451) Tj
+T* (A unique code assigned by D&B to identify the Legal Form Class.) Tj
+T* (E.g. 451 is the Code for Corporation.) Tj
+T* (Refer to Reference code table "4 [Legal Form] & 197 [Business Entity Type]" for all possible values.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 375.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 362.2799999999999727 Td
+(organization.controlOwnershipType) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 375.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 362.2799999999999727 Td
+([object]) Tj
+T* (The details of the type of controlling ownership.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 342.7799999999999727 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 329.2799999999999727 Td
+(organization.controlOwnershipType.description) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 342.7799999999999727 478.4254330708660632 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 329.2799999999999727 Td
+([string] e.g.: Privately owned) Tj
+T* (The name for the type of controlling ownership \(e.g., publicly owned, privately owned, state owned\).) Tj
+T* () Tj
+T* (Note: For some countries, controlling ownership can be derived from the legal form.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 286.7799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 273.2800000000000296 Td
+(organization.controlOwnershipType.dnbCode) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 286.7799999999999727 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 273.2800000000000296 Td
+([integer] e.g.: 9058) Tj
+T* (A unique code assigned by Dun & Bradstreet to identify the type of controlling ownership.) Tj
+T* (Refer to Reference code table "175 [Control Type]" for all possible values.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 242.2800000000000011 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 228.7800000000000296 Td
+(organization.controlOwnershipType.confidenceLevel) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 242.2800000000000011 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 228.7800000000000296 Td
+([object]) Tj
+T* (The details of the level of the confidence for the reported control type within the spectrum.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 209.2800000000000011 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 195.7800000000000864 Td
+(organization.controlOwnershipType.confidenceLevel.descripti) Tj
+T* (on) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 209.2800000000000011 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 195.7800000000000864 Td
+([string] e.g.: Low) Tj
+T* (The level of the confidence for the reported control type within the spectrum.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 176.2800000000000296 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 162.7800000000000864 Td
+(organization.controlOwnershipType.confidenceLevel.dnbCode) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 176.2800000000000296 478.4254330708660632 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 162.7800000000000864 Td
+([integer] e.g.: 13693) Tj
+T* (A unique code assigned by Dun & Bradstreet to identify the level of the confidence for the reported control) Tj
+T* (type.) Tj
+T* (Refer to Reference code table "354 [Range]" for all possible values.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 120.2800000000000153 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 106.7800000000000864 Td
+(organization.ownershipUnavailableReasons) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 120.2800000000000153 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 106.7800000000000864 Td
+([array \(object\)]) Tj
+T* (The details on why ownership information is unavailable for this entity.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 87.280000000000058 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 73.7800000000000864 Td
+(organization.ownershipUnavailableReasons.description) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 87.280000000000058 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 73.7800000000000864 Td
+([string] e.g.: Subject declined to provide this data) Tj
+T* (The reason why ownership information for this entity is unavailable.) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+19 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 20 0 R
+>>
+endobj
+20 0 obj
+<<
+/Length 7739
+>>
+stream
+0. w
+0.78 G
+1. g
+0.78 G
+0. w
+1. g
+40. 555.2799999999999727 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 541.7799999999999727 Td
+(organization.ownershipUnavailableReasons.dnbCode) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 555.2799999999999727 478.4254330708660632 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+([integer] e.g.: 931) Tj
+T* (A unique code assigned by Dun & Bradstreet to identify the reason why ownership information for this) Tj
+T* (entity is unavailable.) Tj
+T* (Refer to Reference code table "74 [Unavailable Reason]" for all possible values.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 499.2799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 485.7799999999999727 Td
+(organization.pscUnavailableReasons) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 499.2799999999999159 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 485.7799999999999727 Td
+([array \(object\)]) Tj
+T* (The details of why Persons of Significant control information is unavailable for this entity.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 466.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 452.7799999999999727 Td
+(organization.pscUnavailableReasons.description) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 466.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 452.7799999999999727 Td
+([string] e.g.: PSC exists but not identified) Tj
+T* (The reason Persons of Significant control information is unavailable for this entity.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 433.2799999999999727 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 419.7799999999999727 Td
+(organization.pscUnavailableReasons.dnbCode) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 433.2799999999999727 478.4254330708660632 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 419.7799999999999727 Td
+([integer] e.g.: 30842) Tj
+T* (A unique code assigned by Dun & Bradstreet to identify the reason Persons of Significant control) Tj
+T* (information is unavailable for this entity.) Tj
+T* (Refer to Reference code table "74 [Unavailable Reason]" for all possible values.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 377.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 363.7799999999999727 Td
+(organization.pscUnavailableReasons.startDate) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 377.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 363.7799999999999727 Td
+([string] e.g.: 2016-02-01) Tj
+T* (The date from when the Persons of Significant control information for this entity is unavailable.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 344.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 330.7799999999999727 Td
+(organization.beneficialOwnershipSummary) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 344.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 330.7799999999999727 Td
+([object]) Tj
+T* (The indicative or derived information about the ownership structure of the entity.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 311.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 297.7799999999999727 Td
+(organization.beneficialOwnershipSummary.beneficialOwnersC) Tj
+T* (ount) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 311.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 297.7799999999999727 Td
+([integer] e.g.: 250) Tj
+T* (The number of owners of the entity that can include direct, indirect and beneficial owners.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 278.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 264.7799999999999727 Td
+(organization.beneficialOwnershipSummary.relationshipsCount) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 278.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 264.7799999999999727 Td
+([integer] e.g.: 120) Tj
+T* (The number of relationships between members in an ownership structure for the entity.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 245.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 231.7800000000000296 Td
+(organization.beneficialOwnershipSummary.maximumDegreeO) Tj
+T* (fSeparation) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 245.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 231.7800000000000296 Td
+([integer] e.g.: 3) Tj
+T* (The farthest distance between the entity and another owner within the ownership structure.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 212.2800000000000011 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 198.7800000000000864 Td
+(organization.beneficialOwnershipSummary.totalAllocatedOwn) Tj
+T* (ershipPercentage) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 212.2800000000000011 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 198.7800000000000864 Td
+([number] e.g.: 32.5) Tj
+T* (The overall percentage of shares of the entity that are known to be allocated to shareowners.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 179.280000000000058 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 165.7800000000000864 Td
+(organization.beneficialOwnershipSummary.organizationsCoun) Tj
+T* (t) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 179.280000000000058 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 165.7800000000000864 Td
+([integer] e.g.: 80) Tj
+T* (The number of owners of the entity that are identified as business entities.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 146.2800000000000864 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 132.7800000000001432 Td
+(organization.beneficialOwnershipSummary.individualsCount) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 146.2800000000000864 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 132.7800000000001432 Td
+([integer] e.g.: 70) Tj
+T* (The number of owners of the entity that are identified as individuals.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 113.280000000000129 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 99.7800000000002001 Td
+(organization.beneficialOwnershipSummary.unclassifedOwner) Tj
+T* (sCount) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 113.280000000000129 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 99.7800000000002001 Td
+([integer] e.g.: 50) Tj
+T* (The number of owners of the entity that are not categorized as individual or entity.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 80.2800000000001575 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 66.7800000000002001 Td
+(organization.beneficialOwnershipSummary.corporateBeneficia) Tj
+T* (riesCount) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 80.2800000000001575 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 66.7800000000002001 Td
+([integer] e.g.: 25) Tj
+T* (The number of ultimate beneficiaries of the entity that are identified as legally setup corporate businesses.) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+21 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 22 0 R
+>>
+endobj
+22 0 obj
+<<
+/Length 7319
+>>
+stream
+0. w
+0.78 G
+1. g
+0.78 G
+0. w
+1. g
+40. 555.2799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 541.7799999999999727 Td
+(organization.beneficialOwnershipSummary.stateOwnedOrgani) Tj
+T* (zationsCount) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 555.2799999999999727 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+([integer] e.g.: 5) Tj
+T* (The number of owners of the entity that are classified as State Owned Organization. This does not include) Tj
+T* (the entity.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 510.7799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 497.2799999999999727 Td
+(organization.beneficialOwnershipSummary.governmentOrgani) Tj
+T* (zationsCount) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 510.7799999999999727 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 497.2799999999999727 Td
+([integer] e.g.: 5) Tj
+T* (The number of owners of the entity that are classified as Government Organization. This does not include) Tj
+T* (the entity.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 466.2799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 452.7799999999999727 Td
+(organization.beneficialOwnershipSummary.publiclyTradingOrg) Tj
+T* (anizationsCount) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 466.2799999999999727 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 452.7799999999999727 Td
+([integer] e.g.: 65) Tj
+T* (The number of owners of the entity that are classified as Publicly Trading Organization. This does not) Tj
+T* (include the entity.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 421.7799999999999159 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 408.2799999999999727 Td
+(organization.beneficialOwnershipSummary.privatelyHeldOrga) Tj
+T* (nizationsCount) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 421.7799999999999159 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 408.2799999999999727 Td
+([integer] e.g.: 12) Tj
+T* (The number of owners of the entity that are classified as Privately Held Organization. This does not) Tj
+T* (include the entity.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 377.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 363.7799999999999727 Td
+(organization.beneficialOwnershipSummary.countryWiseSumm) Tj
+T* (ary) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 377.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 363.7799999999999727 Td
+([array \(object\)]) Tj
+T* (The details of the indicative or derived information about the owners of the entity in each country.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 344.2799999999999727 283.4645669291338663 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 330.7799999999999727 Td
+(organization.beneficialOwnershipSummary.countryWiseSumm) Tj
+T* (ary.countryISOAlpha2Code) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 344.2799999999999727 478.4254330708660632 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 330.7799999999999727 Td
+([string] e.g.: US) Tj
+T* (The country code provided in the request.) Tj
+T* () Tj
+T* (Note: Please refer to Country Code Substitutions Table) Tj
+T* ([/html/resources/CountryCodes.html#country-substitute] for the country code substitutions.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 276.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 263.2799999999999727 Td
+(organization.beneficialOwnershipSummary.countryWiseSumm) Tj
+T* (ary.beneficialOwnersCount) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 276.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 263.2799999999999727 Td
+([integer] e.g.: 250) Tj
+T* (The number of owners of the entity that can include direct, indirect and beneficial owners.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 243.7799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 230.2800000000000296 Td
+(organization.beneficialOwnershipSummary.pscCount) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 243.7799999999999727 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 230.2800000000000296 Td
+([integer] e.g.: 125) Tj
+T* (The number of owners of the entity that are classified as Persons of Significant Control Organization. This) Tj
+T* (does not include the entity.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 199.2799999999999443 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 185.7799999999999727 Td
+(organization.beneficialOwnershipSummary.pscUniqueTypeCo) Tj
+T* (unt) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 199.2799999999999443 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 185.7799999999999727 Td
+([integer] e.g.: 50) Tj
+T* (The number of distinct types of Persons of Significant Control present for the entity.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 166.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 152.7800000000000296 Td
+(organization.beneficialOwnershipSummary.typeWisePSCSum) Tj
+T* (mary) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 166.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 152.7800000000000296 Td
+([array \(object\)]) Tj
+T* (The details on the count of nodes per type of Persons of Significant Control for the entity.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 133.2800000000000011 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 119.7800000000000864 Td
+(organization.beneficialOwnershipSummary.typeWisePSCSum) Tj
+T* (mary.pscType) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 133.2800000000000011 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 119.7800000000000864 Td
+([object]) Tj
+T* (The details on the type of Persons of Significant Control.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 100.2800000000000438 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 86.7800000000000864 Td
+(organization.beneficialOwnershipSummary.typeWisePSCSum) Tj
+T* (mary.pscType.description) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 100.2800000000000438 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 86.7800000000000864 Td
+([string] e.g.: Individual) Tj
+T* (The type of Persons of Significant Control.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 67.2800000000000864 283.4645669291338663 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 53.7800000000002001 Td
+(organization.beneficialOwnershipSummary.typeWisePSCSum) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 67.2800000000000864 478.4254330708660632 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 53.7800000000002001 Td
+([integer] e.g.: 119) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+23 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 24 0 R
+>>
+endobj
+24 0 obj
+<<
+/Length 7381
+>>
+stream
+0. w
+0.78 G
+1. g
+0.78 G
+0. w
+1. g
+40. 555.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 541.7799999999999727 Td
+(mary.pscType.dnbCode) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 555.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+(A unique code assigned by Dun & Bradstreet to identify the type of Persons of Significant Control.) Tj
+T* (Refer to Reference code table "11 [Subject Type]" for all possible values.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 522.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 508.7799999999999727 Td
+(organization.beneficialOwnershipSummary.typeWisePSCSum) Tj
+T* (mary.pscType.pscCount) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 522.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 508.7799999999999727 Td
+([integer] e.g.: 55) Tj
+T* (The number of beneficiaries present for this specific type of Person Of Significant Control type.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 489.2799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 475.7799999999999727 Td
+(organization.beneficialOwnershipSummary.nationalityWisePS) Tj
+T* (CSummary) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 489.2799999999999159 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 475.7799999999999727 Td
+([array \(object\)]) Tj
+T* (The details of the summary information on Persons of Significant Control by nationality.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 456.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 442.7799999999999727 Td
+(organization.beneficialOwnershipSummary.nationalityWisePS) Tj
+T* (CSummary.nationality) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 456.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 442.7799999999999727 Td
+([string] e.g.: British) Tj
+T* (The nationality of the Person of Significant control.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 423.2799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 409.7799999999999727 Td
+(organization.beneficialOwnershipSummary.nationalityWisePS) Tj
+T* (CSummary.pscCount) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 423.2799999999999159 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 409.7799999999999727 Td
+([integer] e.g.: 35) Tj
+T* (The number of PSCs present for this specific nationality.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 390.2799999999999727 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 376.7799999999999727 Td
+(organization.beneficialOwnershipSummary.nationalityUnknow) Tj
+T* (nPSCCount) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 390.2799999999999727 478.4254330708660632 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 376.7799999999999727 Td
+([string] e.g.: 20) Tj
+T* (DO NOT USE. This element is in the process of being deprecated. Please use) Tj
+T* (organization.beneficialOwnershipSummary.unknownNationalityPSCCount) Tj
+T* (The number of PSCs present that do not have a nationality recorded.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 334.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 320.7799999999999727 Td
+(organization.beneficialOwnershipSummary.unknownNationalit) Tj
+T* (yPSCCount) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 334.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 320.7799999999999727 Td
+([integer] e.g.: 20) Tj
+T* (The number of PSCs present that do not have a nationality recorded.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 301.2799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 287.7799999999999727 Td
+(organization.beneficialOwnershipSummary.countryWisePSCS) Tj
+T* (ummary) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 301.2799999999999159 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 287.7799999999999727 Td
+([array \(object\)]) Tj
+T* (The details of the summary information on Persons of Significant Control by country.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 268.2799999999999159 283.4645669291338663 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 254.7799999999999727 Td
+(organization.beneficialOwnershipSummary.countryWisePSCS) Tj
+T* (ummary.countryISOAlpha2Code) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 268.2799999999999159 478.4254330708660632 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 254.7799999999999727 Td
+([string] e.g.: US) Tj
+T* (The country code provided in the request.) Tj
+T* () Tj
+T* (Note: Please refer to Country Code Substitutions Table) Tj
+T* ([/html/resources/CountryCodes.html#country-substitute] for the country code substitutions.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 200.7799999999999443 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 187.2799999999999727 Td
+(organization.beneficialOwnershipSummary.countryWisePSCS) Tj
+T* (ummary.pscCount) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 200.7799999999999443 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 187.2799999999999727 Td
+([integer] e.g.: 35) Tj
+T* (The number of PSCs with the given country of residence.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 167.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 154.2800000000000296 Td
+(organization.beneficialOwnershipSummary.countryUnknownP) Tj
+T* (SCCount) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 167.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 154.2800000000000296 Td
+([integer]) Tj
+T* (The number of PSCs that do not have a country of residence recorded.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 134.7800000000000011 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 121.2800000000000864 Td
+(organization.beneficialOwnershipSummary.totalImpliedOwner) Tj
+T* (shipPercentage) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 134.7800000000000011 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 121.2800000000000864 Td
+([number] e.g.: 40) Tj
+T* (The sum of D&B inferred beneficial ownership percentages across all beneficiaries of the subject) Tj
+T* (company.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 90.2799999999999869 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 76.7800000000000864 Td
+(organization.beneficialOwnershipSummary.unIdentifiedShare) Tj
+T* (OwnersCount) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 90.2799999999999869 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 76.7800000000000864 Td
+([integer] e.g.: 2) Tj
+T* (The number of anonymous shareholders that were added to the ownership structure to enable calculation) Tj
+T* (of implied beneficial ownership.) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+25 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 26 0 R
+>>
+endobj
+26 0 obj
+<<
+/Length 4933
+>>
+stream
+0. w
+0.78 G
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 555.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 541.7799999999999727 Td
+(organization.beneficialOwnershipSummary.impliedPercentage) Tj
+T* (BeneficialOwnersCount) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 555.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+([integer] e.g.: 2) Tj
+T* (The number of nodes that have D&B inferred ownership percentages within the ownership structure.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 522.2799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 508.7799999999999727 Td
+(organization.beneficialOwnership) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 522.2799999999999727 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 508.7799999999999727 Td
+([object]) Tj
+T* (The details of the owners of the entity that can include direct, indirect and beneficial owners. The details) Tj
+T* (under this section can be used to generate the ownership structure.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 477.7799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 464.2799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 477.7799999999999159 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 464.2799999999999727 Td
+([array \(object\)]) Tj
+T* (The details of the beneficiaries of the entity.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 444.7799999999999727 283.4645669291338663 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 431.2799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.isBenefici) Tj
+T* (ary) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 444.7799999999999727 478.4254330708660632 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 431.2799999999999727 Td
+([boolean] e.g.: true) Tj
+T* (Indicates whether this owner is identified as a beneficiary.) Tj
+T* () Tj
+T* (- If true, this owner is identified as a beneficiary.) Tj
+T* (-If false, this owner is not identified as a beneficiary.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 377.2799999999999727 283.4645669291338663 -274.4999999999999432 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 363.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.memberID) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 377.2799999999999727 478.4254330708660632 -274.4999999999999432 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 363.7799999999999727 Td
+([integer] e.g.: 55544321) Tj
+T* (A unique identifier assigned by Dun & Bradstreet at this point of time for a node, entity associated in this) Tj
+T* (structure. This system generated ID is bound to change at a later point of time.) Tj
+T* () Tj
+T* (Notes:) Tj
+T* (1. This element is mandatory to create the ownership structure.) Tj
+T* (2. With the introduction of the applied logic functionality on 25 November 2020 any balance of the) Tj
+T* (unknown holdings will be attributed to an "Unknown" owner. This owner will be identified in the response) Tj
+T* (with the same member ID as the subject DUNS but prefixed with a "-", e.g. "memberID": -207144500,) Tj
+T* (This member will have the following fields populated only:) Tj
+T* ("isBeneficiary": true,) Tj
+T* ("memberID": -207144500,) Tj
+T* ("name": "Unknown",) Tj
+T* ("degreeOfSeparation": 1,) Tj
+T* ("isUndisclosed": true,) Tj
+T* ("appliedControlType": [) Tj
+T* ({) Tj
+T* ("dnbCode": 34785,) Tj
+T* ("description": "Forced Distribution") Tj
+T* (}) Tj
+T* (],) Tj
+T* ("impliedDirectOwnershipPercentage": N.N, \(where N.N is the undisclosed balance\)) Tj
+T* ("impliedBeneficialOwnershipPercentage": N.N, \(where N.N is the undisclosed balance\)) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 102.7800000000000011 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 89.2800000000000864 Td
+(organization.beneficialOwnership.beneficialOwners.name) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 102.7800000000000011 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 89.2800000000000864 Td
+([string] e.g.: GORMAN MANUFACTURING COMPANY, INC.) Tj
+T* (The name by which the individual / organization is primarily known / identified.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 69.7800000000000438 283.4645669291338663 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 56.2800000000000864 Td
+(organization.beneficialOwnership.beneficialOwners.duns) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 69.7800000000000438 478.4254330708660632 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 56.2800000000000864 Td
+([string] e.g.: 804735132) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+27 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 28 0 R
+>>
+endobj
+28 0 obj
+<<
+/Length 6906
+>>
+stream
+0. w
+0.78 G
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 555.2799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 555.2799999999999727 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+(The D-U-N-S® Number, a proprietary organizational identifier owned and managed by Dun & Bradstreet) Tj
+T* (Inc, provides unique identification of a subject organization, in accordance with the Data Universal) Tj
+T* (Numbering System \(D-U-N-S®\).) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 510.7799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 497.2799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.personId) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 510.7799999999999727 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 497.2799999999999727 Td
+([string] e.g.: 123456) Tj
+T* (The personal identification number or shareholder number assigned by an external body that helps to) Tj
+T* (identify a shareholder.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 466.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 452.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.beneficiar) Tj
+T* (yType) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 466.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 452.7799999999999727 Td
+([object]) Tj
+T* (The high level classification of whether the owner is an Individual, Company or if it is Unknown.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 433.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 419.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.beneficiar) Tj
+T* (yType.description) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 433.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 419.7799999999999727 Td
+([string] e.g.: Individual) Tj
+T* (Identifies whether the owner is an Individual, Company or if it is Unknown.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 400.2799999999999727 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 386.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.beneficiar) Tj
+T* (yType.dnbCode) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 400.2799999999999727 478.4254330708660632 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 386.7799999999999727 Td
+([integer] e.g.: 119) Tj
+T* (A unique code assigned by Dun & Bradstreet to identify whether the owner is an Individual, Company or if) Tj
+T* (it is Unknown.) Tj
+T* (Refer to Reference code table "11 [Subject Type]" for all possible values.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 344.2799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 330.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.detailedB) Tj
+T* (eneficiaryType) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 344.2799999999999159 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 330.7799999999999727 Td
+([object]) Tj
+T* (Records lower level classification of the owner based on the type of beneficiary.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 311.2799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 297.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.detailedB) Tj
+T* (eneficiaryType.description) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 311.2799999999999159 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 297.7799999999999727 Td
+([string] e.g.: Representative Officer) Tj
+T* (This denotes the type of beneficiary. For e.g., Individual, Business etc.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 278.2799999999999159 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 264.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.detailedB) Tj
+T* (eneficiaryType.dnbCode) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 278.2799999999999159 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 264.7799999999999727 Td
+([integer] e.g.: 1601) Tj
+T* (The description for the detailed beneficiary Type.) Tj
+T* (Refer to Reference code table "11 [Subject Type]" for all possible values.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 233.7799999999999443 283.4645669291338663 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 220.2799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.businessE) Tj
+T* (ntityType) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 233.7799999999999443 478.4254330708660632 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 220.2799999999999727 Td
+([object]) Tj
+T* (A broad category of an organization structure into which all Legal Forms are grouped. These categories) Tj
+T* (are created by Dun & Bradstreet for client use based on Legal Form association with one and only one) Tj
+T* (Legal Form Class. Legal Form Class is limited to Corporation, Partnership, Proprietorship, National) Tj
+T* (Government, Local Government, Joint Venture, Non Profit Organization, Co-operative / Mutual) Tj
+T* (Organization and Foreign Company as well as a category for Legal Forms that do not fit into an existing) Tj
+T* (Legal Form Class.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 143.2799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 129.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.businessE) Tj
+T* (ntityType.description) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 143.2799999999999159 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 129.7799999999999727 Td
+([string] e.g.: Corporation) Tj
+T* (The text description of the unique code assigned by Dun & Bradstreet for the Legal Form Class.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 110.2799999999999585 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 96.7800000000000296 Td
+(organization.beneficialOwnership.beneficialOwners.businessE) Tj
+T* (ntityType.dnbCode) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 110.2799999999999585 478.4254330708660632 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 96.7800000000000296 Td
+([integer] e.g.: 451) Tj
+T* (A unique code assigned by Dun & Bradstreet to identify the legal form or structure of the entity as) Tj
+T* (registered with government authorities.) Tj
+T* (Refer to Reference code table "4 [Legal Form] & 197 [Business Entity Type]" for all possible values.) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+29 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 30 0 R
+>>
+endobj
+30 0 obj
+<<
+/Length 5957
+>>
+stream
+0. w
+0.78 G
+1. g
+0.78 G
+0. w
+1. g
+40. 555.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 541.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.address) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 555.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+([object]) Tj
+T* (The details of the Primary Address at which the organization is located or conducts operations.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 522.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 508.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.address.a) Tj
+T* (ddressCountry) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 522.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 508.7799999999999727 Td
+([object]) Tj
+T* (The details of the country or region for this address of the organization.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 489.2799999999999159 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 475.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.address.a) Tj
+T* (ddressCountry.name) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 489.2799999999999159 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 475.7799999999999727 Td
+([string] e.g.: United States) Tj
+T* (The country or region for this address of the organization.) Tj
+T* (Refer to Reference code table "ISOCountry [ISO Country Codes]" for all possible values.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 444.7799999999999727 283.4645669291338663 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 431.2799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.address.a) Tj
+T* (ddressCountry.isoAlpha2Code) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 444.7799999999999727 478.4254330708660632 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 431.2799999999999727 Td
+([string] e.g.: US) Tj
+T* (The 2 letter alpha country code assigned by the International Organization for Standardization \(ISO\)) Tj
+T* (identifying the Country/Region for this address of the organization.) Tj
+T* () Tj
+T* (Note: Please refer to Country Code Substitutions Table) Tj
+T* ([/html/resources/CountryCodes.html#country-substitute] for the country code substitutions.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 365.7799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 352.2799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.address.a) Tj
+T* (ddressLocality) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 365.7799999999999727 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 352.2799999999999727 Td
+([object]) Tj
+T* (The details of the locality for this address of the organization. Locality defined as a district population) Tj
+T* (cluster. City, town, township, village, borough etc.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 321.2799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 307.7800000000000296 Td
+(organization.beneficialOwnership.beneficialOwners.address.a) Tj
+T* (ddressLocality.name) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 321.2799999999999727 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 307.7800000000000296 Td
+([string] e.g.: SAN FRANCISCO) Tj
+T* (The name of the locality for this address of the organization. Locality defined as a district population) Tj
+T* (cluster. City, town, township, village, borough etc.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 276.7800000000000296 283.4645669291338663 -124.9999999999999858 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 263.2800000000000296 Td
+(organization.beneficialOwnership.beneficialOwners.address.a) Tj
+T* (ddressRegion) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 276.7800000000000296 478.4254330708660632 -124.9999999999999858 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 263.2800000000000296 Td
+([object]) Tj
+T* (Details of the type of geographical area for this address of the organization.) Tj
+T* (Different markets have their own way of subdividing the country into smaller parts.) Tj
+T* (Examples:) Tj
+T* (Departments \(France\)) Tj
+T* (States \(USA\)) Tj
+T* (Provinces \(Netherlands\)) Tj
+T* (Counties \(UK\)) Tj
+T* (Bundeslander \(Germany\)) Tj
+T* (Provinces and Territories \(Canada\)) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 151.780000000000058 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 138.2800000000001432 Td
+(organization.beneficialOwnership.beneficialOwners.address.a) Tj
+T* (ddressRegion.name) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 151.780000000000058 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 138.2800000000001432 Td
+([string] e.g.: California) Tj
+T* (The name of the geographical area for this address of the organization. For Example New Jersey.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 118.7800000000000864 283.4645669291338663 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 105.2800000000001432 Td
+(organization.beneficialOwnership.beneficialOwners.address.p) Tj
+T* (ostalCode) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 118.7800000000000864 478.4254330708660632 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 105.2800000000001432 Td
+([string] e.g.: 941109999) Tj
+T* (The postal code for this address of the organization.) Tj
+T* () Tj
+T* (Also known locally in various English-speaking countries throughout the world as a postcode, post code,) Tj
+T* (Eircode, PIN or ZIP Code\) is a series of letters or digits or both, sometimes including spaces or) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+31 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 32 0 R
+>>
+endobj
+32 0 obj
+<<
+/Length 5751
+>>
+stream
+0. w
+0.78 G
+1. g
+0.78 G
+0. w
+1. g
+40. 555.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 555.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+(punctuation, included in a postal address for the purpose of sorting mail. The code is used by the country's) Tj
+T* (postal authority to identify the address where the organization is located or conducts operations .) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 522.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 508.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.address.st) Tj
+T* (reetAddress) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 522.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 508.7799999999999727 Td
+([object]) Tj
+T* (The details of the street address for this address of the organization.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 489.2799999999999159 283.4645669291338663 -113.4999999999999858 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 475.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.address.st) Tj
+T* (reetAddress.line1) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 489.2799999999999159 478.4254330708660632 -113.4999999999999858 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 475.7799999999999727 Td
+([string] e.g.: 492 KOLLER ST) Tj
+T* (The first line of the address where the entity is located.) Tj
+T* () Tj
+T* (The first line of this address of the organization. For example The Point in the address) Tj
+T* () Tj
+T* (The Point) Tj
+T* (37 North Wharf Road) Tj
+T* (London) Tj
+T* (W2 1AF) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 375.7799999999999727 283.4645669291338663 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 362.2799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.address.st) Tj
+T* (reetAddress.line2) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 375.7799999999999727 478.4254330708660632 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 362.2799999999999727 Td
+([string] e.g.: Suite 100) Tj
+T* (The second line of this address of the organization.) Tj
+T* (For example 37 North Wharf Road in the address) Tj
+T* (The Point) Tj
+T* (37 North Wharf Road) Tj
+T* (London) Tj
+T* (W2 1AF) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 285.2799999999999727 283.4645669291338663 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 271.7800000000000296 Td
+(organization.beneficialOwnership.beneficialOwners.address.st) Tj
+T* (reetAddress.line3) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 285.2799999999999727 478.4254330708660632 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 271.7800000000000296 Td
+([string] e.g.: Address line 3) Tj
+T* (The third line of the organization's official address. For example London in the address) Tj
+T* (The Point) Tj
+T* (37 North Wharf Road) Tj
+T* (London) Tj
+T* (W2 1AF) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 206.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 192.7800000000000296 Td
+(organization.beneficialOwnership.beneficialOwners.nationality) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 206.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 192.7800000000000296 Td
+([string] e.g.: British) Tj
+T* (The nationality of the owner if the owner is an individual.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 173.2800000000000296 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 159.7800000000000864 Td
+(organization.beneficialOwnership.beneficialOwners.birthDate) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 173.2800000000000296 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 159.7800000000000864 Td
+([string] e.g.: 1955-02-17) Tj
+T* (The date of birth of the owner if the owner is an individual.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 140.280000000000058 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 126.7800000000001432 Td
+(organization.beneficialOwnership.beneficialOwners.residence) Tj
+T* (CountryName) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 140.280000000000058 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 126.7800000000001432 Td
+([string] e.g.: United States) Tj
+T* (The name of the country in which the individual usually resides.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 107.2800000000001006 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 93.7800000000001432 Td
+(organization.beneficialOwnership.beneficialOwners.legalAuth) Tj
+T* (ority) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 107.2800000000001006 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 93.7800000000001432 Td
+([string] e.g.: Limited Liability Partnership Act 2000) Tj
+T* (The name of the government body or the law, which supervises or regulates the individual or the company,) Tj
+T* (and also exercises significant influence over the beneficiary.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 62.7800000000000722 283.4645669291338663 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 49.2800000000000864 Td
+(organization.beneficialOwnership.beneficialOwners.legalForm) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 62.7800000000000722 478.4254330708660632 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 49.2800000000000864 Td
+([string] e.g.: Limited Company) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+33 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 34 0 R
+>>
+endobj
+34 0 obj
+<<
+/Length 6425
+>>
+stream
+0. w
+0.78 G
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 555.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 555.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+(The legal form or structure of the company, who exercises significant influence over the beneficiary, as) Tj
+T* (registered with government authorities.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 522.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 508.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.directOwn) Tj
+T* (ershipPercentage) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 522.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 508.7799999999999727 Td
+([number] e.g.: 0.56) Tj
+T* (The owner's direct shareholding percentage.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 489.2799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 475.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.indirectO) Tj
+T* (wnershipPercentage) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 489.2799999999999159 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 475.7799999999999727 Td
+([number] e.g.: 0.45) Tj
+T* (The owner's indirect shareholding percentage.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 456.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 442.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.beneficial) Tj
+T* (OwnershipPercentage) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 456.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 442.7799999999999727 Td
+([number] e.g.: 1.01) Tj
+T* (The owner's actual shareholding percentage.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 423.2799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 409.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.ownership) Tj
+T* (UnavailableReasons) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 423.2799999999999159 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 409.7799999999999727 Td
+([array \(object\)]) Tj
+T* (The details on why ownership information is unavailable for this entity.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 390.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 376.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.ownership) Tj
+T* (UnavailableReasons.description) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 390.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 376.7799999999999727 Td
+([string] e.g.: Subject declined to provide this data) Tj
+T* (The reason why ownership information for this entity is unavailable.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 357.2799999999999727 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 343.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.ownership) Tj
+T* (UnavailableReasons.dnbCode) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 357.2799999999999727 478.4254330708660632 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 343.7799999999999727 Td
+([integer] e.g.: 931) Tj
+T* (A unique code assigned by Dun & Bradstreet to identify the reason why ownership information for this) Tj
+T* (entity is unavailable.) Tj
+T* (Refer to Reference code table "74 [Unavailable Reason]" for all possible values.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 301.2799999999999727 283.4645669291338663 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 287.7800000000000296 Td
+(organization.beneficialOwnership.beneficialOwners.isOutofBu) Tj
+T* (siness) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 301.2799999999999727 478.4254330708660632 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 287.7800000000000296 Td
+([boolean] e.g.: true) Tj
+T* (DO NOT USE. This element is in the process of being deprecated. Please use) Tj
+T* (organization.beneficialOwnership.beneficialOwners.isOutOfBusiness) Tj
+T* (Indicates whether the owner entity is currently Out of Business.) Tj
+T* () Tj
+T* (- If true, the owner entity is out of business.) Tj
+T* (- If false, the owner entity is not out of business.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 210.7800000000000011 283.4645669291338663 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 197.2800000000000864 Td
+(organization.beneficialOwnership.beneficialOwners.isOutOfBu) Tj
+T* (siness) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 210.7800000000000011 478.4254330708660632 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 197.2800000000000864 Td
+([boolean] e.g.: true) Tj
+T* (Indicates whether the owner entity is currently Out of Business.) Tj
+T* () Tj
+T* (- If true, the owner entity is out of business.) Tj
+T* (- If false, the owner entity is not out of business.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 143.2800000000000011 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 129.7800000000000296 Td
+(organization.beneficialOwnership.beneficialOwners.controlOw) Tj
+T* (nershipType) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 143.2800000000000011 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 129.7800000000000296 Td
+([object]) Tj
+T* (The details of the type of controlling ownership.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 110.2800000000000296 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 96.7800000000000864 Td
+(organization.beneficialOwnership.beneficialOwners.controlOw) Tj
+T* (nershipType.description) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 110.2800000000000296 478.4254330708660632 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 96.7800000000000864 Td
+([string] e.g.: Privately owned) Tj
+T* (The name for the type of controlling ownership \(e.g., publicly owned, privately owned, state owned\).) Tj
+T* () Tj
+T* (Note: For some countries, controlling ownership can be derived from the legal form.) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+35 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 36 0 R
+>>
+endobj
+36 0 obj
+<<
+/Length 6905
+>>
+stream
+0. w
+0.78 G
+1. g
+0.78 G
+0. w
+1. g
+40. 555.2799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 541.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.controlOw) Tj
+T* (nershipType.dnbCode) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 555.2799999999999727 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+([integer] e.g.: 9058) Tj
+T* (A unique code assigned by Dun & Bradstreet to identify the type of controlling ownership.) Tj
+T* (Refer to Reference code table "175 [Control Type]" for all possible values.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 510.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 497.2799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.controlOw) Tj
+T* (nershipType.confidenceLevel) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 510.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 497.2799999999999727 Td
+([object]) Tj
+T* (The details of the level of the confidence for the reported control type within the spectrum.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 477.7799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 464.2799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.controlOw) Tj
+T* (nershipType.confidenceLevel.description) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 477.7799999999999159 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 464.2799999999999727 Td
+([string] e.g.: Low) Tj
+T* (The level of the confidence for the reported control type within the spectrum.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 444.7799999999999727 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 431.2799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.controlOw) Tj
+T* (nershipType.confidenceLevel.dnbCode) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 444.7799999999999727 478.4254330708660632 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 431.2799999999999727 Td
+([integer] e.g.: 13693) Tj
+T* (A unique code assigned by Dun & Bradstreet to identify the level of the confidence for the reported control) Tj
+T* (type.) Tj
+T* (Refer to Reference code table "354 [Range]" for all possible values.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 388.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 375.2799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.degreeOf) Tj
+T* (Separation) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 388.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 375.2799999999999727 Td
+([integer] e.g.: 3) Tj
+T* (The distance between this beneficiary and the entity within the ownership structure.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 355.7799999999999727 283.4645669291338663 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 342.2799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.isFiltered) Tj
+T* (Out) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 355.7799999999999727 478.4254330708660632 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 342.2799999999999727 Td
+([boolean] e.g.: undefined) Tj
+T* (Indicates whether the member has not met the filter criteria set in the request.) Tj
+T* () Tj
+T* (- If true, the member has not met the filter criteria set in the request.) Tj
+T* (- If false, the member has met the filter criteria set in the request.) Tj
+T* (- If null, there is no filter set in the request.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 276.7799999999999727 283.4645669291338663 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 263.2799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.appliedCo) Tj
+T* (ntrolType) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 276.7799999999999727 478.4254330708660632 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 263.2799999999999727 Td
+([array \(object\)]) Tj
+T* (Records information of the type of calculation applied on the member.) Tj
+T* () Tj
+T* (Note: While the request parameters are restricted to codes 34781 [Worst Case Distribution] or 34782) Tj
+T* ([Equal Distribution], the response can include all 5 code values.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 209.2800000000000011 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 195.7800000000000864 Td
+(organization.beneficialOwnership.beneficialOwners.appliedCo) Tj
+T* (ntrolType.dnbCode) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 209.2800000000000011 478.4254330708660632 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 195.7800000000000864 Td
+([integer] e.g.: 34781) Tj
+T* (A unique code assigned by Dun & Bradstreet that describes the type of calculation applied to imply the) Tj
+T* (unknown or undisclosed ownership percentage of the inquired subject.) Tj
+T* (Refer to Reference code table "793 [Applied Control Type]" for all possible values.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 153.2799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 139.7800000000000296 Td
+(organization.beneficialOwnership.beneficialOwners.appliedCo) Tj
+T* (ntrolType.description) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 153.2799999999999727 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 139.7800000000000296 Td
+([string] e.g.: Worst Case Distribution) Tj
+T* (Text that specifies the type of calculation applied to imply the unknown or undisclosed ownership) Tj
+T* (percentage of the inquired subject, e.g., Worst Case Distribution, Equal Distribution.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 108.7799999999999443 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 95.2800000000000296 Td
+(organization.beneficialOwnership.beneficialOwners.impliedDir) Tj
+T* (ectOwnershipPercentage) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 108.7799999999999443 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 95.2800000000000296 Td
+([number] e.g.: 60) Tj
+T* (Dun & Bradstreet inferred direct shareholding percentage due to unavailable % information from registry) Tj
+T* (source) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 64.2799999999999159 283.4645669291338663 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 50.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.impliedInd) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 64.2799999999999159 478.4254330708660632 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 50.7799999999999727 Td
+([number] e.g.: 60) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+37 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 38 0 R
+>>
+endobj
+38 0 obj
+<<
+/Length 6574
+>>
+stream
+0. w
+0.78 G
+1. g
+0.78 G
+0. w
+1. g
+40. 555.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 541.7799999999999727 Td
+(irectOwnershipPercentage) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 555.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+(Dun & Bradstreet inferred indirect shareholding percentage due to unavailable % information from registry) Tj
+T* (source) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 522.2799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 508.7799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.impliedBe) Tj
+T* (neficialOwnershipPercentage) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 522.2799999999999727 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 508.7799999999999727 Td
+([number] e.g.: 60) Tj
+T* (Dun & Bradstreet inferred beneficiary shareholding percentage due to unavailable % information from) Tj
+T* (registry source) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 477.7799999999999159 283.4645669291338663 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 464.2799999999999727 Td
+(organization.beneficialOwnership.beneficialOwners.isTrustee) Tj
+T* (Nominee) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 477.7799999999999159 478.4254330708660632 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 464.2799999999999727 Td
+([boolean] e.g.: true) Tj
+T* (When turned ON \(set to 1\) indicates that a shareholder is a trustee or a nominee, I.e. the shareholder is) Tj
+T* (acting on behalf of someone else to hold the shares.) Tj
+T* () Tj
+T* (When turned OFF \(set to 0\) this indicates that the shareholder is acting in their own right and is not a) Tj
+T* (trustee or nominee; however as this is the assumed condition there is no requirement to create this tag to) Tj
+T* (represent this fact.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 387.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 373.7799999999999727 Td
+(organization.beneficialOwnership.relationships) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 387.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 373.7799999999999727 Td
+([array \(object\)]) Tj
+T* (The details of the relationships between members in an ownership structure for the entity.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 354.2799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 340.7799999999999727 Td
+(organization.beneficialOwnership.relationships.relationshipID) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 354.2799999999999727 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 340.7799999999999727 Td
+([integer] e.g.: 299298921) Tj
+T* (A unique identifier assigned by Dun & Bradstreet to identify the relationship between two entities) Tj
+T* (associated in this structure. This system generated ID is bound to change at a later point of time.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 309.7799999999999727 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 296.2799999999999727 Td
+(organization.beneficialOwnership.relationships.sourceMember) Tj
+T* (ID) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 309.7799999999999727 478.4254330708660632 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 296.2799999999999727 Td
+([integer] e.g.: 14519123) Tj
+T* (A unique identifier assigned by Dun & Bradstreet to identify the source node associated based on) Tj
+T* (relationship type to the target node denoted by the Target Member ID. This system generated ID is bound) Tj
+T* (to change at a later point of time.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 253.7799999999999443 283.4645669291338663 -102. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 240.2799999999999727 Td
+(organization.beneficialOwnership.relationships.targetMemberI) Tj
+T* (D) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 253.7799999999999443 478.4254330708660632 -102. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 240.2799999999999727 Td
+([integer] e.g.: 226161123) Tj
+T* (A unique identifier assigned by Dun & Bradstreet to identify the receiving node associated based on) Tj
+T* (relationship type to the source node denoted by the Source Member ID. This system generated ID is) Tj
+T* (bound to change at a later point of time.) Tj
+T* () Tj
+T* (Note: The memberID can be prefixed by a "-". This indicates a node which has been created to represent) Tj
+T* (the balance of any unknown shareholdings. It will have a relationship with the subject DUNS. See the) Tj
+T* (description for organization.beneficialOwnership.beneficialOwners.memberID for more details.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 151.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 138.2800000000000296 Td
+(organization.beneficialOwnership.relationships.relationshipTyp) Tj
+T* (e) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 151.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 138.2800000000000296 Td
+([object]) Tj
+T* (The details of the type of relationship between the source and target members.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 118.7800000000000153 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 105.2800000000000864 Td
+(organization.beneficialOwnership.relationships.relationshipTyp) Tj
+T* (e.description) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 118.7800000000000153 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 105.2800000000000864 Td
+([string] e.g.: Share Ownership) Tj
+T* (The relationship between the source and target members.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 85.7800000000000438 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 72.2800000000000864 Td
+(organization.beneficialOwnership.relationships.relationshipTyp) Tj
+T* (e.dnbCode) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 85.7800000000000438 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 72.2800000000000864 Td
+([integer] e.g.: 137) Tj
+T* (A unique code assigned by Dun & Bradstreet to identify the type of relationship between the source and) Tj
+T* (target members.) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+39 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 40 0 R
+>>
+endobj
+40 0 obj
+<<
+/Length 7435
+>>
+stream
+0. w
+0.78 G
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 555.2799999999999727 283.4645669291338663 -21.4999999999999964 re
+f
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 555.2799999999999727 478.4254330708660632 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+(Refer to Reference code table "15 [Relationship Type]" for all possible values.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 533.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 520.2799999999999727 Td
+(organization.beneficialOwnership.relationships.detailedRelatio) Tj
+T* (nshipType) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 533.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 520.2799999999999727 Td
+([object]) Tj
+T* (Records the type of relationship exists between the source and target members.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 500.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 487.2799999999999727 Td
+(organization.beneficialOwnership.relationships.detailedRelatio) Tj
+T* (nshipType.description) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 500.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 487.2799999999999727 Td
+([string] e.g.: Partner \(German ownership without shares\)) Tj
+T* (Text that defines the type of relationship exists between the source and target members.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 467.7799999999999727 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 454.2799999999999727 Td
+(organization.beneficialOwnership.relationships.detailedRelatio) Tj
+T* (nshipType.dnbCode) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 467.7799999999999727 478.4254330708660632 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 454.2799999999999727 Td
+([integer] e.g.: 8630) Tj
+T* (A unique code assigned by D&B that describes the type of relationship exists between the source and) Tj
+T* (target members.) Tj
+T* (Refer to Reference code table "15: Association Type" for all possible values.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 411.7799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 398.2799999999999727 Td
+(organization.beneficialOwnership.relationships.sharePercenta) Tj
+T* (ge) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 411.7799999999999159 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 398.2799999999999727 Td
+([number] e.g.: 2.57) Tj
+T* (The total percentage of the shares of the entity directly held/owned by the Shareholder.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 378.7799999999999727 283.4645669291338663 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 365.2799999999999727 Td
+(organization.beneficialOwnership.relationships.isFilteredOut) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 378.7799999999999727 478.4254330708660632 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 365.2799999999999727 Td
+([boolean] e.g.: true) Tj
+T* (Indicates whether the relationship has not met the filter criteria set in the request.) Tj
+T* () Tj
+T* (- If true, the relationship has not met the filter criteria set in the request.) Tj
+T* (- If false, the relationship has met the filter criteria set in the request.) Tj
+T* (- If null, there is no filter set in the request.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 299.7799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 286.2799999999999727 Td
+(organization.beneficialOwnership.relationships.natureOfContr) Tj
+T* (olType) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 299.7799999999999159 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 286.2799999999999727 Td
+([array \(object\)]) Tj
+T* (Records the significant influence that exists between two beneficiaries.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 266.7799999999999159 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 253.2799999999999727 Td
+(organization.beneficialOwnership.relationships.natureOfContr) Tj
+T* (olType.description) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 266.7799999999999159 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 253.2799999999999727 Td
+([string] e.g.: Significant control of a firm which owns 25% to 50% shares of the company) Tj
+T* (Text identifying the type of control the individual or the company holds on the subject, e.g., ownership of) Tj
+T* (25% to 50% of shares, voting rights of 25% to 50%.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 222.2799999999999159 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 208.7799999999999727 Td
+(organization.beneficialOwnership.relationships.natureOfContr) Tj
+T* (olType.dnbCode) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 222.2799999999999159 478.4254330708660632 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 208.7799999999999727 Td
+([integer] e.g.: 30854) Tj
+T* (A unique code assigned by Dun & Bradstreet identifying the type of control the individual or the company) Tj
+T* (holds on the subject, e.g., ownership of 25% to 50% of shares, voting rights of 25% to 50%.) Tj
+T* (Refer to Reference code table "743 [Nature of Control]" for all possible values.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 166.2799999999998875 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 152.7799999999999727 Td
+(organization.beneficialOwnership.relationships.natureOfContr) Tj
+T* (olType.controlClass) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 166.2799999999998875 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 152.7799999999999727 Td
+([object]) Tj
+T* (Records the class of significant influence that exists between two beneficiaries.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 133.2799999999999159 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 119.7799999999999727 Td
+(organization.beneficialOwnership.relationships.natureOfContr) Tj
+T* (olType.controlClass.description) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 133.2799999999999159 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 119.7799999999999727 Td
+([string] e.g.: Ownership voting rights) Tj
+T* (Text that describes a broad class into which the type of control the individual or the company holds on the) Tj
+T* (subject is categorized, e.g., ownership or voting rights between 25% to 50%.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 88.7799999999999017 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 75.2799999999999727 Td
+(organization.beneficialOwnership.relationships.natureOfContr) Tj
+T* (olType.controlClass.dnbCode) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 88.7799999999999017 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 75.2799999999999727 Td
+([integer] e.g.: 36136) Tj
+T* (A unique code assigned by D&B that identifies the broad class into which the type of control the individual) Tj
+T* (or the company holds on the subject is categorized, e.g., ownership or voting rights between 25% to 50%.) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+41 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 42 0 R
+>>
+endobj
+42 0 obj
+<<
+/Length 6880
+>>
+stream
+0. w
+0.78 G
+1. g
+0.78 G
+0. w
+1. g
+40. 555.2799999999999727 283.4645669291338663 -21.4999999999999964 re
+f
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 555.2799999999999727 478.4254330708660632 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+(Refer to Reference code table "758 [Nature of Control Class]" for all possible values.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 533.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 520.2799999999999727 Td
+(organization.beneficialOwnership.relationships.natureOfContr) Tj
+T* (olType.controlPercentage) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 533.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 520.2799999999999727 Td
+([number] e.g.: 12.5) Tj
+T* (This denotes the nature of control's percentage.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 500.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 487.2799999999999727 Td
+(organization.beneficialOwnership.relationships.natureOfContr) Tj
+T* (olType.controlReasons) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 500.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 487.2799999999999727 Td
+([array \(object\)]) Tj
+T* (Records the reason for the nature of control.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 467.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 454.2799999999999727 Td
+(organization.beneficialOwnership.relationships.natureOfContr) Tj
+T* (olType.controlReasons.description) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 467.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 454.2799999999999727 Td
+([string] e.g.: Settlor of the trust) Tj
+T* (Text that describes the reason for the control type which qualifies the nature of control.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 434.7799999999999159 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 421.2799999999999727 Td
+(organization.beneficialOwnership.relationships.natureOfContr) Tj
+T* (olType.controlReasons.dnbCode) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 434.7799999999999159 478.4254330708660632 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 421.2799999999999727 Td
+([integer] e.g.: 36009) Tj
+T* (A unique code assigned by D&B that identifies the reason for the control type which qualifies the nature of) Tj
+T* (control.) Tj
+T* (Refer to Reference code table "822 [Nature of Control Reason]" for all possible values.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 378.7799999999999727 283.4645669291338663 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 365.2799999999999727 Td
+(organization.beneficialOwnership.relationships.natureOfContr) Tj
+T* (olType.isDirectControl) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 378.7799999999999727 478.4254330708660632 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 365.2799999999999727 Td
+([boolean] e.g.: true) Tj
+T* (When turned ON \(set to true\) it denotes the control is due to holding a controlling stake directly in this) Tj
+T* (organisation.) Tj
+T* (When turned OFF \(set to false\) it denotes the control is due to holding a controlling stake via other parent) Tj
+T* (organisations.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 311.2799999999999727 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 297.7799999999999727 Td
+(organization.beneficialOwnership.relationships.natureofContro) Tj
+T* (lClass) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 311.2799999999999727 478.4254330708660632 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 297.7799999999999727 Td
+([array \(object\)]) Tj
+T* (DO NOT USE. This element is in the process of being deprecated. Please use) Tj
+T* (organization.beneficialOwnership.relationships.natureOfControlClass) Tj
+T* (Records the class of significant influence that exists between two beneficiaries.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 255.2799999999999443 283.4645669291338663 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 241.7799999999999727 Td
+(organization.beneficialOwnership.relationships.natureofContro) Tj
+T* (lClass.description) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 255.2799999999999443 478.4254330708660632 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 241.7799999999999727 Td
+([string]) Tj
+T* (DO NOT USE. This element is in the process of being deprecated. Please use) Tj
+T* (organization.beneficialOwnership.relationships.natureOfControlClass.description) Tj
+T* (Text identifying a broad class into which the type of control the individual or the company holds on the) Tj
+T* (subject is categorized, e.g., ownership or voting rights between 25% to 50%.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 187.7799999999999443 283.4645669291338663 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 174.2800000000000296 Td
+(organization.beneficialOwnership.relationships.natureofContro) Tj
+T* (lClass.dnbCode) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 187.7799999999999443 478.4254330708660632 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 174.2800000000000296 Td
+([integer]) Tj
+T* (DO NOT USE. This element is in the process of being deprecated. Please use) Tj
+T* (organization.beneficialOwnership.relationships.natureOfControlClass.dnbCode) Tj
+T* (A unique code assigned by Dun & Bradstreet identifying a broad class into which the type of control the) Tj
+T* (individual or the company holds on the subject is categorized, e.g., ownership or voting rights between) Tj
+T* (25% to 50%.) Tj
+T* (Refer to Reference code table "758 [Nature of Control Class]" for all possible values.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 97.2799999999999585 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 83.7800000000000296 Td
+(organization.beneficialOwnership.relationships.natureOfContr) Tj
+T* (olClass) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 97.2799999999999585 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 83.7800000000000296 Td
+([array \(object\)]) Tj
+T* (Records the class of significant influence that exists between two beneficiaries.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 64.2800000000000011 283.4645669291338663 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 50.7800000000000864 Td
+(organization.beneficialOwnership.relationships.natureOfContr) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 64.2800000000000011 478.4254330708660632 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 50.7800000000000864 Td
+([string] e.g.: Ownership or voting rights of 50% to 75%) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+43 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 44 0 R
+>>
+endobj
+44 0 obj
+<<
+/Length 6481
+>>
+stream
+0. w
+0.78 G
+1. g
+0.78 G
+0. w
+1. g
+40. 555.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 541.7799999999999727 Td
+(olClass.description) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 555.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+(Text identifying a broad class into which the type of control the individual or the company holds on the) Tj
+T* (subject is categorized, e.g., ownership or voting rights between 25% to 50%.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 522.2799999999999727 283.4645669291338663 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 508.7799999999999727 Td
+(organization.beneficialOwnership.relationships.natureOfContr) Tj
+T* (olClass.dnbCode) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 522.2799999999999727 478.4254330708660632 -67.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 508.7799999999999727 Td
+([integer] e.g.: 33475) Tj
+T* (A unique code assigned by Dun & Bradstreet identifying a broad class into which the type of control the) Tj
+T* (individual or the company holds on the subject is categorized, e.g., ownership or voting rights between) Tj
+T* (25% to 50%.) Tj
+T* (Refer to Reference code table "758 [Nature of Control Class]" for all possible values.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 454.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 441.2799999999999727 Td
+(organization.beneficialOwnership.relationships.natureOfContr) Tj
+T* (olStartDate) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 454.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 441.2799999999999727 Td
+([string] e.g.: 2013-01-01) Tj
+T* (The date when the individual or the company has acquired significant influence over the entity.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 421.7799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 408.2799999999999727 Td
+(organization.beneficialOwnership.relationships.impliedShareP) Tj
+T* (ercentage) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 421.7799999999999159 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 408.2799999999999727 Td
+([number] e.g.: 60) Tj
+T* (Dun & Bradstreet inferred percentage of the shares owned by the member within the associated business.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 388.7799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 375.2799999999999727 Td
+(organization.corporateLinkage) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 388.7799999999999727 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 375.2799999999999727 Td
+([object]) Tj
+T* (Details of organization to organization relationships based on majority ownership or control \(>50%\). There) Tj
+T* (are two types of relationships, branch/division to Headquarter and Subsidiary to Parent.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 344.2799999999999727 283.4645669291338663 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 330.7799999999999727 Td
+(organization.corporateLinkage.globalUltimate) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 344.2799999999999727 478.4254330708660632 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 330.7799999999999727 Td
+([object]) Tj
+T* (The details of the top most organization in the family tree, tracing each parent up to its own parent. For) Tj
+T* (example, organization A is based in the US and has organization B as its parent also in the US. In turn) Tj
+T* (organization B is owned by organization C, also in the US, which is owned by organization D which is in) Tj
+T* (the UK. Thus, the Global Ultimate of this family tree \(and therefore of each member of the family tree\) is) Tj
+T* (organization D.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 265.2799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 251.7799999999999727 Td
+(organization.corporateLinkage.globalUltimate.duns) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 265.2799999999999727 478.4254330708660632 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 251.7799999999999727 Td
+([string] e.g.: 804735132) Tj
+T* (The unique identification number assigned by Dun and Bradstreet identifying the top most organisation in) Tj
+T* (the family tree.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 220.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 207.2800000000000296 Td
+(organization.corporateLinkage.globalUltimate.primaryName) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 220.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 207.2800000000000296 Td
+([string] e.g.: GORMAN MANUFACTURING COMPANY, INC.) Tj
+T* (Single name by which the organization is primarily known or identified.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 187.7800000000000296 283.4645669291338663 -124.9999999999999858 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 174.2800000000000864 Td
+(organization.corporateLinkage.domesticUltimate) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 187.7800000000000296 478.4254330708660632 -124.9999999999999858 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 174.2800000000000864 Td
+([object]) Tj
+T* (The details of the highest ranking member of a family tree within the same country/region within a limb of a) Tj
+T* (family.) Tj
+T* () Tj
+T* ( ) Tj
+T* () Tj
+T* (For example, Company A is based in the US and has Company B as its parent also in the US. In turn) Tj
+T* (Company B is owned by Company C, also in the US, which is owned by Company D which is in the UK.) Tj
+T* (Thus, the Domestic Ultimate of Company A is actually Company C as this is the last entity in the parent) Tj
+T* (chain that is in the US.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 62.779999999999994 283.4645669291338663 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 49.2800000000000864 Td
+(organization.corporateLinkage.domesticUltimate.duns) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 62.779999999999994 478.4254330708660632 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 49.2800000000000864 Td
+([string] e.g.: 804735132) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+45 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 46 0 R
+>>
+endobj
+46 0 obj
+<<
+/Length 7089
+>>
+stream
+0. w
+0.78 G
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 555.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 555.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+(The D-U-N-S® number of the highest ranking member of a family tree within the same country/region) Tj
+T* (within a limb of a family tree.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 522.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 508.7799999999999727 Td
+(organization.corporateLinkage.domesticUltimate.primaryNam) Tj
+T* (e) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 522.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 508.7799999999999727 Td
+([string] e.g.: GORMAN MANUFACTURING COMPANY, INC.) Tj
+T* (Single name by which the organization is primarily known or identified.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 489.2799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 475.7799999999999727 Td
+(organization.corporateLinkage.parent) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 489.2799999999999159 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 475.7799999999999727 Td
+([object]) Tj
+T* (The details of the organization that owns more than 50% of the subject organization.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 456.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 442.7799999999999727 Td
+(organization.corporateLinkage.parent.duns) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 456.2799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 442.7799999999999727 Td
+([string] e.g.: 804735132) Tj
+T* (The D-U-N-S® number of the organization that owns more than 50% of the subject organization.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 423.2799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 409.7799999999999727 Td
+(organization.corporateLinkage.parent.primaryName) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 423.2799999999999159 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 409.7799999999999727 Td
+([string] e.g.: GORMAN MANUFACTURING COMPANY, INC.) Tj
+T* (Single name by which the organization is primarily known or identified.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 390.2799999999999727 283.4645669291338663 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 376.7799999999999727 Td
+(organization.isLargeStructure) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 390.2799999999999727 478.4254330708660632 -90.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 376.7799999999999727 Td
+([boolean] e.g.: true) Tj
+T* (When set to "true", it denotes that this request has more associated entities that cannot be delivered in a) Tj
+T* (single API response and needs to be paginated to deliver all linked entities. The totalRecordCount) Tj
+T* (provides the number of all entities for this request criteria.) Tj
+T* (A default page size of 1000 applied in this case.) Tj
+T* (When set to "false", it denotes that all the entities associated with this request can be delivered in a single) Tj
+T* (API response.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 299.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 286.2800000000000296 Td
+(organization.totalRecordCount) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 299.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 286.2800000000000296 Td
+([integer] e.g.: 10000) Tj
+T* (The overall number of entities that match the request criteria.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 266.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 253.2800000000000296 Td
+(organization.returnedRecordCount) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 266.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 253.2800000000000296 Td
+([integer] e.g.: 100) Tj
+T* (The number of entities returned in the response.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 233.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 220.2800000000000296 Td
+(totalPageCount) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 233.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 220.2800000000000296 Td
+([integer] e.g.: 5) Tj
+T* (The total number of pages that match the request criteria.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 200.7800000000000296 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 187.2800000000000864 Td
+(links) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 200.7800000000000296 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 187.2800000000000864 Td
+([object]) Tj
+T* (The links to traverse between pages with search results.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 167.780000000000058 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 154.2800000000001432 Td
+(links.self) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 167.780000000000058 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 154.2800000000001432 Td
+([string] e.g.: https://dnblinktopage.com) Tj
+T* (Link to the current page of the results.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 134.7800000000000864 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 121.2800000000001432 Td
+(links.prev) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 134.7800000000000864 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 121.2800000000001432 Td
+([string] e.g.: https://dnblinktopage.com) Tj
+T* (Link to the previous page of the results.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 101.780000000000129 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 88.2800000000002001 Td
+(links.next) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 101.780000000000129 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 88.2800000000002001 Td
+([string] e.g.: https://dnblinktopage.com) Tj
+T* (Link to the next page of the results.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 68.7800000000001717 283.4645669291338663 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 55.2800000000002001 Td
+(links.first) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 68.7800000000001717 478.4254330708660632 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 55.2800000000002001 Td
+([string] e.g.: https://dnblinktopage.com) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+47 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 48 0 R
+>>
+endobj
+48 0 obj
+<<
+/Length 6914
+>>
+stream
+0. w
+0.78 G
+1. g
+0.78 G
+0. w
+1. g
+40. 555.2799999999999727 283.4645669291338663 -21.4999999999999964 re
+f
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 555.2799999999999727 478.4254330708660632 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+(Link to the first page of the results.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 533.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 520.2799999999999727 Td
+(links.last) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 533.7799999999999727 478.4254330708660632 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 520.2799999999999727 Td
+([string] e.g.: https://dnblinktopage.com) Tj
+T* (Link to the last page of the results) Tj
+ET
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0. g
+28.3464566929133888 472.4335433070866088 Td
+(Response for HTTP Status Code : 301) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.93 g
+0.78 G
+0. w
+0.93 g
+40. 444.0870866141732449 283.4645669291338663 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+0. 0.318 0.447 rg
+45. 430.5870866141732449 Td
+(Name) Tj
+ET
+0.93 g
+0.78 G
+0. w
+0.93 g
+323.4645669291339232 444.0870866141732449 478.4254330708662337 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+0. 0.318 0.447 rg
+328.4645669291338663 430.5870866141732449 Td
+(Details) Tj
+ET
+0. G
+0.5670000000000001 w
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 422.5870866141731881 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 409.0870866141732449 Td
+(transactionDetail) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 422.5870866141731881 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 409.0870866141732449 Td
+([object]) Tj
+T* (The information used to process this request.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 389.5870866141731881 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 376.0870866141732449 Td
+(transactionDetail.transactionID) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 389.5870866141731881 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 376.0870866141732449 Td
+([string] e.g.: rlh-hi9puyoijk-jop8u-kd-d-1) Tj
+T* (A value assigned by the Dun & Bradstreet application to uniquely identify this request.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 356.5870866141731881 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 343.0870866141732449 Td
+(transactionDetail.transactionTimestamp) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 356.5870866141731881 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 343.0870866141732449 Td
+([string] e.g.: 2017-02-21T17:46:19.839Z) Tj
+T* (The date and time, in ISO 8601 UTC Z standard, when this response was created.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 323.5870866141731881 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 310.0870866141732449 Td
+(transactionDetail.inLanguage) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 323.5870866141731881 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 310.0870866141732449 Td
+([string] e.g.: en-US) Tj
+T* (An IETF BCP 47 code value that defines the language in which this product was rendered.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 290.5870866141731881 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 277.0870866141732449 Td
+(transactionDetail.productID) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 290.5870866141731881 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 277.0870866141732449 Td
+([string] e.g.: PRODID) Tj
+T* (The ID of the product used to create the response.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 257.5870866141731881 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 244.0870866141732449 Td
+(transactionDetail.productVersion) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 257.5870866141731881 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 244.0870866141732449 Td
+([string] e.g.: 1) Tj
+T* (The version of the product used to create the response.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 224.5870866141732449 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 211.0870866141733018 Td
+(error) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 224.5870866141732449 478.4254330708662337 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 211.0870866141733018 Td
+([object]) Tj
+T* (The details of any error that occurred. This section is created only when the customer request was not) Tj
+T* (fulfilled due to system failures, incorrect, or incomplete request parameters, etc.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 180.0870866141732165 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 166.5870866141733018 Td
+(error.errorCode) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 180.0870866141732165 478.4254330708662337 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 166.5870866141733018 Td
+([string] e.g.: 10002) Tj
+T* (A number assigned by Dun & Bradstreet that uniquely identifies the reason for failure of this request. See) Tj
+T* (the Error and Information Code list for more information.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 135.5870866141731881 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 122.0870866141732449 Td
+(error.errorMessage) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 135.5870866141731881 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 122.0870866141732449 Td
+([string] e.g.: Invalid parameters.) Tj
+T* (Describes reason for failure of this request.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 102.5870866141732165 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 89.0870866141733018 Td
+(error.errorDetails) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 102.5870866141732165 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 89.0870866141733018 Td
+([array \(object\)]) Tj
+T* (The details of the error.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 69.5870866141732591 283.4645669291338663 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 56.0870866141733586 Td
+(error.errorDetails.parameter) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 69.5870866141732591 478.4254330708662337 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 56.0870866141733586 Td
+([string] e.g.: duns) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+49 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 50 0 R
+>>
+endobj
+50 0 obj
+<<
+/Length 6803
+>>
+stream
+0. w
+0.78 G
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 555.2799999999999727 283.4645669291338663 -21.4999999999999964 re
+f
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 555.2799999999999727 478.4254330708662337 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+(The name of the parameter that contains an invalid value or is missing.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 533.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 520.2799999999999727 Td
+(error.errorDetails.description) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 533.7799999999999727 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 520.2799999999999727 Td
+([string] e.g.: Invalid parameters.) Tj
+T* (Describes reason for failure of this request.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 500.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 487.2799999999999727 Td
+(inquiryDetail) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 500.7799999999999727 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 487.2799999999999727 Td
+([object]) Tj
+T* (The details of the input data provided.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 467.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 454.2799999999999727 Td
+(inquiryDetail.duns) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 467.7799999999999727 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 454.2799999999999727 Td
+([string] e.g.: 804735132) Tj
+T* (The D-U-N-S number provided in the request.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 434.7799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 421.2799999999999727 Td
+(inquiryDetail.productID) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 434.7799999999999159 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 421.2799999999999727 Td
+([string] e.g.: PRODID) Tj
+T* (The ID of the product used to produce the response.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 401.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 388.2799999999999727 Td
+(inquiryDetail.productVersion) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 401.7799999999999727 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 388.2799999999999727 Td
+([string] e.g.: v1) Tj
+T* (The product version number provided in the request.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 368.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 355.2799999999999727 Td
+(inquiryDetail.tradeUp) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 368.7799999999999727 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 355.2799999999999727 Td
+([string] e.g.: hq) Tj
+T* (The value of the tradeUp parameter provided in the request.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 335.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 322.2799999999999727 Td
+(inquiryDetail.ownershipType) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 335.7799999999999727 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 322.2799999999999727 Td
+([string] e.g.: BENF_OWRP) Tj
+T* (The ownership type code provided in the request.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 302.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 289.2799999999999727 Td
+(inquiryDetail.ownershipPercentage) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 302.7799999999999727 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 289.2799999999999727 Td
+([number] e.g.: 50) Tj
+T* (The ownership percentage included in the request.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 269.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 256.2799999999999727 Td
+(inquiryDetail.excludeUndisclosedHoldings) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 269.7799999999999727 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 256.2799999999999727 Td
+([string] e.g.: true) Tj
+T* (The undisclosed holdings value provided in the request.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 236.7799999999999443 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 223.2799999999999727 Td
+(inquiryDetail.degreeOfSeparation) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 236.7799999999999443 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 223.2799999999999727 Td
+([integer] e.g.: 1) Tj
+T* (The degree of separation provided in the request.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 203.7799999999999443 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 190.2800000000000296 Td
+(inquiryDetail.customerReference) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 203.7799999999999443 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 190.2800000000000296 Td
+([string] e.g.: Some text to describe the request.) Tj
+T* (A reference string provided by the customer for this particular transaction.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 170.7799999999999727 283.4645669291338663 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 157.2800000000000296 Td
+(inquiryDetail.appliedControlType) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 170.7799999999999727 478.4254330708662337 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 157.2800000000000296 Td
+([integer] e.g.: 34781) Tj
+T* (The type of calculation applied to imply the unknown or undisclosed ownership percentage of the inquired) Tj
+T* (subject.) Tj
+T* () Tj
+T* (When set to NULL, D&B implied ownership percentages will be calculated based on the worst case) Tj
+T* (distribution.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 91.7799999999999869 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 78.2800000000000864 Td
+(inquiryDetail.pageNumber) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 91.7799999999999869 478.4254330708662337 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 78.2800000000000864 Td
+([string] e.g.: 1) Tj
+T* (Denotes the preference of the customer to return search results starting from a specific page. A maximum) Tj
+T* (of 1000 results can be returned. By default this is set to 1.) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+51 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 52 0 R
+>>
+endobj
+52 0 obj
+<<
+/Length 6747
+>>
+stream
+0. w
+0.78 G
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 555.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 541.7799999999999727 Td
+(inquiryDetail.returnPaginatedResults) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 555.2799999999999727 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+([string] e.g.: true) Tj
+T* (The returnPaginatedResults provided in the request.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 522.2799999999999727 283.4645669291338663 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 508.7799999999999727 Td
+(duns) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 522.2799999999999727 478.4254330708662337 -56. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 508.7799999999999727 Td
+([string] e.g.: 804735132) Tj
+T* (The D-U-N-S® Number, a proprietary organizational identifier owned and managed by Dun & Bradstreet) Tj
+T* (Inc, provides unique identification of a subject organization, in accordance with the Data Universal) Tj
+T* (Numbering System \(D-U-N-S®\).) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 466.2799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 452.7799999999999727 Td
+(dunsControlStatus) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 466.2799999999999727 478.4254330708662337 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 452.7799999999999727 Td
+([object]) Tj
+T* (The details of the organization's functional state and controls that impact its suitability for various usage) Tj
+T* (purposes.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 421.7799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 408.2799999999999727 Td
+(dunsControlStatus.dunsTransfers) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 421.7799999999999159 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 408.2799999999999727 Td
+([array \(object\)] Required) Tj
+T* (The transfer details of the given D-U-N-S number.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 388.7799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 375.2799999999999727 Td
+(dunsControlStatus.dunsTransfers.retainedDUNS) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 388.7799999999999727 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 375.2799999999999727 Td
+([string] Required e.g.: 123456789) Tj
+T* (D-U-N-S number of the given input that is retained.) Tj
+ET
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0. g
+28.3464566929133888 327.4335433070866088 Td
+(Response for all other HTTP Status Codes) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.93 g
+0.78 G
+0. w
+0.93 g
+40. 299.0870866141731881 283.4645669291338663 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+0. 0.318 0.447 rg
+45. 285.5870866141731881 Td
+(Name) Tj
+ET
+0.93 g
+0.78 G
+0. w
+0.93 g
+323.4645669291339232 299.0870866141731881 478.4254330708662337 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+0. 0.318 0.447 rg
+328.4645669291338663 285.5870866141731881 Td
+(Details) Tj
+ET
+0. G
+0.5670000000000001 w
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 277.5870866141731881 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 264.0870866141731881 Td
+(transactionDetail) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 277.5870866141731881 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 264.0870866141731881 Td
+([object]) Tj
+T* (The information used to process this request.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 244.5870866141731597 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 231.0870866141731881 Td
+(transactionDetail.transactionID) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 244.5870866141731597 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 231.0870866141731881 Td
+([string] e.g.: rlh-hi9puyoijk-jop8u-kd-d-1) Tj
+T* (A value assigned by the Dun & Bradstreet application to uniquely identify this request.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 211.5870866141731597 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 198.0870866141732449 Td
+(transactionDetail.transactionTimestamp) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 211.5870866141731597 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 198.0870866141732449 Td
+([string] e.g.: 2017-02-21T17:46:19.839Z) Tj
+T* (The date and time, in ISO 8601 UTC Z standard, when this response was created.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 178.5870866141732165 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 165.0870866141732449 Td
+(transactionDetail.inLanguage) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 178.5870866141732165 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 165.0870866141732449 Td
+([string] e.g.: en-US) Tj
+T* (An IETF BCP 47 code value that defines the language in which this product was rendered.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 145.5870866141732449 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 132.0870866141733018 Td
+(transactionDetail.productID) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 145.5870866141732449 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 132.0870866141733018 Td
+([string] e.g.: PRODID) Tj
+T* (The ID of the product used to create the response.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 112.5870866141732876 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 99.0870866141733586 Td
+(transactionDetail.productVersion) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 112.5870866141732876 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 99.0870866141733586 Td
+([string] e.g.: 1) Tj
+T* (The version of the product used to create the response.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 79.5870866141733302 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 66.0870866141733586 Td
+(error) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 79.5870866141733302 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 66.0870866141733586 Td
+([object]) Tj
+T* (The details of any error that occurred. This section is created only when the customer request was not) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+53 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 54 0 R
+>>
+endobj
+54 0 obj
+<<
+/Length 7023
+>>
+stream
+0. w
+0.78 G
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 555.2799999999999727 283.4645669291338663 -21.4999999999999964 re
+f
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 555.2799999999999727 478.4254330708662337 -21.4999999999999964 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+(fulfilled due to system failures, incorrect, or incomplete request parameters, etc.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 533.7799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 520.2799999999999727 Td
+(error.errorCode) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 533.7799999999999727 478.4254330708662337 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 520.2799999999999727 Td
+([string] e.g.: 10002) Tj
+T* (A number assigned by Dun & Bradstreet that uniquely identifies the reason for failure of this request. See) Tj
+T* (the Error and Information Code list for more information.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 489.2799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 475.7799999999999727 Td
+(error.errorMessage) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 489.2799999999999159 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 475.7799999999999727 Td
+([string] e.g.: Invalid parameters.) Tj
+T* (Describes reason for failure of this request.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 456.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 442.7799999999999727 Td
+(error.errorDetails) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 456.2799999999999727 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 442.7799999999999727 Td
+([array \(object\)]) Tj
+T* (The details of the error.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 423.2799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 409.7799999999999727 Td
+(error.errorDetails.parameter) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 423.2799999999999159 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 409.7799999999999727 Td
+([string] e.g.: duns) Tj
+T* (The name of the parameter that contains an invalid value or is missing.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 390.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 376.7799999999999727 Td
+(error.errorDetails.description) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 390.2799999999999727 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 376.7799999999999727 Td
+([string] e.g.: Invalid parameters.) Tj
+T* (Describes reason for failure of this request.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 357.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 343.7799999999999727 Td
+(inquiryDetail) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 357.2799999999999727 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 343.7799999999999727 Td
+([object]) Tj
+T* (The details of the input data provided.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 324.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 310.7799999999999727 Td
+(inquiryDetail.duns) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 324.2799999999999727 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 310.7799999999999727 Td
+([string] e.g.: 804735132) Tj
+T* (The D-U-N-S number provided in the request.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 291.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 277.7799999999999727 Td
+(inquiryDetail.productID) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 291.2799999999999727 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 277.7799999999999727 Td
+([string] e.g.: PRODID) Tj
+T* (The ID of the product used to produce the response.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 258.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 244.7799999999999727 Td
+(inquiryDetail.productVersion) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 258.2799999999999727 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 244.7799999999999727 Td
+([string] e.g.: v1) Tj
+T* (The product version number provided in the request.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 225.2800000000000011 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 211.7800000000000864 Td
+(inquiryDetail.tradeUp) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 225.2800000000000011 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 211.7800000000000864 Td
+([string] e.g.: hq) Tj
+T* (The value of the tradeUp parameter provided in the request.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 192.2800000000000296 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 178.7800000000000864 Td
+(inquiryDetail.ownershipType) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 192.2800000000000296 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 178.7800000000000864 Td
+([string] e.g.: BENF_OWRP) Tj
+T* (The ownership type code provided in the request.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 159.2800000000000864 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 145.7800000000001432 Td
+(inquiryDetail.ownershipPercentage) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 159.2800000000000864 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 145.7800000000001432 Td
+([number] e.g.: 50) Tj
+T* (The ownership percentage included in the request.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 126.2800000000001148 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 112.7800000000002001 Td
+(inquiryDetail.excludeUndisclosedHoldings) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 126.2800000000001148 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 112.7800000000002001 Td
+([string] e.g.: true) Tj
+T* (The undisclosed holdings value provided in the request.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 93.2800000000001575 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 79.7800000000002001 Td
+(inquiryDetail.degreeOfSeparation) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 93.2800000000001575 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 79.7800000000002001 Td
+([integer] e.g.: 1) Tj
+T* (The degree of separation provided in the request.) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+endstream
+endobj
+55 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 841.8899999999999864 595.2799999999999727]
+/Contents 56 0 R
+>>
+endobj
+56 0 obj
+<<
+/Length 2321
+>>
+stream
+0. w
+0.78 G
+1. g
+0.78 G
+0. w
+1. g
+40. 555.2799999999999727 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 541.7799999999999727 Td
+(inquiryDetail.customerReference) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 555.2799999999999727 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 541.7799999999999727 Td
+([string] e.g.: Some text to describe the request.) Tj
+T* (A reference string provided by the customer for this particular transaction.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 522.2799999999999727 283.4645669291338663 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 508.7799999999999727 Td
+(inquiryDetail.appliedControlType) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 522.2799999999999727 478.4254330708662337 -79. re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 508.7799999999999727 Td
+([integer] e.g.: 34781) Tj
+T* (The type of calculation applied to imply the unknown or undisclosed ownership percentage of the inquired) Tj
+T* (subject.) Tj
+T* () Tj
+T* (When set to NULL, D&B implied ownership percentages will be calculated based on the worst case) Tj
+T* (distribution.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 443.2799999999999727 283.4645669291338663 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 429.7799999999999727 Td
+(inquiryDetail.pageNumber) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+323.4645669291339232 443.2799999999999727 478.4254330708662337 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 429.7799999999999727 Td
+([string] e.g.: 1) Tj
+T* (Denotes the preference of the customer to return search results starting from a specific page. A maximum) Tj
+T* (of 1000 results can be returned. By default this is set to 1.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 398.7799999999999159 283.4645669291338663 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 385.2799999999999727 Td
+(inquiryDetail.returnPaginatedResults) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+323.4645669291339232 398.7799999999999159 478.4254330708662337 -32.9999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+328.4645669291338663 385.2799999999999727 Td
+([string] e.g.: true) Tj
+T* (The returnPaginatedResults provided in the request.) Tj
+ET
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R 27 0 R 29 0 R 31 0 R 33 0 R 35 0 R 37 0 R 39 0 R 41 0 R 43 0 R 45 0 R 47 0 R 49 0 R 51 0 R 53 0 R 55 0 R ]
+/Count 27
+>>
+endobj
+57 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+58 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+59 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+60 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+61 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+62 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+63 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+64 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+65 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+66 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+67 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+68 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+69 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+70 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 57 0 R
+/F2 58 0 R
+/F3 59 0 R
+/F4 60 0 R
+/F5 61 0 R
+/F6 62 0 R
+/F7 63 0 R
+/F8 64 0 R
+/F9 65 0 R
+/F10 66 0 R
+/F11 67 0 R
+/F12 68 0 R
+/F13 69 0 R
+/F14 70 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+71 0 obj
+<<
+/Producer (jsPDF 3.0.1)
+/CreationDate (D:20260105182511-00'00')
+>>
+endobj
+72 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 73
+0000000000 65535 f 
+0000172878 00000 n 
+0000174880 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000005089 00000 n 
+0000005226 00000 n 
+0000009099 00000 n 
+0000009236 00000 n 
+0000014447 00000 n 
+0000014585 00000 n 
+0000022125 00000 n 
+0000022264 00000 n 
+0000028601 00000 n 
+0000028740 00000 n 
+0000033828 00000 n 
+0000033967 00000 n 
+0000038940 00000 n 
+0000039079 00000 n 
+0000045647 00000 n 
+0000045786 00000 n 
+0000053578 00000 n 
+0000053717 00000 n 
+0000061089 00000 n 
+0000061228 00000 n 
+0000068662 00000 n 
+0000068801 00000 n 
+0000073787 00000 n 
+0000073926 00000 n 
+0000080885 00000 n 
+0000081024 00000 n 
+0000087034 00000 n 
+0000087173 00000 n 
+0000092977 00000 n 
+0000093116 00000 n 
+0000099594 00000 n 
+0000099733 00000 n 
+0000106691 00000 n 
+0000106830 00000 n 
+0000113457 00000 n 
+0000113596 00000 n 
+0000121084 00000 n 
+0000121223 00000 n 
+0000128156 00000 n 
+0000128295 00000 n 
+0000134829 00000 n 
+0000134968 00000 n 
+0000142110 00000 n 
+0000142249 00000 n 
+0000149216 00000 n 
+0000149355 00000 n 
+0000156211 00000 n 
+0000156350 00000 n 
+0000163150 00000 n 
+0000163289 00000 n 
+0000170365 00000 n 
+0000170504 00000 n 
+0000173115 00000 n 
+0000173241 00000 n 
+0000173372 00000 n 
+0000173506 00000 n 
+0000173644 00000 n 
+0000173768 00000 n 
+0000173897 00000 n 
+0000174029 00000 n 
+0000174165 00000 n 
+0000174293 00000 n 
+0000174420 00000 n 
+0000174549 00000 n 
+0000174682 00000 n 
+0000174784 00000 n 
+0000175133 00000 n 
+0000175219 00000 n 
+trailer
+<<
+/Size 73
+/Root 72 0 R
+/Info 71 0 R
+/ID [ <D39432E30522C3A8B6D27033F76BAD2B> <D39432E30522C3A8B6D27033F76BAD2B> ]
+>>
+startxref
+175323
+%%EOF
