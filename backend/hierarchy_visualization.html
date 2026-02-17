@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&B Hierarchy Visualization</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 600;
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            font-size: 16px;
+        }
+        
+        .controls {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .controls label {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .controls select {
+            padding: 8px 12px;
+            border: 2px solid #667eea;
+            border-radius: 6px;
+            font-size: 14px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .controls select:hover {
+            border-color: #764ba2;
+        }
+        
+        .controls button {
+            padding: 8px 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .controls button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        
+        .info-panel {
+            padding: 20px 30px;
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            margin: 20px 30px;
+            border-radius: 6px;
+        }
+        
+        .info-panel h3 {
+            margin: 0 0 10px 0;
+            color: #856404;
+        }
+        
+        .info-panel p {
+            margin: 5px 0;
+            color: #856404;
+        }
+        
+        #visualization {
+            padding: 30px;
+            min-height: 600px;
+            background: white;
+        }
+        
+        .node circle {
+            stroke-width: 3px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .node:hover circle {
+            stroke-width: 5px;
+            filter: brightness(1.1);
+        }
+        
+        .node text {
+            font-size: 14px;
+            font-weight: 500;
+            pointer-events: none;
+        }
+        
+        .link {
+            fill: none;
+            stroke: #999;
+            stroke-width: 2px;
+            stroke-opacity: 0.6;
+        }
+        
+        .node-subject circle {
+            fill: #667eea;
+            stroke: #5568d3;
+        }
+        
+        .node-parent circle {
+            fill: #48bb78;
+            stroke: #38a169;
+        }
+        
+        .node-ultimate_parent circle {
+            fill: #ed8936;
+            stroke: #dd6b20;
+        }
+        
+        .node-subsidiary circle {
+            fill: #4299e1;
+            stroke: #3182ce;
+        }
+        
+        .legend {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid rgba(0,0,0,0.2);
+        }
+        
+        .legend-label {
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 60px 30px;
+            color: #999;
+        }
+        
+        .empty-state svg {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌳 D&B Hierarchy Visualization</h1>
+            <p>Interactive visualization of corporate hierarchy structures from D&B data</p>
+        </div>
+        
+        <div class="controls">
+            <label for="moduleSelect">Select Module:</label>
+            <select id="moduleSelect">
+                <option value="">Loading modules...</option>
+            </select>
+            <button onclick="loadHierarchy()">Load Hierarchy</button>
+            <button onclick="resetZoom()">Reset Zoom</button>
+        </div>
+        
+        <div id="infoPanel" class="info-panel" style="display: none;">
+            <h3>Hierarchy Information</h3>
+            <p><strong>Module:</strong> <span id="infoModule">-</span></p>
+            <p><strong>Total Nodes:</strong> <span id="infoNodes">-</span></p>
+            <p><strong>Max Depth:</strong> <span id="infoDepth">-</span></p>
+            <p><strong>Root Entity:</strong> <span id="infoRoot">-</span></p>
+        </div>
+        
+        <div id="visualization"></div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: #667eea; border-color: #5568d3;"></div>
+                <span class="legend-label">Subject Entity</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #48bb78; border-color: #38a169;"></div>
+                <span class="legend-label">Parent</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ed8936; border-color: #dd6b20;"></div>
+                <span class="legend-label">Ultimate Parent</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #4299e1; border-color: #3182ce;"></div>
+                <span class="legend-label">Subsidiary</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:8000/api/v1';
+        let currentData = null;
+        let svg = null;
+        let g = null;
+        let zoom = null;
+        
+        // Load hierarchy-capable modules
+        async function loadModules() {
+            try {
+                const response = await fetch(`${API_BASE}/references/hierarchy/summary`);
+                const data = await response.json();
+                
+                const select = document.getElementById('moduleSelect');
+                select.innerHTML = '<option value="">-- Select a module --</option>';
+                
+                data.modules.forEach(module => {
+                    const option = document.createElement('option');
+                    option.value = module.module_id;
+                    option.textContent = `${module.module_id} (${module.node_count} nodes)`;
+                    select.appendChild(option);
+                });
+            } catch (error) {
+                console.error('Error loading modules:', error);
+                alert('Error loading modules. Make sure the backend server is running.');
+            }
+        }
+        
+        // Load hierarchy for selected module
+        async function loadHierarchy() {
+            const moduleId = document.getElementById('moduleSelect').value;
+            if (!moduleId) {
+                alert('Please select a module first');
+                return;
+            }
+            
+            try {
+                const response = await fetch(`${API_BASE}/references/${moduleId}/hierarchy`);
+                currentData = await response.json();
+                
+                // Update info panel
+                document.getElementById('infoPanel').style.display = 'block';
+                document.getElementById('infoModule').textContent = currentData.module_id;
+                document.getElementById('infoNodes').textContent = currentData.summary.total_nodes;
+                document.getElementById('infoDepth').textContent = currentData.summary.max_depth;
+                document.getElementById('infoRoot').textContent = currentData.root_node ? currentData.root_node.name : 'None';
+                
+                // Visualize
+                visualizeHierarchy(currentData);
+            } catch (error) {
+                console.error('Error loading hierarchy:', error);
+                alert('Error loading hierarchy data');
+            }
+        }
+        
+        // Visualize hierarchy using D3
+        function visualizeHierarchy(data) {
+            const container = document.getElementById('visualization');
+            container.innerHTML = '';
+            
+            if (!data.nodes || data.nodes.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                        </svg>
+                        <h3>No Hierarchy Data Available</h3>
+                        <p>This module doesn't contain hierarchy information in the sample JSON.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            const width = container.clientWidth;
+            const height = 600;
+            
+            // Create SVG
+            svg = d3.select('#visualization')
+                .append('svg')
+                .attr('width', width)
+                .attr('height', height);
+            
+            // Add zoom behavior
+            zoom = d3.zoom()
+                .scaleExtent([0.1, 4])
+                .on('zoom', (event) => {
+                    g.attr('transform', event.transform);
+                });
+            
+            svg.call(zoom);
+            
+            g = svg.append('g');
+            
+            // Create force simulation
+            const simulation = d3.forceSimulation(data.nodes)
+                .force('charge', d3.forceManyBody().strength(-300))
+                .force('center', d3.forceCenter(width / 2, height / 2))
+                .force('collision', d3.forceCollide().radius(60));
+            
+            // Create links (if any relationships exist)
+            const link = g.append('g')
+                .selectAll('line')
+                .data(data.relationships)
+                .enter()
+                .append('line')
+                .attr('class', 'link');
+            
+            // Create nodes
+            const node = g.append('g')
+                .selectAll('g')
+                .data(data.nodes)
+                .enter()
+                .append('g')
+                .attr('class', d => `node node-${d.type}`)
+                .call(d3.drag()
+                    .on('start', dragstarted)
+                    .on('drag', dragged)
+                    .on('end', dragended));
+            
+            // Add circles
+            node.append('circle')
+                .attr('r', 30)
+                .on('click', (event, d) => {
+                    alert(`${d.name}\\nDUNS: ${d.id}\\nType: ${d.type}\\nLevel: ${d.level}`);
+                });
+            
+            // Add labels
+            node.append('text')
+                .attr('dy', 50)
+                .attr('text-anchor', 'middle')
+                .text(d => d.name.length > 20 ? d.name.substring(0, 20) + '...' : d.name)
+                .style('fill', '#333')
+                .style('font-size', '12px');
+            
+            // Update positions on simulation tick
+            simulation.on('tick', () => {
+                link
+                    .attr('x1', d => d.source.x)
+                    .attr('y1', d => d.source.y)
+                    .attr('x2', d => d.target.x)
+                    .attr('y2', d => d.target.y);
+                
+                node.attr('transform', d => `translate(${d.x},${d.y})`);
+            });
+            
+            function dragstarted(event, d) {
+                if (!event.active) simulation.alphaTarget(0.3).restart();
+                d.fx = d.x;
+                d.fy = d.y;
+            }
+            
+            function dragged(event, d) {
+                d.fx = event.x;
+                d.fy = event.y;
+            }
+            
+            function dragended(event, d) {
+                if (!event.active) simulation.alphaTarget(0);
+                d.fx = null;
+                d.fy = null;
+            }
+        }
+        
+        function resetZoom() {
+            if (svg && zoom) {
+                svg.transition().duration(750).call(
+                    zoom.transform,
+                    d3.zoomIdentity
+                );
+            }
+        }
+        
+        // Initialize
+        loadModules();
+    </script>
+</body>
+</html>

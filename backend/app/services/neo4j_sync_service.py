@@ -18,6 +18,7 @@ class Neo4jSyncService:
             e.jurisdiction_code = $jurisdiction_code,
             e.revenue_usd = $revenue_usd,
             e.employee_count = $employee_count,
+            e.risk_score = $risk_score,
             e.last_updated = datetime()
         """
         
@@ -27,7 +28,8 @@ class Neo4jSyncService:
                 name=entity.name,
                 jurisdiction_code=entity.jurisdiction_code,
                 revenue_usd=entity.revenue_usd,
-                employee_count=entity.employee_count
+                employee_count=entity.employee_count,
+                risk_score=entity.risk_score or 50
             )
 
     def sync_relationships(self, parent_id: str, child_id: str, relationship_type: str, properties: dict):

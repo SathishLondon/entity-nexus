@@ -1,0 +1,41 @@
+{
+  "module_id": "Standard_DB_Hierarchy_Connections",
+  "nodes": [
+    {
+      "id": "804735132",
+      "name": "Gorman Manufacturing Company, Inc.",
+      "type": "subject",
+      "level": 0
+    },
+    {
+      "id": "804735132",
+      "name": "Gorman Manufacturing Company, Inc.",
+      "type": "parent",
+      "level": -1
+    },
+    {
+      "id": "804735132",
+      "name": "Gorman Manufacturing Company, Inc.",
+      "type": "ultimate_parent",
+      "level": -2
+    }
+  ],
+  "relationships": [],
+  "root_node": {
+    "id": "804735132",
+    "name": "Gorman Manufacturing Company, Inc.",
+    "type": "subject",
+    "level": 0
+  },
+  "tree_data": {
+    "id": "804735132",
+    "name": "Gorman Manufacturing Company, Inc.",
+    "type": "subject",
+    "children": []
+  },
+  "summary": {
+    "total_nodes": 3,
+    "total_relationships": 0,
+    "max_depth": 0
+  }
+}

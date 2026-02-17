@@ -79,8 +79,33 @@ class ResolvedEntity(Base):
     revenue_usd = Column(Float)
     employee_count = Column(Integer)
     
+    # Risk Data (Phase 7)
+    risk_score = Column(Integer, default=50) # 0-100 (Higher is riskier)
+    
     # Lineage Metadata (The "Why")
     # Structure: { "name": { "source": "dnb", "payload_id": "...", "confidence": 0.9 } }
     lineage_metadata = Column(JSONB, default=dict)
     
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+class EntityDataBlock(Base):
+    """
+    Tracks which D&B data blocks have been loaded for each entity.
+    Enables cross-module data linking and visualization of data completeness.
+    """
+    __tablename__ = "entity_data_blocks"
+    
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    entity_id = Column(UUID(as_uuid=True), ForeignKey('resolved_entities.id'), nullable=False, index=True)
+    module_id = Column(String(255), nullable=False)
+    category = Column(String(50))  # Standard, Additional, Side, Add-on
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    
+    # Relationship
+    entity = relationship("ResolvedEntity")
+    
+    # Composite unique constraint: one record per entity-module pair
+    __table_args__ = (
+        Index('idx_entity_module', 'entity_id', 'module_id', unique=True),
+    )

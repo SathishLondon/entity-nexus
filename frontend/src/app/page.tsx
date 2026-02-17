@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import GraphViz from '@/components/GraphViz';
 import { fetchEntityGraph } from '@/lib/api';
 import { Node, Edge } from '@xyflow/react';
@@ -41,9 +42,14 @@ export default function Home() {
 
   return (
     <div className="min-h-screen p-8 font-sans bg-gray-50">
-      <header className="mb-8">
-        <h1 className="text-3xl font-bold mb-2 text-gray-900">Entity Nexus</h1>
-        <p className="text-gray-600">Enterprise Entity Resolution & Graph Explorer</p>
+      <header className="mb-8 flex justify-between items-center">
+        <div>
+          <h1 className="text-3xl font-bold mb-2 text-gray-900">Entity Nexus</h1>
+          <p className="text-gray-600">Enterprise Entity Resolution & Graph Explorer</p>
+        </div>
+        <Link href="/explorer" className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded font-medium transition-colors">
+          📚 D&B API Explorer
+        </Link>
       </header>
 
       <div className="flex gap-4 mb-8">

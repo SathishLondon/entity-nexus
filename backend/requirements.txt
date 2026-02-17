@@ -48,3 +48,11 @@ uvicorn==0.39.0
 xxhash==3.6.0
 zstandard==0.25.0
 pydantic-settings
+langchain
+langchain-openai
+langchain-community
+pandas
+openpyxl
+jsonpath-ng==1.6.1
+fuzzywuzzy==0.18.0
+python-Levenshtein==0.25.0
