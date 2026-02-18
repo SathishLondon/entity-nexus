@@ -1,0 +1,43 @@
+# Phase 0B Knowledge Extraction Test
+
+**Date:** 2026-02-17  
+**Meeting:** D&B Data Integration Discussion
+
+## Attendees
+- John Smith (Data Architect)
+- Sarah Johnson (Integration Lead)
+- Mike Chen (Developer)
+
+## Discussion Notes
+
+### Ownership Data Modules
+
+John Smith: We've been getting questions about cmpbol versus cmpbos. The key difference is that cmpbol shows cumulative ownership percentages relative to the inquiry party, while cmpbos shows pairwise relationships between each entity in the hierarchy.
+
+Sarah Johnson: That's a critical distinction! I've seen clients get confused because they expect the same percentages in both modules. We should document this.
+
+Mike Chen: Also, watch out for DUNS numbers - they can have leading zeros, so always store them as strings, never as integers. I've seen data corruption issues when people treat them as numbers.
+
+### API Best Practices
+
+John Smith: When querying hierarchy data, always use the cmpbos module if you're building visualizations. It's optimized for graph representations. Use cmpbol for tabular reports and compliance documents.
+
+Sarah Johnson: Important note - the reliability code in financial data modules is critical. Never use financial data without checking the reliability code first. A code of "9" means the data is modeled/estimated, not actual.
+
+### Common Pitfalls
+
+Mike Chen: One gotcha I've encountered - the parent company field can be confusing. There's "immediate parent" and "ultimate parent" - they're different! The immediate parent is the direct owner, while ultimate parent is the top of the ownership chain.
+
+John Smith: Another thing - when comparing Standard_DB modules versus Side_DB modules, remember that Standard modules are included in the base subscription, but Side modules require additional licensing. This affects API access.
+
+### Registration Numbers
+
+Sarah Johnson: Be careful with registration numbers. Unlike DUNS, they vary by jurisdiction. A UK company number is different from a US EIN. Always include the jurisdiction code when storing registration numbers.
+
+Mike Chen: And unlike DUNS numbers, registration numbers can change if a company re-registers or changes legal structure.
+
+## Action Items
+- Document cmpbol vs cmpbos differences
+- Create best practices guide for financial data
+- Add warnings about DUNS formatting
+- Clarify parent company terminology

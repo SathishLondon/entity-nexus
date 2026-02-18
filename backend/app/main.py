@@ -6,7 +6,7 @@ app = FastAPI(
     openapi_url=f"{settings.API_V1_STR}/openapi.json"
 )
 
-from app.api.endpoints import graph, ingest, entity, agent, references, knowledge, assistant
+from app.api.endpoints import graph, ingest, entity, agent, references, knowledge, assistant, knowledge_enrichment, knowledge_extraction
 app.include_router(graph.router, prefix=settings.API_V1_STR + "/graph", tags=["graph"])
 app.include_router(ingest.router, prefix=settings.API_V1_STR + "/ingest", tags=["ingest"])
 app.include_router(entity.router, prefix=settings.API_V1_STR + "/entities", tags=["entity"])
@@ -14,6 +14,10 @@ app.include_router(agent.router, prefix=settings.API_V1_STR + "/agent", tags=["a
 app.include_router(references.router, prefix=settings.API_V1_STR + "/references", tags=["references"])
 app.include_router(knowledge.router, prefix=settings.API_V1_STR + "/knowledge", tags=["knowledge"])
 app.include_router(assistant.router, prefix=settings.API_V1_STR + "/assistant", tags=["assistant"])
+app.include_router(knowledge_enrichment.router, prefix=settings.API_V1_STR + "/knowledge", tags=["knowledge_enrichment"])
+app.include_router(knowledge_extraction.router, prefix=settings.API_V1_STR, tags=["knowledge_extraction"])
+
+
 
 
 @app.get("/")

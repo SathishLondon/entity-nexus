@@ -56,6 +56,7 @@ class ReferenceDataAssistant:
             'relevant_modules': context.get('modules', []),
             'relevant_fields': context.get('fields', []),
             'sample_json': context.get('sample_json'),
+            'expert_notes': self._format_expert_notes(context.get('expert_notes', [])),  # NEW
             'try_it_actions': self._generate_actions(context),
             'related_questions': self._get_related_questions(question)
         }
@@ -67,7 +68,8 @@ class ReferenceDataAssistant:
         context = {
             'modules': [],
             'fields': [],
-            'sample_json': None
+            'sample_json': None,
+            'expert_notes': []  # NEW: Expert knowledge notes
         }
         
         question_lower = question.lower()
@@ -108,6 +110,23 @@ class ReferenceDataAssistant:
             except:
                 pass
         
+        # Retrieve expert knowledge notes
+        try:
+            from app.services.knowledge_enrichment_service import KnowledgeEnrichmentService
+            enrichment_service = KnowledgeEnrichmentService()
+            
+            # Search by question keywords
+            notes = enrichment_service.search_notes(question)
+            context['expert_notes'] = notes
+            
+            # Get comparison notes if multiple modules
+            if len(context['modules']) > 1:
+                module_ids = [m['id'] for m in context['modules']]
+                comparisons = enrichment_service.get_comparisons(module_ids)
+                context['expert_notes'].extend(comparisons)
+        except Exception as e:
+            logger.warning(f"Could not retrieve expert notes: {e}")
+        
         return context
     
     def _generate_with_ollama(self, question: str, context: Dict) -> str:
@@ -142,6 +161,14 @@ Available Context:
 
 """
         
+        # Add expert notes FIRST (highest priority)
+        if context.get('expert_notes'):
+            prompt += "**EXPERT KNOWLEDGE NOTES (CRITICAL - Use this information):**\n"
+            for note in context['expert_notes']:
+                prompt += f"\n**{note.title}** ({note.note_type}, {note.severity}):\n"
+                prompt += f"{note.content}\n"
+            prompt += "\n"
+        
         # Add modules
         if context['modules']:
             prompt += "Relevant Modules:\n"
@@ -164,9 +191,10 @@ Available Context:
 Instructions:
 1. Provide a clear, concise answer
 2. Mention specific module names and field paths
-3. Explain any nuances or differences
+3. Explain any nuances or differences (especially from expert notes)
 4. Use markdown formatting
 5. Keep response under 300 words
+6. IMPORTANT: If expert notes are provided, use that information as the primary source of truth
 
 Answer:"""
         
@@ -323,6 +351,20 @@ Answer:"""
         # Simple: return 3 random suggestions
         import random
         return random.sample(all_questions, min(3, len(all_questions)))
+    
+    def _format_expert_notes(self, notes: List) -> List[Dict]:
+        """Format expert notes for response"""
+        formatted = []
+        for note in notes:
+            formatted.append({
+                'id': note.id,
+                'title': note.title,
+                'content': note.content,
+                'note_type': note.note_type,
+                'severity': note.severity,
+                'tags': note.tags or []
+            })
+        return formatted
     
     def get_suggested_questions(self) -> List[str]:
         """Get list of suggested questions"""

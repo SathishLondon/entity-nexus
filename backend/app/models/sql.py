@@ -109,3 +109,60 @@ class EntityDataBlock(Base):
     __table_args__ = (
         Index('idx_entity_module', 'entity_id', 'module_id', unique=True),
     )
+
+class KnowledgeNote(Base):
+    """
+    Expert knowledge notes for capturing domain expertise and nuances
+    not available in automated documentation.
+    """
+    __tablename__ = "knowledge_notes"
+    
+    id = Column(Integer, primary_key=True, index=True)
+    module_id = Column(String(255), index=True, nullable=True)
+    field_path = Column(String(500), nullable=True)
+    note_type = Column(String(50), index=True)
+    title = Column(String(255), nullable=False)
+    content = Column(Text, nullable=False)
+    tags = Column(JSON)
+    severity = Column(String(20), default="info")
+    created_by = Column(String(100), default="system")
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    extra_data = Column(JSON)  # Renamed from metadata to avoid SQLAlchemy reserved word
+
+class DocumentUpload(Base):
+    """Uploaded documents for knowledge extraction"""
+    __tablename__ = "document_uploads"
+    
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    filename = Column(String(500), nullable=False)
+    file_type = Column(String(50), nullable=False)
+    file_path = Column(String(1000))
+    uploaded_at = Column(DateTime, default=datetime.utcnow)
+    uploaded_by = Column(String(100), default="user")
+    status = Column(String(50), default="pending")  # pending, processing, completed, failed
+    extra_data = Column(JSON)
+
+class KnowledgeRecommendation(Base):
+    """AI-generated knowledge note recommendations"""
+    __tablename__ = "knowledge_recommendations"
+    
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    document_id = Column(UUID(as_uuid=True), ForeignKey('document_uploads.id'), nullable=False)
+    note_type = Column(String(50), nullable=False)  # comparison, nuance, gotcha, best_practice
+    title = Column(String(255), nullable=False)
+    content = Column(Text, nullable=False)
+    severity = Column(String(20), default="info")
+    tags = Column(JSON)
+    module_id = Column(String(255))
+    field_path = Column(String(500))
+    confidence = Column(Float)
+    source_excerpt = Column(Text)
+    reasoning = Column(Text)
+    status = Column(String(50), default="pending")  # pending, approved, rejected, edited
+    reviewed_by = Column(String(100))
+    reviewed_at = Column(DateTime)
+    created_note_id = Column(Integer, ForeignKey('knowledge_notes.id'))
+    created_at = Column(DateTime, default=datetime.utcnow)
+    extra_data = Column(JSON)
+
